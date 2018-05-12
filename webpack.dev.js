@@ -4,13 +4,12 @@ module.exports = {
 	mode: 'development',
 
 	//entry point
-	entry: './src/app.js',
+	entry: './src/root.js',
 
 	// compiled output js
 	output: {
 		filename: 'assets/js/[name].js',
 	},
-
 
 	module: {
 		rules: [
@@ -19,18 +18,16 @@ module.exports = {
 				// only process files in src folder
 				include: /src/,
 				use: {
-					loader: 'babel-loader'
-				}
-			}
+					loader: 'babel-loader',
+				},
+			},
 		],
 	},
-
 
 	plugins: [
 		//remove localization from moment.js (significantly reduces vendor.js)
 		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 	],
-
 
 	optimization: {
 		//break out vendor module to seperate folder
@@ -45,6 +42,5 @@ module.exports = {
 		},
 	},
 
-
-	devtool: 'eval-source-map'
+	devtool: 'eval-source-map',
 };

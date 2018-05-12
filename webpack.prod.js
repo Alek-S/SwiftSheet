@@ -5,34 +5,30 @@ module.exports = {
 	mode: 'production',
 
 	//entry point
-	entry: './src/app.js',
+	entry: './src/root.js',
 
 	// compiled output js
 	output: {
-		filename: 'assets/js/[name].js'
+		filename: 'assets/js/[name].js',
 	},
 
-
 	module: {
-
 		rules: [
 			{
 				test: /\.js?$/,
 				// only process files in src folder
 				include: /src/,
 				use: {
-					loader: 'babel-loader'
-				}
-			}
+					loader: 'babel-loader',
+				},
+			},
 		],
 	}, //end module
 
-
 	plugins: [
 		//remove localization from moment.js (significantly reduces vendor.js)
-		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)	
+		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 	],
-
 
 	optimization: {
 		//break out vendor module to seperate folder
@@ -45,13 +41,15 @@ module.exports = {
 				},
 			},
 		},
-		minimizer: [new UglifyWebpackPlugin({
-			//no console.log
-			uglifyOptions: {
-				compress: {
-					drop_console: true,
-				}
-			}
-		})],
-	}
+		minimizer: [
+			new UglifyWebpackPlugin({
+				//no console.log
+				uglifyOptions: {
+					compress: {
+						drop_console: true,
+					},
+				},
+			}),
+		],
+	},
 };
