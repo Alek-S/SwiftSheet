@@ -1,7 +1,16 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=f05791e82f3f1dec3dcf2fa4ae62dca78ed6eb74664f01f5503eb4aff363fbf6
 language: node_js
 node_js:
   - "10"
 services:
   - mongodb
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 after_success:
   - bash <(curl -s https://codecov.io/bash) -e TRAVIS_NODE_VERSION
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
