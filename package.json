@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"test": "jest --coverage",
+		"test": "jest && codecov",
 		"build": "webpack --progress --config ./webpack.prod.js",
 		"watch": "webpack --config ./webpack.dev.js -w",
 		"precommit": "lint-staged && npm run test"
@@ -47,6 +47,7 @@
 		"babel-plugin-transform-class-properties": "^6.24.1",
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-react": "^6.24.1",
+		"codecov": "^3.0.2",
 		"enzyme": "^3.3.0",
 		"enzyme-adapter-react-16": "^1.1.1",
 		"husky": "^0.14.3",
@@ -72,6 +73,8 @@
 		]
 	},
 	"jest": {
+		"coverageDirectory": "./coverage/",
+		"collectCoverage": true,
 		"setupFiles": [
 			"raf/polyfill"
 		],
