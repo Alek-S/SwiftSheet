@@ -56,6 +56,17 @@
     "webpack": "^4.8.2",
     "webpack-cli": "^2.1.3"
   },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier prettier --config ./.prettierrc --write"
+    ],
+    "controller/**/*.js": [
+      "prettier prettier --config ./.prettierrc --write"
+    ],
+    "model/**/*.js": [
+      "prettier prettier --config ./.prettierrc --write"
+    ]
+  },
   "jest": {
     "setupFiles": [
       "raf/polyfill"
