@@ -1,9 +1,7 @@
 language: node_js
 node_js:
   - "10"
-install:
-  - npm install -g codecov
-script:
-  - codecov
 services:
   - mongodb
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -e TRAVIS_NODE_VERSION
