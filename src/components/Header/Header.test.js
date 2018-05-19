@@ -1,19 +1,14 @@
 import React from 'react';
 import Enzyme, { configure, shallow } from 'enzyme';
-import App from './App.js';
+import Header from './Header';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('App', () => {
+describe('Header', () => {
 	it('matches the snapshot', () => {
-		const tree = shallow(<App />);
+		const tree = shallow(<Header />);
 		expect(toJson(tree)).toMatchSnapshot();
-	});
-
-	it('contains a Header', () => {
-		const wrapper = shallow(<App />);
-		expect(wrapper.find('Header').length).toBe(1);
 	});
 });

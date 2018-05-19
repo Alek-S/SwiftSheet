@@ -16,11 +16,9 @@ app.use(morgan(':method :url :status - :response-time ms'));
 
 
 //===Parsing===
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '5mb', type: 'application/vnd.api+json'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
-
 
 //===Static Files, CSS,Images,Fonts===
 app.use(express.static('dist'));
@@ -34,7 +32,8 @@ let server = app.listen(app.get('port'), function() {
 	if(process.env.PORT){
 		console.log('Running on Port:', app.get('port'),'\n' );
 	}else{
-		console.log(`Running on: http://localhost:${app.get('port')}\n` );
+		const location = `http://localhost:${app.get('port')}`;
+		console.log('Running at:', chalk.cyan(location) );
 	}
 });
 

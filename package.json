@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"test": "jest && codecov",
+		"test": "jest",
 		"build": "webpack --progress --config ./webpack.prod.js",
 		"watch": "webpack --config ./webpack.dev.js -w",
 		"precommit": "lint-staged && npm run test"
@@ -44,6 +44,7 @@
 		"babel-core": "^6.26.3",
 		"babel-jest": "^22.4.3",
 		"babel-loader": "^7.1.4",
+		"babel-plugin-styled-components": "^1.5.1",
 		"babel-plugin-transform-class-properties": "^6.24.1",
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-react": "^6.24.1",
