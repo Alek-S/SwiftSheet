@@ -1,9 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
-<nav>
+.c0 {
+  border-bottom: solid 1px #d9d9d9;
+  padding: .75rem;
+}
+
+.c0 img,
+.c0 h1 {
+  display: inline;
+}
+
+.c0 h1 {
+  position: relative;
+  top: -.6rem;
+  font-size: 2rem;
+}
+
+<nav
+  className="c0"
+>
+  <img
+    alt="logo"
+    height="40px"
+    src="./assets/images/logo.svg"
+  />
+   
   <h1>
-    Hello from navbar
+    SwiftSheet
   </h1>
 </nav>
 `;
