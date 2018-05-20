@@ -75,10 +75,11 @@
 		]
 	},
 	"jest": {
-		"coverageDirectory": "./coverage/",
+		"coverageDirectory": "./test/coverage/",
 		"collectCoverage": true,
 		"setupFiles": [
-			"raf/polyfill"
+			"raf/polyfill",
+			"./test/jest.setup.js"
 		],
 		"testPathIgnorePatterns": [
 			"__snapshots__"
