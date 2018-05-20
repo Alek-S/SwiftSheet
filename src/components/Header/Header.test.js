@@ -25,4 +25,25 @@ describe('Header', () => {
 		const tree = shallowWithTheme(<Header />, theme).dive();
 		expect(toJson(tree)).toMatchSnapshot();
 	});
+
+	it('start as large', () => {
+		const document = {}
+		const wrapper = shallow(<Header />);
+		expect(wrapper.find('.large').length).toBe(1);
+		expect(wrapper.state().headerSize).toEqual('large');
+	});
+
+	it('becomes small on scroll', () => {
+		const wrapper = shallow(<Header />);
+		wrapper.instance().handleScroll(200);
+		expect(wrapper.state().headerSize).toEqual('small');
+	});
+
+	it('becomes small on scroll, and large when back to top', () => {
+		const wrapper = shallow(<Header />);
+		wrapper.instance().handleScroll(200);
+		expect(wrapper.state().headerSize).toEqual('small');
+		wrapper.instance().handleScroll(0);
+		expect(wrapper.state().headerSize).toEqual('large');
+	});
 });

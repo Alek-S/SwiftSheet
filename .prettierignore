@@ -1,4 +1,5 @@
-dist/
+dist/assets/js/main.js
+dist/assets/js/vendor.js
 node_modules/
 package.json
 package-lock.json
