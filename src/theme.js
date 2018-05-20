@@ -6,9 +6,11 @@ const theme = {
 	color: {
 		background: '#fafafa',
 		border: '#d9d9d9',
+		text: '#404040',
 	},
 	font: {
 		header: `'Poiret One', cursive`,
+		main: `'Quicksand', sans-serif`,
 	}
 };
 

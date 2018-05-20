@@ -2,6 +2,8 @@
 
 exports[`Header matches the snapshot 1`] = `
 .c0 {
+  background-color: white;
+  color: #404040;
   position: fixed;
   width: 100%;
   border-bottom: solid 1px #d9d9d9;

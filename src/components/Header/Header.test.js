@@ -17,7 +17,7 @@ const shallowWithTheme = (tree, theme) => {
 	  .instance()
 	  .getChildContext()
 	return shallow(tree, { context })
-  }
+}
 
 
 describe('Header', () => {
@@ -34,16 +34,18 @@ describe('Header', () => {
 	});
 
 	it('becomes small on scroll', () => {
+		const mockEvent = {};
 		const wrapper = shallow(<Header />);
-		wrapper.instance().handleScroll(200);
+		wrapper.instance().handleScroll(mockEvent, 200);
 		expect(wrapper.state().headerSize).toEqual('small');
 	});
 
 	it('becomes small on scroll, and large when back to top', () => {
+		const mockEvent = {};
 		const wrapper = shallow(<Header />);
-		wrapper.instance().handleScroll(200);
+		wrapper.instance().handleScroll(mockEvent, 200);
 		expect(wrapper.state().headerSize).toEqual('small');
-		wrapper.instance().handleScroll(0);
+		wrapper.instance().handleScroll(mockEvent, 0);
 		expect(wrapper.state().headerSize).toEqual('large');
 	});
 });

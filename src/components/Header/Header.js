@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
+/** @class 
+ * @name Header
+ * Top header element of page - always viewable
+ * 
+ * @returns {JSX}
+*/
 export default class Header extends React.Component {
 	constructor(props){
 		super(props)
@@ -14,12 +19,23 @@ export default class Header extends React.Component {
 		window.addEventListener('scroll', this.handleScroll);
 	}
 	
-	handleScroll = (scrollTop = document.documentElement.scrollTop) => {
-		if(scrollTop > 100 && this.state.headerSize !== 'small'){
+
+	/**
+	 * Updates this.state.headerSize depending on how far
+	 * scrolled from top
+	 * 
+	 * @param {Object} Event
+	 * @param {Number} scroll top override value otherwise based on document's scrollTop
+	*/
+	handleScroll = (e, scrollTop = document.documentElement.scrollTop) => {
+		//distance from top in px at which to resize header
+		const resize = 50; 
+
+		if(scrollTop > resize && this.state.headerSize !== 'small'){
 			this.setState({
 				headerSize: 'small'
 			});
-		}else if(scrollTop <= 100 && this.state.headerSize !== 'large'){
+		}else if(scrollTop <= resize && this.state.headerSize !== 'large'){
 			this.setState({
 				headerSize: 'large'
 			});
@@ -39,6 +55,8 @@ export default class Header extends React.Component {
 
 
 const Nav = styled.nav`
+	background-color: white;
+	color: ${props => props.theme.color.text};
 	position: fixed;
 	width: 100%;
 	border-bottom: solid 1px ${props => props.theme.color.border};
