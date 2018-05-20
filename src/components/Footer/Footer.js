@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import defaultStyle from '../defaultStyle';
 
 /** @function 
  * @name Footer
@@ -16,14 +16,10 @@ export default function Footer() {
 	);
 }
 
-const Styledfooter = styled.footer`
-	color: ${props => props.theme.color.text};
-	width: 100%;
-	background-color: white;
+const Styledfooter = defaultStyle.extend`
 	padding: 1rem;
 	text-align: center;
-	font-size: .9em;
-	font-family: ${props => props.theme.font.main};
+	width: 100%;
 
 	& a{
 		color: ${props => props.theme.color.text};

@@ -4,12 +4,14 @@ exports[`Header matches the snapshot 1`] = `
 .c0 {
   background-color: white;
   color: #404040;
-  position: fixed;
-  width: 100%;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
   border-bottom: solid 1px #d9d9d9;
   padding: .8rem;
+  position: fixed;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  width: 100%;
 }
 
 .c0 img,
@@ -50,7 +52,7 @@ exports[`Header matches the snapshot 1`] = `
   top: -.3rem;
 }
 
-<nav
+<div
   className="large c0"
 >
   <img
@@ -61,5 +63,5 @@ exports[`Header matches the snapshot 1`] = `
   <h1>
     SwiftSheet
   </h1>
-</nav>
+</div>
 `;

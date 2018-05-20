@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import defaultStyle from '../defaultStyle';
 
 /** @class 
  * @name Header
@@ -54,14 +55,12 @@ export default class Header extends React.Component {
 }
 
 
-const Nav = styled.nav`
-	background-color: white;
-	color: ${props => props.theme.color.text};
-	position: fixed;
-	width: 100%;
+const Nav = defaultStyle.extend`
 	border-bottom: solid 1px ${props => props.theme.color.border};
 	padding: .8rem;
+	position: fixed;
 	transition: all 0.3s;
+	width: 100%;
 
 	& img, h1{
 		display:inline;
