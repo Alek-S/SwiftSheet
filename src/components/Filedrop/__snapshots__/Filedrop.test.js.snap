@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filedrop matches the snapshot 1`] = `
+<section>
+  <t
+    accept="text/csv"
+    disableClick={false}
+    disablePreview={false}
+    disabled={false}
+    inputProps={Object {}}
+    maxSize={Infinity}
+    minSize={0}
+    multiple={true}
+    onDrop={[Function]}
+    preventDropOnDocument={true}
+  >
+    <p>
+      Drag & Drop your file here
+    </p>
+  </t>
+</section>
+`;

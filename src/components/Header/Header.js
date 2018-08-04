@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../defaultStyle';
 
@@ -8,7 +8,7 @@ import defaultStyle from '../defaultStyle';
  * 
  * @returns {JSX}
 */
-export default class Header extends React.Component {
+export default class Header extends Component {
 	constructor(props){
 		super(props)
 

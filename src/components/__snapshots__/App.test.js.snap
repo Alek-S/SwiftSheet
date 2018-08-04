@@ -3,6 +3,7 @@
 exports[`App matches the snapshot 1`] = `
 <div>
   <Header />
+  <Filedrop />
   <App__Body />
   <Footer />
 </div>

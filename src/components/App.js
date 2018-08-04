@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
+import Filedrop from './Filedrop/Filedrop';
 
 /** @class
  * @name App
@@ -14,6 +15,7 @@ export default class App extends React.Component {
 		return (
 			<div>
 				<Header />
+				<Filedrop />
 				<Body />
 				<Footer />
 			</div>
