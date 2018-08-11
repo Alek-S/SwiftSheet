@@ -7,6 +7,7 @@ exports[`Filedrop matches the snapshot 1`] = `
     disableClick={false}
     disablePreview={false}
     disabled={false}
+    getDataTransferItems={[Function]}
     inputProps={Object {}}
     maxSize={Infinity}
     minSize={0}
