@@ -64,15 +64,9 @@
 		"webpack-cli": "^2.1.5"
 	},
 	"lint-staged": {
-		"src/*/*.js": [
+		"*.js": [
 			"prettier --config ./.prettierrc --write",
 			"git add"
-		],
-		"controller/*/*.js": [
-			"prettier --config ./.prettierrc --write"
-		],
-		"model/*/*.js": [
-			"prettier --config ./.prettierrc --write"
 		]
 	},
 	"jest": {
