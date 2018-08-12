@@ -44,8 +44,8 @@
 		"no-shadow": "error",
 		"no-unneeded-ternary": "error",
 		"multiline-ternary": ["warn", "always-multiline"],
-		"no-undef": "warn",
-		"no-unused-vars": "warn",
+		"no-undef": "error",
+		"no-unused-vars": "error",
 		"no-console": 0
 	}
 }
