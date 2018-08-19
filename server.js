@@ -3,6 +3,13 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const chalk = require('chalk');
 const morgan = require('morgan');
+const express_graphql = require('express-graphql');
+const schema = require('./graphql/schema/schema');
+const {
+	getCourse,
+	getCourses,
+	updateCourseTopic,
+} = require('./graphql/root/root');
 
 //==Express Setup==
 const app = express();
@@ -37,6 +44,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
+//===Graphql===
+const root = {
+	course: getCourse,
+	courses: getCourses,
+	updateCourseTopic,
+};
+
+app.use(
+	'/graphql',
+	express_graphql({
+		schema: schema,
+		rootValue: root,
+		graphiql: true,
+	})
+);
+
 //===Static Files, CSS,Images,Fonts===
 app.use(express.static('dist'));
 
@@ -66,6 +89,7 @@ const server = app.listen(app.get('port'), () => {
 	} else {
 		const location = `http://localhost:${app.get('port')}`;
 		console.log(`🙌 Running at: ${chalk.cyan(location)}`);
+		console.log(`GraphQL: ${chalk.cyan(location + '/graphql')}`);
 	}
 });
 
