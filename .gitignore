@@ -12,3 +12,4 @@ dist/assets/js/vendor.js
 
 .DS_Store
 coverage/
+.npmrc
