@@ -2,21 +2,17 @@ const { buildSchema } = require('graphql');
 
 const schema = buildSchema(`
     type Query {
-        course(id: Int!): Course
-        courses(topic: String): [Course]
+        sheet(_id: String): Sheet
+        sheets: [Sheet]
 	},
 
 	type Mutation {
-		updateCourseTopic(id: Int!, topic: String!): Course
+        createSheet(message: String!): Sheet
 	}
 
-    type Course {
-        id: Int
-        title: String
-        author: String
-        description: String
-        topic: String
-        url: String
+    type Sheet {
+        _id: String
+        message: String
     }
 `);
 

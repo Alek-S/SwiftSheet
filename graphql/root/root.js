@@ -1,3 +1,6 @@
+const SwiftSheet = require('../../model/swiftsheetDB');
+const mongoose = require('mongoose');
+
 // TODO: sample data - delete below
 let coursesData = [
 	{
@@ -29,22 +32,6 @@ let coursesData = [
 	},
 ];
 
-const getCourse = args => {
-	const { id } = args;
-	return coursesData.filter(course => {
-		return course.id == id;
-	})[0];
-};
-
-const getCourses = args => {
-	if (args.topic) {
-		const { topic } = args;
-		return coursesData.filter(course => course.topic === topic);
-	} else {
-		return coursesData;
-	}
-};
-
 const updateCourseTopic = ({ id, topic }) => {
 	coursesData.map(course => {
 		if (course.id === id) {
@@ -55,8 +42,18 @@ const updateCourseTopic = ({ id, topic }) => {
 	return coursesData.filter(course => course.id === id)[0];
 };
 
-module.exports = {
-	getCourse,
-	getCourses,
-	updateCourseTopic,
+const getSheet = async args => {
+	return await SwiftSheet.findOne(mongoose.mongo.ObjectId(args._id));
 };
+
+const getSheets = async () => {
+	return await SwiftSheet.find({});
+};
+
+const root = {
+	updateCourseTopic,
+	sheet: getSheet,
+	sheets: getSheets,
+};
+
+module.exports = root;

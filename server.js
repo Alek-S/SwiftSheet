@@ -5,11 +5,7 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const express_graphql = require('express-graphql');
 const schema = require('./graphql/schema/schema');
-const {
-	getCourse,
-	getCourses,
-	updateCourseTopic,
-} = require('./graphql/root/root');
+const root = require('./graphql/root/root');
 
 //==Express Setup==
 const app = express();
@@ -45,12 +41,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
 //===Graphql===
-const root = {
-	course: getCourse,
-	courses: getCourses,
-	updateCourseTopic,
-};
-
 app.use(
 	'/graphql',
 	express_graphql({

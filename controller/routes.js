@@ -34,4 +34,11 @@ module.exports = function(app) {
 			});
 		}
 	});
+
+	app.get('/api/sheets/', (_req, res) => {
+		SwiftSheet.find({}).then(docs => {
+			console.log(JSON.stringify(docs));
+			res.json(docs);
+		});
+	});
 };
