@@ -5,11 +5,12 @@ const {
 	GraphQLString,
 	GraphQLBoolean,
 	GraphQLList,
+	GraphQLNonNull,
 } = require('graphql');
 const GraphQLJSON = require('graphql-type-json');
-const SwiftSheet = require('../../model/swiftsheetDB');
-const mongoose = require('mongoose');
+const { getSheet, getSheets, createSheet } = require('../resolver/resolver');
 
+//===TYPES===
 const sheetType = new GraphQLObjectType({
 	name: 'Sheet',
 	description: 'A single Swiftsheet object',
@@ -33,32 +34,29 @@ const sheetType = new GraphQLObjectType({
 	},
 });
 
-// TODO: break out resolver logic to seperate file
+//===QUERIES===
 const queryType = new GraphQLObjectType({
 	name: 'QueryType',
 	description: 'The root query type.',
 	fields: {
 		sheets: {
 			type: new GraphQLList(sheetType),
-			resolve: async () => {
-				return await SwiftSheet.find({});
-			},
+			resolve: getSheets,
 		},
 		sheet: {
 			args: {
 				_id: {
 					description: 'Unique ID of sheet',
-					type: GraphQLID,
+					type: new GraphQLNonNull(GraphQLID),
 				},
 			},
 			type: sheetType,
-			resolve: async (_root, { _id }) => {
-				return await SwiftSheet.findOne(mongoose.mongo.ObjectId(_id));
-			},
+			resolve: (root, args) => getSheet(root, args),
 		},
 	},
 });
 
+//===MUTATIONS===
 const mutation = new GraphQLObjectType({
 	name: 'Mutation',
 	description: 'Root mutation type',
@@ -67,19 +65,16 @@ const mutation = new GraphQLObjectType({
 			args: {
 				sheetData: {
 					description: 'Spreadsheet data as JSON',
-					type: GraphQLJSON,
+					type: new GraphQLNonNull(GraphQLJSON),
 				},
 			},
 			type: sheetType,
-			resolve: async (_root, args) => {
-				return await SwiftSheet.create({
-					sheetData: args.sheetData,
-				});
-			},
+			resolve: (root, args) => createSheet(root, args),
 		},
 	},
 });
 
+//===SCHEMA===
 const schema = new GraphQLSchema({
 	query: queryType,
 	mutation,

@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const express_graphql = require('express-graphql');
 const schema = require('./graphql/schema/schema');
-// const root = require('./graphql/root/root');
+const depthLimit = require('graphql-depth-limit');
 
 //==Express Setup==
 const app = express();
@@ -46,6 +46,7 @@ app.use(
 	express_graphql({
 		schema: schema,
 		graphiql: true,
+		validationRules: [depthLimit(2)],
 	})
 );
 
