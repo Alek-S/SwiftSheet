@@ -1,31 +1,35 @@
 {
-	"ecmaFeatures": {
-		"jsx": true,
-		"modules": true
+	"env": {
+		"es6": true,
+		"node": true
 	},
 	"extends": "eslint:recommended",
-	"env": {
-		"browser": true
+	"parserOptions": {
+		"sourceType": "module"
 	},
-	"parser": "babel-eslint",
 	"rules": {
-		"quotes": [2, "single"],
-		"no-console": 0,
-		"strict": [2, "never"],
-		"react/jsx-uses-react": 2,
-		"react/jsx-uses-vars": 2,
-		"react/react-in-jsx-scope": 2,
+		"indent": [
+			"error",
+			"tab",
+			{ "SwitchCase": 1 }
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"warn",
+			"single"
+		],
 		"semi": [
 			"error",
 			"always"
-        ],
-		"no-var": "warn",
-		 "indent": [
-            "error",
-            "tab", {
-                "SwitchCase": 1
-            }
 		],
+		"strict": [
+			"error", 
+			"global"
+		],
+		"no-var": "error",
 		"prefer-const": "warn",
 		"no-dupe-keys": "error",
 		"no-func-assign": "error",
@@ -39,9 +43,9 @@
 		"prefer-template": "error",
 		"no-shadow": "error",
 		"no-unneeded-ternary": "error",
-		"multiline-ternary": ["warn", "always-multiline"]
-    },
-	"plugins": [
-		"react"
-	]
+		"multiline-ternary": ["warn", "always-multiline"],
+		"no-undef": "error",
+		"no-unused-vars": "error",
+		"no-console": 0
+	}
 }
