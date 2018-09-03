@@ -2,11 +2,11 @@ const {
 	GraphQLSchema,
 	GraphQLObjectType,
 	GraphQLID,
-	GraphQLString,
 	GraphQLBoolean,
 	GraphQLList,
 	GraphQLNonNull,
 } = require('graphql');
+const { GraphQLDateTime } = require('graphql-iso-date');
 const GraphQLJSON = require('graphql-type-json');
 const { getSheet, getSheets, createSheet } = require('../resolver/resolver');
 
@@ -27,9 +27,21 @@ const sheetType = new GraphQLObjectType({
 			type: GraphQLBoolean,
 			description: 'Is sheet currently active',
 		},
-		created: {
-			type: GraphQLString,
-			description: 'Date created on',
+		hasPassword: {
+			type: GraphQLBoolean,
+			description: 'Is current sheet password protected',
+		},
+		expireAt: {
+			type: GraphQLDateTime,
+			description: ' DateTime record will expire at',
+		},
+		createdAt: {
+			type: GraphQLDateTime,
+			description: 'DateTime created on',
+		},
+		updatedAt: {
+			type: GraphQLDateTime,
+			description: 'DateTime created on',
 		},
 	},
 });
@@ -66,6 +78,10 @@ const mutation = new GraphQLObjectType({
 				sheetData: {
 					description: 'Spreadsheet data as JSON',
 					type: new GraphQLNonNull(GraphQLJSON),
+				},
+				expireAt: {
+					description: 'DateTime that sheet should expire',
+					type: GraphQLDateTime,
 				},
 			},
 			type: sheetType,
