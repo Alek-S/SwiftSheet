@@ -1,6 +1,6 @@
 const SwiftSheet = require('../../model/swiftsheetDB');
 const mongoose = require('mongoose');
-const { addDays } = require('date-fns');
+const addDays = require('date-fns/add_days');
 const bcrypt = require('bcrypt');
 
 /**
@@ -8,20 +8,29 @@ const bcrypt = require('bcrypt');
  * @param {*} _root
  * @param {Object} args - argument object
  * @param {String} args._id - Unique ID of sheet
+ * @param {String} args.password - Password for sheet
  */
-const getSheet = async (_root, { _id, password }) => {
-	if (!password) {
-		return await SwiftSheet.findOne(
-			{ _id: mongoose.mongo.ObjectId(_id) },
-			{ password: 0 }
-		);
+const getSheet = async (_root, args) => {
+	const dbResult = await SwiftSheet.findOne(mongoose.mongo.ObjectId(args._id));
+
+	if (!args.password) {
+		// if no password provided
+		if (dbResult.hasPassword) {
+			throw new Error('Pasword required for this sheet.');
+		}
 	} else {
-		// compare hashed password and then return
+		// if password provided
+		const match = await bcrypt.compare(args.password, dbResult.password);
+		if (!match) {
+			throw new Error('Wrong password provided');
+		}
 	}
+	// all good, return results
+	return dbResult;
 };
 
 /**
- * @function getSheets - get all sheets
+ * @function getSheets - gets all sheets not password protected
  */
 const getSheets = async () => {
 	return await SwiftSheet.find({ hasPassword: false }, { password: 0 });
@@ -33,17 +42,18 @@ const getSheets = async () => {
  * @param {Object} args - argument object
  * @param {Object} args.sheetData - spreadsheet data as JSON
  * @param {Date} args.expireAt - Datetime record should be deleted at
+ * @param {String} args.password - Password for sheet
  */
 const createSheet = async (_root, args) => {
 	// if no expireAt provided, default to three days
 	const expireAt = args.expireAt || addDays(new Date(), 3);
-	const passwordText = args.password || null;
+	const passwordText = args.password.trim() || null;
 
 	if (passwordText) {
 		if (passwordText.length < 6) {
 			throw new Error('Password too short. Minimum 6 characters');
 		} else if (passwordText.length > 70) {
-			throw new Error('Password too long. Maximum 6 characters');
+			throw new Error('Password too long. Maximum 70 characters');
 		}
 	}
 

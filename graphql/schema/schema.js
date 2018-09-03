@@ -60,6 +60,10 @@ const queryType = new GraphQLObjectType({
 					description: 'Unique ID of sheet',
 					type: new GraphQLNonNull(GraphQLID),
 				},
+				password: {
+					description: 'sheet password',
+					type: GraphQLString,
+				},
 			},
 			type: sheetType,
 			resolve: (root, args) => getSheet(root, args),
