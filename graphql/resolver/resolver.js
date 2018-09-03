@@ -1,6 +1,7 @@
 const SwiftSheet = require('../../model/swiftsheetDB');
 const mongoose = require('mongoose');
 const { addDays } = require('date-fns');
+const bcrypt = require('bcrypt');
 
 /**
  * @function getSheet - get single sheet based on _id
@@ -8,18 +9,22 @@ const { addDays } = require('date-fns');
  * @param {Object} args - argument object
  * @param {String} args._id - Unique ID of sheet
  */
-const getSheet = async (_root, { _id }) => {
-	return await SwiftSheet.findOne(mongoose.mongo.ObjectId(_id));
+const getSheet = async (_root, { _id, password }) => {
+	if (!password) {
+		return await SwiftSheet.findOne(
+			{ _id: mongoose.mongo.ObjectId(_id) },
+			{ password: 0 }
+		);
+	} else {
+		// compare hashed password and then return
+	}
 };
 
 /**
  * @function getSheets - get all sheets
  */
 const getSheets = async () => {
-	// throw new Error('Unavailable in your country.');
-	return await SwiftSheet.find({
-		hasPassword: false,
-	});
+	return await SwiftSheet.find({ hasPassword: false }, { password: 0 });
 };
 
 /**
@@ -30,11 +35,22 @@ const getSheets = async () => {
  * @param {Date} args.expireAt - Datetime record should be deleted at
  */
 const createSheet = async (_root, args) => {
-	// if provided expireAt date use it, else set expire to be in three days
+	// if no expireAt provided, default to three days
 	const expireAt = args.expireAt || addDays(new Date(), 3);
-	console.log(expireAt);
+	const passwordText = args.password || null;
+
+	if (passwordText) {
+		if (passwordText.length < 6) {
+			throw new Error('Password too short. Minimum 6 characters');
+		} else if (passwordText.length > 70) {
+			throw new Error('Password too long. Maximum 6 characters');
+		}
+	}
+
 	return await SwiftSheet.create({
 		sheetData: args.sheetData,
+		hasPassword: !!passwordText,
+		password: passwordText ? await bcrypt.hash(passwordText, 11) : null,
 		expireAt,
 	});
 };

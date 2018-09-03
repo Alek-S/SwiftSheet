@@ -24,10 +24,6 @@ const sheetType = new GraphQLObjectType({
 			type: GraphQLJSON,
 			description: 'Spreadsheet data as JSON',
 		},
-		active: {
-			type: GraphQLBoolean,
-			description: 'Is sheet currently active',
-		},
 		hasPassword: {
 			type: GraphQLBoolean,
 			description: 'Is current sheet password protected',

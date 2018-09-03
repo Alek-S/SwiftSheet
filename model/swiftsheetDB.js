@@ -8,10 +8,6 @@ const SwiftSheetSchema = new Schema(
 			type: Object,
 			required: true,
 		},
-		active: {
-			type: Boolean,
-			default: true,
-		},
 		hasPassword: {
 			type: Boolean,
 			default: false,
