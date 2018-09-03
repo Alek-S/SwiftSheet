@@ -17,7 +17,9 @@ const getSheet = async (_root, { _id }) => {
  */
 const getSheets = async () => {
 	// throw new Error('Unavailable in your country.');
-	return await SwiftSheet.find({});
+	return await SwiftSheet.find({
+		hasPassword: false,
+	});
 };
 
 /**

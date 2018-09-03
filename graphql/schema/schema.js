@@ -3,6 +3,7 @@ const {
 	GraphQLObjectType,
 	GraphQLID,
 	GraphQLBoolean,
+	GraphQLString,
 	GraphQLList,
 	GraphQLNonNull,
 } = require('graphql');
@@ -52,10 +53,12 @@ const queryType = new GraphQLObjectType({
 	description: 'The root query type.',
 	fields: {
 		sheets: {
+			description: 'Return all sheets, excluding password protected',
 			type: new GraphQLList(sheetType),
 			resolve: getSheets,
 		},
 		sheet: {
+			description: "Return specific sheet, based un sheet's ID",
 			args: {
 				_id: {
 					description: 'Unique ID of sheet',
@@ -82,6 +85,10 @@ const mutation = new GraphQLObjectType({
 				expireAt: {
 					description: 'DateTime that sheet should expire',
 					type: GraphQLDateTime,
+				},
+				password: {
+					description: 'Optional password for requesting sheet',
+					type: GraphQLString,
 				},
 			},
 			type: sheetType,
