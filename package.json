@@ -21,13 +21,16 @@
 	"homepage": "https://github.com/Alek-S/SwiftSheet#readme",
 	"dependencies": {
 		"axios": "^0.18.0",
+		"bcrypt": "^3.0.0",
 		"body-parser": "^1.18.3",
 		"chalk": "^2.4.1",
+		"date-fns": "^1.29.0",
 		"enzyme-to-json": "^3.3.4",
 		"express": "^4.16.3",
 		"express-graphql": "^0.6.12",
 		"graphql": "^0.13.2",
 		"graphql-depth-limit": "^1.1.0",
+		"graphql-iso-date": "^3.5.0",
 		"graphql-type-json": "^0.2.1",
 		"mongoose": "^5.2.7",
 		"morgan": "^1.9.0",
@@ -41,8 +44,7 @@
 		"react-virtualized": "^9.20.1",
 		"redux": "^4.0.0",
 		"redux-thunk": "^2.3.0",
-		"styled-components": "^3.4.2",
-		"validator": "^10.5.0"
+		"styled-components": "^3.4.2"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.3",
