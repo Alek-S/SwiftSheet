@@ -2,11 +2,12 @@ const {
 	GraphQLSchema,
 	GraphQLObjectType,
 	GraphQLID,
-	GraphQLString,
 	GraphQLBoolean,
+	GraphQLString,
 	GraphQLList,
 	GraphQLNonNull,
 } = require('graphql');
+const { GraphQLDateTime } = require('graphql-iso-date');
 const GraphQLJSON = require('graphql-type-json');
 const { getSheet, getSheets, createSheet } = require('../resolver/resolver');
 
@@ -23,13 +24,21 @@ const sheetType = new GraphQLObjectType({
 			type: GraphQLJSON,
 			description: 'Spreadsheet data as JSON',
 		},
-		active: {
+		hasPassword: {
 			type: GraphQLBoolean,
-			description: 'Is sheet currently active',
+			description: 'Is current sheet password protected',
 		},
-		created: {
-			type: GraphQLString,
-			description: 'Date created on',
+		expireAt: {
+			type: GraphQLDateTime,
+			description: ' DateTime record will expire at',
+		},
+		createdAt: {
+			type: GraphQLDateTime,
+			description: 'DateTime created on',
+		},
+		updatedAt: {
+			type: GraphQLDateTime,
+			description: 'DateTime created on',
 		},
 	},
 });
@@ -40,14 +49,20 @@ const queryType = new GraphQLObjectType({
 	description: 'The root query type.',
 	fields: {
 		sheets: {
+			description: 'Return all sheets, excluding password protected',
 			type: new GraphQLList(sheetType),
 			resolve: getSheets,
 		},
 		sheet: {
+			description: "Return specific sheet, based un sheet's ID",
 			args: {
 				_id: {
 					description: 'Unique ID of sheet',
 					type: new GraphQLNonNull(GraphQLID),
+				},
+				password: {
+					description: 'sheet password',
+					type: GraphQLString,
 				},
 			},
 			type: sheetType,
@@ -66,6 +81,14 @@ const mutation = new GraphQLObjectType({
 				sheetData: {
 					description: 'Spreadsheet data as JSON',
 					type: new GraphQLNonNull(GraphQLJSON),
+				},
+				expireAt: {
+					description: 'DateTime that sheet should expire',
+					type: GraphQLDateTime,
+				},
+				password: {
+					description: 'Optional password for requesting sheet',
+					type: GraphQLString,
 				},
 			},
 			type: sheetType,
