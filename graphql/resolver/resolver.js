@@ -16,7 +16,7 @@ const getSheet = async (_root, args) => {
 	if (!args.password) {
 		// if no password provided
 		if (dbResult.hasPassword) {
-			throw new Error('Pasword required for this sheet.');
+			throw new Error('Password required for this sheet.');
 		}
 	} else {
 		// if password provided
@@ -45,22 +45,25 @@ const getSheets = async () => {
  * @param {String} args.password - Password for sheet
  */
 const createSheet = async (_root, args) => {
+	const { password, sheetData } = args;
 	// if no expireAt provided, default to three days
 	const expireAt = args.expireAt || addDays(new Date(), 3);
-	const passwordText = args.password.trim() || null;
 
-	if (passwordText) {
-		if (passwordText.length < 6) {
+	if (password) {
+		if (password.length < 6) {
 			throw new Error('Password too short. Minimum 6 characters');
-		} else if (passwordText.length > 70) {
+		} else if (password.length > 70) {
 			throw new Error('Password too long. Maximum 70 characters');
 		}
 	}
 
 	return await SwiftSheet.create({
-		sheetData: args.sheetData,
-		hasPassword: !!passwordText,
-		password: passwordText ? await bcrypt.hash(passwordText, 11) : null,
+		sheetData,
+		hasPassword: !!password,
+		// if password, remove whitespace characters and get salted hash, else null
+		password: password
+			? await bcrypt.hash(password.replace(/\s/g, ''), 11)
+			: null,
 		expireAt,
 	});
 };

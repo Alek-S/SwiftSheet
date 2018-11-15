@@ -24,6 +24,7 @@ const SwiftSheetSchema = new Schema(
 	{ timestamps: true }
 );
 
+// Sheet expires and deleter zero seconds after reaching expireAt timedate
 SwiftSheetSchema.index({ expireAt: 1 }, { expireAfterSeconds: 0 });
 
 const SwiftSheet = mongoose.model('SwiftSheetDB', SwiftSheetSchema);
