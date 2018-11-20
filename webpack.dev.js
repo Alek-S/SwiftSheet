@@ -24,10 +24,12 @@ module.exports = {
 		],
 	},
 
-	plugins: [
-		//remove localization from moment.js (significantly reduces vendor.js)
-		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-	],
+	devServer: {
+		contentBase: './dist',
+		hot: true,
+	},
+
+	plugins: [new webpack.HotModuleReplacementPlugin()],
 
 	optimization: {
 		//break out vendor module to seperate folder

@@ -7,7 +7,8 @@
 		"test": "jest",
 		"build": "webpack --progress --config ./webpack.prod.js",
 		"watch": "webpack --config ./webpack.dev.js -w",
-		"precommit": "lint-staged && npm run test"
+		"precommit": "lint-staged && npm run test",
+		"dev": "webpack-dev-server --config ./webpack.dev.js --hot"
 	},
 	"repository": {
 		"type": "git",
@@ -62,11 +63,13 @@
 		"jest-styled-components": "^6.0.1",
 		"lint-staged": "^7.2.0",
 		"prettier": "^1.14.2",
+		"react-hot-loader": "^4.3.12",
 		"redux-devtools-extension": "^2.13.5",
 		"supertest": "^3.1.0",
 		"uglifyjs-webpack-plugin": "^1.2.7",
 		"webpack": "^4.16.5",
-		"webpack-cli": "^2.1.5"
+		"webpack-cli": "^2.1.5",
+		"webpack-dev-server": "^3.1.10"
 	},
 	"lint-staged": {
 		"*.js": [
