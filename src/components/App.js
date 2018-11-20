@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { hot } from 'react-hot-loader';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
@@ -13,12 +14,16 @@ import Filedrop from './Filedrop/Filedrop';
  */
 const App = () => {
 	return (
-		<div>
-			<Header />
-			<Filedrop />
-			<Body />
-			<Footer />
-		</div>
+		<BrowserRouter>
+			<div>
+				<Header />
+				<Switch>
+					<Route exact path="/" component={Filedrop} />
+				</Switch>
+				<Body />
+				<Footer />
+			</div>
+		</BrowserRouter>
 	);
 };
 
