@@ -2,12 +2,8 @@
 
 exports[`Header matches the snapshot 1`] = `
 .c0 {
-  background-color: white;
-  color: #404040;
-  font-family: 'Quicksand',sans-serif;
-  font-size: 0.9em;
   border-bottom: solid 1px #d9d9d9;
-  padding: .8rem;
+  padding: 0.8rem;
   position: fixed;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -32,15 +28,15 @@ exports[`Header matches the snapshot 1`] = `
   -moz-letter-spacing: 4px;
   -ms-letter-spacing: 4px;
   letter-spacing: 4px;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   position: relative;
-  top: -.7rem;
+  top: -0.7rem;
 }
 
 .c0.small {
-  padding: .4rem;
-  padding-left: .8rem;
-  padding-bottom: .15rem;
+  padding: 0.4rem;
+  padding-left: 0.8rem;
+  padding-bottom: 0.15rem;
 }
 
 .c0.small img {
@@ -49,10 +45,10 @@ exports[`Header matches the snapshot 1`] = `
 
 .c0.small h1 {
   font-size: 1.5rem;
-  top: -.3rem;
+  top: -0.3rem;
 }
 
-<div
+<defaultStyle
   className="large c0"
 >
   <img
@@ -63,5 +59,5 @@ exports[`Header matches the snapshot 1`] = `
   <h1>
     SwiftSheet
   </h1>
-</div>
+</defaultStyle>
 `;
