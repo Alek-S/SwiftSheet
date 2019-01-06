@@ -2,10 +2,6 @@
 
 exports[`Footer matches the snapshot 1`] = `
 .c0 {
-  background-color: white;
-  color: #404040;
-  font-family: 'Quicksand',sans-serif;
-  font-size: 0.9em;
   padding: 1rem;
   text-align: center;
   width: 100%;
@@ -15,10 +11,11 @@ exports[`Footer matches the snapshot 1`] = `
   color: #404040;
 }
 
-<div
+<defaultStyle
   className="c0"
 >
-  Created by 
+  Created by
+   
   <a
     href="https://www.alekshnayder.com/"
     rel="noopener"
@@ -26,5 +23,5 @@ exports[`Footer matches the snapshot 1`] = `
   >
     Alek Shnayder
   </a>
-</div>
+</defaultStyle>
 `;
