@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defaultStyle matches the snapshot 1`] = `
+.c0 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
+}
+
+<div
+  className="c0"
+/>
+`;

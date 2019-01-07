@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { hot } from 'react-hot-loader';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
-import Filedrop from './Filedrop/Filedrop';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Filedrop from '../components/Filedrop/Filedrop';
 
 /** @function
  * @name App
