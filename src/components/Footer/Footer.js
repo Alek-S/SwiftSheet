@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import defaultStyle from '../defaultStyle';
+import defaultStyle from '../../defaultStyle';
 
 /** @function
  * @name Footer

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import defaultStyle from '../defaultStyle';
+import defaultStyle from '../../defaultStyle';
 
 /** @class
  * @name Header
