@@ -5,7 +5,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import Filedrop from '../components/Filedrop/Filedrop';
+import FrontPage from './FrontPage/FrontPage';
+import UploadPage from './UploadPage/UploadPage';
+import ViewPage from './ViewPage/ViewPage';
 
 /** @function
  * @name App
@@ -18,7 +20,9 @@ const App = () => {
 			<div>
 				<Header />
 				<Switch>
-					<Route exact path="/" component={Filedrop} />
+					<Route exact path="/" component={FrontPage} />
+					<Route path="/upload" component={UploadPage} />
+					<Route path="/view" component={ViewPage} />
 				</Switch>
 				<Body />
 				<Footer />

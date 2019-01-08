@@ -10,6 +10,14 @@ exports[`App matches the snapshot 1`] = `
         exact={true}
         path="/"
       />
+      <Route
+        component={[Function]}
+        path="/upload"
+      />
+      <Route
+        component={[Function]}
+        path="/view"
+      />
     </Switch>
     <App__Body />
     <Footer />
