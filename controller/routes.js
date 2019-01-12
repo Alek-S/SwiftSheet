@@ -1,5 +1,6 @@
 const SwiftSheet = require('../model/swiftsheetDB');
 const chalk = require('chalk');
+const path = require('path');
 
 module.exports = function(app) {
 	app.get('/api/sanitycheck', (_req, res) => {
@@ -40,5 +41,9 @@ module.exports = function(app) {
 			console.log(JSON.stringify(docs));
 			res.json(docs);
 		});
+	});
+
+	app.get('/*', (req, res) => {
+		res.sendFile(path.join(__dirname, '../dist/index.html'));
 	});
 };

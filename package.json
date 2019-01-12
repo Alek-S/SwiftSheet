@@ -8,7 +8,8 @@
 		"build": "webpack --progress --config ./webpack.prod.js",
 		"watch": "webpack --config ./webpack.dev.js -w",
 		"precommit": "lint-staged && npm run test",
-		"dev": "webpack-dev-server --config ./webpack.dev.js --hot"
+		"dev": "webpack-dev-server --config ./webpack.dev.js --hot",
+		"dev:server": "nodemon --inspect ./server.js"
 	},
 	"repository": {
 		"type": "git",
@@ -63,7 +64,9 @@
 		"jest": "^23.5.0",
 		"jest-styled-components": "^6.0.1",
 		"lint-staged": "^7.2.0",
+		"nodemon": "^1.18.9",
 		"prettier": "^1.14.2",
+		"react-test-renderer": "^16.7.0",
 		"redux-devtools-extension": "^2.13.5",
 		"supertest": "^3.1.0",
 		"uglifyjs-webpack-plugin": "^1.2.7",

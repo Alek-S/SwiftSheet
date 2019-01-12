@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadPage matches the snapshot 1`] = `
+.c0 {
+  padding-top: 20rem;
+}
+
+<defaultStyle
+  className="c0"
+>
+  Upload Page
+</defaultStyle>
+`;

@@ -10,6 +10,11 @@ exports[`Header matches the snapshot 1`] = `
   width: 100%;
 }
 
+.c0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 img,
 .c0 h1 {
   display: inline;
@@ -31,6 +36,7 @@ exports[`Header matches the snapshot 1`] = `
   margin-left: 0.5rem;
   position: relative;
   top: -0.7rem;
+  color: #404040;
 }
 
 .c0.small {
@@ -48,16 +54,46 @@ exports[`Header matches the snapshot 1`] = `
   top: -0.3rem;
 }
 
+.c0.small .tagline {
+  display: none;
+}
+
 <defaultStyle
   className="large c0"
 >
-  <img
-    alt="logo"
-    src="./assets/images/logo.svg"
-  />
-   
-  <h1>
-    SwiftSheet
-  </h1>
+  <Link
+    replace={false}
+    to="/"
+  >
+    <img
+      alt="logo"
+      src="./assets/images/logo.svg"
+    />
+     
+    <h1>
+      SwiftSheet
+    </h1>
+  </Link>
+  <Header__Tagline
+    className="tagline"
+  >
+    <h2>
+      Fast and ephemeral data sharing.
+    </h2>
+  </Header__Tagline>
+  <Header__NavSection
+    className="large"
+  >
+    <Header__StyledNavLink
+      to="/upload"
+    >
+      Upload
+    </Header__StyledNavLink>
+    <Header__StyledNavLink
+      to="/view"
+    >
+      View
+    </Header__StyledNavLink>
+  </Header__NavSection>
 </defaultStyle>
 `;

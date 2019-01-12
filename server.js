@@ -57,10 +57,10 @@ app.use(express.static('dist'));
 app.set('trust proxy', 1);
 
 //===MongoDB Connection with Mongoose==
-mongoose.Promise = global.Promise; //use standard Promise instead of Mongo's promise library
+// mongoose.Promise = global.Promise; //use standard Promise instead of Mongo's promise library
 mongoose.connect(
 	process.env.MONGODB_URI || 'mongodb://localhost:27017/swiftsheet',
-	{ useNewUrlParser: true }
+	{ useCreateIndex: true, useNewUrlParser: true }
 );
 const db = mongoose.connection;
 
