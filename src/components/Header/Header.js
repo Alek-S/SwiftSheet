@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
+import { Link, NavLink } from 'react-router-dom';
 
 /** @class
  * @name Header
@@ -23,7 +24,6 @@ export default class Header extends Component {
 	/**
 	 * Updates this.state.headerSize depending on how far
 	 * scrolled from top
-	 *
 	 * @param {Object} Event
 	 * @param {Number} scroll top override value otherwise based on document's scrollTop
 	 */
@@ -47,7 +47,14 @@ export default class Header extends Component {
 
 		return (
 			<Nav className={headerSize}>
-				<img src="./assets/images/logo.svg" alt="logo" /> <h1>SwiftSheet</h1>
+				<Link to="/">
+					<img src="./assets/images/logo.svg" alt="logo" /> <h1>SwiftSheet</h1>
+				</Link>
+
+				<NavSection className={headerSize}>
+					<StyledNavLink to="/upload">Upload</StyledNavLink>
+					<StyledNavLink to="/view">View</StyledNavLink>
+				</NavSection>
 			</Nav>
 		);
 	}
@@ -59,6 +66,10 @@ const Nav = styled(defaultStyle)`
 	position: fixed;
 	transition: all 0.3s;
 	width: 100%;
+
+	a {
+		text-decoration: none;
+	}
 
 	& img,
 	h1 {
@@ -75,6 +86,7 @@ const Nav = styled(defaultStyle)`
 		margin-left: 0.5rem;
 		position: relative;
 		top: -0.7rem;
+		color: ${props => props.theme.color.text};
 	}
 
 	&.small {
@@ -89,5 +101,31 @@ const Nav = styled(defaultStyle)`
 			font-size: 1.5rem;
 			top: -0.3rem;
 		}
+	}
+`;
+
+const NavSection = styled.ul`
+	position: absolute;
+	top: 1.75rem;
+	right: 5rem;
+	transition: all 0.3s;
+	&.small {
+		top: 0.6rem;
+	}
+	&.small * {
+		font-size: 1rem;
+	}
+`;
+
+const StyledNavLink = styled(NavLink)`
+	font-size: 1.25rem;
+	color: ${props => props.theme.color.text};
+	padding-right: 1rem;
+	padding-left: 1rem;
+	transition: all 0.3s;
+
+	&.active {
+		font-weight: 500;
+		color: ${props => props.theme.color.red};
 	}
 `;

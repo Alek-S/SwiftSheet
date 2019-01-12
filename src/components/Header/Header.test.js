@@ -4,7 +4,6 @@ import 'jest-styled-components';
 import Header from './Header';
 import theme from '../../theme';
 
-
 describe('Header', () => {
 	it('matches the snapshot', () => {
 		const tree = shallowWithTheme(<Header />, theme).dive();
@@ -12,9 +11,9 @@ describe('Header', () => {
 	});
 
 	it('start as large', () => {
-		const document = {}
+		const document = {};
 		const wrapper = shallow(<Header />);
-		expect(wrapper.find('.large').length).toBe(1);
+		expect(wrapper.find('.large').length).toBeGreaterThan(0);
 		expect(wrapper.state().headerSize).toEqual('large');
 	});
 

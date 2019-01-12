@@ -9,6 +9,8 @@ node_modules/
 # build
 dist/assets/js/main.js
 dist/assets/js/vendor.js
+dist/*.json
+dist/*.js
 
 .DS_Store
 coverage/
