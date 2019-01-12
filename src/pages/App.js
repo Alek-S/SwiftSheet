@@ -8,6 +8,7 @@ import Footer from '../components/Footer/Footer';
 import FrontPage from './FrontPage/FrontPage';
 import UploadPage from './UploadPage/UploadPage';
 import ViewPage from './ViewPage/ViewPage';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 /** @function
  * @name App
@@ -17,7 +18,7 @@ import ViewPage from './ViewPage/ViewPage';
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div>
+			<ScrollToTop>
 				<Header />
 				<Switch>
 					<Route exact path="/" component={FrontPage} />
@@ -26,7 +27,7 @@ const App = () => {
 				</Switch>
 				<Body />
 				<Footer />
-			</div>
+			</ScrollToTop>
 		</BrowserRouter>
 	);
 };

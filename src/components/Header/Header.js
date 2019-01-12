@@ -50,6 +50,9 @@ export default class Header extends Component {
 				<Link to="/">
 					<img src="./assets/images/logo.svg" alt="logo" /> <h1>SwiftSheet</h1>
 				</Link>
+				<Tagline className="tagline">
+					<h2>Fast and ephemeral data sharing.</h2>
+				</Tagline>
 
 				<NavSection className={headerSize}>
 					<StyledNavLink to="/upload">Upload</StyledNavLink>
@@ -101,13 +104,16 @@ const Nav = styled(defaultStyle)`
 			font-size: 1.5rem;
 			top: -0.3rem;
 		}
+		.tagline {
+			display: none;
+		}
 	}
 `;
 
 const NavSection = styled.ul`
 	position: absolute;
 	top: 1.75rem;
-	right: 5rem;
+	right: 2rem;
 	transition: all 0.3s;
 	&.small {
 		top: 0.6rem;
@@ -120,12 +126,23 @@ const NavSection = styled.ul`
 const StyledNavLink = styled(NavLink)`
 	font-size: 1.25rem;
 	color: ${props => props.theme.color.text};
-	padding-right: 1rem;
-	padding-left: 1rem;
+	padding-right: 2rem;
+	padding-left: 2rem;
 	transition: all 0.3s;
+	border-left: solid 1px ${props => props.theme.color.border};
 
 	&.active {
 		font-weight: 500;
 		color: ${props => props.theme.color.red};
 	}
+`;
+
+const Tagline = styled.div`
+	color: ${props => props.theme.color.lightText};
+	position: absolute;
+	display: inline-block;
+	margin-left: 2rem;
+	margin-top: 0.5rem;
+	padding: 0.75rem 2rem;
+	border-left: solid 1px ${props => props.theme.color.border};
 `;

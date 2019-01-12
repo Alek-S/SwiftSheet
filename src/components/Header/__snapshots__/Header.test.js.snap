@@ -54,6 +54,10 @@ exports[`Header matches the snapshot 1`] = `
   top: -0.3rem;
 }
 
+.c0.small .tagline {
+  display: none;
+}
+
 <defaultStyle
   className="large c0"
 >
@@ -70,6 +74,13 @@ exports[`Header matches the snapshot 1`] = `
       SwiftSheet
     </h1>
   </Link>
+  <Header__Tagline
+    className="tagline"
+  >
+    <h2>
+      Fast and ephemeral data sharing.
+    </h2>
+  </Header__Tagline>
   <Header__NavSection
     className="large"
   >

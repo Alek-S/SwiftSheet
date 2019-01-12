@@ -2,7 +2,7 @@
 
 exports[`App matches the snapshot 1`] = `
 <BrowserRouter>
-  <div>
+  <withRouter(ScrollToTop)>
     <Header />
     <Switch>
       <Route
@@ -21,6 +21,6 @@ exports[`App matches the snapshot 1`] = `
     </Switch>
     <App__Body />
     <Footer />
-  </div>
+  </withRouter(ScrollToTop)>
 </BrowserRouter>
 `;
