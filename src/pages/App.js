@@ -25,18 +25,10 @@ const App = () => {
 					<Route path="/upload" component={UploadPage} />
 					<Route path="/view" component={ViewPage} />
 				</Switch>
-				<Body />
 				<Footer />
 			</ScrollToTop>
 		</BrowserRouter>
 	);
 };
-
-//TODO: remove Body - placeholder to test header/footer positions
-/* istanbul ignore next*/
-const Body = styled.div`
-	background-color: ${props => props.theme.color.background};
-	height: 1500px;
-`;
 
 export default hot(module)(App);
