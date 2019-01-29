@@ -12,5 +12,8 @@ exports[`FrontPage matches the snapshot 1`] = `
     Quickly share a spreadsheet, then make it go away.
   </FrontPage__StyledHeader>
   <ScrollDownIcon />
+  <FrontPage__InfoSection>
+    [ More how-to info Here ]
+  </FrontPage__InfoSection>
 </div>
 `;

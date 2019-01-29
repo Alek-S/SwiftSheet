@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import defaultStyle from '../../defaultStyle';
+import defaultStyle from '../../defaultStyle';
 import ScrollDownIcon from '../../components/ScrollDownIcon/ScrollDownIcon';
 
 const FrontPage = () => (
@@ -11,6 +11,7 @@ const FrontPage = () => (
 			Quickly share a spreadsheet, then make it go away.
 		</StyledHeader>
 		<ScrollDownIcon />
+		<InfoSection>[ More how-to info Here ]</InfoSection>
 	</div>
 );
 
@@ -38,6 +39,14 @@ const StyledHeader = styled.h3`
 		top: 2.8rem;
 		margin-right: 1.5rem;
 	}
+`;
+
+const InfoSection = styled(defaultStyle)`
+	padding-top: 150px;
+	padding-bottom: 150px;
+	text-align: center;
+	font-size: 1.5rem;
+	background: linear-gradient(135deg, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
 `;
 
 export default FrontPage;

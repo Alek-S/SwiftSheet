@@ -8,6 +8,7 @@ exports[`Header matches the snapshot 1`] = `
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 100%;
+  z-index: 50;
 }
 
 .c0 a {

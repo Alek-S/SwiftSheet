@@ -69,6 +69,7 @@ const Nav = styled(defaultStyle)`
 	padding: 0.8rem;
 	transition: all 0.3s;
 	width: 100%;
+	z-index: 50;
 
 	a {
 		text-decoration: none;
