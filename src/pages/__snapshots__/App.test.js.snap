@@ -19,7 +19,6 @@ exports[`App matches the snapshot 1`] = `
         path="/view"
       />
     </Switch>
-    <App__Body />
     <Footer />
   </withRouter(ScrollToTop)>
 </BrowserRouter>

@@ -1,25 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FrontPage matches the snapshot 1`] = `
-.c0 {
-  padding-top: 20rem;
-}
-
-<defaultStyle
-  className="c0"
->
-  Front Page
-  <Link
-    replace={false}
-    to="/upload"
-  >
-    upload
-  </Link>
-  <Link
-    replace={false}
-    to="/view"
-  >
-    view
-  </Link>
-</defaultStyle>
+<div>
+  <FrontPage__HeroImg />
+  <FrontPage__StyledHeader>
+    <img
+      alt="logo"
+      height="150"
+      src="./assets/images/logo-sheet.svg"
+    />
+    Quickly share a spreadsheet, then make it go away.
+  </FrontPage__StyledHeader>
+  <ScrollDownIcon />
+  <FrontPage__InfoSection>
+    [ More how-to info Here ]
+  </FrontPage__InfoSection>
+</div>
 `;

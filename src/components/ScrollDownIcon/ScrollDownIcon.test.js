@@ -1,13 +1,12 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 
-import FrontPage from './FrontPage';
+import ScrollDownIcon from './ScrollDownIcon';
 import theme from '../../theme';
 
-describe('FrontPage', () => {
+describe('ScrollDownIcon', () => {
 	it('matches the snapshot', () => {
-		const tree = shallowWithTheme(<FrontPage />, theme);
+		const tree = shallowWithTheme(<ScrollDownIcon />, theme);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });

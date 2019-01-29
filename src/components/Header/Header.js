@@ -64,11 +64,12 @@ export default class Header extends Component {
 }
 
 const Nav = styled(defaultStyle)`
+	position: fixed;
 	border-bottom: solid 1px ${props => props.theme.color.border};
 	padding: 0.8rem;
-	position: fixed;
 	transition: all 0.3s;
 	width: 100%;
+	z-index: 50;
 
 	a {
 		text-decoration: none;
