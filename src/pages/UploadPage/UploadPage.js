@@ -4,17 +4,14 @@ import defaultStyle from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
 
 const StyledDiv = styled(defaultStyle)`
+	background-color: ${props => props.theme.color.background};
 	padding-top: 7rem;
-	padding-bottom: 2rem;
-	padding-left: 2rem;
-	font-size: 1.2rem;
 `;
 
 const UploadPage = () => (
-	<div>
-		<StyledDiv>Upload Page</StyledDiv>
+	<StyledDiv>
 		<Filedrop />
-	</div>
+	</StyledDiv>
 );
 
 export default UploadPage;

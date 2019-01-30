@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Dropzone from 'react-dropzone';
+import Papa from 'papaparse';
 import defaultStyle from '../../defaultStyle';
 
 /** @class
@@ -20,10 +21,18 @@ export default class Filedrop extends Component {
 	}
 
 	onDrop = (file, rejectedFile) => {
-		// do stuff with files...
-		console.log(file);
-		console.log(file[0].preview);
 		this.setState({ file, rejectedFile });
+		Papa.parse(file[0], {
+			header: true,
+			download: true,
+			skipEmptyLines: false,
+			complete: this.handleJSONData,
+		});
+	};
+
+	handleJSONData = result => {
+		const data = result.data;
+		console.log(data);
 	};
 
 	onDragEnter = () => this.setState({ dragging: true });
@@ -34,7 +43,7 @@ export default class Filedrop extends Component {
 		const { dragging } = this.state;
 
 		return (
-			<section style={{ height: 'calc(100vh - 200px)' }}>
+			<section style={{ height: 'calc(100vh - 100px)' }}>
 				<StyledDropzone
 					onDrop={this.onDrop}
 					accept="text/csv"
@@ -54,11 +63,11 @@ export default class Filedrop extends Component {
 
 const StyledDropzone = styled(Dropzone)`
 	background-color: ${props =>
-		props.dragging ? props.theme.color.blue : props.theme.color.background};
-	border: dashed 1px
+		props.dragging ? props.theme.color.blue : '#fff'};
+	border: dashed 2px
 		${props =>
-			props.dragging ? props.theme.color.blue : props.theme.color.border};
-	border-radius: 4px;
+			props.dragging ? props.theme.color.darkBlue : props.theme.color.border};
+	border-radius: 5px;
 	height: 250px;
 	width: 60%;
 	margin: auto;

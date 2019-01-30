@@ -1,10 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UploadPage matches the snapshot 1`] = `
-<div>
-  <UploadPage__StyledDiv>
-    Upload Page
-  </UploadPage__StyledDiv>
+<UploadPage__StyledDiv>
   <Filedrop />
-</div>
+</UploadPage__StyledDiv>
 `;

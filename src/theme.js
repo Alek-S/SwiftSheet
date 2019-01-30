@@ -11,6 +11,7 @@ const theme = {
 		red: '#ED5050',
 		green: '#D8E13F',
 		blue: '#46C8F5',
+		darkBlue: '#2E8AA8',
 	},
 	font: {
 		header: `'Poiret One', cursive`,
