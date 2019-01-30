@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Filedrop matches the snapshot 1`] = `
-<section
-  style={
-    Object {
-      "height": "calc(100vh - 100px)",
-    }
-  }
->
+<section>
   <Filedrop__StyledDropzone
     accept="text/csv"
     dragging={false}

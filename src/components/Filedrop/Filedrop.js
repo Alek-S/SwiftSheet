@@ -11,8 +11,8 @@ import defaultStyle from '../../defaultStyle';
  * @returns {JSX}
  */
 export default class Filedrop extends Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
 		this.state = {
 			fileData: [],
 			dragging: false,
@@ -52,7 +52,7 @@ export default class Filedrop extends Component {
 		const { dragging } = this.state;
 
 		return (
-			<section style={{ height: 'calc(100vh - 100px)' }}>
+			<section>
 				<StyledDropzone
 					onDrop={this.onDrop}
 					accept="text/csv"
