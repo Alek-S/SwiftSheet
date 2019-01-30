@@ -20,7 +20,6 @@ export default class Filedrop extends Component {
 	}
 
 	onDrop = (file, rejectedFile) => {
-		// console.log(file[0].name.indexOf('.csv') + 4, file[0].name.length);
 		if (
 			file[0] &&
 			file[0].name &&
@@ -64,7 +63,20 @@ export default class Filedrop extends Component {
 					onDragEnter={this.onDragEnter}
 					onDragLeave={this.onDragLeave}
 				>
-					<StyledText>{dragging ? 'Drop' : 'Drag'} CSV file here</StyledText>
+					{dragging ? (
+						<img
+							src="./assets/images/upload-cloud-darkBlue.svg"
+							alt="upload-cloud-logo"
+						/>
+					) : (
+						<img
+							src="./assets/images/upload-cloud-light.svg"
+							alt="upload-cloud-logo"
+						/>
+					)}
+					<StyledText dragging={dragging}>
+						{dragging ? 'Drop' : 'Drag'} CSV file here
+					</StyledText>
 				</StyledDropzone>
 			</section>
 		);
@@ -82,11 +94,19 @@ const StyledDropzone = styled(Dropzone)`
 	width: 60%;
 	margin: auto;
 	margin-top: 4rem;
+
+	img {
+		display: block;
+		height: 200px;
+		width: 80%;
+		margin: auto;
+	}
 `;
 
 const StyledText = styled(defaultStyle)`
+	color: ${props =>
+		props.dragging ? props.theme.color.darkBlue : props.theme.color.lightText};
 	font-size: 1.2rem;
 	text-align: center;
 	background-color: transparent;
-	padding-top: 7rem;
 `;
