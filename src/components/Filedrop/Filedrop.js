@@ -23,7 +23,7 @@ export default class Filedrop extends Component {
 	onDrop = (file, rejectedFile) => {
 		this.setState({ file, rejectedFile });
 		Papa.parse(file[0], {
-			header: true,
+			header: false,
 			download: true,
 			skipEmptyLines: false,
 			complete: this.handleJSONData,
