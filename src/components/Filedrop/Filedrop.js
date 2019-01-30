@@ -14,25 +14,35 @@ export default class Filedrop extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			file: null,
-			rejectedFile: [],
+			fileData: [],
 			dragging: false,
 		};
 	}
 
 	onDrop = (file, rejectedFile) => {
-		this.setState({ file, rejectedFile });
-		Papa.parse(file[0], {
-			header: false,
-			download: true,
-			skipEmptyLines: false,
-			complete: this.handleJSONData,
-		});
+		// console.log(file[0].name.indexOf('.csv') + 4, file[0].name.length);
+		if (
+			file[0] &&
+			file[0].name &&
+			file[0].name.indexOf('.csv') + 4 === file[0].name.length
+		) {
+			Papa.parse(file[0], {
+				header: false,
+				download: true,
+				skipEmptyLines: false,
+				complete: this.handleJSONData,
+			});
+		} else {
+			// TODO handle Error on UI
+			console.error(
+				`file rejected!: \n ${rejectedFile[0].name}\n ${rejectedFile[0].type}`
+			);
+		}
 	};
 
 	handleJSONData = result => {
-		const data = result.data;
-		console.log(data);
+		console.log(result.data);
+		this.setState({ fileData: result.data });
 	};
 
 	onDragEnter = () => this.setState({ dragging: true });
