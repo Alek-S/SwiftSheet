@@ -5,43 +5,57 @@ exports[`UploadPage matches the snapshot 1`] = `
   <Filedrop />
   <UploadPage__StyledForm
     disableSubmit={false}
-    onSubmit={[Function]}
   >
-    <label>
-      Expires In:
-      <select
-        onChange={[Function]}
-        value={72}
-      >
-        <option
-          value={4}
-        >
-          4 Hours
-        </option>
-        <option
-          value={8}
-        >
-          8 Hours
-        </option>
-        <option
-          value={24}
-        >
-          1 Day
-        </option>
-        <option
+    <UploadPage__Options>
+      <label>
+        Expires In:
+        <select
+          onChange={[Function]}
           value={72}
         >
-          3 Days
-        </option>
-        <option
-          value={120}
+          <option
+            value={4}
+          >
+            4 Hours
+          </option>
+          <option
+            value={8}
+          >
+            8 Hours
+          </option>
+          <option
+            value={24}
+          >
+            1 Day
+          </option>
+          <option
+            value={72}
+          >
+            3 Days
+          </option>
+          <option
+            value={120}
+          >
+            5 Days
+          </option>
+        </select>
+      </label>
+      <UploadPage__HeaderToggle
+        active={false}
+      >
+        <span>
+          First Row Header:
+        </span>
+        <button
+          onClick={[Function]}
         >
-          5 Days
-        </option>
-      </select>
-    </label>
+          No
+        </button>
+      </UploadPage__HeaderToggle>
+    </UploadPage__Options>
     <input
       disabled={false}
+      onClick={[Function]}
       type="submit"
       value="Upload File"
     />
