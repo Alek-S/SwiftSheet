@@ -7,7 +7,7 @@ class UploadPage extends Component {
 	constructor() {
 		super();
 		this.state = {
-			value: 72,
+			expireIn: 72,
 			header: false,
 			disableSubmit: false,
 		};
@@ -27,7 +27,7 @@ class UploadPage extends Component {
 
 	handleSubmit = e => {
 		e.preventDefault();
-		console.log('hours until expire: ' + this.state.value);
+		console.log('hours until expire: ' + this.state.expireIn);
 	};
 
 	render() {
@@ -40,7 +40,7 @@ class UploadPage extends Component {
 					<Options>
 						<label>
 							Expires In:
-							<select value={this.state.value} onChange={this.handleChange}>
+							<select value={this.state.expireIn} onChange={this.handleChange}>
 								<option value={4}>4 Hours</option>
 								<option value={8}>8 Hours</option>
 								<option value={24}>1 Day</option>
