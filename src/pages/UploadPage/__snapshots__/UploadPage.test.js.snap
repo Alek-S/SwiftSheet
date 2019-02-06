@@ -1,13 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UploadPage matches the snapshot 1`] = `
-.c0 {
-  padding-top: 20rem;
-}
-
-<defaultStyle
-  className="c0"
->
-  Upload Page
-</defaultStyle>
+<UploadPage__StyledDiv>
+  <Filedrop />
+  <UploadPage__StyledForm
+    disableSubmit={false}
+  >
+    <UploadPage__Options>
+      <label>
+        Expires In:
+        <select
+          onChange={[Function]}
+          value={72}
+        >
+          <option
+            value={4}
+          >
+            4 Hours
+          </option>
+          <option
+            value={8}
+          >
+            8 Hours
+          </option>
+          <option
+            value={24}
+          >
+            1 Day
+          </option>
+          <option
+            value={72}
+          >
+            3 Days
+          </option>
+          <option
+            value={120}
+          >
+            5 Days
+          </option>
+        </select>
+      </label>
+      <UploadPage__HeaderToggle
+        active={false}
+      >
+        <span>
+          First Row Header:
+        </span>
+        <button
+          onClick={[Function]}
+        >
+          No
+        </button>
+      </UploadPage__HeaderToggle>
+    </UploadPage__Options>
+    <input
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+      value="Upload File"
+    />
+  </UploadPage__StyledForm>
+</UploadPage__StyledDiv>
 `;

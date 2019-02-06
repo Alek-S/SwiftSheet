@@ -2,22 +2,26 @@
 
 exports[`Filedrop matches the snapshot 1`] = `
 <section>
-  <t
+  <Filedrop__StyledDropzone
     accept="text/csv"
-    disableClick={false}
-    disablePreview={false}
-    disabled={false}
-    getDataTransferItems={[Function]}
-    inputProps={Object {}}
-    maxSize={Infinity}
-    minSize={0}
-    multiple={true}
+    dragging={false}
+    maxSize={5000000}
+    minSize={1}
+    multiple={false}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
     onDrop={[Function]}
-    preventDropOnDocument={true}
   >
-    <p>
-      Drag & Drop your file here
-    </p>
-  </t>
+    <img
+      alt="upload-cloud-logo"
+      src="./assets/images/upload-cloud-light.svg"
+    />
+    <Filedrop__StyledText
+      dragging={false}
+    >
+      Drag
+       CSV file here
+    </Filedrop__StyledText>
+  </Filedrop__StyledDropzone>
 </section>
 `;

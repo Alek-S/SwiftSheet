@@ -6,7 +6,7 @@ import theme from '../../theme';
 
 describe('UploadPage', () => {
 	it('matches the snapshot', () => {
-		const tree = shallowWithTheme(<UploadPage />, theme).dive();
+		const tree = shallowWithTheme(<UploadPage />, theme);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });
