@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+	.BundleAnalyzerPlugin;
 
 module.exports = {
 	mode: 'production',
@@ -25,13 +27,10 @@ module.exports = {
 		],
 	}, //end module
 
-	plugins: [
-		//remove localization from moment.js (significantly reduces vendor.js)
-		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-	],
+	plugins: [new BundleAnalyzerPlugin()],
 
 	optimization: {
-		//break out vendor module to seperate folder
+		//break out vendor module to separate folder
 		splitChunks: {
 			cacheGroups: {
 				commons: {
