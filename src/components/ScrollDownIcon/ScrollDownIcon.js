@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 /** @function
  * @name ScrollDownIcon
@@ -13,7 +13,17 @@ const ScrollDownIcon = () => (
 	</ScrollDownAnimation>
 );
 
-/* istanbul ignore next*/
+const scrollAnimation = keyframes`
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(46px);
+		transform: translateY(46px);
+	}
+`;
+
 const ScrollDownAnimation = styled.div`
 	width: 40px;
 	height: 70px;
@@ -45,27 +55,7 @@ const ScrollDownAnimation = styled.div`
 		-webkit-animation-iteration-count: infinite;
 		animation-iteration-count: infinite;
 		-webkit-animation-name: scroll;
-		animation-name: scroll;
-	}
-	@-webkit-keyframes scroll {
-		0% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0;
-			-webkit-transform: translateY(46px);
-			transform: translateY(46px);
-		}
-	}
-	@keyframes scroll {
-		0% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0;
-			-webkit-transform: translateY(46px);
-			transform: translateY(46px);
-		}
+		animation-name: ${scrollAnimation};
 	}
 
 	p {
