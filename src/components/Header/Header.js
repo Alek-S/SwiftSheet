@@ -1,67 +1,58 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
 import { Link, NavLink } from 'react-router-dom';
 
-/** @class
+/**
+ * @function
  * @name Header
  * Top header element of page - always viewable
  *
  * @returns {JSX}
  */
-export default class Header extends Component {
-	constructor(props) {
-		super(props);
+const Header = props => {
+	const [headerSize, setHeaderSize] = useState('large');
 
-		this.state = {
-			headerSize: 'large',
+	useEffect(() => {
+		window.addEventListener('scroll', _handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', _handleScroll);
 		};
-	}
-	componentDidMount() {
-		window.addEventListener('scroll', this.handleScroll);
-	}
+	});
 
 	/**
-	 * Updates this.state.headerSize depending on how far
-	 * scrolled from top
-	 * @param {Object} Event
-	 * @param {Number} scroll top override value otherwise based on document's scrollTop
+	 * @function
+	 * Updates headerSize state
+	 * depending on how far scrolled from top
 	 */
-	handleScroll = (e, scrollTop = document.documentElement.scrollTop) => {
-		//distance from top in px at which to resize header
-		const resize = 50;
+	const _handleScroll = () => {
+		const scrollTop = document.documentElement.scrollTop;
+		const resize = 50; //distance from top in px at which to resize header
 
-		if (scrollTop > resize && this.state.headerSize !== 'small') {
-			this.setState({
-				headerSize: 'small',
-			});
-		} else if (scrollTop <= resize && this.state.headerSize !== 'large') {
-			this.setState({
-				headerSize: 'large',
-			});
+		if (scrollTop > resize && headerSize !== 'small') {
+			setHeaderSize('small');
+		} else if (scrollTop <= resize && headerSize !== 'large') {
+			setHeaderSize('large');
 		}
 	};
 
-	render() {
-		const { headerSize } = this.state;
+	return (
+		<Nav className={headerSize}>
+			<Link to="/">
+				<img src="./assets/images/logo.svg" alt="logo" /> <h1>SwiftSheet</h1>
+			</Link>
+			<Tagline className="tagline">
+				<h2>Fast and ephemeral data sharing.</h2>
+			</Tagline>
 
-		return (
-			<Nav className={headerSize}>
-				<Link to="/">
-					<img src="./assets/images/logo.svg" alt="logo" /> <h1>SwiftSheet</h1>
-				</Link>
-				<Tagline className="tagline">
-					<h2>Fast and ephemeral data sharing.</h2>
-				</Tagline>
-
-				<NavSection className={headerSize}>
-					<StyledNavLink to="/upload">Upload</StyledNavLink>
-					<StyledNavLink to="/view">View</StyledNavLink>
-				</NavSection>
-			</Nav>
-		);
-	}
-}
+			<NavSection className={headerSize}>
+				<StyledNavLink to="/upload">Upload</StyledNavLink>
+				<StyledNavLink to="/view">View</StyledNavLink>
+			</NavSection>
+		</Nav>
+	);
+};
 
 const Nav = styled(defaultStyle)`
 	position: fixed;
@@ -147,3 +138,5 @@ const Tagline = styled.div`
 	padding: 0.75rem 2rem;
 	border-left: solid 1px ${props => props.theme.color.border};
 `;
+
+export default Header;

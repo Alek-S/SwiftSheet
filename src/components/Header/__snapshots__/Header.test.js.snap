@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches the snapshot 1`] = `
+.c1 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
+}
+
 .c0 {
   position: fixed;
   border-bottom: solid 1px #d9d9d9;
@@ -59,42 +66,181 @@ exports[`Header matches the snapshot 1`] = `
   display: none;
 }
 
-<defaultStyle
-  className="large c0"
->
-  <Link
-    replace={false}
-    to="/"
+.c3 {
+  position: absolute;
+  top: 1.75rem;
+  right: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c3.small {
+  top: 0.6rem;
+}
+
+.c3.small * {
+  font-size: 1rem;
+}
+
+.c4 {
+  font-size: 1.25rem;
+  color: #404040;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-left: solid 1px #d9d9d9;
+}
+
+.c4.active {
+  font-weight: 500;
+  color: #ED5050;
+}
+
+.c2 {
+  color: #848484;
+  position: absolute;
+  display: inline-block;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-left: solid 1px #d9d9d9;
+}
+
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
   >
-    <img
-      alt="logo"
-      src="./assets/images/logo.svg"
-    />
-     
-    <h1>
-      SwiftSheet
-    </h1>
-  </Link>
-  <Header__Tagline
-    className="tagline"
-  >
-    <h2>
-      Fast and ephemeral data sharing.
-    </h2>
-  </Header__Tagline>
-  <Header__NavSection
-    className="large"
-  >
-    <Header__StyledNavLink
-      to="/upload"
-    >
-      Upload
-    </Header__StyledNavLink>
-    <Header__StyledNavLink
-      to="/view"
-    >
-      View
-    </Header__StyledNavLink>
-  </Header__NavSection>
-</defaultStyle>
+    <Header>
+      <Header__Nav
+        className="large"
+      >
+        <defaultStyle
+          className="large c0"
+        >
+          <div
+            className="large c0 c1"
+          >
+            <Link
+              replace={false}
+              to="/"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                <img
+                  alt="logo"
+                  src="./assets/images/logo.svg"
+                />
+                 
+                <h1>
+                  SwiftSheet
+                </h1>
+              </a>
+            </Link>
+            <Header__Tagline
+              className="tagline"
+            >
+              <div
+                className="tagline c2"
+              >
+                <h2>
+                  Fast and ephemeral data sharing.
+                </h2>
+              </div>
+            </Header__Tagline>
+            <Header__NavSection
+              className="large"
+            >
+              <ul
+                className="large c3"
+              >
+                <Header__StyledNavLink
+                  to="/upload"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="c4"
+                    to="/upload"
+                  >
+                    <Route
+                      path="\\\\/upload"
+                    >
+                      <Link
+                        aria-current={null}
+                        className="c4"
+                        replace={false}
+                        to="/upload"
+                      >
+                        <a
+                          aria-current={null}
+                          className="c4"
+                          href="/upload"
+                          onClick={[Function]}
+                        >
+                          Upload
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </Header__StyledNavLink>
+                <Header__StyledNavLink
+                  to="/view"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="c4"
+                    to="/view"
+                  >
+                    <Route
+                      path="\\\\/view"
+                    >
+                      <Link
+                        aria-current={null}
+                        className="c4"
+                        replace={false}
+                        to="/view"
+                      >
+                        <a
+                          aria-current={null}
+                          className="c4"
+                          href="/view"
+                          onClick={[Function]}
+                        >
+                          View
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                </Header__StyledNavLink>
+              </ul>
+            </Header__NavSection>
+          </div>
+        </defaultStyle>
+      </Header__Nav>
+    </Header>
+  </Router>
+</BrowserRouter>
 `;

@@ -5,6 +5,7 @@
 	"main": "server.js",
 	"scripts": {
 		"test": "jest",
+		"test:watch": "jest --watch",
 		"build": "webpack --progress --config ./webpack.prod.js",
 		"watch": "webpack --config ./webpack.dev.js -w",
 		"precommit": "lint-staged && npm run test",
@@ -65,6 +66,7 @@
 		"codecov": "^3.0.4",
 		"enzyme": "^3.4.1",
 		"enzyme-adapter-react-16": "^1.9.1",
+		"eslint-plugin-react-hooks": "^1.0.1",
 		"husky": "^0.14.3",
 		"jest": "^23.5.0",
 		"jest-styled-components": "^6.0.1",
@@ -72,6 +74,7 @@
 		"nodemon": "^1.18.10",
 		"prettier": "^1.16.4",
 		"react-test-renderer": "^16.8.1",
+		"react-testing-library": "^5.6.1",
 		"redux-devtools-extension": "^2.13.8",
 		"supertest": "^3.4.2",
 		"uglifyjs-webpack-plugin": "^1.2.7",
