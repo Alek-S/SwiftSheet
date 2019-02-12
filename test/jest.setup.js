@@ -27,4 +27,5 @@ global.mountWithTheme = (tree, theme) => {
 };
 
 global.shallow = shallow;
+global.mount = mount;
 global.toJson = toJson;

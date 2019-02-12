@@ -1,10 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import { render, fireEvent, testHook } from 'react-testing-library';
-import renderer from 'react-test-renderer';
-import 'jest-styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
 
 import Header from './Header';
 import theme from '../../theme';
