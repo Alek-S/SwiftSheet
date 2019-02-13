@@ -1,71 +1,58 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
 
-class UploadPage extends Component {
-	constructor() {
-		super();
-		this.state = {
-			expireIn: 72,
-			header: false,
-			disableSubmit: false,
-		};
-	}
+const UploadPage = () => {
+	const [expireIn, setExpireIn] = useState(72);
+	const [header, setHeader] = useState(false);
+	const [disableSubmit, setDisableSubmit] = useState(false);
 
-	handleChange = e => {
+	const _handleChange = e => {
 		e.preventDefault();
-		this.setState({ value: e.target.value });
+		setExpireIn(e.target.value);
 	};
 
-	toggleHeader = e => {
+	const _toggleHeader = e => {
 		e.preventDefault();
-		this.setState(prevState => ({
-			header: !prevState.header,
-		}));
+		setHeader(!header);
 	};
 
-	handleSubmit = e => {
+	const _handleSubmit = e => {
 		e.preventDefault();
-		console.log('hours until expire: ' + this.state.expireIn);
+		console.log('hours until expire: ' + expireIn);
 	};
 
-	render() {
-		const { header, disableSubmit } = this.state;
-
-		return (
-			<StyledDiv>
-				<Filedrop />
-				<StyledForm disableSubmit={disableSubmit}>
-					<Options>
-						<label>
-							Expires In:
-							<select value={this.state.expireIn} onChange={this.handleChange}>
-								<option value={4}>4 Hours</option>
-								<option value={8}>8 Hours</option>
-								<option value={24}>1 Day</option>
-								<option value={72}>3 Days</option>
-								<option value={120}>5 Days</option>
-							</select>
-						</label>
-						<HeaderToggle active={header}>
-							<span>First Row Header:</span>
-							<button onClick={this.toggleHeader}>
-								{header ? 'Yes' : 'No'}
-							</button>
-						</HeaderToggle>
-					</Options>
-					<input
-						type="submit"
-						onClick={this.handleSubmit}
-						value="Upload File"
-						disabled={disableSubmit}
-					/>
-				</StyledForm>
-			</StyledDiv>
-		);
-	}
-}
+	return (
+		<StyledDiv>
+			<Filedrop />
+			<StyledForm disableSubmit={disableSubmit}>
+				<Options>
+					<label>
+						Expires In:
+						<select value={expireIn} onChange={_handleChange}>
+							<option value={4}>4 Hours</option>
+							<option value={8}>8 Hours</option>
+							<option value={24}>1 Day</option>
+							<option value={72}>3 Days</option>
+							<option value={120}>5 Days</option>
+						</select>
+					</label>
+					<HeaderToggle active={header}>
+						<span>First Row Header:</span>
+						<button onClick={_toggleHeader}>{header ? 'Yes' : 'No'}</button>
+					</HeaderToggle>
+				</Options>
+				<input
+					type="submit"
+					onClick={_handleSubmit}
+					value="Upload File"
+					disabled={disableSubmit}
+				/>
+			</StyledForm>
+		</StyledDiv>
+	);
+};
 
 const StyledDiv = styled(defaultStyle)`
 	background-color: ${props => props.theme.color.background};
