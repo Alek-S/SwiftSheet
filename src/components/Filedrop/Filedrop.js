@@ -1,25 +1,19 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Dropzone from 'react-dropzone';
 import Papa from 'papaparse';
 import defaultStyle from '../../defaultStyle';
 
-/** @class
- * @name Filedrop
+/**
+ * @function
  * Area for drag & drop file uploads of csv
- *
- * @returns {JSX}
+ * @returns {jsx} <Filedrop />
  */
-export default class Filedrop extends Component {
-	constructor() {
-		super();
-		this.state = {
-			fileData: [],
-			dragging: false,
-		};
-	}
+const Filedrop = () => {
+	const [filedata, setFileData] = useState([]);
+	const [dragging, setDragging] = useState(false);
 
-	onDrop = (file, rejectedFile) => {
+	const onDrop = (file, rejectedFile) => {
 		if (
 			file[0] &&
 			file[0].name &&
@@ -29,7 +23,7 @@ export default class Filedrop extends Component {
 				header: false,
 				download: true,
 				skipEmptyLines: false,
-				complete: this.handleJSONData,
+				complete: handleJSONData,
 			});
 		} else {
 			// TODO handle Error on UI
@@ -39,49 +33,41 @@ export default class Filedrop extends Component {
 		}
 	};
 
-	handleJSONData = result => {
+	const handleJSONData = result => {
 		console.log(result.data);
-		this.setState({ fileData: result.data });
+		setFileData(result.data);
 	};
 
-	onDragEnter = () => this.setState({ dragging: true });
-
-	onDragLeave = () => this.setState({ dragging: false });
-
-	render() {
-		const { dragging } = this.state;
-
-		return (
-			<section>
-				<StyledDropzone
-					onDrop={this.onDrop}
-					accept="text/csv"
-					maxSize={5000000}
-					minSize={1}
-					multiple={false}
-					dragging={dragging}
-					onDragEnter={this.onDragEnter}
-					onDragLeave={this.onDragLeave}
-				>
-					{dragging ? (
-						<img
-							src="./assets/images/upload-cloud-darkBlue.svg"
-							alt="upload-cloud-logo"
-						/>
-					) : (
-						<img
-							src="./assets/images/upload-cloud-light.svg"
-							alt="upload-cloud-logo"
-						/>
-					)}
-					<StyledText dragging={dragging}>
-						{dragging ? 'Drop' : 'Drag'} CSV file here
-					</StyledText>
-				</StyledDropzone>
-			</section>
-		);
-	}
-}
+	return (
+		<section>
+			<StyledDropzone
+				onDrop={onDrop}
+				accept="text/csv"
+				maxSize={5000000}
+				minSize={1}
+				multiple={false}
+				dragging={dragging}
+				onDragEnter={() => setDragging(true)}
+				onDragLeave={() => setDragging(false)}
+			>
+				{dragging ? (
+					<img
+						src="./assets/images/upload-cloud-darkBlue.svg"
+						alt="upload-cloud-logo"
+					/>
+				) : (
+					<img
+						src="./assets/images/upload-cloud-light.svg"
+						alt="upload-cloud-logo"
+					/>
+				)}
+				<StyledText dragging={dragging}>
+					{dragging ? 'Drop' : 'Drag'} CSV file here
+				</StyledText>
+			</StyledDropzone>
+		</section>
+	);
+};
 
 const StyledDropzone = styled(Dropzone)`
 	background-color: ${props =>
@@ -110,3 +96,5 @@ const StyledText = styled(defaultStyle)`
 	text-align: center;
 	background-color: transparent;
 `;
+
+export default Filedrop;

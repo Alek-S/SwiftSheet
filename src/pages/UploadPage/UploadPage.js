@@ -3,21 +3,41 @@ import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
 
+/**
+ * @function
+ * Page to upload file and set upload settings
+ * @returns {JSX} <UploadPage />
+ */
 const UploadPage = () => {
 	const [expireIn, setExpireIn] = useState(72);
 	const [header, setHeader] = useState(false);
 	const [disableSubmit, setDisableSubmit] = useState(false);
 
+	/**
+	 * @function
+	 * Set expireIn state, in Hrs
+	 * @param {object} e - dom event
+	 */
 	const _handleChange = e => {
 		e.preventDefault();
 		setExpireIn(e.target.value);
 	};
 
+	/**
+	 * @function
+	 * Toggle first row of CSV header boolean
+	 * @param {object} e - dom event
+	 */
 	const _toggleHeader = e => {
 		e.preventDefault();
 		setHeader(!header);
 	};
 
+	/**
+	 * @function
+	 * Submit file to upload to back end
+	 * @param {object} e - dom event
+	 */
 	const _handleSubmit = e => {
 		e.preventDefault();
 		console.log('hours until expire: ' + expireIn);
