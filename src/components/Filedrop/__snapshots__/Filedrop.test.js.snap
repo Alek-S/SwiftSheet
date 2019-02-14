@@ -1,27 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Filedrop matches the snapshot 1`] = `
-<section>
-  <Filedrop__StyledDropzone
-    accept="text/csv"
-    dragging={false}
-    maxSize={5000000}
-    minSize={1}
-    multiple={false}
-    onDragEnter={[Function]}
-    onDragLeave={[Function]}
-    onDrop={[Function]}
-  >
-    <img
-      alt="upload-cloud-logo"
-      src="./assets/images/upload-cloud-light.svg"
-    />
-    <Filedrop__StyledText
+<Filedrop>
+  <section>
+    <Filedrop__StyledDropzone
+      accept="text/csv"
       dragging={false}
+      maxSize={5000000}
+      minSize={1}
+      multiple={false}
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDrop={[Function]}
     >
-      Drag
-       CSV file here
-    </Filedrop__StyledText>
-  </Filedrop__StyledDropzone>
-</section>
+      <t
+        accept="text/csv"
+        className="Filedrop__StyledDropzone-zvfrty-0 byxFEd"
+        disableClick={false}
+        disablePreview={false}
+        disabled={false}
+        dragging={false}
+        getDataTransferItems={[Function]}
+        inputProps={Object {}}
+        maxSize={5000000}
+        minSize={1}
+        multiple={false}
+        onDragEnter={[Function]}
+        onDragLeave={[Function]}
+        onDrop={[Function]}
+        preventDropOnDocument={true}
+      >
+        <div
+          aria-disabled={false}
+          className="Filedrop__StyledDropzone-zvfrty-0 byxFEd"
+          dragging={false}
+          onClick={[Function]}
+          onDragEnter={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <img
+            alt="upload-cloud-logo"
+            src="./assets/images/upload-cloud-light.svg"
+          />
+          <Filedrop__StyledText
+            dragging={false}
+          >
+            <defaultStyle
+              className="Filedrop__StyledText-zvfrty-1 blmkpl"
+              dragging={false}
+            >
+              <div
+                className="Filedrop__StyledText-zvfrty-1 blmkpl defaultStyle-sc-1afhot-0 iywwUC"
+              >
+                Drag
+                 CSV file here
+              </div>
+            </defaultStyle>
+          </Filedrop__StyledText>
+          <input
+            accept="text/csv"
+            autoComplete="off"
+            disabled={false}
+            multiple={false}
+            onChange={[Function]}
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "opacity": 0.00001,
+                "pointerEvents": "none",
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+            type="file"
+          />
+        </div>
+      </t>
+    </Filedrop__StyledDropzone>
+  </section>
+</Filedrop>
 `;

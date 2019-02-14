@@ -7,7 +7,7 @@ import theme from '../../theme';
 
 describe('FrontPage', () => {
 	it('matches the snapshot', () => {
-		const tree = shallowWithTheme(<FrontPage />, theme);
-		expect(toJson(tree)).toMatchSnapshot();
+		const tree = mountWithTheme(<FrontPage />, theme);
+		expect(tree).toMatchSnapshot();
 	});
 });
