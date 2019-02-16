@@ -6,8 +6,8 @@ import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
 const UPLOAD_SHEET = gql`
-	mutation UPLOAD_SHEET($sheetData: JSON!) {
-		createSheet(sheetData: $sheetData) {
+	mutation UPLOAD_SHEET($sheetData: JSON!, $expireIn: Int!) {
+		createSheet(sheetData: $sheetData, expireIn: $expireIn) {
 			_id
 		}
 	}
@@ -31,6 +31,7 @@ const UploadPage = () => {
 	 */
 	const _handleChange = e => {
 		e.preventDefault();
+		console.log(e.target.value);
 		setExpireIn(e.target.value);
 	};
 
@@ -81,8 +82,9 @@ const UploadPage = () => {
 							type="submit"
 							onClick={e => {
 								e.preventDefault();
+								console.log('expire', expireIn);
 								uploadSheet({
-									variables: { sheetData },
+									variables: { sheetData, expireIn: parseInt(expireIn) },
 								});
 							}}
 							value="Upload File"

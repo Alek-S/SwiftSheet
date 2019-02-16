@@ -2,6 +2,7 @@ const {
 	GraphQLSchema,
 	GraphQLObjectType,
 	GraphQLID,
+	GraphQLInt,
 	GraphQLBoolean,
 	GraphQLString,
 	GraphQLList,
@@ -30,7 +31,7 @@ const sheetType = new GraphQLObjectType({
 		},
 		expireAt: {
 			type: GraphQLDateTime,
-			description: ' DateTime record will expire at',
+			description: 'Date Time Sheet will expire at',
 		},
 		createdAt: {
 			type: GraphQLDateTime,
@@ -82,9 +83,9 @@ const mutation = new GraphQLObjectType({
 					description: 'Spreadsheet data as JSON',
 					type: new GraphQLNonNull(GraphQLJSON),
 				},
-				expireAt: {
-					description: 'DateTime that sheet should expire',
-					type: GraphQLDateTime,
+				expireIn: {
+					description: 'How many hours to expire in',
+					type: GraphQLInt,
 				},
 				password: {
 					description: 'Optional password for requesting sheet',

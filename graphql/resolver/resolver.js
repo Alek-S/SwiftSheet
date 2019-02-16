@@ -1,6 +1,7 @@
 const SwiftSheet = require('../../model/swiftsheetDB');
 const mongoose = require('mongoose');
 const addDays = require('date-fns/add_days');
+const addHours = require('date-fns/add_hours');
 const bcrypt = require('bcrypt');
 
 /**
@@ -46,8 +47,11 @@ const getSheets = async () => {
  */
 const createSheet = async (_root, args) => {
 	const { password, sheetData } = args;
+
 	// if no expireAt provided, default to three days
-	const expireAt = args.expireAt || addDays(new Date(), 3);
+	const expireAt = args.expireIn
+		? addHours(new Date(), args.expireIn)
+		: addDays(new Date(), 3);
 
 	if (password) {
 		if (password.length < 6) {
