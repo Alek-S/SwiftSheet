@@ -4,6 +4,7 @@ import defaultStyle from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
+import { Redirect } from 'react-router-dom';
 
 const UPLOAD_SHEET = gql`
 	mutation UPLOAD_SHEET($sheetData: JSON!, $expireIn: Int!) {
@@ -23,6 +24,7 @@ const UploadPage = () => {
 	const [header, setHeader] = useState(true);
 	const [disableSubmit, setDisableSubmit] = useState(true);
 	const [sheetData, setSheetData] = useState();
+	const [redirect, setRedirect] = useState(false);
 
 	/**
 	 * @function
@@ -56,6 +58,18 @@ const UploadPage = () => {
 		setDisableSubmit(false);
 	};
 
+	const onCompleted = data => {
+		const id = data.createSheet._id;
+		setRedirect(true);
+	};
+
+	const renderRedirect = data => {
+		const id = data && data.createSheet._id;
+		if (redirect) {
+			return <Redirect to={`/${id}`} />;
+		}
+	};
+
 	return (
 		<StyledDiv>
 			<Filedrop firstRowHeader={header} handleJSONData={handleJSONData} />
@@ -76,20 +90,23 @@ const UploadPage = () => {
 						<button onClick={_toggleHeader}>{header ? 'Yes' : 'No'}</button>
 					</HeaderToggle>
 				</Options>
-				<Mutation mutation={UPLOAD_SHEET}>
+				<Mutation mutation={UPLOAD_SHEET} onCompleted={onCompleted}>
 					{(uploadSheet, { loading, error, data }) => (
-						<input
-							type="submit"
-							onClick={e => {
-								e.preventDefault();
-								console.log('expire', expireIn);
-								uploadSheet({
-									variables: { sheetData, expireIn: parseInt(expireIn) },
-								});
-							}}
-							value="Upload File"
-							disabled={disableSubmit}
-						/>
+						<div>
+							{renderRedirect(data)}
+							<input
+								type="submit"
+								onClick={e => {
+									e.preventDefault();
+									console.log('expire', expireIn);
+									uploadSheet({
+										variables: { sheetData, expireIn: parseInt(expireIn) },
+									});
+								}}
+								value="Upload File"
+								disabled={disableSubmit}
+							/>
+						</div>
 					)}
 				</Mutation>
 			</StyledForm>
@@ -180,4 +197,5 @@ const Options = styled.div`
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 `;
+
 export default UploadPage;

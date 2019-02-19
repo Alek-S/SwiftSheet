@@ -28,8 +28,8 @@ const SheetPage = ({ match }) => {
 				return (
 					<StyledDiv>
 						<ExpireDiv>
-							Sheet Expires at:{' '}
-							{format(expireAt, 'MMM DD, YYYY  @  H:mm  (Z [GMT])')}
+							Sheet Expires on:{' '}
+							{format(expireAt, 'MMM DD, YYYY  @  H:mm aa  (Z [GMT])')}
 						</ExpireDiv>
 						<Table data={sheetData} />
 					</StyledDiv>
