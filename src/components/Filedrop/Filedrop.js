@@ -7,10 +7,10 @@ import defaultStyle from '../../defaultStyle';
 /**
  * @function
  * Area for drag & drop file uploads of csv
+ * @param {bool} - props.firstRowHeader - is first row a header
  * @returns {jsx} <Filedrop />
  */
-const Filedrop = () => {
-	const [filedata, setFileData] = useState([]);
+const Filedrop = ({ firstRowHeader, handleJSONData }) => {
 	const [dragging, setDragging] = useState(false);
 
 	const onDrop = (file, rejectedFile) => {
@@ -20,7 +20,7 @@ const Filedrop = () => {
 			file[0].name.indexOf('.csv') + 4 === file[0].name.length
 		) {
 			Papa.parse(file[0], {
-				header: false,
+				header: firstRowHeader,
 				download: true,
 				skipEmptyLines: false,
 				complete: handleJSONData,
@@ -31,11 +31,6 @@ const Filedrop = () => {
 				`file rejected!: \n ${rejectedFile[0].name}\n ${rejectedFile[0].type}`
 			);
 		}
-	};
-
-	const handleJSONData = result => {
-		console.log(result.data);
-		setFileData(result.data);
 	};
 
 	return (
