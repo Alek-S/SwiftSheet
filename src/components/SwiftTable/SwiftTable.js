@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Column, Table } from 'react-virtualized';
+import { Column, Table, AutoSizer } from 'react-virtualized';
 import DefaultStyle from './StyledTable';
 
 const list = [
@@ -16,25 +16,37 @@ const SwiftTable = ({ data }) => {
 	const getColumn = () => {
 		const columnsArr = Object.keys(data[0]);
 
-		return columnsArr.map(column => {
-			<Column width={200} label={column} dataKey={column} />;
-		});
+		return columnsArr.map(column => (
+			<Column
+				width={200}
+				label={column}
+				dataKey={column}
+				style={
+					{
+						// backgroundColor: 'white',
+					}
+				}
+				width={850}
+			/>
+		));
 	};
 
 	return (
 		<Styledtable>
-			<Table
-				width={800}
-				height={300}
-				headerHeight={20}
-				rowHeight={50}
-				rowCount={data.length}
-				rowGetter={({ index }) => data[index]}
-			>
-				{Object.keys(data[0]).map(column => (
-					<Column width={200} label={column} dataKey={column} />
-				))}
-			</Table>
+			<AutoSizer disableHeight>
+				{({ width }) => (
+					<Table
+						width={width}
+						height={300}
+						headerHeight={40}
+						rowHeight={50}
+						rowCount={data.length}
+						rowGetter={({ index }) => data[index]}
+					>
+						{getColumn()}
+					</Table>
+				)}
+			</AutoSizer>
 		</Styledtable>
 	);
 };
@@ -44,14 +56,19 @@ SwiftTable.propTypes = {
 };
 
 const Styledtable = styled(DefaultStyle)`
-	width: 80%;
-	margin: auto;
-	margin-top: 3rem;
-	border: 2px solid green;
+	margin: 3rem;
+	border: 1px solid ${props => props.theme.color.border};
+	border-radius: 7px;
+	overflow: hidden;
 	background-color: white;
 
-	* .ReactVirtualized__Table__rowColumn {
+	.ReactVirtualized__Table__rowColumn {
 		height: 25px;
+	}
+
+	.ReactVirtualized__Table__headerRow {
+		background-color: ${props => props.theme.color.blue};
+		/* border-radius: 7px; */
 	}
 `;
 
