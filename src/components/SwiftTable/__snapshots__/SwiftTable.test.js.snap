@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SwiftTable /> matches the snapshot 1`] = `
+<SwiftTable__Styledtable>
+  <Table
+    disableHeader={false}
+    estimatedRowSize={30}
+    headerHeight={20}
+    headerRowRenderer={[Function]}
+    headerStyle={Object {}}
+    height={300}
+    noRowsRenderer={[Function]}
+    onRowsRendered={[Function]}
+    onScroll={[Function]}
+    overscanIndicesGetter={[Function]}
+    overscanRowCount={10}
+    rowCount={6}
+    rowGetter={[Function]}
+    rowHeight={50}
+    rowRenderer={[Function]}
+    rowStyle={Object {}}
+    scrollToAlignment="auto"
+    scrollToIndex={-1}
+    style={Object {}}
+    width={800}
+  >
+    <Column
+      cellDataGetter={[Function]}
+      cellRenderer={[Function]}
+      dataKey="First Name"
+      defaultSortDirection="ASC"
+      flexGrow={0}
+      flexShrink={1}
+      headerRenderer={[Function]}
+      label="First Name"
+      style={Object {}}
+      width={200}
+    />
+    <Column
+      cellDataGetter={[Function]}
+      cellRenderer={[Function]}
+      dataKey="Last Name"
+      defaultSortDirection="ASC"
+      flexGrow={0}
+      flexShrink={1}
+      headerRenderer={[Function]}
+      label="Last Name"
+      style={Object {}}
+      width={200}
+    />
+    <Column
+      cellDataGetter={[Function]}
+      cellRenderer={[Function]}
+      dataKey="Address"
+      defaultSortDirection="ASC"
+      flexGrow={0}
+      flexShrink={1}
+      headerRenderer={[Function]}
+      label="Address"
+      style={Object {}}
+      width={200}
+    />
+    <Column
+      cellDataGetter={[Function]}
+      cellRenderer={[Function]}
+      dataKey="City"
+      defaultSortDirection="ASC"
+      flexGrow={0}
+      flexShrink={1}
+      headerRenderer={[Function]}
+      label="City"
+      style={Object {}}
+      width={200}
+    />
+    <Column
+      cellDataGetter={[Function]}
+      cellRenderer={[Function]}
+      dataKey="State"
+      defaultSortDirection="ASC"
+      flexGrow={0}
+      flexShrink={1}
+      headerRenderer={[Function]}
+      label="State"
+      style={Object {}}
+      width={200}
+    />
+    <Column
+      cellDataGetter={[Function]}
+      cellRenderer={[Function]}
+      dataKey="Zip"
+      defaultSortDirection="ASC"
+      flexGrow={0}
+      flexShrink={1}
+      headerRenderer={[Function]}
+      label="Zip"
+      style={Object {}}
+      width={200}
+    />
+  </Table>
+</SwiftTable__Styledtable>
+`;

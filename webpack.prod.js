@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin;
@@ -24,10 +25,28 @@ module.exports = {
 					loader: 'babel-loader',
 				},
 			},
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: MiniCssExtractPlugin.loader,
+						options: {
+							publicPath: '../',
+						},
+					},
+					'css-loader',
+				],
+			},
 		],
 	}, //end module
 
-	plugins: [new BundleAnalyzerPlugin()],
+	plugins: [
+		new BundleAnalyzerPlugin(),
+		new MiniCssExtractPlugin({
+			filename: '[name].css',
+			chunkFilename: '[id].css',
+		}),
+	],
 
 	optimization: {
 		//break out vendor module to separate folder

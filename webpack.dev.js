@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -21,6 +22,18 @@ module.exports = {
 					loader: 'babel-loader',
 				},
 			},
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: MiniCssExtractPlugin.loader,
+						options: {
+							publicPath: '../',
+						},
+					},
+					'css-loader',
+				],
+			},
 		],
 	},
 
@@ -29,7 +42,13 @@ module.exports = {
 		hot: true,
 	},
 
-	plugins: [new webpack.HotModuleReplacementPlugin()],
+	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
+		new MiniCssExtractPlugin({
+			filename: '[name].css',
+			chunkFilename: '[id].css',
+		}),
+	],
 
 	optimization: {
 		//break out vendor module to seperate folder

@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import defaultStyle from '../../defaultStyle';
 import format from 'date-fns/format';
-import Table from '../../components/Table/Table';
+import SwiftTable from '../../components/SwiftTable/SwiftTable';
 
 const GET_SHEET = gql`
 	query GET_SHEET($sheetId: ID!) {
@@ -31,7 +31,7 @@ const SheetPage = ({ match }) => {
 							Sheet Expires on:{' '}
 							{format(expireAt, 'MMM DD, YYYY  @  H:mm aa  (Z [GMT])')}
 						</ExpireDiv>
-						<Table data={sheetData} />
+						<SwiftTable data={sheetData} />
 					</StyledDiv>
 				);
 			}}
@@ -40,7 +40,9 @@ const SheetPage = ({ match }) => {
 };
 
 const StyledDiv = styled(defaultStyle)`
+	background-color: ${props => props.theme.color.background};
 	padding-top: 7rem;
+	height: calc(100vh - 100px);
 `;
 
 const ExpireDiv = styled.div`
