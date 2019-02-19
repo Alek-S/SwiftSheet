@@ -33,7 +33,6 @@ const UploadPage = () => {
 	 */
 	const _handleChange = e => {
 		e.preventDefault();
-		console.log(e.target.value);
 		setExpireIn(e.target.value);
 	};
 
@@ -53,7 +52,6 @@ const UploadPage = () => {
 	 * @param {object} response - converted data from FileDrop
 	 */
 	const handleJSONData = response => {
-		console.log(response.data);
 		setSheetData(response.data);
 		setDisableSubmit(false);
 	};
@@ -98,7 +96,6 @@ const UploadPage = () => {
 								type="submit"
 								onClick={e => {
 									e.preventDefault();
-									console.log('expire', expireIn);
 									uploadSheet({
 										variables: { sheetData, expireIn: parseInt(expireIn) },
 									});
