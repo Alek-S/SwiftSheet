@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SwiftTable /> matches the snapshot 1`] = `
-<SwiftTable__Styledtable>
+exports[`<HeadlessTable /> matches the snapshot 1`] = `
+<HeadlessTable__Styledtable>
   <AutoSizer
     disableHeight={true}
     disableWidth={false}
@@ -10,5 +10,5 @@ exports[`<SwiftTable /> matches the snapshot 1`] = `
   >
     <Component />
   </AutoSizer>
-</SwiftTable__Styledtable>
+</HeadlessTable__Styledtable>
 `;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
+import Grid from 'react-virtualized/dist/commonjs/Grid';
 import styled from 'styled-components';
-import { Column, Table, AutoSizer } from 'react-virtualized';
 import DefaultStyle from './StyledTable';
 
 const list = [
@@ -10,50 +11,49 @@ const list = [
 	// And so on...
 ];
 
-const SwiftTable = ({ data }) => {
+const HeadlessTable = ({ data }) => {
 	console.log('SwiftTable', data);
 
-	const getColumn = () => {
-		const columnsArr = Object.keys(data[0]);
-
-		return columnsArr.map(column => (
-			<Column
-				width={200}
-				label={column}
-				dataKey={column}
-				style={
-					{
-						// backgroundColor: 'white',
-					}
-				}
-				width={850}
-			/>
-		));
+	const _cellRenderer = ({ columnIndex, key, rowIndex, style }) => {
+		return (
+			<StyledCell key={key} style={style} columnIndex={columnIndex}>
+				{data[rowIndex][columnIndex]}
+			</StyledCell>
+		);
 	};
 
 	return (
 		<Styledtable>
 			<AutoSizer disableHeight>
 				{({ width }) => (
-					<Table
+					<Grid
+						cellRenderer={_cellRenderer}
 						width={width}
 						height={300}
 						headerHeight={40}
 						rowHeight={50}
 						rowCount={data.length}
-						rowGetter={({ index }) => data[index]}
-					>
-						{getColumn()}
-					</Table>
+						columnCount={data[0].length}
+						columnWidth={175}
+					/>
 				)}
 			</AutoSizer>
 		</Styledtable>
 	);
 };
 
-SwiftTable.propTypes = {
+HeadlessTable.propTypes = {
 	data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
+
+const StyledCell = styled.div`
+	display: flex;
+	align-items: center;
+	padding-left: 0.5rem;
+	border-bottom: 1px solid ${props => props.theme.color.border};
+	border-left: ${props =>
+		props.columnIndex !== 0 ? `1px solid ${props.theme.color.border}` : 'none'};
+`;
 
 const Styledtable = styled(DefaultStyle)`
 	margin: 3rem;
@@ -72,4 +72,4 @@ const Styledtable = styled(DefaultStyle)`
 	}
 `;
 
-export default SwiftTable;
+export default HeadlessTable;

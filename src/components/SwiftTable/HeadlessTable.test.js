@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 
-import SwiftTable from './SwiftTable';
+import HeadlessTable from './HeadlessTable';
 import theme from '../../theme';
 
 const match = {
@@ -58,9 +58,9 @@ const data = [
 	},
 ];
 
-describe('<SwiftTable />', () => {
+describe('<HeadlessTable />', () => {
 	it('matches the snapshot', () => {
-		const tree = shallowWithTheme(<SwiftTable data={data} />, theme);
+		const tree = shallowWithTheme(<HeadlessTable data={data} />, theme);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });
