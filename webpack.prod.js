@@ -1,5 +1,7 @@
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin;
 
@@ -24,16 +26,33 @@ module.exports = {
 					loader: 'babel-loader',
 				},
 			},
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: MiniCssExtractPlugin.loader,
+						options: {
+							publicPath: '../',
+						},
+					},
+					'css-loader',
+				],
+			},
 		],
 	}, //end module
 
-	plugins: [new BundleAnalyzerPlugin()],
+	plugins: [
+		new BundleAnalyzerPlugin(),
+		new MiniCssExtractPlugin({
+			filename: 'assets/css/[name].css',
+		}),
+	],
 
 	optimization: {
 		//break out vendor module to separate folder
 		splitChunks: {
 			cacheGroups: {
-				commons: {
+				vendor: {
 					test: /[\\/]node_modules[\\/]/,
 					name: 'vendor',
 					chunks: 'initial',
@@ -42,13 +61,16 @@ module.exports = {
 		},
 		minimizer: [
 			new UglifyWebpackPlugin({
-				//no console.log
 				uglifyOptions: {
 					compress: {
 						drop_console: true,
 					},
+					output: {
+						comments: false,
+					},
 				},
 			}),
+			new OptimizeCSSAssetsPlugin({}),
 		],
 	},
 };

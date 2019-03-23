@@ -20,7 +20,9 @@ export default function Footer() {
 }
 
 const Styledfooter = styled(defaultStyle)`
+	box-sizing: border-box;
 	padding: 1rem;
+	padding-top: 1.25rem;
 	text-align: center;
 	width: 100%;
 

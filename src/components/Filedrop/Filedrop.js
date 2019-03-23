@@ -12,13 +12,13 @@ import defaultStyle from '../../defaultStyle';
  */
 const Filedrop = ({ firstRowHeader, handleJSONData }) => {
 	const [dragging, setDragging] = useState(false);
-
 	const onDrop = (file, rejectedFile) => {
 		if (
 			file[0] &&
 			file[0].name &&
 			file[0].name.indexOf('.csv') + 4 === file[0].name.length
 		) {
+			console.log(firstRowHeader); //TODO: Delete
 			Papa.parse(file[0], {
 				header: firstRowHeader,
 				download: true,

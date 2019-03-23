@@ -13,8 +13,10 @@ const theme = {
 		text: '#404040',
 		lightText: '#848484',
 		red: '#ED5050',
+		lightRed: '#FF8D8D',
 		green: '#D8E13F',
 		blue: '#46C8F5',
+		lightBlue: '#97E4FF',
 		darkBlue: '#2E8AA8',
 	},
 	gradient: {
