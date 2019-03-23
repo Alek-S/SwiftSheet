@@ -45,13 +45,12 @@ module.exports = {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[id].css',
+			filename: 'assets/css/[name].css',
 		}),
 	],
 
 	optimization: {
-		//break out vendor module to seperate folder
+		//break out vendor module to separate folder
 		splitChunks: {
 			cacheGroups: {
 				commons: {

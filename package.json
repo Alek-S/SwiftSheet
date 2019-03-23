@@ -11,7 +11,8 @@
 		"precommit": "lint-staged && npm run test",
 		"dev": "webpack-dev-server --config ./webpack.dev.js --hot",
 		"dev:server": "nodemon --inspect ./server.js",
-		"start:prod": "NODE_ENV=production node ./server.js"
+		"start:prod": "NODE_ENV=production node ./server.js",
+		"clean-install": "rm -rf ./node_modules && npm i"
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +25,8 @@
 	},
 	"homepage": "https://github.com/Alek-S/SwiftSheet#readme",
 	"dependencies": {
+		"ag-grid-community": "^20.2.0",
+		"ag-grid-react": "^20.2.0",
 		"apollo-boost": "^0.1.27",
 		"axios": "^0.18.0",
 		"bcrypt": "^3.0.4",
@@ -69,15 +72,18 @@
 		"enzyme-adapter-react-16": "^1.9.1",
 		"eslint-plugin-react-hooks": "^1.0.1",
 		"husky": "^0.14.3",
+		"identity-obj-proxy": "^3.0.0",
 		"jest": "^23.5.0",
 		"jest-styled-components": "^6.0.1",
 		"lint-staged": "^7.2.0",
 		"mini-css-extract-plugin": "^0.5.0",
 		"nodemon": "^1.18.10",
+		"optimize-css-assets-webpack-plugin": "^5.0.1",
 		"prettier": "^1.16.4",
 		"react-test-renderer": "^16.8.1",
 		"react-testing-library": "^5.6.1",
 		"redux-devtools-extension": "^2.13.8",
+		"style-loader": "^0.23.1",
 		"supertest": "^3.4.2",
 		"uglifyjs-webpack-plugin": "^1.2.7",
 		"webpack": "^4.29.3",
@@ -106,6 +112,9 @@
 			"js",
 			"json",
 			"jsx"
-		]
+		],
+		"moduleNameMapper": {
+			"\\.(css|less)$": "identity-obj-proxy"
+		}
 	}
 }

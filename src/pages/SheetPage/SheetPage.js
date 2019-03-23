@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import defaultStyle from '../../defaultStyle';
 import format from 'date-fns/format';
-import HeadlessTable from '../../components/SwiftTable/HeadlessTable';
+import HeadlessTable from '../../components/SwiftTable/Table';
 
 const GET_SHEET = gql`
 	query GET_SHEET($sheetId: ID!) {
