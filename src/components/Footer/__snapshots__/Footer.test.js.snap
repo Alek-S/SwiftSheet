@@ -2,7 +2,9 @@
 
 exports[`Footer matches the snapshot 1`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 1rem;
+  padding-top: 1.25rem;
   text-align: center;
   width: 100%;
 }

@@ -37,6 +37,11 @@ HeadlessTable.propTypes = {
 	data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
+const Border = styled.div`
+	border: 1px solid ${props => props.theme.color.border};
+	border-radius: 7px;
+`;
+
 const Styledtable = styled.div`
 	height: 90%;
 	min-height: 200px;
@@ -44,11 +49,11 @@ const Styledtable = styled.div`
 	font-family: ${props => props.theme.font.main};
 	font-size: 14px;
 	letter-spacing: 1px;
-	border-radius: 7px;
+	border-radius: 2px;
 	overflow: hidden;
 	background-color: white;
 	width: 80%;
-	max-width: 1500px;
+	max-width: ${props => props.children.props.columnDefs.length * 225 + 'px'};
 	margin: auto;
 	margin-top: 20px;
 
@@ -61,7 +66,34 @@ const Styledtable = styled.div`
 		background-color: ${props => props.theme.color.background};
 	}
 	.ag-row-hover {
-		background-color: ${props => props.theme.color.lightRed};
+		background-color: ${props => props.theme.color.lightBlue};
+	}
+
+	.ag-header {
+		background-color: ${props => props.theme.color.text};
+		color: white;
+
+		& .ag-column-hover {
+			background-color: ${props => props.theme.color.background};
+			color: ${props => props.theme.color.text};
+			border-bottom: 5px solid ${props => props.theme.color.blue};
+		}
+	}
+
+	.ag-icon-desc,
+	.ag-icon-asc {
+		background-color: ${props => props.theme.color.blue};
+		border-radius: 10px;
+		position: relative;
+		top: 5px;
+		padding: 2px;
+	}
+	.ag-icon-filter {
+		background-color: ${props => props.theme.color.blue};
+		border-radius: 4px;
+		position: relative;
+		top: 5px;
+		padding: 5px;
 	}
 `;
 

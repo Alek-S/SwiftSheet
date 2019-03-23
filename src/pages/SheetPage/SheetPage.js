@@ -42,7 +42,8 @@ const SheetPage = ({ match }) => {
 const StyledDiv = styled(defaultStyle)`
 	background-color: ${props => props.theme.color.background};
 	padding-top: 7rem;
-	height: calc(100vh - 170px);
+	height: calc(100vh - 100px);
+	/* margin-bottom: 100px; */
 `;
 
 const ExpireDiv = styled.div`
