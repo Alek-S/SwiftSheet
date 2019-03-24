@@ -34,7 +34,7 @@ const HeadlessTable = ({ data }) => {
 };
 
 HeadlessTable.propTypes = {
-	data: PropTypes.arrayOf(PropTypes.object).isRequired,
+	data: PropTypes.array.isRequired,
 };
 
 const Border = styled.div`

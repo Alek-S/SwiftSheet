@@ -21,7 +21,6 @@ const Blah = ({ match }) => (
  * @returns {JSX}
  */
 const App = ({ match }) => {
-	console.log('app', match);
 	return (
 		<ScrollToTop>
 			<Header />

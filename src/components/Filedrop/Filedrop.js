@@ -10,27 +10,33 @@ import defaultStyle from '../../defaultStyle';
  * @param {bool} - props.firstRowHeader - is first row a header
  * @returns {jsx} <Filedrop />
  */
-const Filedrop = ({ firstRowHeader, handleJSONData }) => {
+const Filedrop = ({
+	firstRowHeader,
+	expireIn,
+	setExpireIn,
+	setHeader,
+	onDrop,
+}) => {
 	const [dragging, setDragging] = useState(false);
-	const onDrop = (file, rejectedFile) => {
-		if (
-			file[0] &&
-			file[0].name &&
-			file[0].name.indexOf('.csv') + 4 === file[0].name.length
-		) {
-			console.log(firstRowHeader); //TODO: Delete
-			Papa.parse(file[0], {
-				header: firstRowHeader,
-				download: true,
-				skipEmptyLines: false,
-				complete: handleJSONData,
-			});
-		} else {
-			// TODO handle Error on UI
-			console.error(
-				`file rejected!: \n ${rejectedFile[0].name}\n ${rejectedFile[0].type}`
-			);
-		}
+
+	/**
+	 * @function
+	 * Set expireIn state, in Hrs
+	 * @param {object} e - dom event
+	 */
+	const _handleChange = e => {
+		e.preventDefault();
+		setExpireIn(e.target.value);
+	};
+
+	/**
+	 * @function
+	 * Toggle first row of CSV header boolean
+	 * @param {object} e - dom event
+	 */
+	const _toggleHeader = e => {
+		e.preventDefault();
+		setHeader(!firstRowHeader);
 	};
 
 	return (
@@ -41,7 +47,7 @@ const Filedrop = ({ firstRowHeader, handleJSONData }) => {
 				maxSize={5000000}
 				minSize={1}
 				multiple={false}
-				dragging={dragging}
+				dragging={dragging ? 'true' : undefined}
 				onDragEnter={() => setDragging(true)}
 				onDragLeave={() => setDragging(false)}
 			>
@@ -60,6 +66,25 @@ const Filedrop = ({ firstRowHeader, handleJSONData }) => {
 					{dragging ? 'Drop' : 'Drag'} CSV file here
 				</StyledText>
 			</StyledDropzone>
+			<Options>
+				<label>
+					Expires In:
+					<select value={expireIn} onChange={_handleChange}>
+						<option value={4}>4 Hours</option>
+						<option value={8}>8 Hours</option>
+						<option value={24}>1 Day</option>
+						<option value={72}>3 Days</option>
+						<option value={120}>5 Days</option>
+					</select>
+				</label>
+
+				<HeaderToggle active={firstRowHeader}>
+					<span>First Row Header:</span>
+					<button onClick={_toggleHeader}>
+						{firstRowHeader ? 'Yes' : 'No'}
+					</button>
+				</HeaderToggle>
+			</Options>
 		</section>
 	);
 };
@@ -90,6 +115,42 @@ const StyledText = styled(defaultStyle)`
 	font-size: 1.2rem;
 	text-align: center;
 	background-color: transparent;
+`;
+
+const Options = styled.div`
+	background-color: ${props => props.theme.color.backgroundDark};
+	border-radius: 3px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	display: block;
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	margin-top: 2rem;
+`;
+
+const HeaderToggle = styled.label`
+	margin-left: 2rem;
+
+	button {
+		color: white;
+		cursor: pointer;
+		outline: none;
+		background: ${props =>
+			props.active
+				? props.theme.gradient.greenBlue
+				: props.theme.color.backgroundDarkest};
+		box-shadow: ${props => (props.active ? props.theme.boxShadow : '')};
+		border: none;
+		font-family: ${props => props.theme.font.main};
+		font-size: 1rem;
+		border-radius: 4px;
+		margin-left: 1rem;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width: 70px;
+	}
 `;
 
 export default Filedrop;
