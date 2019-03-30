@@ -82,11 +82,26 @@ exports[`Filedrop matches the snapshot 1`] = `
         </div>
       </t>
     </Filedrop__StyledDropzone>
-    <Filedrop__Options>
+    <Filedrop__Options
+      aria-label="preferences"
+      role="form"
+    >
       <div
-        className="Filedrop__Options-zvfrty-2 cojLYi"
+        aria-label="preferences"
+        className="Filedrop__Options-zvfrty-2 dSPuAV"
+        role="form"
       >
-        <label>
+        <section
+          aria-label="set password"
+        >
+          Password:
+          <input
+            onChange={[Function]}
+          />
+        </section>
+        <section
+          aria-label="set expiration"
+        >
           Expires In:
           <select
             onChange={[Function]}
@@ -117,21 +132,25 @@ exports[`Filedrop matches the snapshot 1`] = `
               5 Days
             </option>
           </select>
-        </label>
-        <Filedrop__HeaderToggle>
-          <label
-            className="Filedrop__HeaderToggle-zvfrty-3 kPurdV"
-          >
-            <span>
-              First Row Header:
-            </span>
-            <button
-              onClick={[Function]}
+        </section>
+        <section
+          aria-label="toggle first row header"
+        >
+          <Filedrop__HeaderToggle>
+            <label
+              className="Filedrop__HeaderToggle-zvfrty-3 kPurdV"
             >
-              No
-            </button>
-          </label>
-        </Filedrop__HeaderToggle>
+              <span>
+                First Row Header:
+              </span>
+              <button
+                onClick={[Function]}
+              >
+                No
+              </button>
+            </label>
+          </Filedrop__HeaderToggle>
+        </section>
       </div>
     </Filedrop__Options>
   </section>

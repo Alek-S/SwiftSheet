@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Dropzone from 'react-dropzone';
-import Papa from 'papaparse';
+import PropTypes from 'prop-types';
 import defaultStyle from '../../defaultStyle';
 
 /**
@@ -15,6 +15,8 @@ const Filedrop = ({
 	expireIn,
 	setExpireIn,
 	setHeader,
+	password,
+	setPassword,
 	onDrop,
 }) => {
 	const [dragging, setDragging] = useState(false);
@@ -66,8 +68,13 @@ const Filedrop = ({
 					{dragging ? 'Drop' : 'Drag'} CSV file here
 				</StyledText>
 			</StyledDropzone>
-			<Options>
-				<label>
+			<Options role="form" aria-label="preferences">
+				<section aria-label="set password">
+					Password:
+					<input value={password} onChange={e => setPassword(e.target.value)} />
+				</section>
+
+				<section aria-label="set expiration">
 					Expires In:
 					<select value={expireIn} onChange={_handleChange}>
 						<option value={4}>4 Hours</option>
@@ -76,14 +83,16 @@ const Filedrop = ({
 						<option value={72}>3 Days</option>
 						<option value={120}>5 Days</option>
 					</select>
-				</label>
+				</section>
 
-				<HeaderToggle active={firstRowHeader}>
-					<span>First Row Header:</span>
-					<button onClick={_toggleHeader}>
-						{firstRowHeader ? 'Yes' : 'No'}
-					</button>
-				</HeaderToggle>
+				<section aria-label="toggle first row header">
+					<HeaderToggle active={firstRowHeader}>
+						<span>First Row Header:</span>
+						<button onClick={_toggleHeader}>
+							{firstRowHeader ? 'Yes' : 'No'}
+						</button>
+					</HeaderToggle>
+				</section>
 			</Options>
 		</section>
 	);
@@ -123,11 +132,41 @@ const Options = styled.div`
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 
-	display: block;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
 	width: 60%;
 	margin: auto;
 	text-align: center;
 	margin-top: 2rem;
+
+	input {
+		margin: 0 2rem 0 0.25rem;
+		padding-left: 0.75rem;
+		outline: none;
+		width: 120px;
+		font-family: ${props => props.theme.font.main};
+		font-size: 0.8rem;
+		height: 20px;
+		border-radius: 10px;
+		border: solid 1px ${props => props.theme.color.border};
+		transition: all 0.25s;
+
+		&:hover {
+			border: solid 1px ${props => props.theme.color.lightBlue};
+		}
+
+		&:focus,
+		&:active {
+			border: solid 1px ${props => props.theme.color.blue};
+		}
+	}
+
+	select {
+		margin-left: 0.25rem;
+	}
 `;
 
 const HeaderToggle = styled.label`
@@ -152,5 +191,15 @@ const HeaderToggle = styled.label`
 		width: 70px;
 	}
 `;
+
+Filedrop.propTypes = {
+	firstRowHeader: PropTypes.bool,
+	expireIn: PropTypes.number,
+	setExpireIn: PropTypes.func,
+	setHeader: PropTypes.func,
+	password: PropTypes.string,
+	setPassword: PropTypes.func,
+	onDrop: PropTypes.func,
+};
 
 export default Filedrop;
