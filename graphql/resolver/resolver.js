@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const addDays = require('date-fns/add_days');
 const addHours = require('date-fns/add_hours');
 const bcrypt = require('bcrypt');
+const errorMessage = require('../../utils/enums/errorMessage');
 
 /**
  * @function getSheet - get single sheet based on _id
@@ -17,13 +18,13 @@ const getSheet = async (_root, args) => {
 	if (!args.password) {
 		// if no password provided
 		if (dbResult.hasPassword) {
-			throw new Error('Password required for this sheet.');
+			throw new Error(errorMessage.noPassword);
 		}
 	} else {
-		// if password provided
+		// if wrong password provided
 		const match = await bcrypt.compare(args.password, dbResult.password);
 		if (!match) {
-			throw new Error('Wrong password provided');
+			throw new Error(errorMessage.wrongPassword);
 		}
 	}
 	// all good, return results
@@ -55,9 +56,9 @@ const createSheet = async (_root, args) => {
 
 	if (password) {
 		if (password.length < 6) {
-			throw new Error('Password too short. Minimum 6 characters');
+			throw new Error(errorMessage.shortPassword);
 		} else if (password.length > 70) {
-			throw new Error('Password too long. Maximum 70 characters');
+			throw new Error(errorMessage.longPassword);
 		}
 	}
 

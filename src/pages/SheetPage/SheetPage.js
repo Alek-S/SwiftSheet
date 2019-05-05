@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 import defaultStyle from '../../defaultStyle';
 import format from 'date-fns/format';
 import HeadlessTable from '../../components/SwiftTable/Table';
+import * as errorMessage from '../../../utils/enums/errorMessage';
 
 const GET_SHEET = gql`
 	query GET_SHEET($sheetId: ID!) {
@@ -22,6 +23,11 @@ const SheetPage = ({ match }) => {
 		<Query query={GET_SHEET} variables={{ sheetId }}>
 			{({ loading, error, data }) => {
 				if (loading) return <StyledDiv>Loading...</StyledDiv>;
+
+				if ((error.message = errorMessage.noPassword)) {
+					return <StyledDiv>Password</StyledDiv>;
+				}
+
 				if (error) return <StyledDiv>Error! {error.message}</StyledDiv>;
 
 				const { sheetData, expireAt } = data.sheet;
@@ -43,7 +49,6 @@ const StyledDiv = styled(defaultStyle)`
 	background-color: ${props => props.theme.color.background};
 	padding-top: 7rem;
 	height: calc(100vh - 100px);
-	/* margin-bottom: 100px; */
 `;
 
 const ExpireDiv = styled.div`
