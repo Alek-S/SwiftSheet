@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import defaultStyle from '../../defaultStyle';
+import defaultStyle, { Card, ErrorDialog } from '../../defaultStyle';
 
 /**
  * @function
@@ -22,9 +22,9 @@ export const PasswordPrompt = ({ password, setPassword, wrongPassword }) => (
 			/>
 		</StyledForm>
 
-		<WrongPassword className={wrongPassword}>
+		<ErrorDialog className={wrongPassword}>
 			⚠️ Incorrect Password Provided
-		</WrongPassword>
+		</ErrorDialog>
 	</StyledDiv>
 );
 
@@ -37,58 +37,15 @@ const StyledDiv = styled(defaultStyle)`
 	align-items: center;
 `;
 
-const StyledForm = styled.form`
+const StyledForm = styled(Card)`
 	margin-bottom: 1rem;
-	background-color: white;
 	padding: 2.5rem 4rem;
-	border-radius: 8px;
-	box-shadow: ${props => props.theme.boxShadowLight};
 
 	input {
-		outline: none;
 		height: 30px;
-		background-color: ${props => props.theme.color.input};
 		padding: 0.2rem 1.5rem;
-		border: 1px solid ${props => props.theme.color.input};
-		border-radius: 5rem;
 		font-size: 1rem;
 		font-weight: 300;
-		color: ${props => props.theme.color.text};
-		font: ${props => props.theme.font.main};
-		transition: all 0.3s;
 		width: 200px;
-
-		::placeholder {
-			font-size: 1rem;
-			font-weight: 300;
-			font: ${props => props.theme.font.main};
-			color: ${props => props.theme.color.lightText};
-		}
-
-		&:hover {
-			border: solid 1px ${props => props.theme.color.border};
-		}
-
-		&:focus {
-			border: 1px solid ${props => props.theme.color.blue};
-		}
-
-		&.true {
-			border: 1px solid ${props => props.theme.color.red};
-		}
-	}
-`;
-
-const WrongPassword = styled.div`
-	text-align: center;
-	opacity: 0;
-	color: white;
-	padding: 0.5rem 1rem;
-	border-radius: 5px;
-	background-color: ${props => props.theme.color.red};
-	transition: all 0.3s;
-
-	&.true {
-		opacity: 1;
 	}
 `;

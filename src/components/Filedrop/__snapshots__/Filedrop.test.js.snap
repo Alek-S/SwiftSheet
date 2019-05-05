@@ -89,87 +89,103 @@ exports[`Filedrop matches the snapshot 1`] = `
         aria-label="preferences"
         role="form"
       >
-        <div
+        <defaultStyle__Card
           aria-label="preferences"
-          className="Filedrop__Options-zvfrty-3 qfjhu"
+          className="Filedrop__Options-zvfrty-3 iACHdv"
           role="form"
         >
-          <section
-            aria-label="set password"
+          <defaultStyle
+            aria-label="preferences"
+            className="Filedrop__Options-zvfrty-3 iACHdv defaultStyle__Card-sc-1afhot-1 irLyLd"
+            role="form"
           >
-            Password:
-            <input
-              autoComplete="new-password"
-              onChange={[Function]}
-              placeholder="enter password"
-              type="password"
-            />
-          </section>
-          <section
-            aria-label="set expiration"
-          >
-            Expires In:
-            <select
-              onChange={[Function]}
+            <div
+              aria-label="preferences"
+              className="Filedrop__Options-zvfrty-3 iACHdv defaultStyle__Card-sc-1afhot-1 irLyLd defaultStyle-sc-1afhot-0 iywwUC"
+              role="form"
             >
-              <option
-                value={1}
+              <section
+                aria-label="set password"
               >
-                1 Hour
-              </option>
-              <option
-                value={4}
+                Password:
+                <input
+                  autoComplete="new-password"
+                  onChange={[Function]}
+                  placeholder="enter password"
+                  type="password"
+                />
+              </section>
+              <section
+                aria-label="set expiration"
               >
-                4 Hours
-              </option>
-              <option
-                value={8}
-              >
-                8 Hours
-              </option>
-              <option
-                value={24}
-              >
-                1 Day
-              </option>
-              <option
-                value={72}
-              >
-                3 Days
-              </option>
-              <option
-                value={120}
-              >
-                5 Days
-              </option>
-            </select>
-          </section>
-          <section
-            aria-label="toggle first row header"
-          >
-            <Filedrop__HeaderToggle>
-              <label
-                className="Filedrop__HeaderToggle-zvfrty-4 cXxnTw"
-              >
-                <span>
-                  First Row Header:
-                </span>
-                <button
-                  onClick={[Function]}
+                Expires In:
+                <select
+                  onChange={[Function]}
                 >
-                  No
-                </button>
-              </label>
-            </Filedrop__HeaderToggle>
-          </section>
-        </div>
+                  <option
+                    value={1}
+                  >
+                    1 Hour
+                  </option>
+                  <option
+                    value={4}
+                  >
+                    4 Hours
+                  </option>
+                  <option
+                    value={8}
+                  >
+                    8 Hours
+                  </option>
+                  <option
+                    value={24}
+                  >
+                    1 Day
+                  </option>
+                  <option
+                    value={72}
+                  >
+                    3 Days
+                  </option>
+                  <option
+                    value={120}
+                  >
+                    5 Days
+                  </option>
+                </select>
+              </section>
+              <section
+                aria-label="toggle first row header"
+              >
+                <Filedrop__HeaderToggle>
+                  <label
+                    className="Filedrop__HeaderToggle-zvfrty-4 cXxnTw"
+                  >
+                    <span>
+                      First Row Header:
+                    </span>
+                    <button
+                      onClick={[Function]}
+                    >
+                      No
+                    </button>
+                  </label>
+                </Filedrop__HeaderToggle>
+              </section>
+            </div>
+          </defaultStyle>
+        </defaultStyle__Card>
       </Filedrop__Options>
       <Filedrop__WrongPassword>
-        <div
-          className="Filedrop__WrongPassword-zvfrty-5 hEgtfN"
+        <defaultStyle__ErrorDialog
+          className="Filedrop__WrongPassword-zvfrty-5 ekibOl"
         >
-          ⚠️ Check Password Length
-        </div>
+          <div
+            className="Filedrop__WrongPassword-zvfrty-5 ekibOl defaultStyle__ErrorDialog-sc-1afhot-2 kyYZDy"
+          >
+            ⚠️ Check Password Length
+          </div>
+        </defaultStyle__ErrorDialog>
       </Filedrop__WrongPassword>
     </section>
   </Filedrop__StyledSection>
