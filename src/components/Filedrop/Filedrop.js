@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Dropzone from 'react-dropzone';
 import PropTypes from 'prop-types';
-import defaultStyle from '../../defaultStyle';
+import defaultStyle, { Card, ErrorDialog } from '../../defaultStyle';
 
 /**
  * @function
@@ -145,10 +145,7 @@ const StyledText = styled(defaultStyle)`
 	background-color: transparent;
 `;
 
-const Options = styled.div`
-	background-color: white;
-	border-radius: 8px;
-	box-shadow: ${props => props.theme.boxShadowLight};
+const Options = styled(Card)`
 	padding-top: 1.75rem;
 	padding-bottom: 1.75rem;
 
@@ -164,38 +161,14 @@ const Options = styled.div`
 
 	input {
 		margin: 0 2rem 0 0.25rem;
-		padding-top: 0.1rem;
 		padding-left: 1rem;
-		outline: none;
 		width: 140px;
-		font-family: ${props => props.theme.font.main};
 		font-size: 0.9rem;
 		font-weight: 400;
 		height: 25px;
-		color: ${props => props.theme.color.text};
-		background-color: ${props => props.theme.color.input};
-		border-radius: 5rem;
-		border: 1px solid ${props => props.theme.color.input};
-		transition: all 0.25s;
 
 		::placeholder {
-			font-size: 1rem;
-			font-weight: 400;
-			font: ${props => props.theme.font.main};
 			color: ${props => props.theme.color.backgroundDarkest};
-		}
-
-		&:hover {
-			border: solid 1px ${props => props.theme.color.border};
-		}
-
-		&:focus,
-		&:active {
-			border: solid 1px ${props => props.theme.color.blue};
-		}
-
-		&.true {
-			border: 1px solid ${props => props.theme.color.red};
 		}
 	}
 
@@ -237,20 +210,9 @@ Filedrop.propTypes = {
 	onDrop: PropTypes.func,
 };
 
-const WrongPassword = styled.div`
-	text-align: center;
-	opacity: 0;
-	color: white;
-	padding: 0.5rem 1rem;
-	border-radius: 5px;
-	background-color: ${props => props.theme.color.red};
-	transition: all 0.3s;
+const WrongPassword = styled(ErrorDialog)`
 	width: 200px;
 	margin-top: 2rem;
-
-	&.true {
-		opacity: 1;
-	}
 `;
 
 export default Filedrop;
