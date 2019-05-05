@@ -3,6 +3,7 @@
  * passed in with theme provider
  */
 const theme = {
+	boxShadowLight: `0px 5px 40px -5px rgba(0,0,0,0.15)`,
 	boxShadow: `0px 5px 40px -5px rgba(0,0,0,0.3)`,
 	boxShadowDark: `0px 5px 40px -2px rgba(0,0,0,0.5)`,
 	color: {
@@ -12,6 +13,7 @@ const theme = {
 		border: '#d9d9d9',
 		text: '#404040',
 		lightText: '#848484',
+		input: '#F1F3F4',
 		red: '#ED5050',
 		lightRed: '#FF8D8D',
 		green: '#D8E13F',

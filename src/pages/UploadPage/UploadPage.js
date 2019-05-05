@@ -8,8 +8,12 @@ import { Redirect } from 'react-router-dom';
 import Papa from 'papaparse';
 
 const UPLOAD_SHEET = gql`
-	mutation UPLOAD_SHEET($sheetData: JSON!, $expireIn: Int!) {
-		createSheet(sheetData: $sheetData, expireIn: $expireIn) {
+	mutation UPLOAD_SHEET($sheetData: JSON!, $expireIn: Int!, $password: String) {
+		createSheet(
+			sheetData: $sheetData
+			expireIn: $expireIn
+			password: $password
+		) {
 			_id
 		}
 	}
@@ -26,6 +30,8 @@ const UploadPage = () => {
 	const [disableSubmit, setDisableSubmit] = useState(true);
 	const [redirect, setRedirect] = useState(false);
 	const [file, setFile] = useState();
+	const [password, setPassword] = useState('');
+	const [wrongPassword, setWrongPassword] = useState(false);
 
 	const onCompleted = data => {
 		// const id = data.createSheet._id;
@@ -56,14 +62,23 @@ const UploadPage = () => {
 		}
 	};
 
+	const checkPassword = pw => {
+		const passing = (pw.length !== 0 && pw.length < 6) || pw.length > 70;
+		setPassword(pw);
+		setWrongPassword(passing);
+	};
+
 	return (
 		<StyledDiv>
 			<Filedrop
 				firstRowHeader={header}
 				expireIn={expireIn}
 				setHeader={setHeader}
+				password={password}
+				setPassword={checkPassword}
 				setExpireIn={setExpireIn}
 				onDrop={onDrop}
+				wrongPassword={wrongPassword}
 			/>
 			<StyledForm disableSubmit={disableSubmit}>
 				<Mutation mutation={UPLOAD_SHEET} onCompleted={onCompleted}>
@@ -83,6 +98,7 @@ const UploadPage = () => {
 												variables: {
 													sheetData: data,
 													expireIn: parseInt(expireIn),
+													password: password,
 												},
 											}),
 									});
@@ -130,7 +146,6 @@ const StyledForm = styled.form`
 			props.disableSubmit ? props.theme.color.border : 'white'};
 		display: block;
 		margin: auto;
-		margin-top: 4rem;
 		font-family: ${props => props.theme.font.main};
 		font-weight: 400;
 		font-size: 1.3rem;

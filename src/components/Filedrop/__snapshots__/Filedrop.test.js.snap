@@ -2,138 +2,176 @@
 
 exports[`Filedrop matches the snapshot 1`] = `
 <Filedrop>
-  <section>
-    <Filedrop__StyledDropzone
-      accept="text/csv"
-      maxSize={5000000}
-      minSize={1}
-      multiple={false}
-      onDragEnter={[Function]}
-      onDragLeave={[Function]}
+  <Filedrop__StyledSection>
+    <section
+      className="Filedrop__StyledSection-zvfrty-0 ensDoU"
     >
-      <t
+      <Filedrop__StyledDropzone
         accept="text/csv"
-        className="Filedrop__StyledDropzone-zvfrty-0 byxFEd"
-        disableClick={false}
-        disablePreview={false}
-        disabled={false}
-        getDataTransferItems={[Function]}
-        inputProps={Object {}}
         maxSize={5000000}
         minSize={1}
         multiple={false}
         onDragEnter={[Function]}
         onDragLeave={[Function]}
-        preventDropOnDocument={true}
       >
-        <div
-          aria-disabled={false}
-          className="Filedrop__StyledDropzone-zvfrty-0 byxFEd"
-          onClick={[Function]}
+        <t
+          accept="text/csv"
+          className="Filedrop__StyledDropzone-zvfrty-1 cFjQcW"
+          disableClick={false}
+          disablePreview={false}
+          disabled={false}
+          getDataTransferItems={[Function]}
+          inputProps={Object {}}
+          maxSize={5000000}
+          minSize={1}
+          multiple={false}
           onDragEnter={[Function]}
           onDragLeave={[Function]}
-          onDragOver={[Function]}
-          onDragStart={[Function]}
-          onDrop={[Function]}
-          style={
-            Object {
-              "position": "relative",
-            }
-          }
+          preventDropOnDocument={true}
         >
-          <img
-            alt="upload-cloud-logo"
-            src="./assets/images/upload-cloud-light.svg"
-          />
-          <Filedrop__StyledText
-            dragging={false}
-          >
-            <defaultStyle
-              className="Filedrop__StyledText-zvfrty-1 blmkpl"
-              dragging={false}
-            >
-              <div
-                className="Filedrop__StyledText-zvfrty-1 blmkpl defaultStyle-sc-1afhot-0 iywwUC"
-              >
-                Drag
-                 CSV file here
-              </div>
-            </defaultStyle>
-          </Filedrop__StyledText>
-          <input
-            accept="text/csv"
-            autoComplete="off"
-            disabled={false}
-            multiple={false}
-            onChange={[Function]}
+          <div
+            aria-disabled={false}
+            className="Filedrop__StyledDropzone-zvfrty-1 cFjQcW"
+            onClick={[Function]}
+            onDragEnter={[Function]}
+            onDragLeave={[Function]}
+            onDragOver={[Function]}
+            onDragStart={[Function]}
+            onDrop={[Function]}
             style={
               Object {
-                "bottom": 0,
-                "left": 0,
-                "opacity": 0.00001,
-                "pointerEvents": "none",
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
+                "position": "relative",
               }
             }
-            type="file"
-          />
-        </div>
-      </t>
-    </Filedrop__StyledDropzone>
-    <Filedrop__Options>
-      <div
-        className="Filedrop__Options-zvfrty-2 cojLYi"
+          >
+            <img
+              alt="upload-cloud-logo"
+              src="./assets/images/upload-cloud-light.svg"
+            />
+            <Filedrop__StyledText
+              dragging={false}
+            >
+              <defaultStyle
+                className="Filedrop__StyledText-zvfrty-2 jxbwaY"
+                dragging={false}
+              >
+                <div
+                  className="Filedrop__StyledText-zvfrty-2 jxbwaY defaultStyle-sc-1afhot-0 iywwUC"
+                >
+                  Drag
+                   CSV file here
+                </div>
+              </defaultStyle>
+            </Filedrop__StyledText>
+            <input
+              accept="text/csv"
+              autoComplete="off"
+              disabled={false}
+              multiple={false}
+              onChange={[Function]}
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 0.00001,
+                  "pointerEvents": "none",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+              type="file"
+            />
+          </div>
+        </t>
+      </Filedrop__StyledDropzone>
+      <Filedrop__Options
+        aria-label="preferences"
+        role="form"
       >
-        <label>
-          Expires In:
-          <select
-            onChange={[Function]}
+        <div
+          aria-label="preferences"
+          className="Filedrop__Options-zvfrty-3 qfjhu"
+          role="form"
+        >
+          <section
+            aria-label="set password"
           >
-            <option
-              value={4}
-            >
-              4 Hours
-            </option>
-            <option
-              value={8}
-            >
-              8 Hours
-            </option>
-            <option
-              value={24}
-            >
-              1 Day
-            </option>
-            <option
-              value={72}
-            >
-              3 Days
-            </option>
-            <option
-              value={120}
-            >
-              5 Days
-            </option>
-          </select>
-        </label>
-        <Filedrop__HeaderToggle>
-          <label
-            className="Filedrop__HeaderToggle-zvfrty-3 kPurdV"
+            Password:
+            <input
+              autoComplete="new-password"
+              onChange={[Function]}
+              placeholder="enter password"
+              type="password"
+            />
+          </section>
+          <section
+            aria-label="set expiration"
           >
-            <span>
-              First Row Header:
-            </span>
-            <button
-              onClick={[Function]}
+            Expires In:
+            <select
+              onChange={[Function]}
             >
-              No
-            </button>
-          </label>
-        </Filedrop__HeaderToggle>
-      </div>
-    </Filedrop__Options>
-  </section>
+              <option
+                value={1}
+              >
+                1 Hour
+              </option>
+              <option
+                value={4}
+              >
+                4 Hours
+              </option>
+              <option
+                value={8}
+              >
+                8 Hours
+              </option>
+              <option
+                value={24}
+              >
+                1 Day
+              </option>
+              <option
+                value={72}
+              >
+                3 Days
+              </option>
+              <option
+                value={120}
+              >
+                5 Days
+              </option>
+            </select>
+          </section>
+          <section
+            aria-label="toggle first row header"
+          >
+            <Filedrop__HeaderToggle>
+              <label
+                className="Filedrop__HeaderToggle-zvfrty-4 cXxnTw"
+              >
+                <span>
+                  First Row Header:
+                </span>
+                <button
+                  onClick={[Function]}
+                >
+                  No
+                </button>
+              </label>
+            </Filedrop__HeaderToggle>
+          </section>
+        </div>
+      </Filedrop__Options>
+      <Filedrop__WrongPassword>
+        <div
+          className="Filedrop__WrongPassword-zvfrty-5 hEgtfN"
+        >
+          ⚠️ Check Password Length
+        </div>
+      </Filedrop__WrongPassword>
+    </section>
+  </Filedrop__StyledSection>
 </Filedrop>
 `;
