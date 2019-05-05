@@ -7,6 +7,7 @@ import format from 'date-fns/format';
 import HeadlessTable from '../../components/SwiftTable/Table';
 import { PasswordPrompt } from '../../components/PasswordPrompt/PasswordPrompt';
 import * as errorMessage from '../../../utils/enums/errorMessage';
+import { Link } from 'react-router-dom';
 
 const GET_SHEET = gql`
 	query GET_SHEET($sheetId: ID!, $password: String) {
@@ -26,6 +27,7 @@ const SheetPage = ({ match }) => {
 			{({ loading, error, data }) => {
 				if (loading) return <StyledDiv>Loading...</StyledDiv>;
 
+				// if password not provided
 				if (
 					error &&
 					(error.message.includes(errorMessage.noPassword) ||
@@ -34,7 +36,7 @@ const SheetPage = ({ match }) => {
 					const wrongPassword = error.message.includes(
 						errorMessage.wrongPassword
 					);
-
+					// then prompt user for password before proceeding
 					return (
 						<PasswordPrompt
 							password={password}
@@ -44,7 +46,18 @@ const SheetPage = ({ match }) => {
 					);
 				}
 
-				if (error) return <StyledDiv>Error! {error.message}</StyledDiv>;
+				if (error) {
+					return (
+						<ExpiredNotice>
+							<section>
+								<p>Sorry, looks like this sheet may have expired.</p>
+								<p>
+									Try <Link to="/upload">uploading</Link> a new one.{' '}
+								</p>
+							</section>
+						</ExpiredNotice>
+					);
+				}
 
 				const { sheetData, expireAt } = data.sheet;
 				return (
@@ -70,6 +83,30 @@ const StyledDiv = styled(defaultStyle)`
 const ExpireDiv = styled.div`
 	text-align: center;
 	color: ${props => props.theme.color.lightText};
+`;
+
+const ExpiredNotice = styled(defaultStyle)`
+	background-color: ${props => props.theme.color.background};
+	height: calc(100vh - 55px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	section {
+		margin-bottom: 1rem;
+		background-color: white;
+		padding: 2.5rem 4rem;
+		border-radius: 8px;
+		box-shadow: ${props => props.theme.boxShadowLight};
+	}
+	p {
+		margin: 1rem;
+	}
+
+	a {
+		color: ${props => props.theme.color.blue};
+	}
 `;
 
 export default SheetPage;

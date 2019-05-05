@@ -30,7 +30,7 @@ export const PasswordPrompt = ({ password, setPassword, wrongPassword }) => (
 
 const StyledDiv = styled(defaultStyle)`
 	background-color: ${props => props.theme.color.background};
-	height: 100vh;
+	height: calc(100vh - 55px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
