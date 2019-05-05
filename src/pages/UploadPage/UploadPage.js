@@ -31,6 +31,7 @@ const UploadPage = () => {
 	const [redirect, setRedirect] = useState(false);
 	const [file, setFile] = useState();
 	const [password, setPassword] = useState('');
+	const [wrongPassword, setWrongPassword] = useState(false);
 
 	const onCompleted = data => {
 		// const id = data.createSheet._id;
@@ -61,6 +62,12 @@ const UploadPage = () => {
 		}
 	};
 
+	const checkPassword = pw => {
+		const passing = (pw.length !== 0 && pw.length < 6) || pw.length > 70;
+		setPassword(pw);
+		setWrongPassword(passing);
+	};
+
 	return (
 		<StyledDiv>
 			<Filedrop
@@ -68,9 +75,10 @@ const UploadPage = () => {
 				expireIn={expireIn}
 				setHeader={setHeader}
 				password={password}
-				setPassword={setPassword}
+				setPassword={checkPassword}
 				setExpireIn={setExpireIn}
 				onDrop={onDrop}
+				wrongPassword={wrongPassword}
 			/>
 			<StyledForm disableSubmit={disableSubmit}>
 				<Mutation mutation={UPLOAD_SHEET} onCompleted={onCompleted}>
@@ -138,7 +146,6 @@ const StyledForm = styled.form`
 			props.disableSubmit ? props.theme.color.border : 'white'};
 		display: block;
 		margin: auto;
-		margin-top: 4rem;
 		font-family: ${props => props.theme.font.main};
 		font-weight: 400;
 		font-size: 1.3rem;

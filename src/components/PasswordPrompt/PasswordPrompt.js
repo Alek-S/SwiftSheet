@@ -13,15 +13,17 @@ export const PasswordPrompt = ({ password, setPassword, wrongPassword }) => (
 	<StyledDiv>
 		<StyledForm>
 			<input
+				type="password"
+				autoComplete="current-password"
 				value={password}
 				onChange={({ target: { value } }) => setPassword(value)}
-				className={wrongPassword.toString()}
+				className={wrongPassword && wrongPassword.toString()}
 				placeholder="Sheet Password"
 			/>
 		</StyledForm>
 
 		<WrongPassword className={wrongPassword}>
-			Incorrect Password Provided
+			⚠️ Incorrect Password Provided
 		</WrongPassword>
 	</StyledDiv>
 );
@@ -45,12 +47,13 @@ const StyledForm = styled.form`
 	input {
 		outline: none;
 		height: 30px;
-		background-color: ${props => props.theme.color.background};
+		background-color: ${props => props.theme.color.input};
 		padding: 0.2rem 1.5rem;
-		border: 1px solid ${props => props.theme.color.background};
+		border: 1px solid ${props => props.theme.color.input};
 		border-radius: 5rem;
 		font-size: 1rem;
 		font-weight: 300;
+		color: ${props => props.theme.color.text};
 		font: ${props => props.theme.font.main};
 		transition: all 0.3s;
 		width: 200px;
@@ -62,8 +65,12 @@ const StyledForm = styled.form`
 			color: ${props => props.theme.color.lightText};
 		}
 
+		&:hover {
+			border: solid 1px ${props => props.theme.color.border};
+		}
+
 		&:focus {
-			border: 1px solid ${props => props.theme.color.border};
+			border: 1px solid ${props => props.theme.color.blue};
 		}
 
 		&.true {
@@ -73,6 +80,7 @@ const StyledForm = styled.form`
 `;
 
 const WrongPassword = styled.div`
+	text-align: center;
 	opacity: 0;
 	color: white;
 	padding: 0.5rem 1rem;

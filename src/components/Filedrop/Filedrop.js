@@ -18,6 +18,7 @@ const Filedrop = ({
 	password,
 	setPassword,
 	onDrop,
+	wrongPassword,
 }) => {
 	const [dragging, setDragging] = useState(false);
 
@@ -42,7 +43,7 @@ const Filedrop = ({
 	};
 
 	return (
-		<section>
+		<StyledSection>
 			<StyledDropzone
 				onDrop={onDrop}
 				accept="text/csv"
@@ -71,12 +72,20 @@ const Filedrop = ({
 			<Options role="form" aria-label="preferences">
 				<section aria-label="set password">
 					Password:
-					<input value={password} onChange={e => setPassword(e.target.value)} />
+					<input
+						value={password}
+						className={wrongPassword && wrongPassword.toString()}
+						onChange={e => setPassword(e.target.value)}
+						type="password"
+						placeholder="enter password"
+						autoComplete="new-password"
+					/>
 				</section>
 
 				<section aria-label="set expiration">
 					Expires In:
 					<select value={expireIn} onChange={_handleChange}>
+						<option value={1}>1 Hour</option>
 						<option value={4}>4 Hours</option>
 						<option value={8}>8 Hours</option>
 						<option value={24}>1 Day</option>
@@ -94,9 +103,19 @@ const Filedrop = ({
 					</HeaderToggle>
 				</section>
 			</Options>
-		</section>
+
+			<WrongPassword className={wrongPassword}>
+				⚠️ Check Password Length
+			</WrongPassword>
+		</StyledSection>
 	);
 };
+
+const StyledSection = styled.section`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
 
 const StyledDropzone = styled(Dropzone)`
 	background-color: ${props =>
@@ -106,9 +125,9 @@ const StyledDropzone = styled(Dropzone)`
 			props.dragging ? props.theme.color.darkBlue : props.theme.color.border};
 	border-radius: 5px;
 	height: 250px;
-	width: 60%;
+	width: 70%;
 	margin: auto;
-	margin-top: 4rem;
+	margin-top: 3rem;
 
 	img {
 		display: block;
@@ -127,40 +146,56 @@ const StyledText = styled(defaultStyle)`
 `;
 
 const Options = styled.div`
-	background-color: ${props => props.theme.color.backgroundDark};
-	border-radius: 3px;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: ${props => props.theme.boxShadowLight};
+	padding-top: 1.75rem;
+	padding-bottom: 1.75rem;
 
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 60%;
+	width: 70%;
 	margin: auto;
 	text-align: center;
-	margin-top: 2rem;
+	margin-top: 3.5rem;
 
 	input {
 		margin: 0 2rem 0 0.25rem;
-		padding-left: 0.75rem;
+		padding-top: 0.1rem;
+		padding-left: 1rem;
 		outline: none;
-		width: 120px;
+		width: 140px;
 		font-family: ${props => props.theme.font.main};
-		font-size: 0.8rem;
-		height: 20px;
-		border-radius: 10px;
-		border: solid 1px ${props => props.theme.color.border};
+		font-size: 0.9rem;
+		font-weight: 400;
+		height: 25px;
+		color: ${props => props.theme.color.text};
+		background-color: ${props => props.theme.color.input};
+		border-radius: 5rem;
+		border: 1px solid ${props => props.theme.color.input};
 		transition: all 0.25s;
 
+		::placeholder {
+			font-size: 1rem;
+			font-weight: 400;
+			font: ${props => props.theme.font.main};
+			color: ${props => props.theme.color.backgroundDarkest};
+		}
+
 		&:hover {
-			border: solid 1px ${props => props.theme.color.lightBlue};
+			border: solid 1px ${props => props.theme.color.border};
 		}
 
 		&:focus,
 		&:active {
 			border: solid 1px ${props => props.theme.color.blue};
+		}
+
+		&.true {
+			border: 1px solid ${props => props.theme.color.red};
 		}
 	}
 
@@ -201,5 +236,21 @@ Filedrop.propTypes = {
 	setPassword: PropTypes.func,
 	onDrop: PropTypes.func,
 };
+
+const WrongPassword = styled.div`
+	text-align: center;
+	opacity: 0;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	background-color: ${props => props.theme.color.red};
+	transition: all 0.3s;
+	width: 200px;
+	margin-top: 2rem;
+
+	&.true {
+		opacity: 1;
+	}
+`;
 
 export default Filedrop;
