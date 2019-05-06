@@ -37,11 +37,7 @@ HeadlessTable.propTypes = {
 	data: PropTypes.array.isRequired,
 };
 
-const Border = styled.div`
-	border: 1px solid ${props => props.theme.color.border};
-	border-radius: 7px;
-`;
-
+/* istanbul ignore next */
 const Styledtable = styled.div`
 	height: 90%;
 	min-height: 200px;

@@ -2,6 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 
 import HeadlessTable from './Table';
+import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
 
 const match = {
@@ -60,7 +61,11 @@ const data = [
 
 describe('<HeadlessTable />', () => {
 	it('matches the snapshot', () => {
-		const tree = shallowWithTheme(<HeadlessTable data={data} />, theme);
+		const tree = mount(
+			<ThemeProvider theme={theme}>
+				<HeadlessTable data={data} />
+			</ThemeProvider>
+		);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });
