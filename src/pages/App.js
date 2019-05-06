@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { hot } from 'react-hot-loader';
 import { Route, Switch } from 'react-router-dom';
 
@@ -10,10 +9,6 @@ import UploadPage from './UploadPage/UploadPage';
 import ViewPage from './ViewPage/ViewPage';
 import SheetPage from './SheetPage/SheetPage';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
-
-const Blah = ({ match }) => (
-	<div style={{ paddingTop: '10rem' }}>blah! {match.params.user}</div>
-);
 
 /** @function
  * @name App

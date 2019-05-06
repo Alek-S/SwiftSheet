@@ -33,8 +33,7 @@ const UploadPage = () => {
 	const [password, setPassword] = useState('');
 	const [wrongPassword, setWrongPassword] = useState(false);
 
-	const onCompleted = data => {
-		// const id = data.createSheet._id;
+	const onCompleted = () => {
 		setRedirect(true);
 	};
 
