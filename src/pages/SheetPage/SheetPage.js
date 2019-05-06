@@ -9,7 +9,7 @@ import { PasswordPrompt } from '../../components/PasswordPrompt/PasswordPrompt';
 import * as errorMessage from '../../../utils/enums/errorMessage';
 import { Link } from 'react-router-dom';
 
-const GET_SHEET = gql`
+export const GET_SHEET = gql`
 	query GET_SHEET($sheetId: ID!, $password: String) {
 		sheet(_id: $sheetId, password: $password) {
 			sheetData
@@ -50,7 +50,9 @@ const SheetPage = ({ match }) => {
 					return (
 						<ExpiredNotice>
 							<section>
-								<p>Sorry, looks like this sheet may have expired.</p>
+								<p className="errorMessage">
+									Sorry, looks like this sheet may have expired.
+								</p>
 								<p>
 									Try <Link to="/upload">uploading</Link> a new one.{' '}
 								</p>

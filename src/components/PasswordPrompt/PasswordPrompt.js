@@ -17,12 +17,14 @@ export const PasswordPrompt = ({ password, setPassword, wrongPassword }) => (
 				autoComplete="current-password"
 				value={password}
 				onChange={({ target: { value } }) => setPassword(value)}
-				className={wrongPassword && wrongPassword.toString()}
+				className={wrongPassword ? wrongPassword.toString() : undefined}
 				placeholder="Sheet Password"
 			/>
 		</StyledForm>
 
-		<ErrorDialog className={wrongPassword}>
+		<ErrorDialog
+			className={wrongPassword ? wrongPassword.toString() : undefined}
+		>
 			⚠️ Incorrect Password Provided
 		</ErrorDialog>
 	</StyledDiv>

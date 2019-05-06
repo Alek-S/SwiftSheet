@@ -74,7 +74,7 @@ const Filedrop = ({
 					Password:
 					<input
 						value={password}
-						className={wrongPassword && wrongPassword.toString()}
+						className={wrongPassword ? wrongPassword.toString() : undefined}
 						onChange={e => setPassword(e.target.value)}
 						type="password"
 						placeholder="enter password"
@@ -104,7 +104,9 @@ const Filedrop = ({
 				</section>
 			</Options>
 
-			<WrongPassword className={wrongPassword}>
+			<WrongPassword
+				className={wrongPassword ? wrongPassword.toString() : undefined}
+			>
 				⚠️ Check Password Length
 			</WrongPassword>
 		</StyledSection>
