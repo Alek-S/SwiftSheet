@@ -6,7 +6,8 @@ import defaultStyle from '../../defaultStyle';
 import format from 'date-fns/format';
 import HeadlessTable from '../../components/SwiftTable/Table';
 import { PasswordPrompt } from '../../components/PasswordPrompt/PasswordPrompt';
-import * as errorMessage from '../../../utils/enums/errorMessage';
+import * as errorMessage from '../../../shared/enums/errorMessage';
+import { addToHistory } from '../../utils/history';
 import { Link } from 'react-router-dom';
 
 export const GET_SHEET = gql`
@@ -62,6 +63,7 @@ const SheetPage = ({ match }) => {
 				}
 
 				const { sheetData, expireAt } = data.sheet;
+				addToHistory(sheetId);
 				return (
 					<StyledDiv>
 						<ExpireDiv>

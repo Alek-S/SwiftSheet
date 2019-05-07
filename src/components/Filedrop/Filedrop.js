@@ -29,7 +29,7 @@ const Filedrop = ({
 	 */
 	const _handleChange = e => {
 		e.preventDefault();
-		setExpireIn(e.target.value);
+		setExpireIn(parseInt(e.target.value));
 	};
 
 	/**

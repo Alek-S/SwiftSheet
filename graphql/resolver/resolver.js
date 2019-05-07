@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const addDays = require('date-fns/add_days');
 const addHours = require('date-fns/add_hours');
 const bcrypt = require('bcrypt');
-const errorMessage = require('../../utils/enums/errorMessage');
+const errorMessage = require('../../shared/enums/errorMessage');
 
 /**
  * @function getSheet - get single sheet based on _id
