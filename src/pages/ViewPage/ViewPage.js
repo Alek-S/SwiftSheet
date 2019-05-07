@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 const ViewPage = () => {
 	const listHistory = getHistory()
 		? getHistory().map((item, i) => (
-				<li key={`${item.toString()}-${i}`}>
-					<Link to={`/${item}`}>{item}</Link>
-				</li>
+				<Link to={`/${item}`} key={`${item.toString()}-${i}`}>
+					<li>{item}</li>
+				</Link>
 		  ))
 		: null;
 
