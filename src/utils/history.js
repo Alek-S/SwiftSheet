@@ -21,13 +21,31 @@ export const addToHistory = item => {
 
 	if (currentStorage && currentStorage.length >= MAX_HISTORY) {
 		//history full
-		while (currentStorage.length > MAX_HISTORY - 1) {
-			currentStorage.shift();
+		if (!currentStorage.includes(item)) {
+			while (currentStorage.length > MAX_HISTORY - 1) {
+				currentStorage.shift();
+			}
+			newStorage.push(item);
 		}
-		newStorage.push(item);
 	}
 
-	localStorage.setItem(HISTORY, JSON.stringify(newStorage));
+	localStorage.setItem(HISTORY, JSON.stringify([...new Set(newStorage)]));
+};
+
+export const removeFromHistory = item => {
+	const currentStorage = JSON.parse(localStorage.getItem(HISTORY));
+	const index = currentStorage.length > 0 && currentStorage.indexOf(item);
+	let newStorage = currentStorage;
+
+	if (index > -1) {
+		newStorage.splice(index, 1);
+
+		if (newStorage.length > 0) {
+			localStorage.setItem(HISTORY, JSON.stringify(newStorage));
+		} else {
+			clearHistory();
+		}
+	}
 };
 
 /**
@@ -42,5 +60,5 @@ export const getHistory = () => JSON.parse(localStorage.getItem(HISTORY));
  * Clear localStorage history
  */
 export const clearHistory = () => {
-	storage.removeItem(HISTORY);
+	localStorage.removeItem(HISTORY);
 };

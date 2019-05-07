@@ -373,6 +373,7 @@ exports[`UploadPage matches the snapshot 1`] = `
               "boxShadowDark": "0px 5px 40px -2px rgba(0,0,0,0.5)",
               "boxShadowLight": "0px 5px 40px -5px rgba(0,0,0,0.15)",
               "color": Object {
+                "aqua": "#57DACB",
                 "background": "#fafafa",
                 "backgroundDark": "#EAEAEA",
                 "backgroundDarkest": "#BCBCBC",
@@ -393,7 +394,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                 "main": "'Quicksand', sans-serif",
               },
               "gradient": Object {
-                "blue": "linear-gradient(to bottom, #D8E13F 0%, #BFC644 100%)",
+                "green": "linear-gradient(to bottom, #D8E13F 0%, #BFC644 100%)",
                 "greenBlue": " linear-gradient(160deg, #57DACB 0%, #55A2ED 100%)",
                 "light": "linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%)",
                 "lightRed": "linear-gradient(to bottom, #f39191 0%, #ef6262 100%)",

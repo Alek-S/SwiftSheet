@@ -21,12 +21,13 @@ const theme = {
 		blue: '#46C8F5',
 		lightBlue: '#97E4FF',
 		darkBlue: '#2E8AA8',
+		aqua: '#57DACB',
 	},
 	gradient: {
 		light: `linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%)`,
 		red: 'linear-gradient(to bottom, #f07878 0%, #ED5050 100%)',
 		lightRed: 'linear-gradient(to bottom, #f39191 0%, #ef6262 100%)',
-		blue: 'linear-gradient(to bottom, #D8E13F 0%, #BFC644 100%)',
+		green: 'linear-gradient(to bottom, #D8E13F 0%, #BFC644 100%)',
 		greenBlue: ' linear-gradient(160deg, #57DACB 0%, #55A2ED 100%)',
 	},
 	font: {

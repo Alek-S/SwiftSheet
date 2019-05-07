@@ -7,7 +7,7 @@ import format from 'date-fns/format';
 import HeadlessTable from '../../components/SwiftTable/Table';
 import { PasswordPrompt } from '../../components/PasswordPrompt/PasswordPrompt';
 import * as errorMessage from '../../../shared/enums/errorMessage';
-import { addToHistory } from '../../utils/history';
+import { addToHistory, removeFromHistory } from '../../utils/history';
 import { Link } from 'react-router-dom';
 
 export const GET_SHEET = gql`
@@ -48,6 +48,7 @@ const SheetPage = ({ match }) => {
 				}
 
 				if (error) {
+					removeFromHistory(sheetId);
 					return (
 						<ExpiredNotice>
 							<section>
