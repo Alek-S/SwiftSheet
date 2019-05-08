@@ -4,20 +4,19 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
 .c0 {
   height: 90%;
   min-height: 200px;
-  border: 1px solid #d9d9d9;
   font-family: 'Quicksand',sans-serif;
   font-size: 14px;
   -webkit-letter-spacing: 1px;
   -moz-letter-spacing: 1px;
   -ms-letter-spacing: 1px;
   letter-spacing: 1px;
-  border-radius: 2px;
-  overflow: hidden;
   background-color: white;
   width: 80%;
   max-width: 1350px;
   margin: auto;
   margin-top: 20px;
+  border: none;
+  box-shadow: 0px 5px 40px -5px rgba(0,0,0,0.15);
 }
 
 .c0 .ag-header-cell-text {
@@ -34,14 +33,18 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
 }
 
 .c0 .ag-header {
-  background-color: #404040;
-  color: white;
+  background: linear-gradient(to bottom,#ffffff 0%,#f6f6f6 47%,#ededed 100%);
+  color: #404040;
+}
+
+.c0 .ag-header .ag-header-cell {
+  border-right: 1px solid #EAEAEA;
 }
 
 .c0 .ag-header .ag-column-hover {
-  background-color: #fafafa;
+  background: linear-gradient(to bottom,#ffffff 0%,#f6f6f6 47%,#ededed 100%);
   color: #404040;
-  border-bottom: 5px solid #46C8F5;
+  border-bottom: 4px solid #ED5050;
 }
 
 .c0 .ag-icon-desc,
@@ -54,11 +57,20 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
 }
 
 .c0 .ag-icon-filter {
-  background-color: #46C8F5;
   border-radius: 4px;
   position: relative;
   top: 5px;
-  padding: 5px;
+}
+
+.c0 .ag-filter {
+  background: linear-gradient(to bottom,#ffffff 0%,#f6f6f6 47%,#ededed 100%);
+  box-shadow: 0px 5px 40px -5px rgba(0,0,0,0.15);
+  font-family: 'Quicksand',sans-serif;
+}
+
+.c0 .ag-theme-material .ag-filter input[type="text"],
+.c0 .ag-theme-material .ag-filter input[type="date"] {
+  border-bottom: 1px solid #d9d9d9;
 }
 
 <ThemeProvider
@@ -98,7 +110,7 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
     }
   }
 >
-  <HeadlessTable
+  <Table
     data={
       Array [
         Object {
@@ -259,6 +271,6 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
         </AgGridReact>
       </div>
     </Table__Styledtable>
-  </HeadlessTable>
+  </Table>
 </ThemeProvider>
 `;

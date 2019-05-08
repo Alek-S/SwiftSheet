@@ -96,12 +96,12 @@ exports[`Filedrop matches the snapshot 1`] = `
         >
           <defaultStyle
             aria-label="preferences"
-            className="Filedrop__Options-zvfrty-3 iACHdv defaultStyle__Card-sc-1afhot-1 irLyLd"
+            className="Filedrop__Options-zvfrty-3 iACHdv defaultStyle__Card-sc-1afhot-1 lbCoOJ"
             role="form"
           >
             <div
               aria-label="preferences"
-              className="Filedrop__Options-zvfrty-3 iACHdv defaultStyle__Card-sc-1afhot-1 irLyLd defaultStyle-sc-1afhot-0 iywwUC"
+              className="Filedrop__Options-zvfrty-3 iACHdv defaultStyle__Card-sc-1afhot-1 lbCoOJ defaultStyle-sc-1afhot-0 iywwUC"
               role="form"
             >
               <section
