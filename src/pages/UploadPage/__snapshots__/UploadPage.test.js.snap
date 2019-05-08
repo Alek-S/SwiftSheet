@@ -16,6 +16,7 @@ exports[`UploadPage matches the snapshot 1`] = `
 .c6 input {
   outline: none;
   color: #404040;
+  font-family: 'Quicksand',sans-serif;
   background-color: #F1F3F4;
   border: 1px solid #F1F3F4;
   border-radius: 5rem;
@@ -26,6 +27,7 @@ exports[`UploadPage matches the snapshot 1`] = `
 .c6 input::-webkit-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
+  font-style: italic;
   font-family: 'Quicksand',sans-serif;
   color: #848484;
 }
@@ -33,6 +35,7 @@ exports[`UploadPage matches the snapshot 1`] = `
 .c6 input::-moz-placeholder {
   font-size: 1rem;
   font-weight: 400;
+  font-style: italic;
   font-family: 'Quicksand',sans-serif;
   color: #848484;
 }
@@ -40,6 +43,7 @@ exports[`UploadPage matches the snapshot 1`] = `
 .c6 input:-ms-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
+  font-style: italic;
   font-family: 'Quicksand',sans-serif;
   color: #848484;
 }
@@ -47,6 +51,7 @@ exports[`UploadPage matches the snapshot 1`] = `
 .c6 input::placeholder {
   font-size: 1rem;
   font-weight: 400;
+  font-style: italic;
   font-family: 'Quicksand',sans-serif;
   color: #848484;
 }

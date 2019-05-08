@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchSheet matches the snapshot 1`] = `
+.c0 {
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.c0 header {
+  background: linear-gradient(160deg,#57DACB 0%,#55A2ED 100%);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.c0 h2 {
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.c0 input {
+  box-sizing: border-box;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  height: 30px;
+  margin-bottom: 0;
+  padding-left: 2rem;
+  margin-right: 1rem;
+  font-size: 0.95rem;
+}
+
+.c0 input::-webkit-input-placeholder {
+  color: #BCBCBC;
+}
+
+.c0 input::-moz-placeholder {
+  color: #BCBCBC;
+}
+
+.c0 input:-ms-input-placeholder {
+  color: #BCBCBC;
+}
+
+.c0 input::placeholder {
+  color: #BCBCBC;
+}
+
+<defaultStyle__Card
+  className="c0"
+>
+  <SearchSheet__StyledForm>
+    <input
+      onChange={[Function]}
+      placeholder="search by sheet ID"
+      type="text"
+      value=""
+    />
+    <Link
+      replace={false}
+      to="/"
+    >
+      <SearchSheet__SubmitButton>
+        Submit
+      </SearchSheet__SubmitButton>
+    </Link>
+  </SearchSheet__StyledForm>
+</defaultStyle__Card>
+`;

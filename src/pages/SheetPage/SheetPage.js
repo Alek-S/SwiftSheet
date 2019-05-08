@@ -56,7 +56,8 @@ const SheetPage = ({ match }) => {
 									Sorry, looks like this sheet may have expired.
 								</p>
 								<p>
-									Try <Link to="/upload">uploading</Link> a new one.{' '}
+									Maybe <Link to="/upload">Upload</Link> a new one, or check
+									recently <Link to="/view">viewed</Link>.
 								</p>
 							</section>
 						</ExpiredNotice>

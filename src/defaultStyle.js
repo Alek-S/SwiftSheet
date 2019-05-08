@@ -15,6 +15,7 @@ const Card = styled(defaultStyle)`
 	input {
 		outline: none;
 		color: ${props => props.theme.color.text};
+		font-family: ${props => props.theme.font.main};
 		background-color: ${props => props.theme.color.input};
 		border: 1px solid ${props => props.theme.color.input};
 		border-radius: 5rem;
@@ -23,6 +24,7 @@ const Card = styled(defaultStyle)`
 		::placeholder {
 			font-size: 1rem;
 			font-weight: 400;
+			font-style: italic;
 			font-family: ${props => props.theme.font.main};
 			color: ${props => props.theme.color.lightText};
 		}

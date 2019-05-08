@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecentlyViewed matches the snapshot 1`] = `
+.c0 {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+}
+
+.c0 header {
+  background: linear-gradient(160deg,#57DACB 0%,#55A2ED 100%);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.c0 h2 {
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.c0 .no-items {
+  font-style: italic;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #404040;
+}
+
+.c0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #404040;
+}
+
+.c0 li {
+  font-size: 0.9rem;
+  color: #404040;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  text-align: center;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.c0 li:hover {
+  border: 1px solid #57DACB;
+  background-color: #fafafa;
+}
+
+<defaultStyle__Card
+  className="c0"
+>
+  <header>
+    <h2>
+      Recently Viewed Sheets
+    </h2>
+  </header>
+  <p
+    className="no-items"
+  >
+    No recently viewed items
+  </p>
+</defaultStyle__Card>
+`;

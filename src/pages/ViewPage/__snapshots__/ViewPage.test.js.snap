@@ -2,8 +2,9 @@
 
 exports[`ViewPage matches the snapshot 1`] = `
 .c0 {
+  padding-top: 6rem;
   background-color: #fafafa;
-  height: calc(100vh - 55px);
+  height: calc(100vh - 80px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,17 +25,7 @@ exports[`ViewPage matches the snapshot 1`] = `
 <defaultStyle
   className="c0"
 >
-  <ViewPage__StyledCard>
-    <header>
-      <h2>
-        Recently Viewed Sheets
-      </h2>
-    </header>
-    <p
-      className="no-items"
-    >
-      No recently viewed items
-    </p>
-  </ViewPage__StyledCard>
+  <SearchSheet />
+  <RecentlyViewed />
 </defaultStyle>
 `;
