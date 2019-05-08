@@ -1,5 +1,5 @@
 const MAX_HISTORY = 5;
-const HISTORY = 'history';
+export const HISTORY = 'history';
 
 /**
  * @function addToHistory
@@ -34,7 +34,7 @@ export const addToHistory = item => {
 
 export const removeFromHistory = item => {
 	const currentStorage = JSON.parse(localStorage.getItem(HISTORY));
-	const index = currentStorage.length > 0 && currentStorage.indexOf(item);
+	const index = currentStorage.length && currentStorage.indexOf(item);
 	let newStorage = currentStorage;
 
 	if (index > -1) {
