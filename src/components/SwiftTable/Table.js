@@ -5,7 +5,7 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-material.css';
 
-const HeadlessTable = ({ data }) => {
+const Table = ({ data }) => {
 	let columnDefs = [];
 	const rowData = [...data];
 	const defaultColDef = {
@@ -33,7 +33,7 @@ const HeadlessTable = ({ data }) => {
 	);
 };
 
-HeadlessTable.propTypes = {
+Table.propTypes = {
 	data: PropTypes.array.isRequired,
 };
 
@@ -41,17 +41,18 @@ HeadlessTable.propTypes = {
 const Styledtable = styled.div`
 	height: 90%;
 	min-height: 200px;
-	border: 1px solid ${props => props.theme.color.border};
 	font-family: ${props => props.theme.font.main};
 	font-size: 14px;
 	letter-spacing: 1px;
-	border-radius: 2px;
-	overflow: hidden;
+
+
 	background-color: white;
 	width: 80%;
 	max-width: ${props => props.children.props.columnDefs.length * 225 + 'px'};
 	margin: auto;
 	margin-top: 20px;
+	border: none;
+	box-shadow: ${props => props.theme.boxShadowLight};
 
 	.ag-header-cell-text {
 		font-family: ${props => props.theme.font.main};
@@ -66,14 +67,18 @@ const Styledtable = styled.div`
 	}
 
 	.ag-header {
-		background-color: ${props => props.theme.color.text};
-		color: white;
+		background: ${props => props.theme.gradient.light};
+		color: ${props => props.theme.color.text};
+
+		& .ag-header-cell {
+			border-right: 1px solid ${props => props.theme.color.backgroundDark};
+		}
 
 		& .ag-column-hover {
-			background-color: ${props => props.theme.color.background};
+			background: ${props => props.theme.gradient.light};
 			color: ${props => props.theme.color.text};
-			border-bottom: 5px solid ${props => props.theme.color.blue};
-		}
+			border-bottom: 4px solid ${props => props.theme.color.red};
+		} 
 	}
 
 	.ag-icon-desc,
@@ -85,12 +90,21 @@ const Styledtable = styled.div`
 		padding: 2px;
 	}
 	.ag-icon-filter {
-		background-color: ${props => props.theme.color.blue};
+		/* background-color: ${props => props.theme.color.blue}; */
 		border-radius: 4px;
 		position: relative;
 		top: 5px;
-		padding: 5px;
+	}
+
+	.ag-filter{
+		background: ${props => props.theme.gradient.light};
+		box-shadow: ${props => props.theme.boxShadowLight};
+		font-family: ${props => props.theme.font.main};
+	}
+
+	.ag-theme-material .ag-filter input[type="text"], .ag-theme-material .ag-filter input[type="date"] {
+			border-bottom: 1px solid ${props => props.theme.color.border};
 	}
 `;
 
-export default HeadlessTable;
+export default Table;
