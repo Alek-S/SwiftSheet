@@ -127,6 +127,14 @@ const StyledNavLink = styled(NavLink)`
 		font-weight: 500;
 		color: ${props => props.theme.color.red};
 	}
+
+	@media (max-width: 550px) {
+		& {
+			font-size: 1.1rem;
+			padding-right: 1rem;
+			padding-left: 1rem;
+		}
+	}
 `;
 
 const Tagline = styled.div`
@@ -137,6 +145,12 @@ const Tagline = styled.div`
 	margin-top: 0.5rem;
 	padding: 0.75rem 2rem;
 	border-left: solid 1px ${props => props.theme.color.border};
+
+	@media (max-width: 835px) {
+		& {
+			display: none;
+		}
+	}
 `;
 
 export default Header;

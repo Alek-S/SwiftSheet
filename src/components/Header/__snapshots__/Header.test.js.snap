@@ -107,6 +107,20 @@ exports[`Header matches the snapshot 1`] = `
   border-left: solid 1px #d9d9d9;
 }
 
+@media (max-width:550px) {
+  .c4 {
+    font-size: 1.1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width:835px) {
+  .c2 {
+    display: none;
+  }
+}
+
 <BrowserRouter>
   <Router
     history={
