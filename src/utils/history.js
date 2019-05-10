@@ -34,10 +34,11 @@ export const addToHistory = item => {
 
 export const removeFromHistory = item => {
 	const currentStorage = JSON.parse(localStorage.getItem(HISTORY));
-	const index = currentStorage.length && currentStorage.indexOf(item);
+	const index =
+		currentStorage && currentStorage.length && currentStorage.indexOf(item);
 	let newStorage = currentStorage;
 
-	if (index > -1) {
+	if (index !== null && index > -1) {
 		newStorage.splice(index, 1);
 
 		if (newStorage.length > 0) {
