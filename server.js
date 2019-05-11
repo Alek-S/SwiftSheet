@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const express_graphql = require('express-graphql');
 const schema = require('./backend/graphql/schema/schema');
 const depthLimit = require('graphql-depth-limit');
+const rateLimit = require('express-rate-limit');
 
 //==Express Setup==
 const app = express();
@@ -34,6 +35,13 @@ if (process.env.NODE_ENV === 'production') {
 		)
 	);
 }
+
+//===Rate Limit===
+const apiLimiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	max: 25,
+});
+app.use('/api/', apiLimiter);
 
 //===Parsing===
 app.use(bodyParser.json({ limit: '5mb' }));
