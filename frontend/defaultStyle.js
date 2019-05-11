@@ -58,5 +58,41 @@ const ErrorDialog = styled.div`
 	}
 `;
 
+const ApiCard = styled(Card)`
+	width: 500px;
+	padding: 1rem;
+	margin: auto;
+	margin-top: 1rem;
+	background-color: #424242;
+	color: ${props => props.theme.color.backgroundDarkest};
+	/* text-align: center; */
+
+	a {
+		margin-left: 1rem;
+		color: ${props => props.theme.color.aqua};
+	}
+
+	.pill {
+		background: ${props => props.theme.gradient.greenBlue};
+		color: white;
+		padding: 0.1rem 0.5rem;
+		border-radius: 4px;
+	}
+	.pill-secondary {
+		background-color: #595959;
+		color: white;
+		padding: 0.1rem 0.5rem;
+		border-radius: 4px;
+	}
+	.gql_query {
+		margin-left: 0.5rem;
+		color: ${props => props.theme.color.backgroundDark};
+	}
+
+	.query_title {
+		margin-top: 0.75rem;
+	}
+`;
+
 export default defaultStyle;
-export { Card, ErrorDialog };
+export { Card, ErrorDialog, ApiCard };

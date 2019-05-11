@@ -6,6 +6,8 @@ import defaultStyle from '../../defaultStyle';
 import format from 'date-fns/format';
 import Table from '../../components/SwiftTable/Table';
 import { PasswordPrompt } from '../../components/PasswordPrompt/PasswordPrompt';
+import { RestExample } from '../../components/RestExample/RestExample';
+import { GQLExample } from '../../components/GQLExample/GQLExample';
 import * as errorMessage from '../../../shared/enums/errorMessage';
 import { addToHistory, removeFromHistory } from '../../utils/history';
 import { Link } from 'react-router-dom';
@@ -67,28 +69,43 @@ const SheetPage = ({ match }) => {
 				const { sheetData, expireAt } = data.sheet;
 				addToHistory(sheetId);
 				return (
-					<StyledDiv>
-						<ExpireDiv>
-							Sheet Expires on:{' '}
-							{format(expireAt, 'MMM DD, YYYY  @  h:mm aa  (Z [GMT])')}
-						</ExpireDiv>
-						<Table data={sheetData} />
-					</StyledDiv>
+					<WrapperDiv>
+						<RestExample host={window.location.origin} id={sheetId} />
+						<GQLExample host={window.location.origin} id={sheetId} />
+						<StyledDiv>
+							<ExpireDiv>
+								Sheet Expires on:{' '}
+								{format(expireAt, 'MMM DD, YYYY  @  h:mm aa  (Z [GMT])')}
+							</ExpireDiv>
+							<Table data={sheetData} />
+						</StyledDiv>
+					</WrapperDiv>
 				);
 			}}
 		</Query>
 	);
 };
 
+const WrapperDiv = styled(defaultStyle)`
+	padding-top: 6rem;
+	background-color: ${props => props.theme.color.background};
+	margin-top: 0rem;
+	padding-bottom: 2rem;
+	width: 100%;
+`;
+
 const StyledDiv = styled(defaultStyle)`
 	background-color: ${props => props.theme.color.background};
-	padding-top: 7rem;
-	height: calc(100vh - 100px);
+	padding-bottom: 2rem;
+	margin-bottom: 0px;
+	width: 100%;
+	height: calc(100vh - 140px);
 `;
 
 const ExpireDiv = styled.div`
 	text-align: center;
 	color: ${props => props.theme.color.lightText};
+	margin-top: 2rem;
 `;
 
 const ExpiredNotice = styled(defaultStyle)`

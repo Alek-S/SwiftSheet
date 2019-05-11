@@ -198,6 +198,7 @@ exports[`SearchSheet matches the snapshot 1`] = `
             "lightBlue": "#97E4FF",
             "lightRed": "#FF8D8D",
             "lightText": "#848484",
+            "orange": "#ffbf80",
             "red": "#ED5050",
             "text": "#404040",
             "vividGreen": "#E3FC52",

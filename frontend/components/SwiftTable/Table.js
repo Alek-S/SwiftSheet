@@ -39,8 +39,7 @@ Table.propTypes = {
 
 /* istanbul ignore next */
 const Styledtable = styled.div`
-	height: 90%;
-	min-height: 200px;
+	height: 98%;
 	font-family: ${props => props.theme.font.main};
 	font-size: 14px;
 	letter-spacing: 1px;

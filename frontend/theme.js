@@ -22,6 +22,7 @@ const theme = {
 		lightBlue: '#97E4FF',
 		darkBlue: '#2E8AA8',
 		aqua: '#57DACB',
+		orange: '#ffbf80',
 	},
 	gradient: {
 		light: `linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%)`,
