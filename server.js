@@ -36,10 +36,13 @@ if (process.env.NODE_ENV === 'production') {
 	);
 }
 
+//===Trust First Proxy===
+app.set('trust proxy', 1);
+
 //===Rate Limit===
 const apiLimiter = rateLimit({
-	windowMs: 15 * 60 * 1000, // 15 minutes
-	max: 25,
+	windowMs: 10 * 60 * 1000, // 10 minutes
+	max: 100,
 });
 app.use('/api/', apiLimiter);
 
@@ -51,6 +54,7 @@ app.use(bodyParser.text());
 //===Graphql===
 app.use(
 	'/graphql',
+	apiLimiter,
 	express_graphql({
 		schema: schema,
 		graphiql: !process.env.NODE_ENV,
@@ -60,9 +64,6 @@ app.use(
 
 //===Static Files, CSS,Images,Fonts===
 app.use(express.static('dist'));
-
-//===Trust First Proxy===
-app.set('trust proxy', 1);
 
 //===MongoDB Connection with Mongoose==
 // mongoose.Promise = global.Promise; //use standard Promise instead of Mongo's promise library

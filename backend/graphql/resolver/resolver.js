@@ -67,7 +67,7 @@ const createSheet = async (_root, args) => {
 		hasPassword: !!password,
 		// if password, remove whitespace characters and get salted hash, else null
 		password: password
-			? await bcrypt.hash(password.replace(/\s/g, ''), 10)
+			? await bcrypt.hash(password.replace(/\s/g, ''), 8)
 			: null,
 		expireAt,
 	});
