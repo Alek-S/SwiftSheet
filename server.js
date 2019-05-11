@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const express_graphql = require('express-graphql');
-const schema = require('./graphql/schema/schema');
+const schema = require('./backend/graphql/schema/schema');
 const depthLimit = require('graphql-depth-limit');
 
 //==Express Setup==
@@ -70,7 +70,7 @@ db.on('error', error => {
 });
 
 //===Routes===
-require('./controller/routes.js')(app);
+require('./backend/controller/routes.js')(app);
 
 //==Start Server==
 const server = app.listen(app.get('port'), () => {
