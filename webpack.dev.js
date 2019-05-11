@@ -5,7 +5,7 @@ module.exports = {
 	mode: 'development',
 
 	//entry point
-	entry: './src/root.js',
+	entry: './frontend/root.js',
 
 	// compiled output js
 	output: {
@@ -17,7 +17,7 @@ module.exports = {
 			{
 				test: /\.js?$/,
 				// only process files in src folder
-				include: /src/,
+				include: /frontend/,
 				use: {
 					loader: 'babel-loader',
 				},
