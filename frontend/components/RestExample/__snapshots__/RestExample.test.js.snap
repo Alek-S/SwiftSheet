@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestExample matches the snapshot 1`] = `
+.c0 {
+  width: 500px;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: #424242;
+  color: #BCBCBC;
+}
+
+.c0 a {
+  margin-left: 1rem;
+  color: #57DACB;
+}
+
+.c0 .pill {
+  background: linear-gradient(160deg,#57DACB 0%,#55A2ED 100%);
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.c0 .pill-secondary {
+  background-color: #595959;
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.c0 .gql_query {
+  margin-left: 0.5rem;
+  color: #EAEAEA;
+}
+
+.c0 .query_title {
+  margin-top: 0.75rem;
+}
+
+<defaultStyle__Card
+  className="c0"
+>
+  <span
+    className="pill"
+  >
+    REST API:
+  </span>
+  <a
+    href="mockHost.com/api/sheet/42"
+    target="_blank"
+  >
+    mockHost.com
+    /api/sheet/
+    42
+  </a>
+</defaultStyle__Card>
+`;

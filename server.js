@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const express_graphql = require('express-graphql');
-const schema = require('./graphql/schema/schema');
+const schema = require('./backend/graphql/schema/schema');
 const depthLimit = require('graphql-depth-limit');
+const rateLimit = require('express-rate-limit');
 
 //==Express Setup==
 const app = express();
@@ -35,6 +36,16 @@ if (process.env.NODE_ENV === 'production') {
 	);
 }
 
+//===Trust First Proxy===
+app.set('trust proxy', 1);
+
+//===Rate Limit===
+const apiLimiter = rateLimit({
+	windowMs: 10 * 60 * 1000, // 10 minutes
+	max: 100,
+});
+app.use('/api/', apiLimiter);
+
 //===Parsing===
 app.use(bodyParser.json({ limit: '5mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '5mb' }));
@@ -43,6 +54,7 @@ app.use(bodyParser.text());
 //===Graphql===
 app.use(
 	'/graphql',
+	apiLimiter,
 	express_graphql({
 		schema: schema,
 		graphiql: !process.env.NODE_ENV,
@@ -52,9 +64,6 @@ app.use(
 
 //===Static Files, CSS,Images,Fonts===
 app.use(express.static('dist'));
-
-//===Trust First Proxy===
-app.set('trust proxy', 1);
 
 //===MongoDB Connection with Mongoose==
 // mongoose.Promise = global.Promise; //use standard Promise instead of Mongo's promise library
@@ -70,7 +79,7 @@ db.on('error', error => {
 });
 
 //===Routes===
-require('./controller/routes.js')(app);
+require('./backend/controller/routes.js')(app);
 
 //==Start Server==
 const server = app.listen(app.get('port'), () => {
