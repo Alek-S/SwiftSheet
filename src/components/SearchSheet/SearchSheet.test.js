@@ -7,7 +7,7 @@ import SearchSheet from './SearchSheet';
 import theme from '../../theme';
 
 describe('SearchSheet', () => {
-	it('matches the snapshot', () => {
+	test('matches the snapshot', () => {
 		const tree = mount(
 			<Router>
 				<ThemeProvider theme={theme}>

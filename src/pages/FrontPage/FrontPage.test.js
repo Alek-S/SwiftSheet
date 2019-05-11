@@ -6,7 +6,7 @@ import FrontPage from './FrontPage';
 import theme from '../../theme';
 
 describe('FrontPage', () => {
-	it('matches the snapshot', () => {
+	test('matches the snapshot', () => {
 		const tree = mountWithTheme(<FrontPage />, theme);
 		expect(tree).toMatchSnapshot();
 	});

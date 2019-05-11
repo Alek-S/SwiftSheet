@@ -95,7 +95,7 @@ const errorMocks = [
 ];
 
 describe('<SheetPage />', () => {
-	it('renders', () => {
+	test('renders', () => {
 		renderer.create(
 			<MockedProvider mocks={mocks} addTypename={false}>
 				<Router>
@@ -113,7 +113,7 @@ describe('<SheetPage />', () => {
 		);
 	});
 
-	it('matches the snapshot', () => {
+	test('matches the snapshot', () => {
 		const component = renderer.create(
 			<MockedProvider mocks={mocks} addTypename={false}>
 				<Router>
@@ -132,7 +132,7 @@ describe('<SheetPage />', () => {
 		expect(toJson(component)).toMatchSnapshot();
 	});
 
-	it('should render loading state initially', () => {
+	test('should render loading state initially', () => {
 		const component = renderer.create(
 			<MockedProvider mocks={mocks} addTypename={false}>
 				<Router>
@@ -154,7 +154,7 @@ describe('<SheetPage />', () => {
 	});
 
 	//TODO:
-	it.skip('should render error', async () => {
+	test.skip('should render error', async () => {
 		const wrapper = mount(
 			<MockedProvider mocks={errorMocks} addTypename={false}>
 				<Router>
@@ -172,7 +172,7 @@ describe('<SheetPage />', () => {
 			</MockedProvider>
 		);
 
-		await wait(0);
+		await watest(0);
 		wrapper.update();
 
 		const message = wrapper.find('p.errorMessage');

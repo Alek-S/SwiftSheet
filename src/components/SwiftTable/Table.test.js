@@ -60,7 +60,7 @@ const data = [
 ];
 
 describe('<HeadlessTable />', () => {
-	it('matches the snapshot', () => {
+	test('matches the snapshot', () => {
 		const tree = mount(
 			<ThemeProvider theme={theme}>
 				<HeadlessTable data={data} />

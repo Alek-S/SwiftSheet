@@ -9,7 +9,7 @@ import UploadPage from './UploadPage';
 import theme from '../../theme';
 
 describe('UploadPage', () => {
-	it('matches the snapshot', () => {
+	test('matches the snapshot', () => {
 		const wrapper = mount(
 			<MockedProvider mocks={[]} addTypename={false}>
 				<Router>

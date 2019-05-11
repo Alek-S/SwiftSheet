@@ -5,7 +5,7 @@ import RecentlyViewed from './RecentlyViewed';
 import theme from '../../theme';
 
 describe('RecentlyViewed', () => {
-	it('matches the snapshot', () => {
+	test('matches the snapshot', () => {
 		const tree = shallowWithTheme(<RecentlyViewed />, theme).dive();
 		expect(toJson(tree)).toMatchSnapshot();
 	});

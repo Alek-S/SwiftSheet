@@ -12,7 +12,7 @@ function fireScroll(height) {
 }
 
 describe('Header', () => {
-	it('matches the snapshot', () => {
+	test('matches the snapshot', () => {
 		const tree = mountWithTheme(
 			<Router>
 				<Header />
@@ -22,13 +22,13 @@ describe('Header', () => {
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 
-	it('start as large', () => {
+	test('start as large', () => {
 		const document = {};
 		const wrapper = shallow(<Header />);
 		expect(wrapper.find('.large').length).toBeGreaterThan(0);
 	});
 
-	// 	it('becomes small on scroll, and large when back to top', () => {
+	// 	test('becomes small on scroll, and large when back to top', () => {
 	// 		const mockEvent = {};
 	// 		const wrapper = shallow(<Header />);
 	// 		wrapper.instance().handleScroll(mockEvent, 200);
