@@ -69,6 +69,19 @@ exports[`Footer matches the snapshot 1`] = `
   }
 }
 
+@media (max-width:750px) {
+  .c0 img {
+    display: block;
+    float: none;
+    width: 40%;
+    margin: auto;
+  }
+
+  .c0 p {
+    margin-left: 0.5rem;
+  }
+}
+
 <section
   className="c0"
 >

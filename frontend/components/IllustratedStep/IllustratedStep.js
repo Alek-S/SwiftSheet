@@ -74,11 +74,21 @@ const StyledSection = styled.section`
 	}
 	@media (max-width: 900px) {
 		width: 98%;
-
 		p {
 			margin-top: 0.5rem;
 			margin-left: 12rem;
 			line-height: 150%;
+		}
+	}
+	@media (max-width: 750px) {
+		img {
+			display: block;
+			float: none;
+			width: 40%;
+			margin: auto;
+		}
+		p {
+			margin-left: 0.5rem;
 		}
 	}
 `;
