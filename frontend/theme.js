@@ -21,7 +21,7 @@ const theme = {
 		blue: '#46C8F5',
 		lightBlue: '#97E4FF',
 		darkBlue: '#2E8AA8',
-		aqua: '#57DACB',
+		aqua: '#68F6BA',
 		orange: '#ffbf80',
 	},
 	gradient: {

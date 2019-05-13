@@ -54,7 +54,7 @@ exports[`RecentlyViewed matches the snapshot 1`] = `
 }
 
 .c0 li:hover {
-  border: 1px solid #57DACB;
+  border: 1px solid #68F6BA;
   background-color: #fafafa;
 }
 

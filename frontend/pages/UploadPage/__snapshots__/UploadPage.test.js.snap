@@ -378,7 +378,7 @@ exports[`UploadPage matches the snapshot 1`] = `
               "boxShadowDark": "0px 5px 40px -2px rgba(0,0,0,0.5)",
               "boxShadowLight": "0px 5px 40px -5px rgba(0,0,0,0.15)",
               "color": Object {
-                "aqua": "#57DACB",
+                "aqua": "#68F6BA",
                 "background": "#fafafa",
                 "backgroundDark": "#EAEAEA",
                 "backgroundDarkest": "#BCBCBC",
