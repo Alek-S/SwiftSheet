@@ -254,6 +254,15 @@ exports[`UploadPage matches the snapshot 1`] = `
   background: transparent;
 }
 
+.c11 {
+  min-width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 2rem;
+}
+
 <MockedProvider
   addTypename={false}
   mocks={Array []}
@@ -812,6 +821,15 @@ exports[`UploadPage matches the snapshot 1`] = `
                           />
                         </div>
                       </Mutation>
+                      <UploadPage__UploadError>
+                        <defaultStyle__ErrorDialog
+                          className="c11"
+                        >
+                          <div
+                            className="c11 c6"
+                          />
+                        </defaultStyle__ErrorDialog>
+                      </UploadPage__UploadError>
                     </form>
                   </UploadPage__StyledForm>
                 </div>
