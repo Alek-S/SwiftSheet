@@ -8,11 +8,12 @@ exports[`Filedrop matches the snapshot 1`] = `
     >
       <Filedrop__StyledDropzone
         accept="text/csv"
-        maxSize={5000000}
-        minSize={1}
+        maxSize={2500000}
+        minSize={8}
         multiple={false}
         onDragEnter={[Function]}
         onDragLeave={[Function]}
+        onDropRejected={[Function]}
       >
         <t
           accept="text/csv"
@@ -22,11 +23,12 @@ exports[`Filedrop matches the snapshot 1`] = `
           disabled={false}
           getDataTransferItems={[Function]}
           inputProps={Object {}}
-          maxSize={5000000}
-          minSize={1}
+          maxSize={2500000}
+          minSize={8}
           multiple={false}
           onDragEnter={[Function]}
           onDragLeave={[Function]}
+          onDropRejected={[Function]}
           preventDropOnDocument={true}
         >
           <div
@@ -85,6 +87,15 @@ exports[`Filedrop matches the snapshot 1`] = `
           </div>
         </t>
       </Filedrop__StyledDropzone>
+      <Filedrop__UploadError>
+        <defaultStyle__ErrorDialog
+          className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx"
+        >
+          <div
+            className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx defaultStyle__ErrorDialog-g21vfe-2 dCQtTE"
+          />
+        </defaultStyle__ErrorDialog>
+      </Filedrop__UploadError>
       <Filedrop__Options
         aria-label="preferences"
         role="form"
@@ -176,17 +187,17 @@ exports[`Filedrop matches the snapshot 1`] = `
           </defaultStyle>
         </defaultStyle__Card>
       </Filedrop__Options>
-      <Filedrop__WrongPassword>
+      <Filedrop__UploadError>
         <defaultStyle__ErrorDialog
-          className="Filedrop__WrongPassword-sc-1u7cgvl-5 eSDlvN"
+          className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx"
         >
           <div
-            className="Filedrop__WrongPassword-sc-1u7cgvl-5 eSDlvN defaultStyle__ErrorDialog-g21vfe-2 dCQtTE"
+            className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx defaultStyle__ErrorDialog-g21vfe-2 dCQtTE"
           >
             ⚠️ Check Password Length
           </div>
         </defaultStyle__ErrorDialog>
-      </Filedrop__WrongPassword>
+      </Filedrop__UploadError>
     </section>
   </Filedrop__StyledSection>
 </Filedrop>
