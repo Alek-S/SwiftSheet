@@ -47,8 +47,8 @@ const apiLimiter = rateLimit({
 app.use('/api/', apiLimiter);
 
 //===Parsing===
-app.use(bodyParser.json({ limit: '5mb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '5mb' }));
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use(bodyParser.text());
 
 //===Graphql===

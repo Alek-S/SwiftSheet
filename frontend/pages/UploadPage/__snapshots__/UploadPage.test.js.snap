@@ -8,12 +8,12 @@ exports[`UploadPage matches the snapshot 1`] = `
   font-size: 0.9em;
 }
 
-.c6 {
+.c8 {
   border-radius: 8px;
   box-shadow: 0px 5px 40px -5px rgba(0,0,0,0.15);
 }
 
-.c6 input {
+.c8 input {
   outline: none;
   color: #404040;
   font-family: 'Quicksand',sans-serif;
@@ -24,7 +24,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   transition: all 0.3s;
 }
 
-.c6 input::-webkit-input-placeholder {
+.c8 input::-webkit-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
@@ -32,7 +32,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   color: #848484;
 }
 
-.c6 input::-moz-placeholder {
+.c8 input::-moz-placeholder {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
@@ -40,7 +40,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   color: #848484;
 }
 
-.c6 input:-ms-input-placeholder {
+.c8 input:-ms-input-placeholder {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
@@ -48,7 +48,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   color: #848484;
 }
 
-.c6 input::placeholder {
+.c8 input::placeholder {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
@@ -56,20 +56,20 @@ exports[`UploadPage matches the snapshot 1`] = `
   color: #848484;
 }
 
-.c6 input:hover {
+.c8 input:hover {
   border: solid 1px #d9d9d9;
 }
 
-.c6 input:focus,
-.c6 input:active {
+.c8 input:focus,
+.c8 input:active {
   border: solid 1px #46C8F5;
 }
 
-.c6 input.true {
+.c8 input.true {
   border: 1px solid #ED5050;
 }
 
-.c9 {
+.c6 {
   text-align: center;
   opacity: 0;
   color: white;
@@ -80,7 +80,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   transition: all 0.3s;
 }
 
-.c9.true {
+.c6.true {
   opacity: 1;
 }
 
@@ -122,7 +122,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   background-color: transparent;
 }
 
-.c5 {
+.c7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
   display: -webkit-box;
@@ -149,7 +149,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   margin-top: 3.5rem;
 }
 
-.c5 input {
+.c7 input {
   margin: 0 2rem 0 0.25rem;
   padding-left: 1rem;
   width: 140px;
@@ -158,31 +158,31 @@ exports[`UploadPage matches the snapshot 1`] = `
   height: 25px;
 }
 
-.c5 input::-webkit-input-placeholder {
+.c7 input::-webkit-input-placeholder {
   color: #BCBCBC;
 }
 
-.c5 input::-moz-placeholder {
+.c7 input::-moz-placeholder {
   color: #BCBCBC;
 }
 
-.c5 input:-ms-input-placeholder {
+.c7 input:-ms-input-placeholder {
   color: #BCBCBC;
 }
 
-.c5 input::placeholder {
+.c7 input::placeholder {
   color: #BCBCBC;
 }
 
-.c5 select {
+.c7 select {
   margin-left: 0.25rem;
 }
 
-.c7 {
+.c9 {
   margin-left: 2rem;
 }
 
-.c7 button {
+.c9 button {
   color: white;
   cursor: pointer;
   outline: none;
@@ -198,8 +198,11 @@ exports[`UploadPage matches the snapshot 1`] = `
   width: 70px;
 }
 
-.c8 {
-  width: 200px;
+.c5 {
+  min-width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: 2rem;
 }
 
@@ -249,6 +252,15 @@ exports[`UploadPage matches the snapshot 1`] = `
 
 .c10 input[type='submit']:hover {
   background: transparent;
+}
+
+.c11 {
+  min-width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 <MockedProvider
@@ -433,12 +445,13 @@ exports[`UploadPage matches the snapshot 1`] = `
                       >
                         <Filedrop__StyledDropzone
                           accept="text/csv"
-                          maxSize={5000000}
-                          minSize={1}
+                          maxSize={2500000}
+                          minSize={8}
                           multiple={false}
                           onDragEnter={[Function]}
                           onDragLeave={[Function]}
                           onDrop={[Function]}
+                          onDropRejected={[Function]}
                         >
                           <t
                             accept="text/csv"
@@ -448,12 +461,13 @@ exports[`UploadPage matches the snapshot 1`] = `
                             disabled={false}
                             getDataTransferItems={[Function]}
                             inputProps={Object {}}
-                            maxSize={5000000}
-                            minSize={1}
+                            maxSize={2500000}
+                            minSize={8}
                             multiple={false}
                             onDragEnter={[Function]}
                             onDragLeave={[Function]}
                             onDrop={[Function]}
+                            onDropRejected={[Function]}
                             preventDropOnDocument={true}
                           >
                             <div
@@ -512,23 +526,32 @@ exports[`UploadPage matches the snapshot 1`] = `
                             </div>
                           </t>
                         </Filedrop__StyledDropzone>
+                        <Filedrop__UploadError>
+                          <defaultStyle__ErrorDialog
+                            className="c5"
+                          >
+                            <div
+                              className="c5 c6"
+                            />
+                          </defaultStyle__ErrorDialog>
+                        </Filedrop__UploadError>
                         <Filedrop__Options
                           aria-label="preferences"
                           role="form"
                         >
                           <defaultStyle__Card
                             aria-label="preferences"
-                            className="c5"
+                            className="c7"
                             role="form"
                           >
                             <defaultStyle
                               aria-label="preferences"
-                              className="c5 c6"
+                              className="c7 c8"
                               role="form"
                             >
                               <div
                                 aria-label="preferences"
-                                className="c5 c6 c1"
+                                className="c7 c8 c1"
                                 role="form"
                               >
                                 <section
@@ -590,7 +613,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                     active={true}
                                   >
                                     <label
-                                      className="c7"
+                                      className="c9"
                                     >
                                       <span>
                                         First Row Header:
@@ -607,17 +630,17 @@ exports[`UploadPage matches the snapshot 1`] = `
                             </defaultStyle>
                           </defaultStyle__Card>
                         </Filedrop__Options>
-                        <Filedrop__WrongPassword>
+                        <Filedrop__UploadError>
                           <defaultStyle__ErrorDialog
-                            className="c8"
+                            className="c5"
                           >
                             <div
-                              className="c8 c9"
+                              className="c5 c6"
                             >
                               ⚠️ Check Password Length
                             </div>
                           </defaultStyle__ErrorDialog>
-                        </Filedrop__WrongPassword>
+                        </Filedrop__UploadError>
                       </section>
                     </Filedrop__StyledSection>
                   </Filedrop>
@@ -798,6 +821,15 @@ exports[`UploadPage matches the snapshot 1`] = `
                           />
                         </div>
                       </Mutation>
+                      <UploadPage__UploadError>
+                        <defaultStyle__ErrorDialog
+                          className="c11"
+                        >
+                          <div
+                            className="c11 c6"
+                          />
+                        </defaultStyle__ErrorDialog>
+                      </UploadPage__UploadError>
                     </form>
                   </UploadPage__StyledForm>
                 </div>

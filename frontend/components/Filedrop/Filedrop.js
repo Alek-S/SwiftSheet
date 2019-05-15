@@ -21,6 +21,9 @@ const Filedrop = ({
 	wrongPassword,
 }) => {
 	const [dragging, setDragging] = useState(false);
+	const [uploadErrorMessage, setUploadErrorMessage] = useState('');
+	const MAX_SIZE = 2500000;
+	const FILE_FORMAT = 'text/csv';
 
 	/**
 	 * @function
@@ -42,17 +45,37 @@ const Filedrop = ({
 		setHeader(!firstRowHeader);
 	};
 
+	const _handleRejection = e => {
+		const { size, type } = e[0];
+
+		if (size >= MAX_SIZE) {
+			setUploadErrorMessage(
+				'⚠️ Woops! Bit too large. File upload limit is currently 2.5mb.'
+			);
+		} else if (type !== FILE_FORMAT) {
+			setUploadErrorMessage(
+				'⚠️ Woops! Only CSV file types currently supported'
+			);
+		} else {
+			setUploadErrorMessage(
+				'⚠️ Woops! Something went wrong. Check that file is formatted correctly'
+			);
+		}
+		console.warn('upload rejected', e);
+	};
+
 	return (
 		<StyledSection>
 			<StyledDropzone
 				onDrop={onDrop}
-				accept="text/csv"
-				maxSize={5000000}
-				minSize={1}
+				accept={FILE_FORMAT}
+				maxSize={MAX_SIZE}
+				minSize={8}
 				multiple={false}
 				dragging={dragging ? 'true' : undefined}
 				onDragEnter={() => setDragging(true)}
 				onDragLeave={() => setDragging(false)}
+				onDropRejected={_handleRejection}
 			>
 				{dragging ? (
 					<img
@@ -69,6 +92,9 @@ const Filedrop = ({
 					{dragging ? 'Drop' : 'Drag'} CSV file here
 				</StyledText>
 			</StyledDropzone>
+			<UploadError className={uploadErrorMessage ? 'true' : undefined}>
+				{uploadErrorMessage}
+			</UploadError>
 			<Options role="form" aria-label="preferences">
 				<section aria-label="set password">
 					Password:
@@ -104,11 +130,11 @@ const Filedrop = ({
 				</section>
 			</Options>
 
-			<WrongPassword
+			<UploadError
 				className={wrongPassword ? wrongPassword.toString() : undefined}
 			>
 				⚠️ Check Password Length
-			</WrongPassword>
+			</UploadError>
 		</StyledSection>
 	);
 };
@@ -212,8 +238,9 @@ Filedrop.propTypes = {
 	onDrop: PropTypes.func,
 };
 
-const WrongPassword = styled(ErrorDialog)`
-	width: 200px;
+const UploadError = styled(ErrorDialog)`
+	min-width: 200px;
+	width: fit-content;
 	margin-top: 2rem;
 `;
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import defaultStyle from '../../defaultStyle';
+import defaultStyle, { ErrorDialog } from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Papa from 'papaparse';
 
 const UPLOAD_SHEET = gql`
@@ -32,6 +32,7 @@ const UploadPage = () => {
 	const [file, setFile] = useState();
 	const [password, setPassword] = useState('');
 	const [wrongPassword, setWrongPassword] = useState(false);
+	const [uploadErrorMessage, setErrorMessage] = useState('');
 
 	const onCompleted = () => {
 		setRedirect(true);
@@ -51,13 +52,12 @@ const UploadPage = () => {
 			file[0].name.indexOf('.csv') + 4 === file[0].name.length
 		) {
 			setFile(file);
-
 			setDisableSubmit(false);
 		} else {
-			// TODO handle Error on UI
 			console.error(
 				`file rejected!: \n ${rejectedFile[0].name}\n ${rejectedFile[0].type}`
 			);
+			setErrorMessage('⚠️ File Rejected');
 		}
 	};
 
@@ -65,6 +65,16 @@ const UploadPage = () => {
 		const passing = (pw.length !== 0 && pw.length < 6) || pw.length > 70;
 		setPassword(pw);
 		setWrongPassword(passing);
+	};
+
+	const showErrorMessage = visible => {
+		let message = '⚠️ Woops! Something went wrong.';
+
+		if (header) {
+			message += ' You sure first row is a header?';
+		}
+
+		setErrorMessage(message);
 	};
 
 	return (
@@ -81,33 +91,42 @@ const UploadPage = () => {
 			/>
 			<StyledForm disableSubmit={disableSubmit}>
 				<Mutation mutation={UPLOAD_SHEET} onCompleted={onCompleted}>
-					{(uploadSheet, { loading, error, data }) => (
-						<div>
-							{renderRedirect(data)}
-							<input
-								type="submit"
-								onClick={e => {
-									e.preventDefault();
-									Papa.parse(file[0], {
-										header: header,
-										download: true,
-										skipEmptyLines: false,
-										complete: ({ data }) =>
-											uploadSheet({
-												variables: {
-													sheetData: data,
-													expireIn: parseInt(expireIn),
-													password: password,
-												},
-											}),
-									});
-								}}
-								value="Upload File"
-								disabled={disableSubmit}
-							/>
-						</div>
-					)}
+					{(uploadSheet, { loading, error, data }) => {
+						if (error) {
+							showErrorMessage();
+						}
+
+						return (
+							<div>
+								{renderRedirect(data)}
+								<input
+									type="submit"
+									onClick={e => {
+										e.preventDefault();
+										Papa.parse(file[0], {
+											header: header,
+											download: true,
+											skipEmptyLines: false,
+											complete: ({ data }) =>
+												uploadSheet({
+													variables: {
+														sheetData: data,
+														expireIn: parseInt(expireIn),
+														password: password,
+													},
+												}),
+										});
+									}}
+									value="Upload File"
+									disabled={disableSubmit}
+								/>
+							</div>
+						);
+					}}
 				</Mutation>
+				<UploadError className={uploadErrorMessage ? 'true' : undefined}>
+					{uploadErrorMessage}
+				</UploadError>
 			</StyledForm>
 		</StyledDiv>
 	);
@@ -164,6 +183,13 @@ const StyledForm = styled.form`
 				props.disableSubmit ? '' : props.theme.boxShadowDark};
 		}
 	}
+`;
+
+const UploadError = styled(ErrorDialog)`
+	min-width: 200px;
+	width: fit-content;
+	margin: auto;
+	margin-top: 2rem;
 `;
 
 export default UploadPage;
