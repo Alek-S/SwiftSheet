@@ -202,3 +202,206 @@ exports[`Filedrop matches the snapshot 1`] = `
   </Filedrop__StyledSection>
 </Filedrop>
 `;
+
+exports[`Filedrop matches the snapshot 2`] = `
+<Filedrop>
+  <Filedrop__StyledSection>
+    <section
+      className="Filedrop__StyledSection-sc-1u7cgvl-0 byCkGb"
+    >
+      <Filedrop__StyledDropzone
+        accept="text/csv"
+        maxSize={2500000}
+        minSize={8}
+        multiple={false}
+        onDragEnter={[Function]}
+        onDragLeave={[Function]}
+        onDropRejected={[Function]}
+      >
+        <t
+          accept="text/csv"
+          className="Filedrop__StyledDropzone-sc-1u7cgvl-1 jGdMmU"
+          disableClick={false}
+          disablePreview={false}
+          disabled={false}
+          getDataTransferItems={[Function]}
+          inputProps={Object {}}
+          maxSize={2500000}
+          minSize={8}
+          multiple={false}
+          onDragEnter={[Function]}
+          onDragLeave={[Function]}
+          onDropRejected={[Function]}
+          preventDropOnDocument={true}
+        >
+          <div
+            aria-disabled={false}
+            className="Filedrop__StyledDropzone-sc-1u7cgvl-1 jGdMmU"
+            onClick={[Function]}
+            onDragEnter={[Function]}
+            onDragLeave={[Function]}
+            onDragOver={[Function]}
+            onDragStart={[Function]}
+            onDrop={[Function]}
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <img
+              alt="upload-cloud-logo"
+              src="./assets/images/upload-cloud-light.svg"
+            />
+            <Filedrop__StyledText
+              dragging={false}
+            >
+              <defaultStyle
+                className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb"
+                dragging={false}
+              >
+                <div
+                  className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb defaultStyle-g21vfe-0 eXjdxI"
+                >
+                  Drag
+                   CSV file here
+                </div>
+              </defaultStyle>
+            </Filedrop__StyledText>
+            <input
+              accept="text/csv"
+              autoComplete="off"
+              disabled={false}
+              multiple={false}
+              onChange={[Function]}
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 0.00001,
+                  "pointerEvents": "none",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+              type="file"
+            />
+          </div>
+        </t>
+      </Filedrop__StyledDropzone>
+      <Filedrop__UploadError>
+        <defaultStyle__ErrorDialog
+          className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx"
+        >
+          <div
+            className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx defaultStyle__ErrorDialog-g21vfe-2 dCQtTE"
+          />
+        </defaultStyle__ErrorDialog>
+      </Filedrop__UploadError>
+      <Filedrop__Options
+        aria-label="preferences"
+        role="form"
+      >
+        <defaultStyle__Card
+          aria-label="preferences"
+          className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP"
+          role="form"
+        >
+          <defaultStyle
+            aria-label="preferences"
+            className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP defaultStyle__Card-g21vfe-1 bmaFoR"
+            role="form"
+          >
+            <div
+              aria-label="preferences"
+              className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP defaultStyle__Card-g21vfe-1 bmaFoR defaultStyle-g21vfe-0 eXjdxI"
+              role="form"
+            >
+              <section
+                aria-label="set password"
+              >
+                Password:
+                <input
+                  autoComplete="new-password"
+                  onChange={[Function]}
+                  placeholder="enter password"
+                  type="password"
+                />
+              </section>
+              <section
+                aria-label="set expiration"
+              >
+                Expires In:
+                <select
+                  onChange={[Function]}
+                >
+                  <option
+                    value={1}
+                  >
+                    1 Hour
+                  </option>
+                  <option
+                    value={4}
+                  >
+                    4 Hours
+                  </option>
+                  <option
+                    value={8}
+                  >
+                    8 Hours
+                  </option>
+                  <option
+                    value={24}
+                  >
+                    1 Day
+                  </option>
+                  <option
+                    value={72}
+                  >
+                    3 Days
+                  </option>
+                  <option
+                    value={120}
+                  >
+                    5 Days
+                  </option>
+                </select>
+              </section>
+              <section
+                aria-label="toggle first row header"
+              >
+                <Filedrop__HeaderToggle>
+                  <label
+                    className="Filedrop__HeaderToggle-sc-1u7cgvl-4 exTaKQ"
+                  >
+                    <span>
+                      First Row Header:
+                    </span>
+                    <button
+                      onClick={[Function]}
+                    >
+                      No
+                    </button>
+                  </label>
+                </Filedrop__HeaderToggle>
+              </section>
+            </div>
+          </defaultStyle>
+        </defaultStyle__Card>
+      </Filedrop__Options>
+      <Filedrop__UploadError>
+        <defaultStyle__ErrorDialog
+          className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx"
+        >
+          <div
+            className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx defaultStyle__ErrorDialog-g21vfe-2 dCQtTE"
+          >
+            ⚠️ Check Password Length
+          </div>
+        </defaultStyle__ErrorDialog>
+      </Filedrop__UploadError>
+    </section>
+  </Filedrop__StyledSection>
+</Filedrop>
+`;
