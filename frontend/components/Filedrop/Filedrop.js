@@ -50,7 +50,7 @@ const Filedrop = ({
 
 		if (size >= MAX_SIZE) {
 			setUploadErrorMessage(
-				'⚠️ Woops! Bit too large. File upload limit is currently 2.5mb.'
+				'⚠️ Woops! Bit too large. Upload limit is currently 2.5MB.'
 			);
 		} else if (type !== FILE_FORMAT) {
 			setUploadErrorMessage(

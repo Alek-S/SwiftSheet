@@ -42,7 +42,7 @@ module.exports = {
 	}, //end module
 
 	plugins: [
-		new BundleAnalyzerPlugin(),
+		// new BundleAnalyzerPlugin(),
 		new MiniCssExtractPlugin({
 			filename: 'assets/css/[name].css',
 		}),

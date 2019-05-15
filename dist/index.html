@@ -12,6 +12,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One&text=SwiftSheet|Quicksand" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+	<link rel="preload" href="./assets/css/reset.css" as="style">
+	<link rel="preload" href="./assets/css/vendor.css" as="style">
+	<link rel="preload" href="./main.js" as="script">
+	<link rel="preload" href="./assets/js/main.js" as="script">
+	
+
 	<!-- CSS reset -->
 	<link rel="stylesheet" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="./assets/css/vendor.css">
@@ -24,7 +30,7 @@
 <body>
 	<div id="app"></div>
 
-	<script async src="assets/js/vendor.js"></script>  <!-- modules ex: react, react-dom etc -->
-	<script defer src="assets/js/main.js"></script> <!-- core application code -->
+	<script async src="./assets/js/vendor.js"></script>  <!-- modules ex: react, react-dom etc -->
+	<script defer src="./assets/js/main.js"></script> <!-- core application code -->
 </body>
 </html>

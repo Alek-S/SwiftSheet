@@ -57,7 +57,6 @@ const UploadPage = () => {
 			console.error(
 				`file rejected!: \n ${rejectedFile[0].name}\n ${rejectedFile[0].type}`
 			);
-			setErrorMessage('⚠️ File Rejected');
 		}
 	};
 
