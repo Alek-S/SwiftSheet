@@ -4,12 +4,14 @@ const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin;
+const path = require('path');
 
 module.exports = {
 	mode: 'production',
 
 	//entry point
 	entry: './frontend/root.js',
+	entry: path.join(__dirname, './frontend/root.js'),
 
 	// compiled output js
 	output: {

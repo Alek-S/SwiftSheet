@@ -66,18 +66,20 @@ app.use(
 app.use(express.static('dist'));
 
 //===MongoDB Connection with Mongoose==
-// mongoose.Promise = global.Promise; //use standard Promise instead of Mongo's promise library
-mongoose.connect(
-	process.env.MONGODB_URI || 'mongodb://localhost:27017/swiftsheet',
-	{ useCreateIndex: true, useNewUrlParser: true }
-);
-const db = mongoose.connection;
+const connect = () => {
+	mongoose.connect(
+		process.env.MONGOURL || 'mongodb://localhost:27017/swiftsheet',
+		{ useCreateIndex: true, useNewUrlParser: true }
+	);
+	const db = mongoose.connection;
 
-db.on('error', error => {
-	// Show any mongoose errors
-	console.error(`${chalk.red('Mongoose Error: ')} ${error}`);
-});
+	db.on('error', error => {
+		// Show any mongoose errors
+		console.error(`${chalk.red('Mongoose Error: ')} ${error}`);
+	});
+};
 
+setTimeout(connect, process.env.DOCKER ? 15000 : 0);
 //===Routes===
 require('./backend/controller/routes.js')(app);
 
