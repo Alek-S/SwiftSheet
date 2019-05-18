@@ -100,6 +100,16 @@ const Nav = styled(defaultStyle)`
 			display: none;
 		}
 	}
+
+	@media (max-width: 475px) {
+		h1 {
+			top: -0.3rem;
+			font-size: 1.25rem;
+		}
+		img {
+			height: 25px;
+		}
+	}
 `;
 
 const NavSection = styled.ul`
@@ -112,6 +122,10 @@ const NavSection = styled.ul`
 	}
 	&.small * {
 		font-size: 1rem;
+	}
+
+	@media (max-width: 475px) {
+		top: 1.2rem;
 	}
 `;
 

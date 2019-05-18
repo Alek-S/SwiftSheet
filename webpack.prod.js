@@ -68,7 +68,8 @@ module.exports = {
 				},
 			],
 			links: [
-				'https://fonts.googleapis.com/css?family=Poiret+One&text=SwiftSheet|Quicksand',
+				'https://fonts.googleapis.com/css?family=Poiret+One&text=SwiftSheet:300',
+				'https://fonts.googleapis.com/css?family=Quicksand:400,600,700',
 				'https://fonts.googleapis.com/icon?family=Material+Icons',
 				{
 					href: '/assets/css/reset.css',
