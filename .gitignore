@@ -10,7 +10,7 @@ node_modules/
 
 # build
 dist/assets/js/
-dist/assets/css/vendor.*.js
+dist/assets/css/vendor.*.css
 dist/*.json
 dist/*.js
 dist/*.map
