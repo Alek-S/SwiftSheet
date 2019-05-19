@@ -107,11 +107,48 @@ exports[`Header matches the snapshot 1`] = `
   border-left: solid 1px #d9d9d9;
 }
 
+@media (max-width:475px) {
+  .c0 h1 {
+    top: -0.3rem;
+    font-size: 1.25rem;
+  }
+
+  .c0 img {
+    height: 25px;
+  }
+}
+
+@media (max-width:350px) {
+  .c0 h1 {
+    top: 0rem;
+    font-size: 1.15rem;
+  }
+
+  .c0 img {
+    position: relative;
+    height: 20px;
+    top: 0.25rem;
+  }
+}
+
+@media (max-width:475px) {
+  .c3 {
+    top: 1.2rem;
+  }
+}
+
 @media (max-width:550px) {
   .c4 {
     font-size: 1.1rem;
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+}
+
+@media (max-width:350px) {
+  .c4 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
 

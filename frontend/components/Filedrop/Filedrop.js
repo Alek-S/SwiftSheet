@@ -163,6 +163,10 @@ const StyledDropzone = styled(Dropzone)`
 		width: 80%;
 		margin: auto;
 	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+	}
 `;
 
 const StyledText = styled(defaultStyle)`
@@ -202,6 +206,16 @@ const Options = styled(Card)`
 
 	select {
 		margin-left: 0.25rem;
+	}
+
+	@media (max-width: 500px) {
+		width: 90%;
+		flex-direction: column;
+		input,
+		select,
+		section {
+			margin: 0.5rem 0;
+		}
 	}
 `;
 

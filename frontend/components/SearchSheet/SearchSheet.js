@@ -59,6 +59,15 @@ const StyledCard = styled(Card)`
 			color: ${props => props.theme.color.backgroundDarkest};
 		}
 	}
+
+	@media (max-width: 500px) {
+		width: 95%;
+
+		input {
+			padding-left: 1rem;
+			margin-right: 0;
+		}
+	}
 `;
 
 const StyledForm = styled.form`
@@ -67,6 +76,11 @@ const StyledForm = styled.form`
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		justify-content: center;
+	}
 `;
 
 const SubmitButton = styled.button`
@@ -84,6 +98,11 @@ const SubmitButton = styled.button`
 
 	&:hover {
 		box-shadow: ${props => props.theme.boxShadow};
+	}
+	@media (max-width: 500px) {
+		width: 100%;
+		margin: auto;
+		margin-top: 2.5rem;
 	}
 `;
 

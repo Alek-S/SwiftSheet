@@ -100,6 +100,28 @@ const Nav = styled(defaultStyle)`
 			display: none;
 		}
 	}
+
+	@media (max-width: 475px) {
+		h1 {
+			top: -0.3rem;
+			font-size: 1.25rem;
+		}
+		img {
+			height: 25px;
+		}
+	}
+
+	@media (max-width: 350px) {
+		h1 {
+			top: 0rem;
+			font-size: 1.15rem;
+		}
+		img {
+			position: relative;
+			height: 20px;
+			top: 0.25rem;
+		}
+	}
 `;
 
 const NavSection = styled.ul`
@@ -112,6 +134,10 @@ const NavSection = styled.ul`
 	}
 	&.small * {
 		font-size: 1rem;
+	}
+
+	@media (max-width: 475px) {
+		top: 1.2rem;
 	}
 `;
 
@@ -134,6 +160,11 @@ const StyledNavLink = styled(NavLink)`
 			padding-right: 1rem;
 			padding-left: 1rem;
 		}
+	}
+
+	@media (max-width: 350px) {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
 	}
 `;
 

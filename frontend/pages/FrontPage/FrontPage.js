@@ -111,6 +111,29 @@ const StyledHeader = styled.h3`
 			height: 80px;
 		}
 	}
+	@media (max-width: 475px) {
+		top: 50px;
+		font-size: 2.6rem;
+		line-height: 160%;
+		padding-left: 0.5rem;
+		width: 80%;
+		img {
+			top: 1.2rem;
+			height: 70px;
+		}
+	}
+	@media (max-width: 350px) {
+		top: 50px;
+		font-size: 2.1rem;
+		line-height: 170%;
+		padding-left: 0.5rem;
+		width: 82%;
+		img {
+			top: 1.2rem;
+			height: 60px;
+			margin-right: 1rem;
+		}
+	}
 `;
 
 const InfoSection = styled(defaultStyle)`
@@ -131,6 +154,13 @@ const InfoSection = styled(defaultStyle)`
 		transform-origin: 0 0;
 		transform: skewY(-2deg);
 		background-color: ${props => props.theme.color.aqua};
+	}
+
+	@media (max-width: 475px) {
+		padding-top: 10px;
+		&:before {
+			display: none;
+		}
 	}
 `;
 

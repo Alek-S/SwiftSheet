@@ -38,6 +38,28 @@ exports[`RestExample matches the snapshot 1`] = `
   margin-top: 0.75rem;
 }
 
+@media (max-width:535px) {
+  .c0 {
+    width: 90%;
+    overflow: none;
+    word-wrap: break-word;
+  }
+
+  .c0 .pill,
+  .c0 .pill-secondary {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+  }
+
+  .c0 a,
+  .c0 .gql_query {
+    margin-left: 0;
+  }
+}
+
 <defaultStyle__Card
   className="c0"
 >
