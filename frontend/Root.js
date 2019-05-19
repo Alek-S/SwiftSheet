@@ -6,9 +6,12 @@ import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router } from 'react-router-dom';
 import theme from './theme';
 import App from './pages/App.js';
+import * as Sentry from '@sentry/browser';
 
-const client = new ApolloClient({
-	uri: 'http://localhost:5000/graphql', //TODO
+const client = new ApolloClient({ uri: '/graphql' });
+
+Sentry.init({
+	dsn: 'https://25efc34f41e746fb9b5c220c8b6c5bdc@sentry.io/1462960',
 });
 
 const Root = () => (

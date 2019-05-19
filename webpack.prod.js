@@ -11,7 +11,6 @@ module.exports = {
 	mode: 'production',
 
 	//entry point
-	entry: './frontend/root.js',
 	entry: path.join(__dirname, './frontend/root.js'),
 
 	// compiled output js

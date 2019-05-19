@@ -25,6 +25,8 @@
 	},
 	"homepage": "https://github.com/Alek-S/SwiftSheet#readme",
 	"dependencies": {
+		"@sentry/browser": "^5.2.1",
+		"@sentry/node": "^5.2.0",
 		"ag-grid-community": "^20.2.0",
 		"ag-grid-react": "^20.2.0",
 		"apollo-boost": "^0.1.27",

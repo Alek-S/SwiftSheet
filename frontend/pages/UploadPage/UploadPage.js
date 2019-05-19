@@ -135,7 +135,7 @@ const StyledDiv = styled(defaultStyle)`
 	background-color: ${props => props.theme.color.background};
 	padding-top: 7rem;
 	height: calc(100vh - 100px);
-	min-height: 775px;
+	min-height: 820px;
 `;
 
 const StyledForm = styled.form`

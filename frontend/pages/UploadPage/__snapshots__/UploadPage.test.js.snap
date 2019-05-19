@@ -210,7 +210,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   background-color: #fafafa;
   padding-top: 7rem;
   height: calc(100vh - 100px);
-  min-height: 775px;
+  min-height: 820px;
 }
 
 .c10 {
