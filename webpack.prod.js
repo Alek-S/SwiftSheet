@@ -6,6 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 	.BundleAnalyzerPlugin;
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
@@ -121,16 +122,7 @@ module.exports = {
 			},
 		},
 		minimizer: [
-			new UglifyWebpackPlugin({
-				uglifyOptions: {
-					compress: {
-						drop_console: true,
-					},
-					output: {
-						comments: false,
-					},
-				},
-			}),
+			new TerserPlugin({ sourceMap: false, extractComments: true }),
 			new OptimizeCSSAssetsPlugin({}),
 		],
 	},

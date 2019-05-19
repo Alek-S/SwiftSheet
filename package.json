@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "jest",
 		"test:watch": "jest --watch",
-		"build": "webpack --progress --config ./webpack.prod.js",
+		"build": "webpack -p --progress --config ./webpack.prod.js",
 		"watch": "webpack --config ./webpack.dev.js -w",
 		"precommit": "lint-staged && npm run test",
 		"start:webpack-dev": "webpack-dev-server --config ./webpack.dev.js --hot",
@@ -88,6 +88,7 @@
 		"resource-hints-webpack-plugin": "0.0.2",
 		"style-loader": "^0.23.1",
 		"supertest": "^3.4.2",
+		"terser-webpack-plugin": "^1.2.4",
 		"uglifyjs-webpack-plugin": "^1.2.7",
 		"webpack": "^4.29.3",
 		"webpack-bundle-analyzer": "^3.0.3",
