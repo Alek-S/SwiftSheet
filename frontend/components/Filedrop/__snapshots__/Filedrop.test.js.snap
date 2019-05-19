@@ -17,7 +17,7 @@ exports[`Filedrop matches the snapshot 1`] = `
       >
         <t
           accept="text/csv"
-          className="Filedrop__StyledDropzone-sc-1u7cgvl-1 jGdMmU"
+          className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
           disableClick={false}
           disablePreview={false}
           disabled={false}
@@ -33,7 +33,7 @@ exports[`Filedrop matches the snapshot 1`] = `
         >
           <div
             aria-disabled={false}
-            className="Filedrop__StyledDropzone-sc-1u7cgvl-1 jGdMmU"
+            className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
             onClick={[Function]}
             onDragEnter={[Function]}
             onDragLeave={[Function]}
@@ -102,17 +102,17 @@ exports[`Filedrop matches the snapshot 1`] = `
       >
         <defaultStyle__Card
           aria-label="preferences"
-          className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP"
+          className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY"
           role="form"
         >
           <defaultStyle
             aria-label="preferences"
-            className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP defaultStyle__Card-g21vfe-1 bmaFoR"
+            className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR"
             role="form"
           >
             <div
               aria-label="preferences"
-              className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP defaultStyle__Card-g21vfe-1 bmaFoR defaultStyle-g21vfe-0 eXjdxI"
+              className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR defaultStyle-g21vfe-0 eXjdxI"
               role="form"
             >
               <section
@@ -220,7 +220,7 @@ exports[`Filedrop matches the snapshot 2`] = `
       >
         <t
           accept="text/csv"
-          className="Filedrop__StyledDropzone-sc-1u7cgvl-1 jGdMmU"
+          className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
           disableClick={false}
           disablePreview={false}
           disabled={false}
@@ -236,7 +236,7 @@ exports[`Filedrop matches the snapshot 2`] = `
         >
           <div
             aria-disabled={false}
-            className="Filedrop__StyledDropzone-sc-1u7cgvl-1 jGdMmU"
+            className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
             onClick={[Function]}
             onDragEnter={[Function]}
             onDragLeave={[Function]}
@@ -305,17 +305,17 @@ exports[`Filedrop matches the snapshot 2`] = `
       >
         <defaultStyle__Card
           aria-label="preferences"
-          className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP"
+          className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY"
           role="form"
         >
           <defaultStyle
             aria-label="preferences"
-            className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP defaultStyle__Card-g21vfe-1 bmaFoR"
+            className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR"
             role="form"
           >
             <div
               aria-label="preferences"
-              className="Filedrop__Options-sc-1u7cgvl-3 dJDFmP defaultStyle__Card-g21vfe-1 bmaFoR defaultStyle-g21vfe-0 eXjdxI"
+              className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR defaultStyle-g21vfe-0 eXjdxI"
               role="form"
             >
               <section

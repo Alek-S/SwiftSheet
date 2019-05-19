@@ -68,6 +68,12 @@ const ScrollDownAnimation = styled.div`
 		text-align: center;
 		line-height: 120%;
 	}
+	@media (max-width: 475px) {
+		margin-top: -5px;
+	}
+	@media (max-width: 350px) {
+		margin-top: 15px;
+	}
 `;
 
 export default ScrollDownIcon;

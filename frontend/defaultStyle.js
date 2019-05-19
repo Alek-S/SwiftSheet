@@ -92,6 +92,22 @@ const ApiCard = styled(Card)`
 	.query_title {
 		margin-top: 0.75rem;
 	}
+
+	@media (max-width: 535px) {
+		width: 90%;
+		overflow: none;
+		word-wrap: break-word;
+		.pill,
+		.pill-secondary {
+			display: block;
+			width: fit-content;
+			margin-bottom: 0.5rem;
+		}
+		a,
+		.gql_query {
+			margin-left: 0;
+		}
+	}
 `;
 
 export default defaultStyle;

@@ -156,6 +156,37 @@ exports[`SearchSheet matches the snapshot 1`] = `
   box-shadow: 0px 5px 40px -5px rgba(0,0,0,0.3);
 }
 
+@media (max-width:500px) {
+  .c0 {
+    width: 95%;
+  }
+
+  .c0 input {
+    padding-left: 1rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width:500px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width:500px) {
+  .c4 {
+    width: 100%;
+    margin: auto;
+    margin-top: 2.5rem;
+  }
+}
+
 <BrowserRouter>
   <Router
     history={

@@ -110,6 +110,18 @@ const Nav = styled(defaultStyle)`
 			height: 25px;
 		}
 	}
+
+	@media (max-width: 350px) {
+		h1 {
+			top: 0rem;
+			font-size: 1.15rem;
+		}
+		img {
+			position: relative;
+			height: 20px;
+			top: 0.25rem;
+		}
+	}
 `;
 
 const NavSection = styled.ul`
@@ -148,6 +160,11 @@ const StyledNavLink = styled(NavLink)`
 			padding-right: 1rem;
 			padding-left: 1rem;
 		}
+	}
+
+	@media (max-width: 350px) {
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
 	}
 `;
 

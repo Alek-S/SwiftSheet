@@ -130,6 +130,17 @@ const ExpiredNotice = styled(defaultStyle)`
 	a {
 		color: ${props => props.theme.color.blue};
 	}
+
+	@media (max-width: 500px) {
+		width: 95%;
+		margin: auto;
+		section {
+			padding: 2rem 1rem;
+		}
+		p {
+			margin: 2rem 0.1rem;
+		}
+	}
 `;
 
 export default SheetPage;
