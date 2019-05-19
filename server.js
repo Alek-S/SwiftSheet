@@ -7,6 +7,7 @@ const express_graphql = require('express-graphql');
 const schema = require('./backend/graphql/schema/schema');
 const depthLimit = require('graphql-depth-limit');
 const rateLimit = require('express-rate-limit');
+const Sentry = require('@sentry/node');
 
 //==Express Setup==
 const app = express();
@@ -57,7 +58,10 @@ app.use(
 	apiLimiter,
 	express_graphql({
 		schema: schema,
-		graphiql: !process.env.NODE_ENV,
+		graphiql:
+			process.env.NODE_ENV && process.env.NODE_ENV === 'production'
+				? false
+				: true,
 		validationRules: [depthLimit(2)],
 	})
 );
@@ -82,6 +86,13 @@ const connect = () => {
 setTimeout(connect, process.env.DOCKER ? 15000 : 0);
 //===Routes===
 require('./backend/controller/routes.js')(app);
+
+//===Sentry===
+if (process.env.NODE_ENV === 'production') {
+	Sentry.init({
+		dsn: 'https://33ebe7e1549640ca9d1b85ea645ea746@sentry.io/1462962',
+	});
+}
 
 //==Start Server==
 const server = app.listen(app.get('port'), () => {

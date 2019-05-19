@@ -1,12 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
 	mode: 'development',
 
 	//entry point
-	entry: './frontend/root.js',
+	entry: path.join(__dirname, './frontend/root.js'),
 
 	// compiled output js
 	output: {
