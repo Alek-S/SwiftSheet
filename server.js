@@ -58,7 +58,10 @@ app.use(
 	apiLimiter,
 	express_graphql({
 		schema: schema,
-		graphiql: !process.env.NODE_ENV,
+		graphiql:
+			process.env.NODE_ENV && process.env.NODE_ENV === 'production'
+				? false
+				: true,
 		validationRules: [depthLimit(2)],
 	})
 );
