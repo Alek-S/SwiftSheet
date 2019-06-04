@@ -138,14 +138,15 @@ exports[`SearchSheet matches the snapshot 1`] = `
 }
 
 .c4 {
+  cursor: pointer;
   outline: none;
   box-sizing: border-box;
   height: 30px;
-  width: 100px;
+  width: 100px !important;
   border-radius: 20px;
   background: linear-gradient(160deg,#57DACB 0%,#55A2ED 100%);
   border: none;
-  color: white;
+  color: white !important;
   font-family: 'Quicksand',sans-serif;
   font-size: 1rem;
   -webkit-transition: all 0.5s;
@@ -249,7 +250,7 @@ exports[`SearchSheet matches the snapshot 1`] = `
       }
     >
       <SearchSheet>
-        <SearchSheet__StyledCard>
+        <defaultStyle__FormCard>
           <defaultStyle__Card
             className="c0"
           >
@@ -259,7 +260,7 @@ exports[`SearchSheet matches the snapshot 1`] = `
               <div
                 className="c0 c1 c2"
               >
-                <SearchSheet__StyledForm>
+                <defaultStyle__StyledForm>
                   <form
                     className="c3"
                   >
@@ -277,21 +278,21 @@ exports[`SearchSheet matches the snapshot 1`] = `
                         href="/"
                         onClick={[Function]}
                       >
-                        <SearchSheet__SubmitButton>
+                        <defaultStyle__SubmitButton>
                           <button
                             className="c4"
                           >
                             Submit
                           </button>
-                        </SearchSheet__SubmitButton>
+                        </defaultStyle__SubmitButton>
                       </a>
                     </Link>
                   </form>
-                </SearchSheet__StyledForm>
+                </defaultStyle__StyledForm>
               </div>
             </defaultStyle>
           </defaultStyle__Card>
-        </SearchSheet__StyledCard>
+        </defaultStyle__FormCard>
       </SearchSheet>
     </ThemeProvider>
   </Router>

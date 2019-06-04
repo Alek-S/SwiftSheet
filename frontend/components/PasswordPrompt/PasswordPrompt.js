@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import defaultStyle, { Card, ErrorDialog } from '../../defaultStyle';
+import defaultStyle, {
+	Card,
+	ErrorDialog,
+	FormCard,
+	StyledForm,
+	SubmitButton,
+} from '../../defaultStyle';
 
 /**
  * @function
@@ -19,7 +25,7 @@ export const PasswordPrompt = ({ setPassword, wrongPassword }) => {
 
 	return (
 		<StyledDiv>
-			<StyledCard>
+			<PasswordFormCard>
 				<StyledForm onSubmit={handleSubmit}>
 					<input
 						type="password"
@@ -28,14 +34,14 @@ export const PasswordPrompt = ({ setPassword, wrongPassword }) => {
 						onChange={({ target: { value } }) => setFormValue(value)}
 						className={wrongPassword ? wrongPassword.toString() : undefined}
 						placeholder="Sheet Password"
-						minlength="6"
+						minLength="6"
 						required
 					/>
 					<SubmitButton type="submit" value="Submit">
 						Submit
 					</SubmitButton>
 				</StyledForm>
-			</StyledCard>
+			</PasswordFormCard>
 
 			<ErrorDialog
 				className={wrongPassword ? wrongPassword.toString() : undefined}
@@ -56,82 +62,6 @@ const StyledDiv = styled(defaultStyle)`
 	align-items: center;
 `;
 
-const StyledCard = styled(Card)`
-	overflow: hidden;
-	width: 90%;
-	max-width: 500px;
-	margin-bottom: 3rem;
-
-	header {
-		background: ${props => props.theme.gradient.greenBlue};
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-		width: 100%;
-	}
-
-	h2 {
-		font-weight: 400;
-		text-align: center;
-		color: white;
-		font-size: 1.1rem;
-	}
-
-	input {
-		box-sizing: border-box;
-		flex-grow: 2;
-		height: 30px;
-		margin-bottom: 0;
-		padding-left: 2rem;
-		margin-right: 1rem;
-		font-size: 0.95rem;
-
-		::placeholder {
-			color: ${props => props.theme.color.backgroundDarkest};
-		}
-	}
-
-	@media (max-width: 500px) {
-		width: 95%;
-
-		input {
-			padding-left: 1rem;
-			margin-right: 0;
-		}
-	}
-`;
-
-const StyledForm = styled.form`
-	margin: 2rem;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-
-	@media (max-width: 500px) {
-		flex-direction: column;
-		justify-content: center;
-	}
-`;
-
-const SubmitButton = styled.button`
-	outline: none;
-	box-sizing: border-box;
-	height: 30px;
-	width: 100px !important;
-	border-radius: 20px;
-	background: ${props => props.theme.gradient.greenBlue};
-	border: none;
-	color: white !important;
-	font-family: ${props => props.theme.font.main};
-	font-size: 1rem;
-	transition: all 0.5s;
-
-	&:hover {
-		box-shadow: ${props => props.theme.boxShadow};
-	}
-	@media (max-width: 500px) {
-		width: 100%;
-		margin: auto;
-		margin-top: 2.5rem;
-	}
+const PasswordFormCard = styled(FormCard)`
+	max-width: 475px;
 `;
