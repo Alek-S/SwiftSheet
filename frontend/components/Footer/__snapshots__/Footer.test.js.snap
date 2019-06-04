@@ -16,7 +16,7 @@ exports[`Footer matches the snapshot 1`] = `
 <defaultStyle
   className="c0"
 >
-  Created by
+  Created with 🍷 by
    
   <a
     href="https://www.alekshnayder.com/"

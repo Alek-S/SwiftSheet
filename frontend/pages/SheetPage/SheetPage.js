@@ -42,7 +42,6 @@ const SheetPage = ({ match }) => {
 					// then prompt user for password before proceeding
 					return (
 						<PasswordPrompt
-							password={password}
 							setPassword={setPassword}
 							wrongPassword={wrongPassword}
 						/>
