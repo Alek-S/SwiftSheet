@@ -122,7 +122,17 @@ module.exports = {
 			},
 		},
 		minimizer: [
-			new TerserPlugin({ sourceMap: false, extractComments: true }),
+			new TerserPlugin({
+				terserOptions: {
+					ecma: 6,
+					warnings: false,
+					ie8: false,
+					safari10: false,
+				},
+				extractComments: true,
+				cache: true,
+				parallel: true,
+			}),
 			new OptimizeCSSAssetsPlugin({}),
 		],
 	},
