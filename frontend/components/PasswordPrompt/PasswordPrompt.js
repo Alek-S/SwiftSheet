@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import defaultStyle, { Card, ErrorDialog } from '../../defaultStyle';
+import defaultStyle, {
+	Card,
+	ErrorDialog,
+	FormCard,
+	StyledForm,
+	SubmitButton,
+} from '../../defaultStyle';
 
 /**
  * @function
@@ -9,45 +15,53 @@ import defaultStyle, { Card, ErrorDialog } from '../../defaultStyle';
  *
  * @returns {JSX}
  */
-export const PasswordPrompt = ({ password, setPassword, wrongPassword }) => (
-	<StyledDiv>
-		<StyledForm>
-			<input
-				type="password"
-				autoComplete="current-password"
-				value={password}
-				onChange={({ target: { value } }) => setPassword(value)}
-				className={wrongPassword ? wrongPassword.toString() : undefined}
-				placeholder="Sheet Password"
-			/>
-		</StyledForm>
+export const PasswordPrompt = ({ setPassword, wrongPassword }) => {
+	const [formValue, setFormValue] = useState('');
 
-		<ErrorDialog
-			className={wrongPassword ? wrongPassword.toString() : undefined}
-		>
-			⚠️ Incorrect Password Provided
-		</ErrorDialog>
-	</StyledDiv>
-);
+	const handleSubmit = e => {
+		e.preventDefault();
+		setPassword(formValue);
+	};
+
+	return (
+		<StyledDiv>
+			<PasswordFormCard>
+				<StyledForm onSubmit={handleSubmit}>
+					<input
+						type="password"
+						autoComplete="current-password"
+						value={formValue}
+						onChange={({ target: { value } }) => setFormValue(value)}
+						className={wrongPassword ? wrongPassword.toString() : undefined}
+						placeholder="Sheet Password"
+						minLength="6"
+						required
+					/>
+					<SubmitButton type="submit" value="Submit">
+						Submit
+					</SubmitButton>
+				</StyledForm>
+			</PasswordFormCard>
+
+			<ErrorDialog
+				className={wrongPassword ? wrongPassword.toString() : undefined}
+			>
+				⚠️ Incorrect Password Provided
+			</ErrorDialog>
+		</StyledDiv>
+	);
+};
 
 const StyledDiv = styled(defaultStyle)`
+	padding-top: 6rem;
 	background-color: ${props => props.theme.color.background};
-	height: calc(100vh - 55px);
+	height: calc(100vh - 80px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 `;
 
-const StyledForm = styled(Card)`
-	margin-bottom: 1rem;
-	padding: 2.5rem 4rem;
-
-	input {
-		height: 30px;
-		padding: 0.2rem 1.5rem;
-		font-size: 1rem;
-		font-weight: 300;
-		width: 200px;
-	}
+const PasswordFormCard = styled(FormCard)`
+	max-width: 475px;
 `;

@@ -11,7 +11,7 @@ import defaultStyle from '../../defaultStyle';
 export default function Footer() {
 	return (
 		<Styledfooter>
-			Created by{' '}
+			Created with 🍷 by{' '}
 			<a href="https://www.alekshnayder.com/" target="_blank" rel="noopener">
 				Alek Shnayder
 			</a>
