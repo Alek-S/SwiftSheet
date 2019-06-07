@@ -9,10 +9,11 @@ import App from './pages/App.js';
 import * as Sentry from '@sentry/browser';
 
 const client = new ApolloClient({ uri: '/graphql' });
-
-Sentry.init({
-	dsn: 'https://25efc34f41e746fb9b5c220c8b6c5bdc@sentry.io/1462960',
-});
+if (process.env.NODE_ENV !== 'development') {
+	Sentry.init({
+		dsn: 'https://25efc34f41e746fb9b5c220c8b6c5bdc@sentry.io/1462960',
+	});
+}
 
 const Root = () => (
 	<ApolloProvider client={client}>

@@ -80,8 +80,8 @@ const mutation = new GraphQLObjectType({
 		createSheet: {
 			args: {
 				sheetData: {
-					description: 'Spreadsheet data as JSON',
-					type: new GraphQLNonNull(GraphQLJSON),
+					description: 'Spreadsheet data as Zlib Base64 string',
+					type: new GraphQLNonNull(GraphQLString),
 				},
 				expireIn: {
 					description: 'How many hours to expire in',
