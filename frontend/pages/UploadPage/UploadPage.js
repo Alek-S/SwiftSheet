@@ -4,11 +4,16 @@ import defaultStyle, { ErrorDialog } from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Papa from 'papaparse';
+import { deflate } from 'pako';
 
 const UPLOAD_SHEET = gql`
-	mutation UPLOAD_SHEET($sheetData: JSON!, $expireIn: Int!, $password: String) {
+	mutation UPLOAD_SHEET(
+		$sheetData: String!
+		$expireIn: Int!
+		$password: String
+	) {
 		createSheet(
 			sheetData: $sheetData
 			expireIn: $expireIn
@@ -109,7 +114,9 @@ const UploadPage = () => {
 											complete: ({ data }) =>
 												uploadSheet({
 													variables: {
-														sheetData: data,
+														sheetData: btoa(
+															deflate(JSON.stringify(data), { to: 'string' })
+														), // zlib compress + zlib
 														expireIn: parseInt(expireIn),
 														password: password,
 													},

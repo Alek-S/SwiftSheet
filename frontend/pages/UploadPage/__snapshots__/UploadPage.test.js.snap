@@ -769,7 +769,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                         "kind": "NamedType",
                                         "name": Object {
                                           "kind": "Name",
-                                          "value": "JSON",
+                                          "value": "String",
                                         },
                                       },
                                     },
@@ -827,7 +827,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                             ],
                             "kind": "Document",
                             "loc": Object {
-                              "end": 187,
+                              "end": 196,
                               "start": 0,
                             },
                           }

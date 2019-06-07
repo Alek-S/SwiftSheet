@@ -4,6 +4,7 @@ const addDays = require('date-fns/add_days');
 const addHours = require('date-fns/add_hours');
 const bcrypt = require('bcrypt');
 const errorMessage = require('../../../shared/enums/errorMessage');
+const pako = require('pako');
 
 /**
  * @function getSheet - get single sheet based on _id
@@ -48,6 +49,12 @@ const getSheets = async () => {
  */
 const createSheet = async (_root, args) => {
 	const { password, sheetData } = args;
+	//convert base64 to binary string
+	const binaryString = Buffer.from(sheetData, 'base64');
+	//zlib inflate binary string and convert to json
+	const restoredSheetData = JSON.parse(
+		pako.inflate(binaryString, { to: 'string' })
+	);
 
 	// if no expireAt provided, default to three days
 	const expireAt = args.expireIn
@@ -63,7 +70,7 @@ const createSheet = async (_root, args) => {
 	}
 
 	return await SwiftSheet.create({
-		sheetData,
+		sheetData: restoredSheetData,
 		hasPassword: !!password,
 		// if password, remove whitespace characters and get salted hash, else null
 		password: password
