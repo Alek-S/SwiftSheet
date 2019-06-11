@@ -13,9 +13,7 @@ module.exports = function(app) {
 		const authHeader = req.headers.authorization;
 		let dbResult;
 		try {
-			dbResult = await SwiftSheet.findOne(
-				mongoose.mongo.ObjectId(req.params.sheetId)
-			);
+			dbResult = await SwiftSheet.findOne({ _id: req.params.sheetId });
 
 			if (dbResult.hasPassword) {
 				if (!authHeader) {

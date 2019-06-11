@@ -14,7 +14,7 @@ const pako = require('pako');
  * @param {String} args.password - Password for sheet
  */
 const getSheet = async (_root, args) => {
-	const dbResult = await SwiftSheet.findOne(mongoose.mongo.ObjectId(args._id));
+	const dbResult = await SwiftSheet.findOne({ _id: args._id });
 
 	if (!args.password) {
 		// if no password provided
