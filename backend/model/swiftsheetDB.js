@@ -1,9 +1,15 @@
 const mongoose = require('mongoose');
+const shortid = require('shortid');
+
 const Schema = mongoose.Schema;
 
 // Create schema
 const SwiftSheetSchema = new Schema(
 	{
+		_id: {
+			type: String,
+			default: shortid.generate,
+		},
 		sheetData: {
 			type: Object,
 			required: true,
