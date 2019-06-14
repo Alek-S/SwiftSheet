@@ -46,7 +46,6 @@ const Filedrop = ({
 	};
 
 	const _handleRejection = e => {
-		console.log('e', e);
 		const { size, type } = e[0];
 
 		if (size >= MAX_SIZE) {
