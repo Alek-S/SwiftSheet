@@ -4,51 +4,59 @@ import defaultStyle from '../../defaultStyle';
 import ScrollDownIcon from '../../components/ScrollDownIcon/ScrollDownIcon';
 import { IllustratedStep } from '../../components/IllustratedStep/IllustratedStep';
 import { Link, NavLink } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
-const FrontPage = () => (
-	<div>
-		<HeroImg />
-		<StyledHeader>
-			<img src="./assets/images/logo-sheet.svg" alt="logo" height="150" />
-			Quickly share an online spreadsheet or API endpoint, then make it go away.
-		</StyledHeader>
-		<ScrollDownIcon />
-		<InfoSection>
-			<IllustratedStep
-				step={1}
-				graphicPath="./assets/images/upload-simple.svg"
-				header="Upload a CSV File & Set Expiration Time"
-			>
-				Go to <NavLink to="/upload">Upload</NavLink> section and drag a file
-				into the upload area. From there{' '}
-				<span className="highlight">set how long until the sheet expires</span>,
-				if the sheet has a header, and an optional password.
-			</IllustratedStep>
-			<IllustratedStep
-				step={2}
-				graphicPath="./assets/images/share.svg"
-				header="Get a Shareable Link or API Endpoint"
-			>
-				Once Uploaded, share the{' '}
-				<span className="highlight">link to an interactive spreadsheet</span>{' '}
-				with filtering and sorting. Additionally, for the developer crowd, get
-				temporary API{' '}
-				<span className="highlight">endpoints for REST or GraphQL</span>.
-			</IllustratedStep>
-			<IllustratedStep
-				step={3}
-				graphicPath="./assets/images/not-found.svg"
-				header="The Sheet is Deleted Once Expired"
-			>
-				When the sheet reaching the expiration time, it is{' '}
-				<span className="highlight">
-					automatically deleted from the database
-				</span>
-				, and no longer shareable.
-			</IllustratedStep>
-		</InfoSection>
-	</div>
-);
+const FrontPage = () => {
+	ReactGA.pageview('/');
+
+	return (
+		<div>
+			<HeroImg />
+			<StyledHeader>
+				<img src="./assets/images/logo-sheet.svg" alt="logo" height="150" />
+				Quickly share an online spreadsheet or API endpoint, then make it go
+				away.
+			</StyledHeader>
+			<ScrollDownIcon />
+			<InfoSection>
+				<IllustratedStep
+					step={1}
+					graphicPath="./assets/images/upload-simple.svg"
+					header="Upload a CSV File & Set Expiration Time"
+				>
+					Go to <NavLink to="/upload">Upload</NavLink> section and drag a file
+					into the upload area. From there{' '}
+					<span className="highlight">
+						set how long until the sheet expires
+					</span>
+					, if the sheet has a header, and an optional password.
+				</IllustratedStep>
+				<IllustratedStep
+					step={2}
+					graphicPath="./assets/images/share.svg"
+					header="Get a Shareable Link or API Endpoint"
+				>
+					Once Uploaded, share the{' '}
+					<span className="highlight">link to an interactive spreadsheet</span>{' '}
+					with filtering and sorting. Additionally, for the developer crowd, get
+					temporary API{' '}
+					<span className="highlight">endpoints for REST or GraphQL</span>.
+				</IllustratedStep>
+				<IllustratedStep
+					step={3}
+					graphicPath="./assets/images/not-found.svg"
+					header="The Sheet is Deleted Once Expired"
+				>
+					When the sheet reaching the expiration time, it is{' '}
+					<span className="highlight">
+						automatically deleted from the database
+					</span>
+					, and no longer shareable.
+				</IllustratedStep>
+			</InfoSection>
+		</div>
+	);
+};
 
 const HeroImg = styled.div`
 	background-image: url('assets/images/banner-lg.jpg');

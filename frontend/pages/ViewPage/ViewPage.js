@@ -3,13 +3,18 @@ import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
 import RecentlyViewed from '../../components/RecentlyViewed/RecentlyViewed';
 import SearchSheet from '../../components/SearchSheet/SearchSheet';
+import ReactGA from 'react-ga';
 
-const ViewPage = () => (
-	<StyledDiv>
-		<SearchSheet />
-		<RecentlyViewed />
-	</StyledDiv>
-);
+const ViewPage = () => {
+	ReactGA.pageview('/view');
+
+	return (
+		<StyledDiv>
+			<SearchSheet />
+			<RecentlyViewed />
+		</StyledDiv>
+	);
+};
 
 const StyledDiv = styled(defaultStyle)`
 	padding-top: 6rem;
