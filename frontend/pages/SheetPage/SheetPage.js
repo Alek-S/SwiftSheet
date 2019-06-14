@@ -11,6 +11,7 @@ import { GQLExample } from '../../components/GQLExample/GQLExample';
 import * as errorMessage from '../../../shared/enums/errorMessage';
 import { addToHistory, removeFromHistory } from '../../utils/history';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 export const GET_SHEET = gql`
 	query GET_SHEET($sheetId: ID!, $password: String) {
@@ -24,6 +25,8 @@ export const GET_SHEET = gql`
 const SheetPage = ({ match }) => {
 	const { sheetId } = match.params;
 	const [password, setPassword] = useState('');
+
+	ReactGA.pageview(window.location.pathname + window.location.search);
 
 	return (
 		<Query query={GET_SHEET} variables={{ sheetId, password }}>

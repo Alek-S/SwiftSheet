@@ -7,6 +7,7 @@ import { Mutation } from 'react-apollo';
 import { Redirect } from 'react-router-dom';
 import Papa from 'papaparse';
 import { deflate } from 'pako';
+import ReactGA from 'react-ga';
 
 const UPLOAD_SHEET = gql`
 	mutation UPLOAD_SHEET(
@@ -38,6 +39,8 @@ const UploadPage = () => {
 	const [password, setPassword] = useState('');
 	const [wrongPassword, setWrongPassword] = useState(false);
 	const [uploadErrorMessage, setErrorMessage] = useState('');
+
+	ReactGA.pageview('/upload');
 
 	const onCompleted = () => {
 		setRedirect(true);
@@ -107,6 +110,12 @@ const UploadPage = () => {
 									type="submit"
 									onClick={e => {
 										e.preventDefault();
+
+										ReactGA.event({
+											category: 'User',
+											action: 'Click Upload',
+										});
+
 										Papa.parse(file[0], {
 											header: header,
 											download: true,

@@ -7,12 +7,16 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import theme from './theme';
 import App from './pages/App.js';
 import * as Sentry from '@sentry/browser';
+import ReactGA from 'react-ga';
 
 const client = new ApolloClient({ uri: '/graphql' });
 if (process.env.NODE_ENV !== 'development') {
 	Sentry.init({
 		dsn: 'https://25efc34f41e746fb9b5c220c8b6c5bdc@sentry.io/1462960',
 	});
+
+	ReactGA.initialize('UA-142126109-1');
+	ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
 const Root = () => (
