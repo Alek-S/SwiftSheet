@@ -466,7 +466,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                         className="c2"
                       >
                         <Filedrop__StyledDropzone
-                          accept="text/csv"
+                          accept=".csv"
                           maxSize={2500000}
                           minSize={8}
                           multiple={false}
@@ -476,7 +476,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                           onDropRejected={[Function]}
                         >
                           <t
-                            accept="text/csv"
+                            accept=".csv"
                             className="c3"
                             disableClick={false}
                             disablePreview={false}
@@ -527,7 +527,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                 </defaultStyle>
                               </Filedrop__StyledText>
                               <input
-                                accept="text/csv"
+                                accept=".csv"
                                 autoComplete="off"
                                 disabled={false}
                                 multiple={false}
