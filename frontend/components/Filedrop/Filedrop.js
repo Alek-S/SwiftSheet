@@ -23,7 +23,7 @@ const Filedrop = ({
 	const [dragging, setDragging] = useState(false);
 	const [uploadErrorMessage, setUploadErrorMessage] = useState('');
 	const MAX_SIZE = 2500000;
-	const FILE_FORMAT = 'text/csv';
+	const FILE_FORMAT = '.csv';
 
 	/**
 	 * @function
