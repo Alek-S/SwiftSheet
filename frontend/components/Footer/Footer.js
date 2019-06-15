@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
+import { Link } from 'react-router-dom';
 
 /** @function
  * @name Footer
@@ -15,6 +16,7 @@ export default function Footer() {
 			<a href="https://www.alekshnayder.com/" target="_blank" rel="noopener">
 				Alek Shnayder
 			</a>
+			|<Link to="/privacy">Privacy Policy</Link>
 		</Styledfooter>
 	);
 }

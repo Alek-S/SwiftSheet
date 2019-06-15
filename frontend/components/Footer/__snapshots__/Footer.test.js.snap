@@ -25,5 +25,12 @@ exports[`Footer matches the snapshot 1`] = `
   >
     Alek Shnayder
   </a>
+  |
+  <Link
+    replace={false}
+    to="/privacy"
+  >
+    Privacy Policy
+  </Link>
 </defaultStyle>
 `;
