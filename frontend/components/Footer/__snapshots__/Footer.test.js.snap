@@ -4,7 +4,7 @@ exports[`Footer matches the snapshot 1`] = `
 .c0 {
   box-sizing: border-box;
   padding: 1rem;
-  padding-top: 1.25rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   width: 100%;
 }
@@ -25,6 +25,36 @@ exports[`Footer matches the snapshot 1`] = `
   >
     Alek Shnayder
   </a>
+  <Footer__Spacer>
+    |
+  </Footer__Spacer>
+  <Footer__IconLink
+    href="mailto:swiftsheetapp@example.com?Subject=Hello"
+    rel="noopener"
+    style={
+      Object {
+        "marginRight": "1rem",
+      }
+    }
+    target="_top"
+  >
+    <img
+      alt="logo"
+      height="22"
+      src="./assets/images/mail.svg"
+    />
+  </Footer__IconLink>
+  <Footer__IconLink
+    href="https://twitter.com/SheetSwift"
+    rel="noopener"
+    target="_blank"
+  >
+    <img
+      alt="logo"
+      height="25"
+      src="./assets/images/twitter.svg"
+    />
+  </Footer__IconLink>
   <Footer__Spacer>
     |
   </Footer__Spacer>
