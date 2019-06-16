@@ -120,7 +120,7 @@ const Policy = styled.section`
 	background-color: ${props => props.theme.color.background};
 	color: ${props => props.theme.color.text};
 	font-family: ${props => props.theme.font.main};
-	padding: 12rem 10rem 5rem 10rem;
+	padding: 10rem 10rem 5rem 10rem;
 	letter-spacing: 1px;
 
 	div {

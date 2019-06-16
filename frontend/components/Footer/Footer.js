@@ -16,7 +16,8 @@ export default function Footer() {
 			<a href="https://www.alekshnayder.com/" target="_blank" rel="noopener">
 				Alek Shnayder
 			</a>
-			|<Link to="/privacy">Privacy Policy</Link>
+			<Spacer>|</Spacer>
+			<Link to="/privacy">Privacy Policy</Link>
 		</Styledfooter>
 	);
 }
@@ -31,4 +32,9 @@ const Styledfooter = styled(defaultStyle)`
 	& a {
 		color: ${props => props.theme.color.text};
 	}
+`;
+
+const Spacer = styled.span`
+	margin-left: 1rem;
+	margin-right: 1rem;
 `;
