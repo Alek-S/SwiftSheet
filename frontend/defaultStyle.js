@@ -193,5 +193,62 @@ const SubmitButton = styled.button`
 	}
 `;
 
+/** For formatting policy pages -- privacy policy, terms of service */
+const Policy = styled.section`
+	background-color: ${props => props.theme.color.background};
+	color: ${props => props.theme.color.text};
+	font-family: ${props => props.theme.font.main};
+	padding: 10rem 10rem 5rem 10rem;
+	letter-spacing: 1px;
+
+	div {
+		max-width: 750px;
+		margin: auto;
+	}
+	h1 {
+		font-weight: 600;
+		font-size: 1.4rem;
+		margin-bottom: 0.5rem;
+	}
+	h2 {
+		font-weight: 600;
+		font-size: 1rem;
+		margin-top: 3rem;
+	}
+	h3 {
+		font-weight: 500;
+		font-size: 1rem;
+	}
+
+	p {
+		padding: 1.5rem;
+		text-align: justify;
+		line-height: 150%;
+	}
+	ol {
+		margin-left: 1rem;
+		line-height: 150%;
+	}
+	li {
+		&:before {
+			content: '•';
+			margin: 1rem;
+			margin-top: 2rem;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: ${props => props.theme.color.red};
+	}
+`;
+
 export default defaultStyle;
-export { Card, ErrorDialog, ApiCard, FormCard, StyledForm, SubmitButton };
+export {
+	Card,
+	ErrorDialog,
+	ApiCard,
+	FormCard,
+	StyledForm,
+	SubmitButton,
+	Policy,
+};

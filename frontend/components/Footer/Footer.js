@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
+import { Link } from 'react-router-dom';
 
 /** @function
  * @name Footer
@@ -15,6 +16,10 @@ export default function Footer() {
 			<a href="https://www.alekshnayder.com/" target="_blank" rel="noopener">
 				Alek Shnayder
 			</a>
+			<Spacer>|</Spacer>
+			<Link to="/privacy">Privacy Policy</Link>
+			<Spacer>|</Spacer>
+			<Link to="/terms">Terms of Service</Link>
 		</Styledfooter>
 	);
 }
@@ -29,4 +34,9 @@ const Styledfooter = styled(defaultStyle)`
 	& a {
 		color: ${props => props.theme.color.text};
 	}
+`;
+
+const Spacer = styled.span`
+	margin-left: 1rem;
+	margin-right: 1rem;
 `;

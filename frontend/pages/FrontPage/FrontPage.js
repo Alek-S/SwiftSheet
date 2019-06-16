@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
 import ScrollDownIcon from '../../components/ScrollDownIcon/ScrollDownIcon';
 import { IllustratedStep } from '../../components/IllustratedStep/IllustratedStep';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 const FrontPage = () => {
