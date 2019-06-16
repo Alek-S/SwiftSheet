@@ -40,6 +40,23 @@ exports[`Footer matches the snapshot 1`] = `
   line-height: 150%;
 }
 
+.c0 ol {
+  margin-left: 1rem;
+  line-height: 150%;
+}
+
+.c0 li:before {
+  content: '•';
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.c0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ED5050;
+}
+
 <section
   className="c0"
 >

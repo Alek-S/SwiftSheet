@@ -64,7 +64,7 @@ module.exports = {
 				{
 					name: 'description',
 					content:
-						'Upload a CSV file to quickly share a link to a interactive spreadsheet.',
+						'Upload a CSV to temporarily share an online interactive spreadsheet or mock API endpoint, then make it go away with no user account needed.',
 				},
 			],
 			links: [

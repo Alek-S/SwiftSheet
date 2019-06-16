@@ -34,5 +34,14 @@ exports[`Footer matches the snapshot 1`] = `
   >
     Privacy Policy
   </Link>
+  <Footer__Spacer>
+    |
+  </Footer__Spacer>
+  <Link
+    replace={false}
+    to="/terms"
+  >
+    Terms of Service
+  </Link>
 </defaultStyle>
 `;

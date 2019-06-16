@@ -10,6 +10,7 @@ import ViewPage from './ViewPage/ViewPage';
 import SheetPage from './SheetPage/SheetPage';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 import PrivacyPage from './PrivacyPage/PrivacyPage';
+import TermsPage from './TermsPage/TermsPage';
 
 /** @function
  * @name App
@@ -23,6 +24,7 @@ const App = ({ match }) => {
 			<Switch>
 				<Route exact path="/" component={FrontPage} />
 				<Route path="/privacy" component={PrivacyPage} />
+				<Route path="/terms" component={TermsPage} />
 				<Route path="/upload" component={UploadPage} />
 				<Route path="/view" component={ViewPage} />
 				<Route path="/:sheetId" component={SheetPage} />

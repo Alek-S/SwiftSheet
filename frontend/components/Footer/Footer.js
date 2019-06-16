@@ -18,6 +18,8 @@ export default function Footer() {
 			</a>
 			<Spacer>|</Spacer>
 			<Link to="/privacy">Privacy Policy</Link>
+			<Spacer>|</Spacer>
+			<Link to="/terms">Terms of Service</Link>
 		</Styledfooter>
 	);
 }
