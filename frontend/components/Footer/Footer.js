@@ -17,6 +17,22 @@ export default function Footer() {
 				Alek Shnayder
 			</a>
 			<Spacer>|</Spacer>
+			<IconLink
+				style={{ marginRight: '1rem' }}
+				href="mailto:swiftsheetapp@example.com?Subject=Hello"
+				target="_top"
+				rel="noopener"
+			>
+				<img src="./assets/images/mail.svg" alt="logo" height="22" />
+			</IconLink>
+			<IconLink
+				href="https://twitter.com/SheetSwift"
+				target="_blank"
+				rel="noopener"
+			>
+				<img src="./assets/images/twitter.svg" alt="logo" height="25" />
+			</IconLink>
+			<Spacer>|</Spacer>
 			<Link to="/privacy">Privacy Policy</Link>
 			<Spacer>|</Spacer>
 			<Link to="/terms">Terms of Service</Link>
@@ -27,7 +43,7 @@ export default function Footer() {
 const Styledfooter = styled(defaultStyle)`
 	box-sizing: border-box;
 	padding: 1rem;
-	padding-top: 1.25rem;
+	margin-bottom: 0.5rem;
 	text-align: center;
 	width: 100%;
 
@@ -39,4 +55,9 @@ const Styledfooter = styled(defaultStyle)`
 const Spacer = styled.span`
 	margin-left: 1rem;
 	margin-right: 1rem;
+`;
+
+const IconLink = styled.a`
+	position: relative;
+	top: 7px;
 `;
