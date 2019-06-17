@@ -102,6 +102,16 @@ const StyledHeader = styled.h3`
 			height: 100px;
 		}
 	}
+	@media (max-height: 768px) {
+		font-size: 4.5rem;
+		line-height: 115%;
+		width: 60%;
+		img {
+			top: 1.5rem;
+			height: 80px;
+		}
+	}
+
 	@media (max-width: 900px) {
 		font-size: 4.2rem;
 		line-height: 125%;

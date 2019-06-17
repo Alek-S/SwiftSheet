@@ -4,74 +4,109 @@ exports[`Footer matches the snapshot 1`] = `
 .c0 {
   box-sizing: border-box;
   padding: 1rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   text-align: center;
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c0 a {
   color: #404040;
 }
 
+@media (max-width:500px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .c0 div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 <defaultStyle
   className="c0"
 >
-  Created with 🍷 by
-   
-  <a
-    href="https://www.alekshnayder.com/"
-    rel="noopener"
-    target="_blank"
-  >
-    Alek Shnayder
-  </a>
+  <div>
+    Created with 🍷 by
+     
+    <a
+      href="https://www.alekshnayder.com/"
+      rel="noopener"
+      target="_blank"
+    >
+      Alek Shnayder
+    </a>
+  </div>
   <Footer__Spacer>
     |
   </Footer__Spacer>
-  <Footer__IconLink
-    href="mailto:swiftsheetapp@example.com?Subject=Hello"
-    rel="noopener"
-    style={
-      Object {
-        "marginRight": "1rem",
+  <div>
+    <Footer__IconLink
+      href="mailto:swiftsheetapp@example.com?Subject=Hello"
+      rel="noopener"
+      style={
+        Object {
+          "marginRight": "1rem",
+        }
       }
-    }
-    target="_top"
-  >
-    <img
-      alt="logo"
-      height="22"
-      src="./assets/images/mail.svg"
-    />
-  </Footer__IconLink>
-  <Footer__IconLink
-    href="https://twitter.com/SheetSwift"
-    rel="noopener"
-    target="_blank"
-  >
-    <img
-      alt="logo"
-      height="25"
-      src="./assets/images/twitter.svg"
-    />
-  </Footer__IconLink>
+      target="_top"
+    >
+      <img
+        alt="logo"
+        height="22"
+        src="./assets/images/mail.svg"
+      />
+    </Footer__IconLink>
+    <Footer__IconLink
+      href="https://twitter.com/SwiftSheetApp"
+      rel="noopener"
+      target="_blank"
+    >
+      <img
+        alt="logo"
+        height="25"
+        src="./assets/images/twitter.svg"
+      />
+    </Footer__IconLink>
+  </div>
   <Footer__Spacer>
     |
   </Footer__Spacer>
-  <Link
-    replace={false}
-    to="/privacy"
-  >
-    Privacy Policy
-  </Link>
+  <div>
+    <Link
+      replace={false}
+      to="/privacy"
+    >
+      Privacy Policy
+    </Link>
+  </div>
   <Footer__Spacer>
     |
   </Footer__Spacer>
-  <Link
-    replace={false}
-    to="/terms"
-  >
-    Terms of Service
-  </Link>
+  <div>
+    <Link
+      replace={false}
+      to="/terms"
+    >
+      Terms of Service
+    </Link>
+  </div>
 </defaultStyle>
 `;
