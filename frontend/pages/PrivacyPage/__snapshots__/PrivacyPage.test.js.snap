@@ -57,6 +57,21 @@ exports[`Footer matches the snapshot 1`] = `
   color: #ED5050;
 }
 
+@media (max-width:475px) {
+  .c0 {
+    padding: 1rem;
+    padding-top: 7rem;
+  }
+
+  .c0 h3 {
+    margin-bottom: 2rem;
+  }
+
+  .c0 p {
+    padding: 0.5rem;
+  }
+}
+
 <section
   className="c0"
 >

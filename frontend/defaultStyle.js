@@ -240,6 +240,17 @@ const Policy = styled.section`
 		text-decoration: none;
 		color: ${props => props.theme.color.red};
 	}
+
+	@media (max-width: 475px) {
+		padding: 1rem;
+		padding-top: 7rem;
+		h3 {
+			margin-bottom: 2rem;
+		}
+		p {
+			padding: 0.5rem;
+		}
+	}
 `;
 
 export default defaultStyle;
