@@ -63,7 +63,7 @@ module.exports = {
 				{
 					name: 'description',
 					content:
-						'Upload a CSV to temporarily share an online interactive spreadsheet or mock API endpoint, then make it go away with no user account needed.',
+						'Upload a CSV to share an online spreadsheet or mock GraphQL or REST API endpoint that auto-deletes after expiration. No user account needed.',
 				},
 			],
 			links: [

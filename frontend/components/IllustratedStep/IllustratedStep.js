@@ -64,7 +64,7 @@ const StyledSection = styled.section`
 	.highlight {
 		/* background-color: rgba(255, 255, 0, .2); */
 		color: #333;
-		font-weight: 500;
+		font-weight: 600;
 		/* padding-left: .3rem;
 		padding-right: .3rem; */
 	}

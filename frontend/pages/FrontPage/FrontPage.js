@@ -14,8 +14,8 @@ const FrontPage = () => {
 			<HeroImg />
 			<StyledHeader>
 				<img src="./assets/images/logo-sheet.svg" alt="logo" height="150" />
-				Quickly share an online spreadsheet or API endpoint, then make it go
-				away.
+				Upload a CSV to share an online spreadsheet or mock API that
+				auto-deletes after expiration. No account needed.
 			</StyledHeader>
 			<ScrollDownIcon />
 			<InfoSection>
@@ -39,8 +39,8 @@ const FrontPage = () => {
 					Once Uploaded, share the{' '}
 					<span className="highlight">link to an interactive spreadsheet</span>{' '}
 					with filtering and sorting. Additionally, for the developer crowd, get
-					temporary API{' '}
-					<span className="highlight">endpoints for REST or GraphQL</span>.
+					temporary{' '}
+					<span className="highlight">API endpoints for REST or GraphQL</span>.
 				</IllustratedStep>
 				<IllustratedStep
 					step={3}
@@ -83,7 +83,7 @@ const StyledHeader = styled.h3`
 		margin-right: 1.5rem;
 	}
 
-	@media (max-height: 950px) {
+	@media (max-height: 1050px) {
 		font-size: 4.5rem;
 		img {
 			top: 1.5rem;
@@ -102,25 +102,25 @@ const StyledHeader = styled.h3`
 			height: 100px;
 		}
 	}
-	@media (max-height: 768px) {
-		font-size: 4.5rem;
-		line-height: 115%;
+	@media (max-height: 875px) {
+		font-size: 3.8rem;
+		line-height: 118%;
 		width: 60%;
 		img {
-			top: 1.5rem;
-			height: 80px;
+			top: 0.8rem;
+			height: 72px;
 		}
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1050px) {
 		font-size: 4.2rem;
-		line-height: 125%;
+		line-height: 150%;
 		img {
-			top: 1rem;
+			top: 1.2rem;
 			height: 80px;
 		}
 	}
-	@media (max-width: 800px) {
+	@media (max-width: 815px) {
 		font-size: 3.5rem;
 		line-height: 125%;
 		width: 75%;
@@ -131,19 +131,19 @@ const StyledHeader = styled.h3`
 	}
 	@media (max-width: 475px) {
 		top: 50px;
-		font-size: 2.6rem;
-		line-height: 160%;
+		font-size: 2.2rem;
+		line-height: 155%;
 		padding-left: 0.5rem;
 		width: 80%;
 		img {
 			top: 1.2rem;
-			height: 70px;
+			height: 50px;
 		}
 	}
 	@media (max-width: 350px) {
 		top: 50px;
-		font-size: 2.1rem;
-		line-height: 170%;
+		font-size: 1.5rem;
+		line-height: 120%;
 		padding-left: 0.5rem;
 		width: 82%;
 		img {
