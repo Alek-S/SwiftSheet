@@ -25,20 +25,18 @@ const Table = ({ data }) => {
 		});
 	});
 
-	const onBtExport = () => {
-		console.log('export');
+	const onExport = () => {
 		api.exportDataAsCsv();
 	};
 
 	const onGridReady = params => {
-		console.log(params.api);
 		api = params.api;
 	};
 
 	return (
 		<React.Fragment>
-			<ButtonGroup>
-				<ExportButton onClick={onBtExport}>Export to CSV</ExportButton>
+			<ButtonGroup style={{ maxWidth: `${columnDefs.length * 225 + 'px'}` }}>
+				<ExportButton onClick={onExport}>Export CSV</ExportButton>
 			</ButtonGroup>
 			<Styledtable className="ag-theme-material">
 				<AgGridReact

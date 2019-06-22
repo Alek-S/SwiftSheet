@@ -35,7 +35,7 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
   margin: auto;
   margin-top: 0px;
   border: none;
-  box-shadow: 0px 5px 40px -5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.15);
 }
 
 .c3 .ag-header-cell-text {
@@ -83,7 +83,7 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
 
 .c3 .ag-filter {
   background: linear-gradient(to bottom,#ffffff 0%,#f6f6f6 47%,#ededed 100%);
-  box-shadow: 0px 5px 40px -5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.15);
   font-family: 'Quicksand',sans-serif;
 }
 
@@ -126,7 +126,7 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
     Object {
       "boxShadow": "0px 5px 40px -5px rgba(0,0,0,0.3)",
       "boxShadowDark": "0px 5px 40px -2px rgba(0,0,0,0.5)",
-      "boxShadowLight": "0px 5px 40px -5px rgba(0,0,0,0.15)",
+      "boxShadowLight": "0px 0px 30px -5px rgba(0,0,0,0.15)",
       "color": Object {
         "aqua": "#68F6BA",
         "background": "#fafafa",
@@ -213,9 +213,20 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
       ]
     }
   >
-    <Table__ButtonGroup>
+    <Table__ButtonGroup
+      style={
+        Object {
+          "maxWidth": "1350px",
+        }
+      }
+    >
       <div
         className="c0"
+        style={
+          Object {
+            "maxWidth": "1350px",
+          }
+        }
       >
         <Table__ExportButton
           onClick={[Function]}
@@ -228,7 +239,7 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
               className="c1 c2"
               onClick={[Function]}
             >
-              Export to CSV
+              Export CSV
             </button>
           </defaultStyle__SubmitButton>
         </Table__ExportButton>

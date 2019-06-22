@@ -40,7 +40,8 @@ const FrontPage = () => {
 					<span className="highlight">link to an interactive spreadsheet</span>{' '}
 					with filtering and sorting. Additionally, for the developer crowd, get
 					temporary{' '}
-					<span className="highlight">API endpoints for REST or GraphQL</span>.
+					<span className="highlight">API endpoints for REST or GraphQL</span>{' '}
+					perfect for quick mocking.
 				</IllustratedStep>
 				<IllustratedStep
 					step={3}
