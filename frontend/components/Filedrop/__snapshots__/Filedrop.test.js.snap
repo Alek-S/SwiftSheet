@@ -107,12 +107,12 @@ exports[`Filedrop matches the snapshot 1`] = `
         >
           <defaultStyle
             aria-label="preferences"
-            className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR"
+            className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 dEKjCV"
             role="form"
           >
             <div
               aria-label="preferences"
-              className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR defaultStyle-g21vfe-0 eXjdxI"
+              className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 dEKjCV defaultStyle-g21vfe-0 eXjdxI"
               role="form"
             >
               <section
@@ -310,12 +310,12 @@ exports[`Filedrop matches the snapshot 2`] = `
         >
           <defaultStyle
             aria-label="preferences"
-            className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR"
+            className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 dEKjCV"
             role="form"
           >
             <div
               aria-label="preferences"
-              className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 bmaFoR defaultStyle-g21vfe-0 eXjdxI"
+              className="Filedrop__Options-sc-1u7cgvl-3 hnFPAY defaultStyle__Card-g21vfe-1 dEKjCV defaultStyle-g21vfe-0 eXjdxI"
               role="form"
             >
               <section

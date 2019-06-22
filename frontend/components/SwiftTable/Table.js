@@ -5,6 +5,8 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-material.css';
 
+import { SubmitButton } from '../../defaultStyle';
+
 const Table = ({ data }) => {
 	let columnDefs = [];
 	const rowData = [...data];
@@ -15,6 +17,7 @@ const Table = ({ data }) => {
 		filter: true,
 		width: 225,
 	};
+	let api;
 	Object.keys(data[0]).forEach(key => {
 		columnDefs.push({
 			headerName: key,
@@ -22,14 +25,28 @@ const Table = ({ data }) => {
 		});
 	});
 
+	const onExport = () => {
+		api.exportDataAsCsv();
+	};
+
+	const onGridReady = params => {
+		api = params.api;
+	};
+
 	return (
-		<Styledtable className="ag-theme-material">
-			<AgGridReact
-				columnDefs={columnDefs}
-				rowData={rowData}
-				defaultColDef={defaultColDef}
-			/>
-		</Styledtable>
+		<React.Fragment>
+			<ButtonGroup style={{ maxWidth: `${columnDefs.length * 225 + 'px'}` }}>
+				<ExportButton onClick={onExport}>Export CSV</ExportButton>
+			</ButtonGroup>
+			<Styledtable className="ag-theme-material">
+				<AgGridReact
+					columnDefs={columnDefs}
+					rowData={rowData}
+					defaultColDef={defaultColDef}
+					onGridReady={onGridReady}
+				/>
+			</Styledtable>
+		</React.Fragment>
 	);
 };
 
@@ -49,7 +66,7 @@ const Styledtable = styled.div`
 	width: 80%;
 	max-width: ${props => props.children.props.columnDefs.length * 225 + 'px'};
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 0px;
 	border: none;
 	box-shadow: ${props => props.theme.boxShadowLight};
 
@@ -106,4 +123,19 @@ const Styledtable = styled.div`
 	}
 `;
 
+const ButtonGroup = styled.div`
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 2rem;
+	margin-bottom: 0rem;
+	padding-bottom: 0rem;
+`;
+
+const ExportButton = styled(SubmitButton)`
+	border-radius: 10px 10px 0 0;
+	font-size: 0.85rem;
+	width: 120px !important;
+`;
 export default Table;

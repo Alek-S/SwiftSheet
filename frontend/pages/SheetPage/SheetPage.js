@@ -92,7 +92,7 @@ const WrapperDiv = styled(defaultStyle)`
 	padding-top: 6rem;
 	background-color: ${props => props.theme.color.background};
 	margin-top: 0rem;
-	padding-bottom: 2rem;
+	padding-bottom: 2.7rem;
 	width: 100%;
 `;
 
