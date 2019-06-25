@@ -84,7 +84,7 @@ const StyledHeader = styled.h3`
 		margin-right: 1.5rem;
 	}
 
-	@media (max-height: 1050px) {
+	@media (max-height: 1150px) {
 		font-size: 4.5rem;
 		img {
 			top: 1.5rem;
@@ -103,6 +103,23 @@ const StyledHeader = styled.h3`
 			height: 100px;
 		}
 	}
+	@media (max-width: 1450px) {
+		font-size: 4.4rem;
+		line-height: 170%;
+		img {
+			top: 1.5rem;
+			height: 100px;
+		}
+	}
+	@media (max-height: 975px) {
+		font-size: 4.2rem;
+		line-height: 118%;
+		width: 60%;
+		img {
+			top: 0.8rem;
+			height: 72px;
+		}
+	}
 	@media (max-height: 875px) {
 		font-size: 3.8rem;
 		line-height: 118%;
@@ -112,12 +129,12 @@ const StyledHeader = styled.h3`
 			height: 72px;
 		}
 	}
-
+	/* ipad landscape */
 	@media (max-width: 1050px) {
-		font-size: 4.2rem;
+		font-size: 3.2rem;
 		line-height: 150%;
 		img {
-			top: 1.2rem;
+			top: 1.4rem;
 			height: 80px;
 		}
 	}
