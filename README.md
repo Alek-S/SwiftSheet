@@ -17,6 +17,18 @@ After upload, you get a sharable minified link to the sheet that others can view
 Additionally API endpoints are also temporarily created as both REST and GraphQL for quickly mocking an API off of a CSV file.
 
 ## File Structure
+- 📁 **frontend**
+  - 📁 **components** -- _Individual UI components used by pages_
+  - 📁 **pages** -- _full pages react-router can route to, composed of components_
+  - 📁 **utils**
+- 📁 **backend**
+  - 📁 **controller** -- _express routes for REST APIs_
+  - 📁 **graphql**
+    - 📁 **resolver** -- _functions for how to get or mutate data_
+    - 📁 **schema** -- _GraphQL API Schema (Queries, Mutations)_
+  - 📁 **model** -- _data model for use by Mongooose with MongoDB_
+- 📁 **shared** -- _shared between front and back code_
+- 📁 **test** -- _jest configs_
 
 
 ## Technology Used
