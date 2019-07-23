@@ -54,10 +54,12 @@ Additionally API endpoints are also temporarily created as both REST and GraphQL
 - Pako (zlib inflate)
 - Prettier
 
-### Deployment
+### Deployment + Tools
 - Ubuntu Linux VPS
 - PM2
 - NGINX
 - CloudFlare CDN
 - Sentry.io (Client-Side Error Reporting)
-- Code Climate (Code Quality)
+- Code Climate (Code Quality & Maintainability analysis)
+- Snyk (package vulnerability detection)
+- Travis CI (used to run unit tests before merging PR - not used to deploy)
