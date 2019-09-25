@@ -8,3 +8,13 @@ patch:
         patched: '2019-09-25T12:51:14.837Z'
     - mongoose > async > lodash:
         patched: '2019-09-25T12:51:14.837Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-09-25T12:54:39.365Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-09-25T12:54:39.365Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-09-25T12:54:39.365Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-09-25T12:54:39.365Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-09-25T12:54:39.365Z'
