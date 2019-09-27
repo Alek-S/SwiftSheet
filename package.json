@@ -44,7 +44,7 @@
     "graphql-depth-limit": "^1.1.0",
     "graphql-iso-date": "^3.5.0",
     "graphql-tag": "^2.10.1",
-    "graphql-type-json": "^0.2.1",
+    "graphql-type-json": "^0.3.0",
     "mongoose": "^5.4.11",
     "morgan": "^1.9.1",
     "pako": "^1.0.10",
