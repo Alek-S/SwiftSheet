@@ -9,7 +9,7 @@ const {
 	GraphQLNonNull,
 } = require('graphql');
 const { GraphQLDateTime } = require('graphql-iso-date');
-const GraphQLJSON = require('graphql-type-json');
+const { GraphQLJSON } = require('graphql-type-json');
 const { getSheet, getSheets, createSheet } = require('../resolver/resolver');
 
 //===TYPES===
