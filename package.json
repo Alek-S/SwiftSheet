@@ -59,7 +59,7 @@
     "react-hot-loader": "^4.6.5",
     "react-router-dom": "^4.3.1",
     "shortid": "^2.2.14",
-    "snyk": "^1.230.2",
+    "snyk": "^1.230.5",
     "styled-components": "^3.4.2",
     "waait": "^1.0.4"
   },
