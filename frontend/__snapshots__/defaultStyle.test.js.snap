@@ -1,5 +1,209 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ApiCard matches the snapshot 1`] = `
+.c0 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.15);
+  width: 500px;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: #424242;
+  color: #BCBCBC;
+}
+
+.c0 input {
+  outline: none;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  background-color: #F1F3F4;
+  border: 1px solid #F1F3F4;
+  border-radius: 5rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c0 input::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c0 input::-moz-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c0 input:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c0 input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c0 input:hover {
+  border: solid 1px #d9d9d9;
+}
+
+.c0 input:focus,
+.c0 input:active {
+  border: solid 1px #46C8F5;
+}
+
+.c0 input.true {
+  border: 1px solid #ED5050;
+}
+
+.c0 a {
+  margin-left: 1rem;
+  color: #68F6BA;
+}
+
+.c0 .pill {
+  background: linear-gradient(160deg,#57DACB 0%,#55A2ED 100%);
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.c0 .pill-secondary {
+  background-color: #595959;
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.c0 .gql_query {
+  margin-left: 0.5rem;
+  color: #EAEAEA;
+}
+
+.c0 .query_title {
+  margin-top: 0.75rem;
+}
+
+@media (max-width:535px) {
+  .c0 {
+    width: 90%;
+    overflow: none;
+    word-wrap: break-word;
+  }
+
+  .c0 .pill,
+  .c0 .pill-secondary {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+  }
+
+  .c0 a,
+  .c0 .gql_query {
+    margin-left: 0;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Policy matches the snapshot 1`] = `
+.c0 {
+  background-color: #fafafa;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  padding: 10rem 10rem 5rem 10rem;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+}
+
+.c0 div {
+  max-width: 750px;
+  margin: auto;
+}
+
+.c0 h1 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.c0 h2 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.c0 h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.c0 p {
+  padding: 1.5rem;
+  text-align: justify;
+  line-height: 150%;
+}
+
+.c0 ol {
+  margin-left: 1rem;
+  line-height: 150%;
+}
+
+.c0 li:before {
+  content: '•';
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.c0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ED5050;
+}
+
+@media (max-width:475px) {
+  .c0 {
+    padding: 1rem;
+    padding-top: 7rem;
+  }
+
+  .c0 h3 {
+    margin-bottom: 2rem;
+  }
+
+  .c0 p {
+    padding: 0.5rem;
+  }
+}
+
+<section
+  className="c0"
+/>
+`;
+
 exports[`defaultStyle matches the snapshot 1`] = `
 .c0 {
   background-color: white;

@@ -1,89 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer matches the snapshot 1`] = `
-.c0 {
-  margin: auto;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.c0 img {
-  float: left;
-  margin-right: 4rem;
-}
-
-.c0 header {
-  padding-top: 10px;
-}
-
-.c0 h2 {
-  font-weight: 500;
-  font-size: 1.4rem;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
-  letter-spacing: 1px;
-  line-height: 175%;
-}
-
-.c0 p {
-  margin-top: 1.5rem;
-  margin-left: 20.5rem;
-  font-size: 1rem;
-  line-height: 175%;
-  max-width: 600px;
-}
-
-.c0 a {
-  color: #ED5050;
-}
-
-.c0 .step {
-  border: solid 1px #404040;
-  border-radius: 40px;
-  padding: 0.5rem 1.5rem;
-  font-weight: 400;
-  margin-right: 0.75rem;
-}
-
-.c0 .highlight {
-  color: #333;
-  font-weight: 600;
-}
-
-@media (max-width:1200px) {
-  .c0 {
-    width: 90%;
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "IllustratedStep__StyledSection-sc-108b0jo-0",
+        "isStatic": false,
+        "rules": Array [
+          "margin:auto;padding-top:4rem;padding-bottom:4rem;img{float:left;margin-right:4rem;}header{padding-top:10px;}h2{font-weight:500;font-size:1.4rem;letter-spacing:1px;line-height:175%;}p{margin-top:1.5rem;margin-left:20.5rem;font-size:1rem;line-height:175%;max-width:600px;}a{color:",
+          [Function],
+          ";}.step{border:solid 1px ",
+          [Function],
+          ";border-radius:40px;padding:0.5rem 1.5rem;font-weight:400;margin-right:0.75rem;}.highlight{color:#333;font-weight:600;}@media (max-width:1200px){width:90%;}@media (max-width:900px){width:98%;p{margin-top:0.5rem;margin-left:12rem;line-height:150%;}}@media (max-width:750px){img{display:block;float:none;width:40%;margin:auto;}p{margin-left:0.5rem;}}",
+        ],
+      },
+      "displayName": "IllustratedStep__StyledSection",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "IllustratedStep__StyledSection-sc-108b0jo-0",
+      "target": "section",
+      "toString": [Function],
+      "usesTheme": true,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
   }
-}
-
-@media (max-width:900px) {
-  .c0 {
-    width: 98%;
-  }
-
-  .c0 p {
-    margin-top: 0.5rem;
-    margin-left: 12rem;
-    line-height: 150%;
-  }
-}
-
-@media (max-width:750px) {
-  .c0 img {
-    display: block;
-    float: none;
-    width: 40%;
-    margin: auto;
-  }
-
-  .c0 p {
-    margin-left: 0.5rem;
-  }
-}
-
-<section
-  className="c0"
+  forwardedRef={null}
 >
   <img
     alt="illustration"
@@ -98,5 +43,5 @@ exports[`Footer matches the snapshot 1`] = `
     </h2>
   </header>
   <p />
-</section>
+</StyledComponent>
 `;

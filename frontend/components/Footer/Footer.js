@@ -89,3 +89,5 @@ const IconLink = styled.a`
 		top: 0;
 	}
 `;
+
+export { Styledfooter };

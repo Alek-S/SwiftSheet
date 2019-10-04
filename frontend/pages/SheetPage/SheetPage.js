@@ -146,3 +146,4 @@ const ExpiredNotice = styled(defaultStyle)`
 `;
 
 export default SheetPage;
+export { WrapperDiv, ExpireDiv };

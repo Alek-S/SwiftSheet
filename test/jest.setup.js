@@ -9,16 +9,12 @@ Enzyme.configure({ adapter: new Adapter() });
 
 /* == GLOBALS == */
 global.shallowWithTheme = (tree, theme) => {
-	const context = shallow(<ThemeProvider theme={theme} />)
-		.instance()
-		.getChildContext();
+	const context = shallow(<ThemeProvider theme={theme} />).instance();
 	return shallow(tree, { context });
 };
 
 global.mountWithTheme = (tree, theme) => {
-	const context = shallow(<ThemeProvider theme={theme} />)
-		.instance()
-		.getChildContext();
+	const context = shallow(<ThemeProvider theme={theme} />).instance();
 
 	return mount(tree, {
 		context,

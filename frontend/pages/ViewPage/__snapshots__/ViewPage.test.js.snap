@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewPage matches the snapshot 1`] = `
+exports[`ViewPage StyledDiv matches the snapshot 1`] = `
 .c0 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
   padding-top: 6rem;
   background-color: #fafafa;
   height: calc(100vh - 80px);
@@ -22,10 +26,47 @@ exports[`ViewPage matches the snapshot 1`] = `
   align-items: center;
 }
 
-<defaultStyle
+<div
   className="c0"
+/>
+`;
+
+exports[`ViewPage matches the snapshot 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "ViewPage__StyledDiv-wujrxm-0",
+        "isStatic": false,
+        "rules": Array [
+          "background-color:white;color:",
+          [Function],
+          ";font-family:",
+          [Function],
+          ";font-size:0.9em;",
+          "padding-top:6rem;background-color:",
+          [Function],
+          ";height:calc(100vh - 80px);display:flex;flex-direction:column;justify-content:center;align-items:center;",
+        ],
+      },
+      "displayName": "ViewPage__StyledDiv",
+      "foldedComponentIds": Array [
+        "defaultStyle-g21vfe-0",
+      ],
+      "render": [Function],
+      "styledComponentId": "ViewPage__StyledDiv-wujrxm-0",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": true,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 >
   <SearchSheet />
   <RecentlyViewed />
-</defaultStyle>
+</StyledComponent>
 `;

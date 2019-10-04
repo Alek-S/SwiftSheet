@@ -2,89 +2,6 @@
 
 exports[`UploadPage matches the snapshot 1`] = `
 .c1 {
-  background-color: white;
-  color: #404040;
-  font-family: 'Quicksand',sans-serif;
-  font-size: 0.9em;
-}
-
-.c8 {
-  border-radius: 8px;
-  box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.15);
-}
-
-.c8 input {
-  outline: none;
-  color: #404040;
-  font-family: 'Quicksand',sans-serif;
-  background-color: #F1F3F4;
-  border: 1px solid #F1F3F4;
-  border-radius: 5rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.c8 input::-webkit-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: italic;
-  font-family: 'Quicksand',sans-serif;
-  color: #848484;
-}
-
-.c8 input::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: italic;
-  font-family: 'Quicksand',sans-serif;
-  color: #848484;
-}
-
-.c8 input:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: italic;
-  font-family: 'Quicksand',sans-serif;
-  color: #848484;
-}
-
-.c8 input::placeholder {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: italic;
-  font-family: 'Quicksand',sans-serif;
-  color: #848484;
-}
-
-.c8 input:hover {
-  border: solid 1px #d9d9d9;
-}
-
-.c8 input:focus,
-.c8 input:active {
-  border: solid 1px #46C8F5;
-}
-
-.c8 input.true {
-  border: 1px solid #ED5050;
-}
-
-.c6 {
-  text-align: center;
-  opacity: 0;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  background-color: #ED5050;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.c6.true {
-  opacity: 1;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,7 +15,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c2 {
   background-color: #fff;
   border: dashed 2px #d9d9d9;
   border-radius: 5px;
@@ -108,21 +25,31 @@ exports[`UploadPage matches the snapshot 1`] = `
   margin-top: 3rem;
 }
 
-.c3 img {
+.c2 img {
   display: block;
   height: 200px;
   width: 80%;
   margin: auto;
 }
 
-.c4 {
+.c3 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
   color: #848484;
   font-size: 1.2rem;
   text-align: center;
   background-color: transparent;
 }
 
-.c7 {
+.c5 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.15);
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
   display: -webkit-box;
@@ -149,7 +76,63 @@ exports[`UploadPage matches the snapshot 1`] = `
   margin-top: 3.5rem;
 }
 
-.c7 input {
+.c5 input {
+  outline: none;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  background-color: #F1F3F4;
+  border: 1px solid #F1F3F4;
+  border-radius: 5rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c5 input::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c5 input::-moz-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c5 input:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c5 input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Quicksand',sans-serif;
+  color: #848484;
+}
+
+.c5 input:hover {
+  border: solid 1px #d9d9d9;
+}
+
+.c5 input:focus,
+.c5 input:active {
+  border: solid 1px #46C8F5;
+}
+
+.c5 input.true {
+  border: 1px solid #ED5050;
+}
+
+.c5 input {
   margin: 0 2rem 0 0.25rem;
   padding-left: 1rem;
   width: 140px;
@@ -158,31 +141,31 @@ exports[`UploadPage matches the snapshot 1`] = `
   height: 25px;
 }
 
-.c7 input::-webkit-input-placeholder {
+.c5 input::-webkit-input-placeholder {
   color: #BCBCBC;
 }
 
-.c7 input::-moz-placeholder {
+.c5 input::-moz-placeholder {
   color: #BCBCBC;
 }
 
-.c7 input:-ms-input-placeholder {
+.c5 input:-ms-input-placeholder {
   color: #BCBCBC;
 }
 
-.c7 input::placeholder {
+.c5 input::placeholder {
   color: #BCBCBC;
 }
 
-.c7 select {
+.c5 select {
   margin-left: 0.25rem;
 }
 
-.c9 {
+.c6 {
   margin-left: 2rem;
 }
 
-.c9 button {
+.c6 button {
   color: white;
   cursor: pointer;
   outline: none;
@@ -198,7 +181,15 @@ exports[`UploadPage matches the snapshot 1`] = `
   width: 70px;
 }
 
-.c5 {
+.c4 {
+  text-align: center;
+  opacity: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #ED5050;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   min-width: 200px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -206,14 +197,22 @@ exports[`UploadPage matches the snapshot 1`] = `
   margin-top: 2rem;
 }
 
+.c4.true {
+  opacity: 1;
+}
+
 .c0 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
   background-color: #fafafa;
   padding-top: 7rem;
   height: calc(100vh - 100px);
   min-height: 820px;
 }
 
-.c10 {
+.c7 {
   display: block;
   width: 60%;
   margin: auto;
@@ -221,11 +220,11 @@ exports[`UploadPage matches the snapshot 1`] = `
   margin-top: 2rem;
 }
 
-.c10 label {
+.c7 label {
   font-size: 1.1rem;
 }
 
-.c10 select {
+.c7 select {
   font-family: 'Quicksand',sans-serif;
   font-size: 1rem;
   background-color: white;
@@ -234,7 +233,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   border: solid 1px #d9d9d9;
 }
 
-.c10 input[type='submit'] {
+.c7 input[type='submit'] {
   position: relative;
   cursor: no-drop;
   color: #d9d9d9;
@@ -251,11 +250,19 @@ exports[`UploadPage matches the snapshot 1`] = `
   transition: all 0.5s;
 }
 
-.c10 input[type='submit']:hover {
+.c7 input[type='submit']:hover {
   background: transparent;
 }
 
-.c11 {
+.c8 {
+  text-align: center;
+  opacity: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #ED5050;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   min-width: 200px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -264,23 +271,27 @@ exports[`UploadPage matches the snapshot 1`] = `
   margin-top: 2rem;
 }
 
+.c8.true {
+  opacity: 1;
+}
+
 @media (max-width:500px) {
-  .c3 {
+  .c2 {
     width: 90%;
   }
 }
 
 @media (max-width:500px) {
-  .c7 {
+  .c5 {
     width: 90%;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 
-  .c7 input,
-  .c7 select,
-  .c7 section {
+  .c5 input,
+  .c5 select,
+  .c5 section {
     margin: 0.5rem 0;
   }
 }
@@ -292,7 +303,6 @@ exports[`UploadPage matches the snapshot 1`] = `
   <ApolloProvider
     client={
       ApolloClient {
-        "__operations_cache__": Map {},
         "cache": InMemoryCache {
           "addTypename": false,
           "cacheKeyRoot": KeyTrie {
@@ -571,11 +581,43 @@ exports[`UploadPage matches the snapshot 1`] = `
         >
           <UploadPage>
             <UploadPage__StyledDiv>
-              <defaultStyle
-                className="c0"
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "UploadPage__StyledDiv-ahg6u5-0",
+                      "isStatic": false,
+                      "lastClassName": "c0",
+                      "rules": Array [
+                        "background-color:white;color:",
+                        [Function],
+                        ";font-family:",
+                        [Function],
+                        ";font-size:0.9em;",
+                        "background-color:",
+                        [Function],
+                        ";padding-top:7rem;height:calc(100vh - 100px);min-height:820px;",
+                      ],
+                    },
+                    "displayName": "UploadPage__StyledDiv",
+                    "foldedComponentIds": Array [
+                      "defaultStyle-g21vfe-0",
+                    ],
+                    "render": [Function],
+                    "styledComponentId": "UploadPage__StyledDiv-ahg6u5-0",
+                    "target": "div",
+                    "toString": [Function],
+                    "usesTheme": true,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
               >
                 <div
-                  className="c0 c1"
+                  className="c0"
                 >
                   <Filedrop
                     expireIn={72}
@@ -588,27 +630,37 @@ exports[`UploadPage matches the snapshot 1`] = `
                     wrongPassword={false}
                   >
                     <Filedrop__StyledSection>
-                      <section
-                        className="c2"
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "Filedrop__StyledSection-sc-1u7cgvl-0",
+                              "isStatic": false,
+                              "lastClassName": "c1",
+                              "rules": Array [
+                                "display:flex;flex-direction:column;align-items:center;",
+                              ],
+                            },
+                            "displayName": "Filedrop__StyledSection",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "Filedrop__StyledSection-sc-1u7cgvl-0",
+                            "target": "section",
+                            "toString": [Function],
+                            "usesTheme": false,
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                       >
-                        <Filedrop__StyledDropzone
-                          accept=".csv"
-                          maxSize={2500000}
-                          minSize={8}
-                          multiple={false}
-                          onDragEnter={[Function]}
-                          onDragLeave={[Function]}
-                          onDrop={[Function]}
-                          onDropRejected={[Function]}
+                        <section
+                          className="c1"
                         >
-                          <t
+                          <Filedrop__StyledDropzone
                             accept=".csv"
-                            className="c3"
-                            disableClick={false}
-                            disablePreview={false}
-                            disabled={false}
-                            getDataTransferItems={[Function]}
-                            inputProps={Object {}}
                             maxSize={2500000}
                             minSize={8}
                             multiple={false}
@@ -616,90 +668,254 @@ exports[`UploadPage matches the snapshot 1`] = `
                             onDragLeave={[Function]}
                             onDrop={[Function]}
                             onDropRejected={[Function]}
-                            preventDropOnDocument={true}
                           >
-                            <div
-                              aria-disabled={false}
-                              className="c3"
-                              onClick={[Function]}
-                              onDragEnter={[Function]}
-                              onDragLeave={[Function]}
-                              onDragOver={[Function]}
-                              onDragStart={[Function]}
-                              onDrop={[Function]}
-                              style={
+                            <StyledComponent
+                              accept=".csv"
+                              forwardedComponent={
                                 Object {
-                                  "position": "relative",
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
+                                    "isStatic": false,
+                                    "lastClassName": "c2",
+                                    "rules": Array [
+                                      "background-color:",
+                                      [Function],
+                                      ";border:dashed 2px ",
+                                      [Function],
+                                      ";border-radius:5px;height:250px;width:70%;margin:auto;margin-top:3rem;img{display:block;height:200px;width:80%;margin:auto;}@media (max-width:500px){width:90%;}",
+                                    ],
+                                  },
+                                  "displayName": "Filedrop__StyledDropzone",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
+                                  "target": [Function],
+                                  "toString": [Function],
+                                  "usesTheme": true,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
                                 }
                               }
+                              forwardedRef={null}
+                              maxSize={2500000}
+                              minSize={8}
+                              multiple={false}
+                              onDragEnter={[Function]}
+                              onDragLeave={[Function]}
+                              onDrop={[Function]}
+                              onDropRejected={[Function]}
                             >
-                              <img
-                                alt="upload-cloud-logo"
-                                src="./assets/images/upload-cloud-light.svg"
-                              />
-                              <Filedrop__StyledText
-                                dragging={false}
-                              >
-                                <defaultStyle
-                                  className="c4"
-                                  dragging={false}
-                                >
-                                  <div
-                                    className="c4 c1"
-                                  >
-                                    Drag
-                                     CSV file here
-                                  </div>
-                                </defaultStyle>
-                              </Filedrop__StyledText>
-                              <input
+                              <t
                                 accept=".csv"
-                                autoComplete="off"
+                                className="c2"
+                                disableClick={false}
+                                disablePreview={false}
                                 disabled={false}
+                                getDataTransferItems={[Function]}
+                                inputProps={Object {}}
+                                maxSize={2500000}
+                                minSize={8}
                                 multiple={false}
-                                onChange={[Function]}
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "opacity": 0.00001,
-                                    "pointerEvents": "none",
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                onDragEnter={[Function]}
+                                onDragLeave={[Function]}
+                                onDrop={[Function]}
+                                onDropRejected={[Function]}
+                                preventDropOnDocument={true}
+                              >
+                                <div
+                                  aria-disabled={false}
+                                  className="c2"
+                                  onClick={[Function]}
+                                  onDragEnter={[Function]}
+                                  onDragLeave={[Function]}
+                                  onDragOver={[Function]}
+                                  onDragStart={[Function]}
+                                  onDrop={[Function]}
+                                  style={
+                                    Object {
+                                      "position": "relative",
+                                    }
                                   }
+                                >
+                                  <img
+                                    alt="upload-cloud-logo"
+                                    src="./assets/images/upload-cloud-light.svg"
+                                  />
+                                  <Filedrop__StyledText
+                                    dragging={false}
+                                  >
+                                    <StyledComponent
+                                      dragging={false}
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "Filedrop__StyledText-sc-1u7cgvl-2",
+                                            "isStatic": false,
+                                            "lastClassName": "c3",
+                                            "rules": Array [
+                                              "background-color:white;color:",
+                                              [Function],
+                                              ";font-family:",
+                                              [Function],
+                                              ";font-size:0.9em;",
+                                              "color:",
+                                              [Function],
+                                              ";font-size:1.2rem;text-align:center;background-color:transparent;",
+                                            ],
+                                          },
+                                          "displayName": "Filedrop__StyledText",
+                                          "foldedComponentIds": Array [
+                                            "defaultStyle-g21vfe-0",
+                                          ],
+                                          "render": [Function],
+                                          "styledComponentId": "Filedrop__StyledText-sc-1u7cgvl-2",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "usesTheme": true,
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                    >
+                                      <div
+                                        className="c3"
+                                      >
+                                        Drag
+                                         CSV file here
+                                      </div>
+                                    </StyledComponent>
+                                  </Filedrop__StyledText>
+                                  <input
+                                    accept=".csv"
+                                    autoComplete="off"
+                                    disabled={false}
+                                    multiple={false}
+                                    onChange={[Function]}
+                                    style={
+                                      Object {
+                                        "bottom": 0,
+                                        "left": 0,
+                                        "opacity": 0.00001,
+                                        "pointerEvents": "none",
+                                        "position": "absolute",
+                                        "right": 0,
+                                        "top": 0,
+                                      }
+                                    }
+                                    type="file"
+                                  />
+                                </div>
+                              </t>
+                            </StyledComponent>
+                          </Filedrop__StyledDropzone>
+                          <Filedrop__UploadError>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "Filedrop__UploadError-sc-1u7cgvl-5",
+                                    "isStatic": false,
+                                    "lastClassName": "c4",
+                                    "rules": Array [
+                                      "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
+                                      [Function],
+                                      ";transition:all 0.3s;&.true{opacity:1;}",
+                                      "min-width:200px;width:fit-content;margin-top:2rem;",
+                                    ],
+                                  },
+                                  "displayName": "Filedrop__UploadError",
+                                  "foldedComponentIds": Array [
+                                    "defaultStyle__ErrorDialog-g21vfe-2",
+                                  ],
+                                  "render": [Function],
+                                  "styledComponentId": "Filedrop__UploadError-sc-1u7cgvl-5",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "usesTheme": true,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
                                 }
-                                type="file"
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="c4"
                               />
-                            </div>
-                          </t>
-                        </Filedrop__StyledDropzone>
-                        <Filedrop__UploadError>
-                          <defaultStyle__ErrorDialog
-                            className="c5"
-                          >
-                            <div
-                              className="c5 c6"
-                            />
-                          </defaultStyle__ErrorDialog>
-                        </Filedrop__UploadError>
-                        <Filedrop__Options
-                          aria-label="preferences"
-                          role="form"
-                        >
-                          <defaultStyle__Card
+                            </StyledComponent>
+                          </Filedrop__UploadError>
+                          <Filedrop__Options
                             aria-label="preferences"
-                            className="c7"
                             role="form"
                           >
-                            <defaultStyle
+                            <StyledComponent
                               aria-label="preferences"
-                              className="c7 c8"
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "Filedrop__Options-sc-1u7cgvl-3",
+                                    "isStatic": false,
+                                    "lastClassName": "c5",
+                                    "rules": Array [
+                                      "background-color:white;color:",
+                                      [Function],
+                                      ";font-family:",
+                                      [Function],
+                                      ";font-size:0.9em;",
+                                      "border-radius:8px;box-shadow:",
+                                      [Function],
+                                      ";input{outline:none;color:",
+                                      [Function],
+                                      ";font-family:",
+                                      [Function],
+                                      ";background-color:",
+                                      [Function],
+                                      ";border:1px solid ",
+                                      [Function],
+                                      ";border-radius:5rem;transition:all 0.3s;::placeholder{font-size:1rem;font-weight:400;font-style:italic;font-family:",
+                                      [Function],
+                                      ";color:",
+                                      [Function],
+                                      ";}&:hover{border:solid 1px ",
+                                      [Function],
+                                      ";}&:focus,&:active{border:solid 1px ",
+                                      [Function],
+                                      ";}&.true{border:1px solid ",
+                                      [Function],
+                                      ";}}",
+                                      "padding-top:1.75rem;padding-bottom:1.75rem;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly;align-items:center;width:70%;margin:auto;text-align:center;margin-top:3.5rem;input{margin:0 2rem 0 0.25rem;padding-left:1rem;width:140px;font-size:0.9rem;font-weight:400;height:25px;::placeholder{color:",
+                                      [Function],
+                                      ";}}select{margin-left:0.25rem;}@media (max-width:500px){width:90%;flex-direction:column;input,select,section{margin:0.5rem 0;}}",
+                                    ],
+                                  },
+                                  "displayName": "Filedrop__Options",
+                                  "foldedComponentIds": Array [
+                                    "defaultStyle-g21vfe-0",
+                                    "defaultStyle__Card-g21vfe-1",
+                                  ],
+                                  "render": [Function],
+                                  "styledComponentId": "Filedrop__Options-sc-1u7cgvl-3",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "usesTheme": true,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
                               role="form"
                             >
                               <div
                                 aria-label="preferences"
-                                className="c7 c8 c1"
+                                className="c5"
                                 role="form"
                               >
                                 <section
@@ -760,137 +976,288 @@ exports[`UploadPage matches the snapshot 1`] = `
                                   <Filedrop__HeaderToggle
                                     active={true}
                                   >
-                                    <label
-                                      className="c9"
+                                    <StyledComponent
+                                      active={true}
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "Filedrop__HeaderToggle-sc-1u7cgvl-4",
+                                            "isStatic": false,
+                                            "lastClassName": "c6",
+                                            "rules": Array [
+                                              "margin-left:2rem;button{color:white;cursor:pointer;outline:none;background:",
+                                              [Function],
+                                              ";box-shadow:",
+                                              [Function],
+                                              ";border:none;font-family:",
+                                              [Function],
+                                              ";font-size:1rem;border-radius:4px;margin-left:1rem;padding-top:5px;padding-bottom:5px;width:70px;}",
+                                            ],
+                                          },
+                                          "displayName": "Filedrop__HeaderToggle",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "Filedrop__HeaderToggle-sc-1u7cgvl-4",
+                                          "target": "label",
+                                          "toString": [Function],
+                                          "usesTheme": true,
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
                                     >
-                                      <span>
-                                        First Row Header:
-                                      </span>
-                                      <button
-                                        onClick={[Function]}
+                                      <label
+                                        className="c6"
                                       >
-                                        Yes
-                                      </button>
-                                    </label>
+                                        <span>
+                                          First Row Header:
+                                        </span>
+                                        <button
+                                          onClick={[Function]}
+                                        >
+                                          Yes
+                                        </button>
+                                      </label>
+                                    </StyledComponent>
                                   </Filedrop__HeaderToggle>
                                 </section>
                               </div>
-                            </defaultStyle>
-                          </defaultStyle__Card>
-                        </Filedrop__Options>
-                        <Filedrop__UploadError>
-                          <defaultStyle__ErrorDialog
-                            className="c5"
-                          >
-                            <div
-                              className="c5 c6"
+                            </StyledComponent>
+                          </Filedrop__Options>
+                          <Filedrop__UploadError>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "Filedrop__UploadError-sc-1u7cgvl-5",
+                                    "isStatic": false,
+                                    "lastClassName": "c4",
+                                    "rules": Array [
+                                      "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
+                                      [Function],
+                                      ";transition:all 0.3s;&.true{opacity:1;}",
+                                      "min-width:200px;width:fit-content;margin-top:2rem;",
+                                    ],
+                                  },
+                                  "displayName": "Filedrop__UploadError",
+                                  "foldedComponentIds": Array [
+                                    "defaultStyle__ErrorDialog-g21vfe-2",
+                                  ],
+                                  "render": [Function],
+                                  "styledComponentId": "Filedrop__UploadError-sc-1u7cgvl-5",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "usesTheme": true,
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
                             >
-                              ⚠️ Check Password Length
-                            </div>
-                          </defaultStyle__ErrorDialog>
-                        </Filedrop__UploadError>
-                      </section>
+                              <div
+                                className="c4"
+                              >
+                                ⚠️ Check Password Length
+                              </div>
+                            </StyledComponent>
+                          </Filedrop__UploadError>
+                        </section>
+                      </StyledComponent>
                     </Filedrop__StyledSection>
                   </Filedrop>
                   <UploadPage__StyledForm
                     disableSubmit={true}
                   >
-                    <form
-                      className="c10"
+                    <StyledComponent
+                      disableSubmit={true}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "UploadPage__StyledForm-ahg6u5-1",
+                            "isStatic": false,
+                            "lastClassName": "c7",
+                            "rules": Array [
+                              "display:block;width:60%;margin:auto;text-align:center;margin-top:2rem;label{font-size:1.1rem;}select{font-family:",
+                              [Function],
+                              ";font-size:1rem;background-color:white;margin-left:0.5rem;margin-right:0.5rem;border:solid 1px ",
+                              [Function],
+                              ";}input[type='submit']{position:relative;cursor:",
+                              [Function],
+                              ";color:",
+                              [Function],
+                              ";display:block;margin:auto;font-family:",
+                              [Function],
+                              ";font-weight:400;font-size:1.3rem;border:",
+                              [Function],
+                              ";border-radius:30px;padding:10px 30px;background:",
+                              [Function],
+                              ";box-shadow:",
+                              [Function],
+                              ";transition:all 0.5s;&:hover{background:",
+                              [Function],
+                              ";box-shadow:",
+                              [Function],
+                              ";}}",
+                            ],
+                          },
+                          "displayName": "UploadPage__StyledForm",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "UploadPage__StyledForm-ahg6u5-1",
+                          "target": "form",
+                          "toString": [Function],
+                          "usesTheme": true,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
                     >
-                      <Mutation
-                        mutation={
-                          Object {
-                            "definitions": Array [
-                              Object {
-                                "directives": Array [],
-                                "kind": "OperationDefinition",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "UPLOAD_SHEET",
-                                },
-                                "operation": "mutation",
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [
-                                        Object {
-                                          "kind": "Argument",
-                                          "name": Object {
-                                            "kind": "Name",
-                                            "value": "sheetData",
-                                          },
-                                          "value": Object {
-                                            "kind": "Variable",
+                      <form
+                        className="c7"
+                      >
+                        <Mutation
+                          mutation={
+                            Object {
+                              "definitions": Array [
+                                Object {
+                                  "directives": Array [],
+                                  "kind": "OperationDefinition",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "UPLOAD_SHEET",
+                                  },
+                                  "operation": "mutation",
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [
+                                          Object {
+                                            "kind": "Argument",
                                             "name": Object {
                                               "kind": "Name",
                                               "value": "sheetData",
                                             },
+                                            "value": Object {
+                                              "kind": "Variable",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "sheetData",
+                                              },
+                                            },
                                           },
-                                        },
-                                        Object {
-                                          "kind": "Argument",
-                                          "name": Object {
-                                            "kind": "Name",
-                                            "value": "expireIn",
-                                          },
-                                          "value": Object {
-                                            "kind": "Variable",
+                                          Object {
+                                            "kind": "Argument",
                                             "name": Object {
                                               "kind": "Name",
                                               "value": "expireIn",
                                             },
+                                            "value": Object {
+                                              "kind": "Variable",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "expireIn",
+                                              },
+                                            },
                                           },
-                                        },
-                                        Object {
-                                          "kind": "Argument",
-                                          "name": Object {
-                                            "kind": "Name",
-                                            "value": "password",
-                                          },
-                                          "value": Object {
-                                            "kind": "Variable",
+                                          Object {
+                                            "kind": "Argument",
                                             "name": Object {
                                               "kind": "Name",
                                               "value": "password",
                                             },
-                                          },
-                                        },
-                                      ],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "createSheet",
-                                      },
-                                      "selectionSet": Object {
-                                        "kind": "SelectionSet",
-                                        "selections": Array [
-                                          Object {
-                                            "alias": undefined,
-                                            "arguments": Array [],
-                                            "directives": Array [],
-                                            "kind": "Field",
-                                            "name": Object {
-                                              "kind": "Name",
-                                              "value": "_id",
+                                            "value": Object {
+                                              "kind": "Variable",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "password",
+                                              },
                                             },
-                                            "selectionSet": undefined,
                                           },
                                         ],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "createSheet",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "_id",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                  "variableDefinitions": Array [
+                                    Object {
+                                      "defaultValue": undefined,
+                                      "directives": Array [],
+                                      "kind": "VariableDefinition",
+                                      "type": Object {
+                                        "kind": "NonNullType",
+                                        "type": Object {
+                                          "kind": "NamedType",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "String",
+                                          },
+                                        },
+                                      },
+                                      "variable": Object {
+                                        "kind": "Variable",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "sheetData",
+                                        },
                                       },
                                     },
-                                  ],
-                                },
-                                "variableDefinitions": Array [
-                                  Object {
-                                    "defaultValue": undefined,
-                                    "directives": Array [],
-                                    "kind": "VariableDefinition",
-                                    "type": Object {
-                                      "kind": "NonNullType",
+                                    Object {
+                                      "defaultValue": undefined,
+                                      "directives": Array [],
+                                      "kind": "VariableDefinition",
+                                      "type": Object {
+                                        "kind": "NonNullType",
+                                        "type": Object {
+                                          "kind": "NamedType",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "Int",
+                                          },
+                                        },
+                                      },
+                                      "variable": Object {
+                                        "kind": "Variable",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "expireIn",
+                                        },
+                                      },
+                                    },
+                                    Object {
+                                      "defaultValue": undefined,
+                                      "directives": Array [],
+                                      "kind": "VariableDefinition",
                                       "type": Object {
                                         "kind": "NamedType",
                                         "name": Object {
@@ -898,90 +1265,77 @@ exports[`UploadPage matches the snapshot 1`] = `
                                           "value": "String",
                                         },
                                       },
-                                    },
-                                    "variable": Object {
-                                      "kind": "Variable",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "sheetData",
-                                      },
-                                    },
-                                  },
-                                  Object {
-                                    "defaultValue": undefined,
-                                    "directives": Array [],
-                                    "kind": "VariableDefinition",
-                                    "type": Object {
-                                      "kind": "NonNullType",
-                                      "type": Object {
-                                        "kind": "NamedType",
+                                      "variable": Object {
+                                        "kind": "Variable",
                                         "name": Object {
                                           "kind": "Name",
-                                          "value": "Int",
+                                          "value": "password",
                                         },
                                       },
                                     },
-                                    "variable": Object {
-                                      "kind": "Variable",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "expireIn",
-                                      },
-                                    },
-                                  },
-                                  Object {
-                                    "defaultValue": undefined,
-                                    "directives": Array [],
-                                    "kind": "VariableDefinition",
-                                    "type": Object {
-                                      "kind": "NamedType",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "String",
-                                      },
-                                    },
-                                    "variable": Object {
-                                      "kind": "Variable",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "password",
-                                      },
-                                    },
-                                  },
-                                ],
+                                  ],
+                                },
+                              ],
+                              "kind": "Document",
+                              "loc": Object {
+                                "end": 196,
+                                "start": 0,
                               },
-                            ],
-                            "kind": "Document",
-                            "loc": Object {
-                              "end": 196,
-                              "start": 0,
-                            },
+                            }
                           }
-                        }
-                        onCompleted={[Function]}
-                      >
-                        <div>
-                          <input
-                            disabled={true}
-                            onClick={[Function]}
-                            type="submit"
-                            value="Upload File"
-                          />
-                        </div>
-                      </Mutation>
-                      <UploadPage__UploadError>
-                        <defaultStyle__ErrorDialog
-                          className="c11"
+                          onCompleted={[Function]}
                         >
-                          <div
-                            className="c11 c6"
-                          />
-                        </defaultStyle__ErrorDialog>
-                      </UploadPage__UploadError>
-                    </form>
+                          <div>
+                            <input
+                              disabled={true}
+                              onClick={[Function]}
+                              type="submit"
+                              value="Upload File"
+                            />
+                          </div>
+                        </Mutation>
+                        <UploadPage__UploadError>
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "UploadPage__UploadError-ahg6u5-2",
+                                  "isStatic": false,
+                                  "lastClassName": "c8",
+                                  "rules": Array [
+                                    "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
+                                    [Function],
+                                    ";transition:all 0.3s;&.true{opacity:1;}",
+                                    "min-width:200px;width:fit-content;margin:auto;margin-top:2rem;",
+                                  ],
+                                },
+                                "displayName": "UploadPage__UploadError",
+                                "foldedComponentIds": Array [
+                                  "defaultStyle__ErrorDialog-g21vfe-2",
+                                ],
+                                "render": [Function],
+                                "styledComponentId": "UploadPage__UploadError-ahg6u5-2",
+                                "target": "div",
+                                "toString": [Function],
+                                "usesTheme": true,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                          >
+                            <div
+                              className="c8"
+                            />
+                          </StyledComponent>
+                        </UploadPage__UploadError>
+                      </form>
+                    </StyledComponent>
                   </UploadPage__StyledForm>
                 </div>
-              </defaultStyle>
+              </StyledComponent>
             </UploadPage__StyledDiv>
           </UploadPage>
         </ThemeProvider>

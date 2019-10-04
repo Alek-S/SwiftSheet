@@ -65,3 +65,5 @@ const StyledDiv = styled(defaultStyle)`
 const PasswordFormCard = styled(FormCard)`
 	max-width: 475px;
 `;
+
+export { StyledDiv };

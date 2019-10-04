@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { MockedProvider } from 'react-apollo/test-utils';
+import { MockedProvider } from '@apollo/react-testing';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
 import wait from 'waait';
 import 'jest-styled-components';
 
-import SheetPage, { GET_SHEET } from './SheetPage';
+import SheetPage, { GET_SHEET, WrapperDiv, ExpireDiv } from './SheetPage';
 import theme from '../../theme';
 
 const match = {
@@ -130,6 +130,16 @@ describe('<SheetPage />', () => {
 			</MockedProvider>
 		);
 		expect(toJson(component)).toMatchSnapshot();
+	});
+
+	test('WrapperDiv matches the snapshot', () => {
+		const tree = renderer.create(<WrapperDiv theme={theme} />).toJSON();
+		expect(tree).toMatchSnapshot();
+	});
+
+	test('ExpireDiv matches the snapshot', () => {
+		const tree = renderer.create(<ExpireDiv theme={theme} />).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 
 	test('should render loading state initially', () => {

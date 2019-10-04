@@ -1,47 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer matches the snapshot 1`] = `
-.c0 {
-  box-sizing: border-box;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  text-align: center;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c0 a {
-  color: #404040;
-}
-
-@media (max-width:500px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Footer__Styledfooter-d380t0-0",
+        "isStatic": false,
+        "lastClassName": "bEyZZv",
+        "rules": Array [
+          "background-color:white;color:",
+          [Function],
+          ";font-family:",
+          [Function],
+          ";font-size:0.9em;",
+          "box-sizing:border-box;padding:1rem;margin-top:0.5rem;text-align:center;width:100%;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;& a{color:",
+          [Function],
+          ";}@media (max-width:500px){flex-direction:column;div{margin-top:0.5rem;margin-bottom:0.5rem;}}",
+        ],
+      },
+      "displayName": "Footer__Styledfooter",
+      "foldedComponentIds": Array [
+        "defaultStyle-g21vfe-0",
+      ],
+      "render": [Function],
+      "styledComponentId": "Footer__Styledfooter-d380t0-0",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": true,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
   }
-
-  .c0 div {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-<defaultStyle
-  className="c0"
+  forwardedRef={null}
 >
   <div>
     Created with 🍷 by
@@ -91,7 +84,6 @@ exports[`Footer matches the snapshot 1`] = `
   </Footer__Spacer>
   <div>
     <Link
-      replace={false}
       to="/privacy"
     >
       Privacy Policy
@@ -102,11 +94,59 @@ exports[`Footer matches the snapshot 1`] = `
   </Footer__Spacer>
   <div>
     <Link
-      replace={false}
       to="/terms"
     >
       Terms of Service
     </Link>
   </div>
-</defaultStyle>
+</StyledComponent>
+`;
+
+exports[`Styledfooter matches the snapshot 1`] = `
+.c0 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 a {
+  color: #404040;
+}
+
+@media (max-width:500px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .c0 div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+<div
+  className="c0"
+/>
 `;
