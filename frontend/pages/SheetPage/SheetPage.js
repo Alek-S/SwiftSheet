@@ -4,6 +4,7 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import defaultStyle from '../../defaultStyle';
 import format from 'date-fns/format';
+import parseISO from 'date-fns/parseISO';
 import Table from '../../components/SwiftTable/Table';
 import { PasswordPrompt } from '../../components/PasswordPrompt/PasswordPrompt';
 import { RestExample } from '../../components/RestExample/RestExample';
@@ -77,7 +78,7 @@ const SheetPage = ({ match }) => {
 						<StyledDiv>
 							<ExpireDiv>
 								Sheet Expires on:{' '}
-								{format(expireAt, 'MMM DD, YYYY  @  h:mm aa  (Z [GMT])')}
+								{format(parseISO(expireAt), 'MMM dd, yyyy  @  h:mm aa  (zzzz)')}
 							</ExpireDiv>
 							<Table data={sheetData} />
 						</StyledDiv>
@@ -146,3 +147,4 @@ const ExpiredNotice = styled(defaultStyle)`
 `;
 
 export default SheetPage;
+export { WrapperDiv, ExpireDiv };

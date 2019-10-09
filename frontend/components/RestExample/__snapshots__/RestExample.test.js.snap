@@ -1,67 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RestExample matches the snapshot 1`] = `
-.c0 {
-  width: 500px;
-  padding: 1rem;
-  margin: auto;
-  margin-top: 1rem;
-  background-color: #424242;
-  color: #BCBCBC;
-}
-
-.c0 a {
-  margin-left: 1rem;
-  color: #68F6BA;
-}
-
-.c0 .pill {
-  background: linear-gradient(160deg,#57DACB 0%,#55A2ED 100%);
-  color: white;
-  padding: 0.1rem 0.5rem;
-  border-radius: 4px;
-}
-
-.c0 .pill-secondary {
-  background-color: #595959;
-  color: white;
-  padding: 0.1rem 0.5rem;
-  border-radius: 4px;
-}
-
-.c0 .gql_query {
-  margin-left: 0.5rem;
-  color: #EAEAEA;
-}
-
-.c0 .query_title {
-  margin-top: 0.75rem;
-}
-
-@media (max-width:535px) {
-  .c0 {
-    width: 90%;
-    overflow: none;
-    word-wrap: break-word;
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "defaultStyle__ApiCard-g21vfe-3",
+        "isStatic": false,
+        "rules": Array [
+          "background-color:white;color:",
+          [Function],
+          ";font-family:",
+          [Function],
+          ";font-size:0.9em;",
+          "border-radius:8px;box-shadow:",
+          [Function],
+          ";input{outline:none;color:",
+          [Function],
+          ";font-family:",
+          [Function],
+          ";background-color:",
+          [Function],
+          ";border:1px solid ",
+          [Function],
+          ";border-radius:5rem;transition:all 0.3s;::placeholder{font-size:1rem;font-weight:400;font-style:italic;font-family:",
+          [Function],
+          ";color:",
+          [Function],
+          ";}&:hover{border:solid 1px ",
+          [Function],
+          ";}&:focus,&:active{border:solid 1px ",
+          [Function],
+          ";}&.true{border:1px solid ",
+          [Function],
+          ";}}",
+          "width:500px;padding:1rem;margin:auto;margin-top:1rem;background-color:#424242;color:",
+          [Function],
+          ";a{margin-left:1rem;color:",
+          [Function],
+          ";}.pill{background:",
+          [Function],
+          ";color:white;padding:0.1rem 0.5rem;border-radius:4px;}.pill-secondary{background-color:#595959;color:white;padding:0.1rem 0.5rem;border-radius:4px;}.gql_query{margin-left:0.5rem;color:",
+          [Function],
+          ";}.query_title{margin-top:0.75rem;}@media (max-width:535px){width:90%;overflow:none;word-wrap:break-word;.pill,.pill-secondary{display:block;width:fit-content;margin-bottom:0.5rem;}a,.gql_query{margin-left:0;}}",
+        ],
+      },
+      "displayName": "defaultStyle__ApiCard",
+      "foldedComponentIds": Array [
+        "defaultStyle-g21vfe-0",
+        "defaultStyle__Card-g21vfe-1",
+      ],
+      "render": [Function],
+      "styledComponentId": "defaultStyle__ApiCard-g21vfe-3",
+      "target": "div",
+      "toString": [Function],
+      "usesTheme": true,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
   }
-
-  .c0 .pill,
-  .c0 .pill-secondary {
-    display: block;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-bottom: 0.5rem;
-  }
-
-  .c0 a,
-  .c0 .gql_query {
-    margin-left: 0;
-  }
-}
-
-<defaultStyle__Card
-  className="c0"
+  forwardedRef={null}
 >
   <span
     className="pill"
@@ -76,5 +76,5 @@ exports[`RestExample matches the snapshot 1`] = `
     /api/sheet/
     42
   </a>
-</defaultStyle__Card>
+</StyledComponent>
 `;

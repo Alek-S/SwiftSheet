@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 
 import theme from './theme';
-import DefaultStyle from './defaultStyle';
+import DefaultStyle, { ApiCard, Policy } from './defaultStyle';
 
 describe('defaultStyle', () => {
 	const tree = renderer.create(<DefaultStyle theme={theme} />).toJSON();
@@ -27,5 +27,21 @@ describe('defaultStyle', () => {
 
 	test('text has correct font-size', () => {
 		expect(tree).toHaveStyleRule('font-size', '0.9em');
+	});
+});
+
+describe('ApiCard', () => {
+	const tree = renderer.create(<ApiCard theme={theme} />).toJSON();
+
+	test('matches the snapshot', () => {
+		expect(tree).toMatchSnapshot();
+	});
+});
+
+describe('Policy', () => {
+	const tree = renderer.create(<Policy theme={theme} />).toJSON();
+
+	test('matches the snapshot', () => {
+		expect(tree).toMatchSnapshot();
 	});
 });

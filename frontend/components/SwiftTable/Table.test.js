@@ -1,7 +1,8 @@
 import React from 'react';
 import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 
-import HeadlessTable from './Table';
+import HeadlessTable, { Styledtable } from './Table';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
 
@@ -67,5 +68,13 @@ describe('<HeadlessTable />', () => {
 			</ThemeProvider>
 		);
 		expect(toJson(tree)).toMatchSnapshot();
+	});
+});
+
+describe.skip('Styledtable', () => {
+	const tree = renderer.create(<Styledtable theme={theme} />).toJSON();
+
+	test('matches the snapshot', () => {
+		expect(tree).toMatchSnapshot();
 	});
 });

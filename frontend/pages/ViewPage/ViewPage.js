@@ -27,3 +27,4 @@ const StyledDiv = styled(defaultStyle)`
 `;
 
 export default ViewPage;
+export { StyledDiv };

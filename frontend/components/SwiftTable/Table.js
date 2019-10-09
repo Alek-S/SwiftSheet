@@ -138,4 +138,6 @@ const ExportButton = styled(SubmitButton)`
 	font-size: 0.85rem;
 	width: 120px !important;
 `;
+
 export default Table;
+export { Styledtable };

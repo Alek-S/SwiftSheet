@@ -82,3 +82,4 @@ const StyledCard = styled(Card)`
 `;
 
 export default RecentlyViewed;
+export { StyledCard };
