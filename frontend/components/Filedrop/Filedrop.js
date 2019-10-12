@@ -18,11 +18,13 @@ const Filedrop = ({
 	password,
 	setPassword,
 	setDisableSubmit,
+	setonDropErrorMessage,
+	onDropErrorMessage,
 	onDrop,
 	wrongPassword,
+	setSuccessMessage,
 }) => {
 	const [dragging, setDragging] = useState(false);
-	const [uploadErrorMessage, setUploadErrorMessage] = useState('');
 	const MAX_SIZE = 2500000;
 	const FILE_FORMAT = '.csv';
 
@@ -50,17 +52,20 @@ const Filedrop = ({
 		const { size, type } = e[0];
 
 		if (size >= MAX_SIZE) {
-			setUploadErrorMessage(
+			setSuccessMessage(undefined);
+			setonDropErrorMessage(
 				'⚠️ Woops! Bit too large. Upload limit is currently 2.5MB.'
 			);
 			setDisableSubmit(true);
 		} else if (type !== FILE_FORMAT) {
-			setUploadErrorMessage(
+			setSuccessMessage(undefined);
+			setonDropErrorMessage(
 				'⚠️ Woops! Only CSV file types currently supported'
 			);
 			setDisableSubmit(true);
 		} else {
-			setUploadErrorMessage(
+			setSuccessMessage(undefined);
+			setonDropErrorMessage(
 				'⚠️ Woops! Something went wrong. Check that file is formatted correctly'
 			);
 			setDisableSubmit(true);
@@ -103,8 +108,8 @@ const Filedrop = ({
 					</StyledDropzone>
 				)}
 			</Dropzone>
-			<UploadError className={uploadErrorMessage ? 'true' : undefined}>
-				{uploadErrorMessage}
+			<UploadError className={onDropErrorMessage ? 'true' : undefined}>
+				{onDropErrorMessage}
 			</UploadError>
 			<Options role="form" aria-label="preferences">
 				<section aria-label="set password">
@@ -261,6 +266,10 @@ Filedrop.propTypes = {
 	password: PropTypes.string,
 	setPassword: PropTypes.func,
 	onDrop: PropTypes.func,
+	onDropErrorMessage: PropTypes.string,
+	setonDropErrorMessage: PropTypes.func,
+	setDisableSubmit: PropTypes.func,
+	setSuccessMessage: PropTypes.func,
 };
 
 const UploadError = styled(ErrorDialog)`

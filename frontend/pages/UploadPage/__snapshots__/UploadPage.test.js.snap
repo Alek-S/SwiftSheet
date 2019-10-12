@@ -291,7 +291,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .c9.true {
@@ -650,11 +650,14 @@ exports[`UploadPage matches the snapshot 1`] = `
                     expireIn={72}
                     firstRowHeader={true}
                     onDrop={[Function]}
+                    onDropErrorMessage=""
                     password=""
                     setDisableSubmit={[Function]}
                     setExpireIn={[Function]}
                     setHeader={[Function]}
                     setPassword={[Function]}
+                    setSuccessMessage={[Function]}
+                    setonDropErrorMessage={[Function]}
                     wrongPassword={false}
                   >
                     <Filedrop__StyledSection>
@@ -1349,7 +1352,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                     ";color:",
                                     [Function],
                                     ";strong{font-weight:600;}",
-                                    "min-width:200px;width:fit-content;margin:auto;margin-top:2rem;",
+                                    "min-width:200px;width:fit-content;margin:auto;margin-top:0rem;",
                                   ],
                                 },
                                 "displayName": "UploadPage__UploadSuccess",

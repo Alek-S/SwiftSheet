@@ -40,6 +40,7 @@ const UploadPage = () => {
 	const [wrongPassword, setWrongPassword] = useState(false);
 	const [uploadErrorMessage, setErrorMessage] = useState('');
 	const [UploadSuccessMessage, setSuccessMessage] = useState('');
+	const [onDropErrorMessage, setonDropErrorMessage] = useState('');
 
 	ReactGA.pageview('/upload');
 
@@ -61,6 +62,7 @@ const UploadPage = () => {
 			file[0].name.indexOf('.csv') + 4 === file[0].name.length
 		) {
 			setSuccessMessage(file[0].name);
+			setonDropErrorMessage(undefined);
 			setFile(file);
 			setDisableSubmit(false);
 		} else {
@@ -98,6 +100,9 @@ const UploadPage = () => {
 				onDrop={onDrop}
 				wrongPassword={wrongPassword}
 				setDisableSubmit={setDisableSubmit}
+				setonDropErrorMessage={setonDropErrorMessage}
+				onDropErrorMessage={onDropErrorMessage}
+				setSuccessMessage={setSuccessMessage}
 			/>
 			<StyledForm disableSubmit={disableSubmit}>
 				<Mutation mutation={UPLOAD_SHEET} onCompleted={onCompleted}>
@@ -218,7 +223,7 @@ const UploadSuccess = styled(SuccessDialog)`
 	min-width: 200px;
 	width: fit-content;
 	margin: auto;
-	margin-top: 2rem;
+	margin-top: 0rem;
 `;
 
 export default UploadPage;
