@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import defaultStyle, { ErrorDialog } from '../../defaultStyle';
+import defaultStyle, { ErrorDialog, SuccessDialog } from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
@@ -39,6 +39,7 @@ const UploadPage = () => {
 	const [password, setPassword] = useState('');
 	const [wrongPassword, setWrongPassword] = useState(false);
 	const [uploadErrorMessage, setErrorMessage] = useState('');
+	const [UploadSuccessMessage, setSuccessMessage] = useState('');
 
 	ReactGA.pageview('/upload');
 
@@ -59,6 +60,7 @@ const UploadPage = () => {
 			file[0].name &&
 			file[0].name.indexOf('.csv') + 4 === file[0].name.length
 		) {
+			setSuccessMessage(file[0].name);
 			setFile(file);
 			setDisableSubmit(false);
 		} else {
@@ -74,7 +76,7 @@ const UploadPage = () => {
 		setWrongPassword(passing);
 	};
 
-	const showErrorMessage = visible => {
+	const showErrorMessage = () => {
 		let message = '⚠️ Woops! Something went wrong.';
 
 		if (header) {
@@ -95,6 +97,7 @@ const UploadPage = () => {
 				setExpireIn={setExpireIn}
 				onDrop={onDrop}
 				wrongPassword={wrongPassword}
+				setDisableSubmit={setDisableSubmit}
 			/>
 			<StyledForm disableSubmit={disableSubmit}>
 				<Mutation mutation={UPLOAD_SHEET} onCompleted={onCompleted}>
@@ -142,6 +145,9 @@ const UploadPage = () => {
 				<UploadError className={uploadErrorMessage ? 'true' : undefined}>
 					{uploadErrorMessage}
 				</UploadError>
+				<UploadSuccess className={UploadSuccessMessage ? 'true' : undefined}>
+					File to upload: <strong>{UploadSuccessMessage}</strong>
+				</UploadSuccess>
 			</StyledForm>
 		</StyledDiv>
 	);
@@ -202,6 +208,13 @@ const StyledForm = styled.form`
 `;
 
 const UploadError = styled(ErrorDialog)`
+	min-width: 200px;
+	width: fit-content;
+	margin: auto;
+	margin-top: 2rem;
+`;
+
+const UploadSuccess = styled(SuccessDialog)`
 	min-width: 200px;
 	width: fit-content;
 	margin: auto;

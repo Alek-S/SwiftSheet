@@ -7,7 +7,7 @@ exports[`RestExample matches the snapshot 1`] = `
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "defaultStyle__ApiCard-g21vfe-3",
+        "componentId": "defaultStyle__ApiCard-g21vfe-4",
         "isStatic": false,
         "rules": Array [
           "background-color:white;color:",
@@ -53,7 +53,7 @@ exports[`RestExample matches the snapshot 1`] = `
         "defaultStyle__Card-g21vfe-1",
       ],
       "render": [Function],
-      "styledComponentId": "defaultStyle__ApiCard-g21vfe-3",
+      "styledComponentId": "defaultStyle__ApiCard-g21vfe-4",
       "target": "div",
       "toString": [Function],
       "usesTheme": true,

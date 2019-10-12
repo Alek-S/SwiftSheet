@@ -17,6 +17,7 @@ const Filedrop = ({
 	setHeader,
 	password,
 	setPassword,
+	setDisableSubmit,
 	onDrop,
 	wrongPassword,
 }) => {
@@ -52,14 +53,17 @@ const Filedrop = ({
 			setUploadErrorMessage(
 				'⚠️ Woops! Bit too large. Upload limit is currently 2.5MB.'
 			);
+			setDisableSubmit(true);
 		} else if (type !== FILE_FORMAT) {
 			setUploadErrorMessage(
 				'⚠️ Woops! Only CSV file types currently supported'
 			);
+			setDisableSubmit(true);
 		} else {
 			setUploadErrorMessage(
 				'⚠️ Woops! Something went wrong. Check that file is formatted correctly'
 			);
+			setDisableSubmit(true);
 		}
 		console.warn('upload rejected', e);
 	};

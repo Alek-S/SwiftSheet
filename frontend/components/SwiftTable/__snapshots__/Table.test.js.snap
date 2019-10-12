@@ -281,7 +281,7 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
                   },
                   "displayName": "Table__ExportButton",
                   "foldedComponentIds": Array [
-                    "defaultStyle__SubmitButton-g21vfe-6",
+                    "defaultStyle__SubmitButton-g21vfe-7",
                   ],
                   "render": [Function],
                   "styledComponentId": "Table__ExportButton-sc-1n1z6me-2",
