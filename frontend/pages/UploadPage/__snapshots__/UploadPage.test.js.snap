@@ -234,6 +234,7 @@ exports[`UploadPage matches the snapshot 1`] = `
 }
 
 .c7 input[type='submit'] {
+  box-sizing: border-box;
   position: relative;
   cursor: no-drop;
   color: #d9d9d9;
@@ -1093,7 +1094,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                               [Function],
                               ";font-size:1rem;background-color:white;margin-left:0.5rem;margin-right:0.5rem;border:solid 1px ",
                               [Function],
-                              ";}input[type='submit']{position:relative;cursor:",
+                              ";}input[type='submit']{box-sizing:border-box;position:relative;cursor:",
                               [Function],
                               ";color:",
                               [Function],

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
 import ScrollDownIcon from '../../components/ScrollDownIcon/ScrollDownIcon';
@@ -7,6 +7,10 @@ import { NavLink } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 const FrontPage = () => {
+	useEffect(() => {
+		document.title = `SwiftSheet`;
+	});
+
 	ReactGA.pageview('/');
 
 	return (

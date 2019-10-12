@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Policy } from '../../defaultStyle';
 import ReactGA from 'react-ga';
 
 const PrivacyPage = () => {
+	useEffect(() => {
+		document.title = `SwiftSheet - Privacy`;
+	});
 	ReactGA.pageview('/privacy');
 
 	return (
