@@ -58,6 +58,14 @@ const ErrorDialog = styled.div`
 	}
 `;
 
+const SuccessDialog = styled(ErrorDialog)`
+	background-color: ${props => props.theme.color.aqua};
+	color: ${props => props.theme.color.text};
+	strong {
+		font-weight: 600;
+	}
+`;
+
 const ApiCard = styled(Card)`
 	width: 500px;
 	padding: 1rem;
@@ -257,6 +265,7 @@ export default defaultStyle;
 export {
 	Card,
 	ErrorDialog,
+	SuccessDialog,
 	ApiCard,
 	FormCard,
 	StyledForm,

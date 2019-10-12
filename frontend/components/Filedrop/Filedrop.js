@@ -17,11 +17,15 @@ const Filedrop = ({
 	setHeader,
 	password,
 	setPassword,
+	setDisableSubmit,
+	setErrorMessage,
+	setonDropErrorMessage,
+	onDropErrorMessage,
 	onDrop,
 	wrongPassword,
+	setSuccessMessage,
 }) => {
 	const [dragging, setDragging] = useState(false);
-	const [uploadErrorMessage, setUploadErrorMessage] = useState('');
 	const MAX_SIZE = 2500000;
 	const FILE_FORMAT = '.csv';
 
@@ -43,23 +47,30 @@ const Filedrop = ({
 	const _toggleHeader = e => {
 		e.preventDefault();
 		setHeader(!firstRowHeader);
+		setErrorMessage(undefined);
 	};
 
 	const _handleRejection = e => {
 		const { size, type } = e[0];
 
 		if (size >= MAX_SIZE) {
-			setUploadErrorMessage(
+			setSuccessMessage(undefined);
+			setonDropErrorMessage(
 				'⚠️ Woops! Bit too large. Upload limit is currently 2.5MB.'
 			);
+			setDisableSubmit(true);
 		} else if (type !== FILE_FORMAT) {
-			setUploadErrorMessage(
+			setSuccessMessage(undefined);
+			setonDropErrorMessage(
 				'⚠️ Woops! Only CSV file types currently supported'
 			);
+			setDisableSubmit(true);
 		} else {
-			setUploadErrorMessage(
+			setSuccessMessage(undefined);
+			setonDropErrorMessage(
 				'⚠️ Woops! Something went wrong. Check that file is formatted correctly'
 			);
+			setDisableSubmit(true);
 		}
 		console.warn('upload rejected', e);
 	};
@@ -99,8 +110,8 @@ const Filedrop = ({
 					</StyledDropzone>
 				)}
 			</Dropzone>
-			<UploadError className={uploadErrorMessage ? 'true' : undefined}>
-				{uploadErrorMessage}
+			<UploadError className={onDropErrorMessage ? 'true' : undefined}>
+				{onDropErrorMessage}
 			</UploadError>
 			<Options role="form" aria-label="preferences">
 				<section aria-label="set password">
@@ -117,7 +128,11 @@ const Filedrop = ({
 
 				<section aria-label="set expiration">
 					Expires In:
-					<select value={expireIn} onChange={_handleChange}>
+					<select
+						value={expireIn}
+						onChange={_handleChange}
+						aria-label="expire-in-select"
+					>
 						<option value={1}>1 Hour</option>
 						<option value={4}>4 Hours</option>
 						<option value={8}>8 Hours</option>
@@ -130,7 +145,7 @@ const Filedrop = ({
 				<section aria-label="toggle first row header">
 					<HeaderToggle active={firstRowHeader}>
 						<span>First Row Header:</span>
-						<button onClick={_toggleHeader}>
+						<button onClick={_toggleHeader} aria-label="toggle-header-button">
 							{firstRowHeader ? 'Yes' : 'No'}
 						</button>
 					</HeaderToggle>
@@ -257,6 +272,11 @@ Filedrop.propTypes = {
 	password: PropTypes.string,
 	setPassword: PropTypes.func,
 	onDrop: PropTypes.func,
+	onDropErrorMessage: PropTypes.string,
+	setonDropErrorMessage: PropTypes.func,
+	setDisableSubmit: PropTypes.func,
+	setSuccessMessage: PropTypes.func,
+	setErrorMessage: PropTypes.func,
 };
 
 const UploadError = styled(ErrorDialog)`

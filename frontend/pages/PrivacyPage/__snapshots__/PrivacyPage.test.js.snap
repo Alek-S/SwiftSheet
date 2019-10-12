@@ -7,7 +7,7 @@ exports[`Footer matches the snapshot 1`] = `
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "defaultStyle__Policy-g21vfe-7",
+        "componentId": "defaultStyle__Policy-g21vfe-8",
         "isStatic": false,
         "rules": Array [
           "background-color:",
@@ -24,7 +24,7 @@ exports[`Footer matches the snapshot 1`] = `
       "displayName": "defaultStyle__Policy",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "styledComponentId": "defaultStyle__Policy-g21vfe-7",
+      "styledComponentId": "defaultStyle__Policy-g21vfe-8",
       "target": "section",
       "toString": [Function],
       "usesTheme": true,

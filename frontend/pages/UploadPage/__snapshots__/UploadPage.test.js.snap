@@ -275,6 +275,33 @@ exports[`UploadPage matches the snapshot 1`] = `
   opacity: 1;
 }
 
+.c9 {
+  text-align: center;
+  opacity: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #ED5050;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #68F6BA;
+  color: #404040;
+  min-width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 0.15rem;
+}
+
+.c9.true {
+  opacity: 1;
+}
+
+.c9 strong {
+  font-weight: 600;
+}
+
 @media (max-width:500px) {
   .c2 {
     width: 90%;
@@ -623,10 +650,15 @@ exports[`UploadPage matches the snapshot 1`] = `
                     expireIn={72}
                     firstRowHeader={true}
                     onDrop={[Function]}
+                    onDropErrorMessage=""
                     password=""
+                    setDisableSubmit={[Function]}
+                    setErrorMessage={[Function]}
                     setExpireIn={[Function]}
                     setHeader={[Function]}
                     setPassword={[Function]}
+                    setSuccessMessage={[Function]}
+                    setonDropErrorMessage={[Function]}
                     wrongPassword={false}
                   >
                     <Filedrop__StyledSection>
@@ -906,6 +938,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                 >
                                   Expires In:
                                   <select
+                                    aria-label="expire-in-select"
                                     onChange={[Function]}
                                     value={72}
                                   >
@@ -987,6 +1020,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                           First Row Header:
                                         </span>
                                         <button
+                                          aria-label="toggle-header-button"
                                           onClick={[Function]}
                                         >
                                           Yes
@@ -1302,6 +1336,52 @@ exports[`UploadPage matches the snapshot 1`] = `
                             />
                           </StyledComponent>
                         </UploadPage__UploadError>
+                        <UploadPage__UploadSuccess>
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "UploadPage__UploadSuccess-ahg6u5-3",
+                                  "isStatic": false,
+                                  "lastClassName": "c9",
+                                  "rules": Array [
+                                    "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
+                                    [Function],
+                                    ";transition:all 0.3s;&.true{opacity:1;}",
+                                    "background-color:",
+                                    [Function],
+                                    ";color:",
+                                    [Function],
+                                    ";strong{font-weight:600;}",
+                                    "min-width:200px;width:fit-content;margin:auto;margin-top:0.15rem;",
+                                  ],
+                                },
+                                "displayName": "UploadPage__UploadSuccess",
+                                "foldedComponentIds": Array [
+                                  "defaultStyle__ErrorDialog-g21vfe-2",
+                                  "defaultStyle__SuccessDialog-g21vfe-3",
+                                ],
+                                "render": [Function],
+                                "styledComponentId": "UploadPage__UploadSuccess-ahg6u5-3",
+                                "target": "div",
+                                "toString": [Function],
+                                "usesTheme": true,
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                          >
+                            <div
+                              className="c9"
+                            >
+                              File to upload: 
+                              <strong />
+                            </div>
+                          </StyledComponent>
+                        </UploadPage__UploadSuccess>
                       </form>
                     </StyledComponent>
                   </UploadPage__StyledForm>
