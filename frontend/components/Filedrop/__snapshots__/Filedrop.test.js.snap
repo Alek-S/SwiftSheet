@@ -6,7 +6,7 @@ exports[`Filedrop matches the snapshot 1`] = `
     <section
       className="Filedrop__StyledSection-sc-1u7cgvl-0 byCkGb"
     >
-      <Filedrop__StyledDropzone
+      <Dropzone
         accept=".csv"
         maxSize={2500000}
         minSize={8}
@@ -15,78 +15,57 @@ exports[`Filedrop matches the snapshot 1`] = `
         onDragLeave={[Function]}
         onDropRejected={[Function]}
       >
-        <t
-          accept=".csv"
-          className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
-          disableClick={false}
-          disablePreview={false}
-          disabled={false}
-          getDataTransferItems={[Function]}
-          inputProps={Object {}}
-          maxSize={2500000}
-          minSize={8}
-          multiple={false}
-          onDragEnter={[Function]}
-          onDragLeave={[Function]}
-          onDropRejected={[Function]}
-          preventDropOnDocument={true}
+        <Filedrop__StyledDropzone
+          dragging={false}
         >
           <div
-            aria-disabled={false}
             className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
-            onClick={[Function]}
-            onDragEnter={[Function]}
-            onDragLeave={[Function]}
-            onDragOver={[Function]}
-            onDragStart={[Function]}
-            onDrop={[Function]}
-            style={
-              Object {
-                "position": "relative",
-              }
-            }
           >
-            <img
-              alt="upload-cloud-logo"
-              src="./assets/images/upload-cloud-light.svg"
-            />
-            <Filedrop__StyledText
-              dragging={false}
+            <div
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragEnter={[Function]}
+              onDragLeave={[Function]}
+              onDragOver={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              tabIndex={0}
             >
-              <defaultStyle
-                className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb"
-                dragging={false}
-              >
-                <div
-                  className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb defaultStyle-g21vfe-0 eXjdxI"
-                >
-                  Drag
-                   CSV file here
-                </div>
-              </defaultStyle>
-            </Filedrop__StyledText>
-            <input
-              accept=".csv"
-              autoComplete="off"
-              disabled={false}
-              multiple={false}
-              onChange={[Function]}
-              style={
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "opacity": 0.00001,
-                  "pointerEvents": "none",
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
+              <input
+                accept=".csv"
+                autoComplete="off"
+                multiple={false}
+                onChange={[Function]}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "display": "none",
+                  }
                 }
-              }
-              type="file"
-            />
+                tabIndex={-1}
+                type="file"
+              />
+              <img
+                alt="upload-cloud-logo"
+                src="./assets/images/upload-cloud-light.svg"
+              />
+              <Filedrop__StyledText>
+                <defaultStyle
+                  className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb"
+                >
+                  <div
+                    className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb defaultStyle-g21vfe-0 eXjdxI"
+                  >
+                    Drag
+                     CSV file here
+                  </div>
+                </defaultStyle>
+              </Filedrop__StyledText>
+            </div>
           </div>
-        </t>
-      </Filedrop__StyledDropzone>
+        </Filedrop__StyledDropzone>
+      </Dropzone>
       <Filedrop__UploadError>
         <defaultStyle__ErrorDialog
           className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx"
@@ -209,7 +188,7 @@ exports[`Filedrop matches the snapshot 2`] = `
     <section
       className="Filedrop__StyledSection-sc-1u7cgvl-0 byCkGb"
     >
-      <Filedrop__StyledDropzone
+      <Dropzone
         accept=".csv"
         maxSize={2500000}
         minSize={8}
@@ -218,78 +197,57 @@ exports[`Filedrop matches the snapshot 2`] = `
         onDragLeave={[Function]}
         onDropRejected={[Function]}
       >
-        <t
-          accept=".csv"
-          className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
-          disableClick={false}
-          disablePreview={false}
-          disabled={false}
-          getDataTransferItems={[Function]}
-          inputProps={Object {}}
-          maxSize={2500000}
-          minSize={8}
-          multiple={false}
-          onDragEnter={[Function]}
-          onDragLeave={[Function]}
-          onDropRejected={[Function]}
-          preventDropOnDocument={true}
+        <Filedrop__StyledDropzone
+          dragging={false}
         >
           <div
-            aria-disabled={false}
             className="Filedrop__StyledDropzone-sc-1u7cgvl-1 ksxVYs"
-            onClick={[Function]}
-            onDragEnter={[Function]}
-            onDragLeave={[Function]}
-            onDragOver={[Function]}
-            onDragStart={[Function]}
-            onDrop={[Function]}
-            style={
-              Object {
-                "position": "relative",
-              }
-            }
           >
-            <img
-              alt="upload-cloud-logo"
-              src="./assets/images/upload-cloud-light.svg"
-            />
-            <Filedrop__StyledText
-              dragging={false}
+            <div
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragEnter={[Function]}
+              onDragLeave={[Function]}
+              onDragOver={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              tabIndex={0}
             >
-              <defaultStyle
-                className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb"
-                dragging={false}
-              >
-                <div
-                  className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb defaultStyle-g21vfe-0 eXjdxI"
-                >
-                  Drag
-                   CSV file here
-                </div>
-              </defaultStyle>
-            </Filedrop__StyledText>
-            <input
-              accept=".csv"
-              autoComplete="off"
-              disabled={false}
-              multiple={false}
-              onChange={[Function]}
-              style={
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "opacity": 0.00001,
-                  "pointerEvents": "none",
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
+              <input
+                accept=".csv"
+                autoComplete="off"
+                multiple={false}
+                onChange={[Function]}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "display": "none",
+                  }
                 }
-              }
-              type="file"
-            />
+                tabIndex={-1}
+                type="file"
+              />
+              <img
+                alt="upload-cloud-logo"
+                src="./assets/images/upload-cloud-light.svg"
+              />
+              <Filedrop__StyledText>
+                <defaultStyle
+                  className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb"
+                >
+                  <div
+                    className="Filedrop__StyledText-sc-1u7cgvl-2 cGKzbb defaultStyle-g21vfe-0 eXjdxI"
+                  >
+                    Drag
+                     CSV file here
+                  </div>
+                </defaultStyle>
+              </Filedrop__StyledText>
+            </div>
           </div>
-        </t>
-      </Filedrop__StyledDropzone>
+        </Filedrop__StyledDropzone>
+      </Dropzone>
       <Filedrop__UploadError>
         <defaultStyle__ErrorDialog
           className="Filedrop__UploadError-sc-1u7cgvl-5 cqFOMx"

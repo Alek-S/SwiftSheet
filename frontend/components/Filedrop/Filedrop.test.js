@@ -25,8 +25,8 @@ describe('Filedrop', () => {
 		const ui = (
 			<Dropzone onDragEnter={onDragEnter}>
 				{({ getRootProps, getInputProps }) => (
-					<div>
-						<input />
+					<div {...getRootProps()}>
+						<input {...getInputProps()} />
 					</div>
 				)}
 			</Dropzone>
