@@ -30,9 +30,8 @@ describe('PasswordPrompt', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	test('should show warning if password length to low', () => {
+	test('should handle submit of password input', () => {
 		const setPassword = jest.fn();
-		const wrongPassword = '';
 
 		const ui = render(
 			<ThemeProvider theme={theme}>

@@ -10,7 +10,7 @@ import { Link, NavLink } from 'react-router-dom';
  *
  * @returns {JSX}
  */
-const Header = props => {
+const Header = () => {
 	const [headerSize, setHeaderSize] = useState('large');
 
 	useEffect(() => {
