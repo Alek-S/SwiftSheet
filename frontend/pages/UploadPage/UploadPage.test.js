@@ -1,5 +1,5 @@
 import React from 'react';
-import { MockedProvider } from 'react-apollo/test-utils';
+import { MockedProvider } from '@apollo/react-testing';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
 import wait from 'waait';

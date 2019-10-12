@@ -1,3 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SheetPage /> ExpireDiv matches the snapshot 1`] = `
+.c0 {
+  text-align: center;
+  color: #848484;
+  margin-top: 2rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<SheetPage /> WrapperDiv matches the snapshot 1`] = `
+.c0 {
+  background-color: white;
+  color: #404040;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.9em;
+  padding-top: 6rem;
+  background-color: #fafafa;
+  margin-top: 0rem;
+  padding-bottom: 2.7rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`<SheetPage /> matches the snapshot 1`] = `undefined`;

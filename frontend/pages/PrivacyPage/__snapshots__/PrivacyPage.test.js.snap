@@ -1,79 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer matches the snapshot 1`] = `
-.c0 {
-  background-color: #fafafa;
-  color: #404040;
-  font-family: 'Quicksand',sans-serif;
-  padding: 10rem 10rem 5rem 10rem;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
-  letter-spacing: 1px;
-}
-
-.c0 div {
-  max-width: 750px;
-  margin: auto;
-}
-
-.c0 h1 {
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.c0 h2 {
-  font-weight: 600;
-  font-size: 1rem;
-  margin-top: 3rem;
-}
-
-.c0 h3 {
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.c0 p {
-  padding: 1.5rem;
-  text-align: justify;
-  line-height: 150%;
-}
-
-.c0 ol {
-  margin-left: 1rem;
-  line-height: 150%;
-}
-
-.c0 li:before {
-  content: '•';
-  margin: 1rem;
-  margin-top: 2rem;
-}
-
-.c0 a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #ED5050;
-}
-
-@media (max-width:475px) {
-  .c0 {
-    padding: 1rem;
-    padding-top: 7rem;
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "defaultStyle__Policy-g21vfe-7",
+        "isStatic": false,
+        "rules": Array [
+          "background-color:",
+          [Function],
+          ";color:",
+          [Function],
+          ";font-family:",
+          [Function],
+          ";padding:10rem 10rem 5rem 10rem;letter-spacing:1px;div{max-width:750px;margin:auto;}h1{font-weight:600;font-size:1.4rem;margin-bottom:0.5rem;}h2{font-weight:600;font-size:1rem;margin-top:3rem;}h3{font-weight:500;font-size:1rem;}p{padding:1.5rem;text-align:justify;line-height:150%;}ol{margin-left:1rem;line-height:150%;}li{&:before{content:'•';margin:1rem;margin-top:2rem;}}a{text-decoration:none;color:",
+          [Function],
+          ";}@media (max-width:475px){padding:1rem;padding-top:7rem;h3{margin-bottom:2rem;}p{padding:0.5rem;}}",
+        ],
+      },
+      "displayName": "defaultStyle__Policy",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "defaultStyle__Policy-g21vfe-7",
+      "target": "section",
+      "toString": [Function],
+      "usesTheme": true,
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
   }
-
-  .c0 h3 {
-    margin-bottom: 2rem;
-  }
-
-  .c0 p {
-    padding: 0.5rem;
-  }
-}
-
-<section
-  className="c0"
+  forwardedRef={null}
 >
   <div>
     <h1>
@@ -156,5 +115,5 @@ exports[`Footer matches the snapshot 1`] = `
       .
     </p>
   </div>
-</section>
+</StyledComponent>
 `;

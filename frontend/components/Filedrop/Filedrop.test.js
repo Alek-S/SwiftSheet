@@ -2,16 +2,11 @@ import React from 'react';
 import Filedrop from './Filedrop';
 import theme from '../../theme';
 import Dropzone from 'react-dropzone';
-import { fireEvent, render } from 'react-testing-library';
+import { fireEvent, render } from '@testing-library/react';
 
 describe('Filedrop', () => {
 	test('matches the snapshot', () => {
-		const tree = mountWithTheme(<Filedrop />, theme);
-		expect(toJson(tree)).toMatchSnapshot();
-	});
-
-	test('matches the snapshot', () => {
-		const tree = mountWithTheme(<Filedrop />, theme);
+		const tree = shallowWithTheme(<Filedrop />, theme);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 

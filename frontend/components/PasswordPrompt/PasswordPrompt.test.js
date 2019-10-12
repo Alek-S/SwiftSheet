@@ -1,13 +1,14 @@
 import React from 'react';
 import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 
-import { PasswordPrompt } from './PasswordPrompt';
+import { PasswordPrompt, StyledDiv } from './PasswordPrompt';
 import theme from '../../theme';
 
 const setMockPassword = jest.fn();
 
 describe('PasswordPrompt', () => {
-	it.only('matches the snapshot', () => {
+	it('matches the snapshot', () => {
 		const wrongPassword = true;
 
 		const tree = shallowWithTheme(
@@ -19,5 +20,10 @@ describe('PasswordPrompt', () => {
 			theme
 		).dive();
 		expect(toJson(tree)).toMatchSnapshot();
+	});
+
+	test('StyledDiv matches the snapshot', () => {
+		const tree = renderer.create(<StyledDiv theme={theme} />).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });

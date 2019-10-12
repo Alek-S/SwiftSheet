@@ -1,12 +1,18 @@
 import React from 'react';
 import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 
-import ViewPage from './ViewPage';
+import ViewPage, { StyledDiv } from './ViewPage';
 import theme from '../../theme';
 
 describe('ViewPage', () => {
 	test('matches the snapshot', () => {
 		const tree = shallowWithTheme(<ViewPage />, theme).dive();
 		expect(toJson(tree)).toMatchSnapshot();
+	});
+
+	test('StyledDiv matches the snapshot', () => {
+		const tree = renderer.create(<StyledDiv theme={theme} />).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });

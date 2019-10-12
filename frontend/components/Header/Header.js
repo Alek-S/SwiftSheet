@@ -141,6 +141,7 @@ const NavSection = styled.ul`
 	}
 `;
 
+/* istanbul ignore next */
 const StyledNavLink = styled(NavLink)`
 	font-size: 1.25rem;
 	color: ${props => props.theme.color.text};
@@ -185,3 +186,4 @@ const Tagline = styled.div`
 `;
 
 export default Header;
+export { Nav, StyledNavLink, Tagline };
