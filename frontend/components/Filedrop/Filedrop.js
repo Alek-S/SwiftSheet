@@ -66,7 +66,7 @@ const Filedrop = ({
 
 	return (
 		<StyledSection>
-			<StyledDropzone
+			<Dropzone
 				onDrop={onDrop}
 				accept={FILE_FORMAT}
 				maxSize={MAX_SIZE}
@@ -77,21 +77,28 @@ const Filedrop = ({
 				onDragLeave={() => setDragging(false)}
 				onDropRejected={_handleRejection}
 			>
-				{dragging ? (
-					<img
-						src="./assets/images/upload-cloud-darkBlue.svg"
-						alt="upload-cloud-logo"
-					/>
-				) : (
-					<img
-						src="./assets/images/upload-cloud-light.svg"
-						alt="upload-cloud-logo"
-					/>
+				{({ getRootProps, getInputProps }) => (
+					<StyledDropzone dragging={dragging}>
+						<div {...getRootProps()}>
+							<input {...getInputProps()} />
+							{dragging ? (
+								<img
+									src="./assets/images/upload-cloud-darkBlue.svg"
+									alt="upload-cloud-logo"
+								/>
+							) : (
+								<img
+									src="./assets/images/upload-cloud-light.svg"
+									alt="upload-cloud-logo"
+								/>
+							)}
+							<StyledText>
+								{dragging ? 'Drop' : 'Drag'} CSV file here
+							</StyledText>
+						</div>
+					</StyledDropzone>
 				)}
-				<StyledText dragging={dragging}>
-					{dragging ? 'Drop' : 'Drag'} CSV file here
-				</StyledText>
-			</StyledDropzone>
+			</Dropzone>
 			<UploadError className={uploadErrorMessage ? 'true' : undefined}>
 				{uploadErrorMessage}
 			</UploadError>
@@ -145,7 +152,7 @@ const StyledSection = styled.section`
 	align-items: center;
 `;
 
-const StyledDropzone = styled(Dropzone)`
+const StyledDropzone = styled.div`
 	background-color: ${props =>
 		props.dragging ? props.theme.color.blue : '#fff'};
 	border: dashed 2px

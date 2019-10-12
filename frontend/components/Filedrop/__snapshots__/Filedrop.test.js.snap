@@ -2,7 +2,7 @@
 
 exports[`Filedrop matches the snapshot 1`] = `
 <Filedrop__StyledSection>
-  <Filedrop__StyledDropzone
+  <Dropzone
     accept=".csv"
     maxSize={2500000}
     minSize={8}
@@ -11,17 +11,8 @@ exports[`Filedrop matches the snapshot 1`] = `
     onDragLeave={[Function]}
     onDropRejected={[Function]}
   >
-    <img
-      alt="upload-cloud-logo"
-      src="./assets/images/upload-cloud-light.svg"
-    />
-    <Filedrop__StyledText
-      dragging={false}
-    >
-      Drag
-       CSV file here
-    </Filedrop__StyledText>
-  </Filedrop__StyledDropzone>
+    <Component />
+  </Dropzone>
   <Filedrop__UploadError />
   <Filedrop__Options
     aria-label="preferences"

@@ -659,7 +659,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                         <section
                           className="c1"
                         >
-                          <Filedrop__StyledDropzone
+                          <Dropzone
                             accept=".csv"
                             maxSize={2500000}
                             minSize={8}
@@ -669,150 +669,121 @@ exports[`UploadPage matches the snapshot 1`] = `
                             onDrop={[Function]}
                             onDropRejected={[Function]}
                           >
-                            <StyledComponent
-                              accept=".csv"
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
-                                    "isStatic": false,
-                                    "lastClassName": "c2",
-                                    "rules": Array [
-                                      "background-color:",
-                                      [Function],
-                                      ";border:dashed 2px ",
-                                      [Function],
-                                      ";border-radius:5px;height:250px;width:70%;margin:auto;margin-top:3rem;img{display:block;height:200px;width:80%;margin:auto;}@media (max-width:500px){width:90%;}",
-                                    ],
-                                  },
-                                  "displayName": "Filedrop__StyledDropzone",
-                                  "foldedComponentIds": Array [],
-                                  "render": [Function],
-                                  "styledComponentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
-                                  "target": [Function],
-                                  "toString": [Function],
-                                  "usesTheme": true,
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                              maxSize={2500000}
-                              minSize={8}
-                              multiple={false}
-                              onDragEnter={[Function]}
-                              onDragLeave={[Function]}
-                              onDrop={[Function]}
-                              onDropRejected={[Function]}
+                            <Filedrop__StyledDropzone
+                              dragging={false}
                             >
-                              <t
-                                accept=".csv"
-                                className="c2"
-                                disableClick={false}
-                                disablePreview={false}
-                                disabled={false}
-                                getDataTransferItems={[Function]}
-                                inputProps={Object {}}
-                                maxSize={2500000}
-                                minSize={8}
-                                multiple={false}
-                                onDragEnter={[Function]}
-                                onDragLeave={[Function]}
-                                onDrop={[Function]}
-                                onDropRejected={[Function]}
-                                preventDropOnDocument={true}
+                              <StyledComponent
+                                dragging={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
+                                      "isStatic": false,
+                                      "lastClassName": "c2",
+                                      "rules": Array [
+                                        "background-color:",
+                                        [Function],
+                                        ";border:dashed 2px ",
+                                        [Function],
+                                        ";border-radius:5px;height:250px;width:70%;margin:auto;margin-top:3rem;img{display:block;height:200px;width:80%;margin:auto;}@media (max-width:500px){width:90%;}",
+                                      ],
+                                    },
+                                    "displayName": "Filedrop__StyledDropzone",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "usesTheme": true,
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
                               >
                                 <div
-                                  aria-disabled={false}
                                   className="c2"
-                                  onClick={[Function]}
-                                  onDragEnter={[Function]}
-                                  onDragLeave={[Function]}
-                                  onDragOver={[Function]}
-                                  onDragStart={[Function]}
-                                  onDrop={[Function]}
-                                  style={
-                                    Object {
-                                      "position": "relative",
-                                    }
-                                  }
                                 >
-                                  <img
-                                    alt="upload-cloud-logo"
-                                    src="./assets/images/upload-cloud-light.svg"
-                                  />
-                                  <Filedrop__StyledText
-                                    dragging={false}
+                                  <div
+                                    onBlur={[Function]}
+                                    onClick={[Function]}
+                                    onDragEnter={[Function]}
+                                    onDragLeave={[Function]}
+                                    onDragOver={[Function]}
+                                    onDrop={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    tabIndex={0}
                                   >
-                                    <StyledComponent
-                                      dragging={false}
-                                      forwardedComponent={
+                                    <input
+                                      accept=".csv"
+                                      autoComplete="off"
+                                      multiple={false}
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      style={
                                         Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "Filedrop__StyledText-sc-1u7cgvl-2",
-                                            "isStatic": false,
-                                            "lastClassName": "c3",
-                                            "rules": Array [
-                                              "background-color:white;color:",
-                                              [Function],
-                                              ";font-family:",
-                                              [Function],
-                                              ";font-size:0.9em;",
-                                              "color:",
-                                              [Function],
-                                              ";font-size:1.2rem;text-align:center;background-color:transparent;",
-                                            ],
-                                          },
-                                          "displayName": "Filedrop__StyledText",
-                                          "foldedComponentIds": Array [
-                                            "defaultStyle-g21vfe-0",
-                                          ],
-                                          "render": [Function],
-                                          "styledComponentId": "Filedrop__StyledText-sc-1u7cgvl-2",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "usesTheme": true,
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
+                                          "display": "none",
                                         }
                                       }
-                                      forwardedRef={null}
-                                    >
-                                      <div
-                                        className="c3"
+                                      tabIndex={-1}
+                                      type="file"
+                                    />
+                                    <img
+                                      alt="upload-cloud-logo"
+                                      src="./assets/images/upload-cloud-light.svg"
+                                    />
+                                    <Filedrop__StyledText>
+                                      <StyledComponent
+                                        forwardedComponent={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "attrs": Array [],
+                                            "componentStyle": ComponentStyle {
+                                              "componentId": "Filedrop__StyledText-sc-1u7cgvl-2",
+                                              "isStatic": false,
+                                              "lastClassName": "c3",
+                                              "rules": Array [
+                                                "background-color:white;color:",
+                                                [Function],
+                                                ";font-family:",
+                                                [Function],
+                                                ";font-size:0.9em;",
+                                                "color:",
+                                                [Function],
+                                                ";font-size:1.2rem;text-align:center;background-color:transparent;",
+                                              ],
+                                            },
+                                            "displayName": "Filedrop__StyledText",
+                                            "foldedComponentIds": Array [
+                                              "defaultStyle-g21vfe-0",
+                                            ],
+                                            "render": [Function],
+                                            "styledComponentId": "Filedrop__StyledText-sc-1u7cgvl-2",
+                                            "target": "div",
+                                            "toString": [Function],
+                                            "usesTheme": true,
+                                            "warnTooManyClasses": [Function],
+                                            "withComponent": [Function],
+                                          }
+                                        }
+                                        forwardedRef={null}
                                       >
-                                        Drag
-                                         CSV file here
-                                      </div>
-                                    </StyledComponent>
-                                  </Filedrop__StyledText>
-                                  <input
-                                    accept=".csv"
-                                    autoComplete="off"
-                                    disabled={false}
-                                    multiple={false}
-                                    onChange={[Function]}
-                                    style={
-                                      Object {
-                                        "bottom": 0,
-                                        "left": 0,
-                                        "opacity": 0.00001,
-                                        "pointerEvents": "none",
-                                        "position": "absolute",
-                                        "right": 0,
-                                        "top": 0,
-                                      }
-                                    }
-                                    type="file"
-                                  />
+                                        <div
+                                          className="c3"
+                                        >
+                                          Drag
+                                           CSV file here
+                                        </div>
+                                      </StyledComponent>
+                                    </Filedrop__StyledText>
+                                  </div>
                                 </div>
-                              </t>
-                            </StyledComponent>
-                          </Filedrop__StyledDropzone>
+                              </StyledComponent>
+                            </Filedrop__StyledDropzone>
+                          </Dropzone>
                           <Filedrop__UploadError>
                             <StyledComponent
                               forwardedComponent={
