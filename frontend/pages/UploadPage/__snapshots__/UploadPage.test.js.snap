@@ -938,6 +938,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                 >
                                   Expires In:
                                   <select
+                                    aria-label="expire-in-select"
                                     onChange={[Function]}
                                     value={72}
                                   >
@@ -1019,6 +1020,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                           First Row Header:
                                         </span>
                                         <button
+                                          aria-label="toggle-header-button"
                                           onClick={[Function]}
                                         >
                                           Yes

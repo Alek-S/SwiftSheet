@@ -128,7 +128,11 @@ const Filedrop = ({
 
 				<section aria-label="set expiration">
 					Expires In:
-					<select value={expireIn} onChange={_handleChange}>
+					<select
+						value={expireIn}
+						onChange={_handleChange}
+						aria-label="expire-in-select"
+					>
 						<option value={1}>1 Hour</option>
 						<option value={4}>4 Hours</option>
 						<option value={8}>8 Hours</option>
@@ -141,7 +145,7 @@ const Filedrop = ({
 				<section aria-label="toggle first row header">
 					<HeaderToggle active={firstRowHeader}>
 						<span>First Row Header:</span>
-						<button onClick={_toggleHeader}>
+						<button onClick={_toggleHeader} aria-label="toggle-header-button">
 							{firstRowHeader ? 'Yes' : 'No'}
 						</button>
 					</HeaderToggle>

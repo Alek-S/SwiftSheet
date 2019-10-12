@@ -2,12 +2,45 @@ import React from 'react';
 import Filedrop from './Filedrop';
 import theme from '../../theme';
 import Dropzone from 'react-dropzone';
-import { fireEvent, render } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import { fireEvent, render, getByLabelText } from '@testing-library/react';
 
 describe('Filedrop', () => {
 	test('matches the snapshot', () => {
 		const tree = shallowWithTheme(<Filedrop />, theme);
 		expect(toJson(tree)).toMatchSnapshot();
+	});
+
+	test('should handle select change', () => {
+		const setExpireIn = jest.fn();
+		const { getByLabelText } = render(
+			<ThemeProvider theme={theme}>
+				<Filedrop setExpireIn={setExpireIn} />
+			</ThemeProvider>
+		);
+		const select = getByLabelText('expire-in-select');
+
+		fireEvent.change(select, { target: { value: 1 } });
+
+		expect(select.value).toBe('1');
+		expect(setExpireIn).toHaveBeenCalledWith(1);
+	});
+
+	test('should handle header toggle', () => {
+		const setHeader = jest.fn();
+		const setErrorMessage = jest.fn();
+
+		const { getByLabelText } = render(
+			<ThemeProvider theme={theme}>
+				<Filedrop setHeader={setHeader} setErrorMessage={setErrorMessage} />
+			</ThemeProvider>
+		);
+		const toggleHeaderButton = getByLabelText('toggle-header-button');
+
+		fireEvent.click(toggleHeaderButton);
+
+		expect(setHeader).toHaveBeenCalledWith(true);
+		expect(setErrorMessage).toHaveBeenCalledWith(undefined);
 	});
 
 	test('invoke onDragEnter when dragenter event occurs', async () => {
