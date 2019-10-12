@@ -71,6 +71,7 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.6.2",
+    "@react-mock/localstorage": "^0.1.2",
     "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
     "babel-core": "^7.0.0-bridge.0",
