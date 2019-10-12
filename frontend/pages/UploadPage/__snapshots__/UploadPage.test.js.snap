@@ -1292,6 +1292,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                         >
                           <div>
                             <input
+                              aria-label="upload button"
                               disabled={true}
                               onClick={[Function]}
                               type="submit"

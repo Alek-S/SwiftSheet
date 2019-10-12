@@ -7,6 +7,7 @@ import defaultStyle, {
 	StyledForm,
 	SubmitButton,
 } from '../../defaultStyle';
+import PropTypes from 'prop-types';
 
 /**
  * @function
@@ -29,6 +30,7 @@ export const PasswordPrompt = ({ setPassword, wrongPassword }) => {
 				<StyledForm onSubmit={handleSubmit}>
 					<input
 						type="password"
+						aria-label="password input"
 						autoComplete="current-password"
 						value={formValue}
 						onChange={({ target: { value } }) => setFormValue(value)}
@@ -65,5 +67,10 @@ const StyledDiv = styled(defaultStyle)`
 const PasswordFormCard = styled(FormCard)`
 	max-width: 475px;
 `;
+
+PasswordPrompt.prototype = {
+	setPassword: PropTypes.func,
+	wrongPassword: PropTypes.string,
+};
 
 export { StyledDiv };

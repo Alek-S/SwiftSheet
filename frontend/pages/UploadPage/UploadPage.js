@@ -113,6 +113,7 @@ const UploadPage = () => {
 								{renderRedirect(data)}
 								<input
 									type="submit"
+									aria-label="upload button"
 									onClick={e => {
 										e.preventDefault();
 
