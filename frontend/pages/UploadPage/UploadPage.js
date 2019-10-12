@@ -79,13 +79,9 @@ const UploadPage = () => {
 	};
 
 	const showErrorMessage = () => {
-		let message = '⚠️ Woops! Something went wrong.';
-
 		if (header) {
-			message += ' You sure first row is a header?';
+			setErrorMessage('⚠️ Woops! You sure first row is a header?');
 		}
-
-		setErrorMessage(message);
 	};
 
 	return (
@@ -103,6 +99,7 @@ const UploadPage = () => {
 				setonDropErrorMessage={setonDropErrorMessage}
 				onDropErrorMessage={onDropErrorMessage}
 				setSuccessMessage={setSuccessMessage}
+				setErrorMessage={setErrorMessage}
 			/>
 			<StyledForm disableSubmit={disableSubmit}>
 				<Mutation mutation={UPLOAD_SHEET} onCompleted={onCompleted}>
@@ -223,7 +220,7 @@ const UploadSuccess = styled(SuccessDialog)`
 	min-width: 200px;
 	width: fit-content;
 	margin: auto;
-	margin-top: 0rem;
+	margin-top: 0.15rem;
 `;
 
 export default UploadPage;

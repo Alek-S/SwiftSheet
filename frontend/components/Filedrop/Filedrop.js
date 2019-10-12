@@ -18,6 +18,7 @@ const Filedrop = ({
 	password,
 	setPassword,
 	setDisableSubmit,
+	setErrorMessage,
 	setonDropErrorMessage,
 	onDropErrorMessage,
 	onDrop,
@@ -46,6 +47,7 @@ const Filedrop = ({
 	const _toggleHeader = e => {
 		e.preventDefault();
 		setHeader(!firstRowHeader);
+		setErrorMessage(undefined);
 	};
 
 	const _handleRejection = e => {
@@ -270,6 +272,7 @@ Filedrop.propTypes = {
 	setonDropErrorMessage: PropTypes.func,
 	setDisableSubmit: PropTypes.func,
 	setSuccessMessage: PropTypes.func,
+	setErrorMessage: PropTypes.func,
 };
 
 const UploadError = styled(ErrorDialog)`

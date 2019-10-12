@@ -291,7 +291,7 @@ exports[`UploadPage matches the snapshot 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  margin-top: 0rem;
+  margin-top: 0.15rem;
 }
 
 .c9.true {
@@ -653,6 +653,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                     onDropErrorMessage=""
                     password=""
                     setDisableSubmit={[Function]}
+                    setErrorMessage={[Function]}
                     setExpireIn={[Function]}
                     setHeader={[Function]}
                     setPassword={[Function]}
@@ -1352,7 +1353,7 @@ exports[`UploadPage matches the snapshot 1`] = `
                                     ";color:",
                                     [Function],
                                     ";strong{font-weight:600;}",
-                                    "min-width:200px;width:fit-content;margin:auto;margin-top:0rem;",
+                                    "min-width:200px;width:fit-content;margin:auto;margin-top:0.15rem;",
                                   ],
                                 },
                                 "displayName": "UploadPage__UploadSuccess",
