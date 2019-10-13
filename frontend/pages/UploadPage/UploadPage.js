@@ -83,9 +83,25 @@ const UploadPage = () => {
 	};
 
 	const showErrorMessage = () => {
+		setErrorMessage('⚠️ Woops! Something went wrong');
+	};
+
+	/** cleans up header for safer handling, specifically period for header (since used for key) */
+	const cleanData = data => {
+		let cleanedData = data;
 		if (header) {
-			setErrorMessage('⚠️ Woops! You sure first row is a header?');
+			cleanedData.map(rowObj => {
+				for (const key in rowObj) {
+					if (key.includes('.')) {
+						const newKey = key.replace('.', '_');
+						rowObj[newKey] = rowObj[key];
+						delete rowObj[key];
+						return rowObj[newKey];
+					}
+				}
+			});
 		}
+		return cleanedData;
 	};
 
 	return (
@@ -134,7 +150,9 @@ const UploadPage = () => {
 												uploadSheet({
 													variables: {
 														sheetData: btoa(
-															deflate(JSON.stringify(data), { to: 'string' })
+															deflate(JSON.stringify(cleanData(data)), {
+																to: 'string',
+															})
 														), // zlib compress + zlib
 														expireIn: parseInt(expireIn),
 														password: password,
