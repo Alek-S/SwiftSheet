@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import defaultStyle, { ErrorDialog, SuccessDialog } from '../../defaultStyle';
 import Filedrop from '../../components/Filedrop/Filedrop';
@@ -43,6 +43,10 @@ const UploadPage = () => {
 	const [onDropErrorMessage, setonDropErrorMessage] = useState('');
 
 	ReactGA.pageview('/upload');
+
+	useEffect(() => {
+		document.title = `SwiftSheet - Upload`;
+	});
 
 	const onCompleted = () => {
 		setRedirect(true);
@@ -138,8 +142,8 @@ const UploadPage = () => {
 												}),
 										});
 									}}
-									value="Upload File"
-									disabled={disableSubmit}
+									value={loading ? 'Uploading...' : 'Upload File'}
+									disabled={disableSubmit || loading}
 								/>
 							</div>
 						);
@@ -183,6 +187,7 @@ const StyledForm = styled.form`
 	}
 
 	input[type='submit'] {
+		box-sizing: border-box;
 		position: relative;
 		cursor: ${props => (props.disableSubmit ? 'no-drop' : 'pointer')};
 		color: ${props =>

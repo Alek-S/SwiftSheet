@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -26,6 +26,10 @@ export const GET_SHEET = gql`
 const SheetPage = ({ match }) => {
 	const { sheetId } = match.params;
 	const [password, setPassword] = useState('');
+
+	useEffect(() => {
+		document.title = `SwiftSheet - ${sheetId}`;
+	});
 
 	ReactGA.pageview(window.location.pathname + window.location.search);
 

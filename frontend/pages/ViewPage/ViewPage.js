@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import defaultStyle from '../../defaultStyle';
 import RecentlyViewed from '../../components/RecentlyViewed/RecentlyViewed';
@@ -7,6 +7,10 @@ import ReactGA from 'react-ga';
 
 const ViewPage = () => {
 	ReactGA.pageview('/view');
+
+	useEffect(() => {
+		document.title = `SwiftSheet - View`;
+	});
 
 	return (
 		<StyledDiv>

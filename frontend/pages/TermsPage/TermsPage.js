@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Policy } from '../../defaultStyle';
 import ReactGA from 'react-ga';
 
 const TermsPage = () => {
 	ReactGA.pageview('/terms');
+
+	useEffect(() => {
+		document.title = `SwiftSheet - View`;
+	});
 
 	return (
 		<Policy>
