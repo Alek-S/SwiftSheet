@@ -8,6 +8,7 @@ const schema = require('./backend/graphql/schema/schema');
 const depthLimit = require('graphql-depth-limit');
 const rateLimit = require('express-rate-limit');
 const Sentry = require('@sentry/node');
+const helmet = require('helmet');
 
 //==Express Setup==
 const app = express();
@@ -19,6 +20,9 @@ if (process.env.NODE_ENV === 'production') {
 } else {
 	console.log(`Server mode [${chalk.cyan('dev')}]`);
 }
+
+//==Safer Headers==
+app.use(helmet());
 
 //===Morgan Logger Middleware===
 if (process.env.NODE_ENV === 'production') {
