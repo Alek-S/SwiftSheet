@@ -77,7 +77,7 @@ app.use(express.static('dist'));
 const connect = () => {
 	mongoose.connect(
 		process.env.MONGOURL || 'mongodb://localhost:27017/swiftsheet',
-		{ useCreateIndex: true, useNewUrlParser: true }
+		{ useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true }
 	);
 	const db = mongoose.connection;
 
