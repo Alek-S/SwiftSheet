@@ -23,7 +23,6 @@ exports[`Footer matches the snapshot 1`] = `
       "styledComponentId": "IllustratedStep__StyledSection-sc-108b0jo-0",
       "target": "section",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }

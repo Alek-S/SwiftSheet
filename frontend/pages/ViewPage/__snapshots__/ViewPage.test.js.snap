@@ -59,7 +59,6 @@ exports[`ViewPage matches the snapshot 1`] = `
       "styledComponentId": "ViewPage__StyledDiv-wujrxm-0",
       "target": "div",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }

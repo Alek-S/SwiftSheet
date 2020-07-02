@@ -56,7 +56,6 @@ exports[`RestExample matches the snapshot 1`] = `
       "styledComponentId": "defaultStyle__ApiCard-g21vfe-4",
       "target": "div",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }

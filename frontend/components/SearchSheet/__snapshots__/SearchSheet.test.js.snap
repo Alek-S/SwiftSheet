@@ -297,7 +297,6 @@ exports[`SearchSheet matches the snapshot 1`] = `
                 "styledComponentId": "defaultStyle__FormCard-g21vfe-5",
                 "target": "div",
                 "toString": [Function],
-                "usesTheme": true,
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
@@ -327,7 +326,6 @@ exports[`SearchSheet matches the snapshot 1`] = `
                       "styledComponentId": "defaultStyle__StyledForm-g21vfe-6",
                       "target": "form",
                       "toString": [Function],
-                      "usesTheme": false,
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
                     }
@@ -381,7 +379,6 @@ exports[`SearchSheet matches the snapshot 1`] = `
                                   "styledComponentId": "defaultStyle__SubmitButton-g21vfe-7",
                                   "target": "button",
                                   "toString": [Function],
-                                  "usesTheme": true,
                                   "warnTooManyClasses": [Function],
                                   "withComponent": [Function],
                                 }

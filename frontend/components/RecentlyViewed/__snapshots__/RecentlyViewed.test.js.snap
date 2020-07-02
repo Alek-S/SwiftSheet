@@ -187,7 +187,6 @@ exports[`RecentlyViewed matches the snapshot 1`] = `
       "styledComponentId": "RecentlyViewed__StyledCard-o9muk8-0",
       "target": "div",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }

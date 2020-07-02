@@ -29,7 +29,6 @@ exports[`Footer matches the snapshot 1`] = `
       "styledComponentId": "Footer__Styledfooter-d380t0-0",
       "target": "div",
       "toString": [Function],
-      "usesTheme": true,
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
     }
