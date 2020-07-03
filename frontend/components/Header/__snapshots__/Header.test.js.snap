@@ -23,185 +23,119 @@ exports[`Header matches the snapshot 1`] = `
     }
   }
 >
-  <Header />
+  <Header
+    theme={
+      Object {
+        "boxShadow": "0px 5px 40px -5px rgba(0,0,0,0.3)",
+        "boxShadowDark": "0px 5px 40px -2px rgba(0,0,0,0.5)",
+        "boxShadowLight": "0px 0px 30px -5px rgba(0,0,0,0.15)",
+        "color": Object {
+          "aqua": "#68F6BA",
+          "background": "#fafafa",
+          "backgroundDark": "#EAEAEA",
+          "backgroundDarkest": "#BCBCBC",
+          "blue": "#46C8F5",
+          "border": "#d9d9d9",
+          "darkBlue": "#2E8AA8",
+          "green": "#D8E13F",
+          "input": "#F1F3F4",
+          "lightBlue": "#97E4FF",
+          "lightRed": "#FF8D8D",
+          "lightText": "#848484",
+          "orange": "#ffbf80",
+          "red": "#ED5050",
+          "text": "#404040",
+          "vividGreen": "#E3FC52",
+        },
+        "font": Object {
+          "header": "'Poiret One', cursive",
+          "main": "'Quicksand', sans-serif",
+        },
+        "gradient": Object {
+          "green": "linear-gradient(to bottom, #D8E13F 0%, #BFC644 100%)",
+          "greenBlue": " linear-gradient(160deg, #57DACB 0%, #55A2ED 100%)",
+          "light": "linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%)",
+          "lightRed": "linear-gradient(to bottom, #f39191 0%, #ef6262 100%)",
+          "red": "linear-gradient(to bottom, #f07878 0%, #ED5050 100%)",
+        },
+      }
+    }
+  />
 </Router>
 `;
 
 exports[`Nav matches the snapshot 1`] = `
-.c0 {
-  background-color: white;
-  color: #404040;
-  font-family: 'Quicksand',sans-serif;
-  font-size: 0.9em;
-  position: fixed;
-  border-bottom: solid 1px #d9d9d9;
-  padding: 0.8rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 100%;
-  z-index: 50;
-}
-
-.c0 a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 img,
-.c0 h1 {
-  display: inline;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.c0 img {
-  height: 50px;
-}
-
-.c0 h1 {
-  font-family: 'Poiret One',cursive;
-  font-size: 2.5rem;
-  -webkit-letter-spacing: 4px;
-  -moz-letter-spacing: 4px;
-  -ms-letter-spacing: 4px;
-  letter-spacing: 4px;
-  margin-left: 0.5rem;
-  position: relative;
-  top: -0.7rem;
-  color: #404040;
-}
-
-.c0.small {
-  padding: 0.4rem;
-  padding-left: 0.8rem;
-  padding-bottom: 0.15rem;
-}
-
-.c0.small img {
-  height: 25px;
-}
-
-.c0.small h1 {
-  font-size: 1.5rem;
-  top: -0.3rem;
-}
-
-.c0.small .tagline {
-  display: none;
-}
-
-@media (max-width:475px) {
-  .c0 h1 {
-    top: -0.3rem;
-    font-size: 1.25rem;
-  }
-
-  .c0 img {
-    height: 25px;
-  }
-}
-
-@media (max-width:350px) {
-  .c0 h1 {
-    top: 0rem;
-    font-size: 1.15rem;
-  }
-
-  .c0 img {
-    position: relative;
-    height: 20px;
-    top: 0.25rem;
-  }
-}
-
 <div
-  className="c0"
+  className="defaultStyle-g21vfe-0 Header__Nav-sc-10rcavb-0 jawuQe"
 />
 `;
 
 exports[`StyledNavLink matches the snapshot 1`] = `
-<ContextProvider
-  value={
+<Router
+  history={
     Object {
-      "history": Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      },
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
       "location": Object {
         "hash": "",
         "pathname": "/",
         "search": "",
         "state": undefined,
       },
-      "match": Object {
-        "isExact": true,
-        "params": Object {},
-        "path": "/",
-        "url": "/",
-      },
-      "staticContext": undefined,
+      "push": [Function],
+      "replace": [Function],
     }
   }
 >
-  <ContextProvider
-    value={
+  <Header__StyledNavLink
+    theme={
       Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
+        "boxShadow": "0px 5px 40px -5px rgba(0,0,0,0.3)",
+        "boxShadowDark": "0px 5px 40px -2px rgba(0,0,0,0.5)",
+        "boxShadowLight": "0px 0px 30px -5px rgba(0,0,0,0.15)",
+        "color": Object {
+          "aqua": "#68F6BA",
+          "background": "#fafafa",
+          "backgroundDark": "#EAEAEA",
+          "backgroundDarkest": "#BCBCBC",
+          "blue": "#46C8F5",
+          "border": "#d9d9d9",
+          "darkBlue": "#2E8AA8",
+          "green": "#D8E13F",
+          "input": "#F1F3F4",
+          "lightBlue": "#97E4FF",
+          "lightRed": "#FF8D8D",
+          "lightText": "#848484",
+          "orange": "#ffbf80",
+          "red": "#ED5050",
+          "text": "#404040",
+          "vividGreen": "#E3FC52",
         },
-        "push": [Function],
-        "replace": [Function],
+        "font": Object {
+          "header": "'Poiret One', cursive",
+          "main": "'Quicksand', sans-serif",
+        },
+        "gradient": Object {
+          "green": "linear-gradient(to bottom, #D8E13F 0%, #BFC644 100%)",
+          "greenBlue": " linear-gradient(160deg, #57DACB 0%, #55A2ED 100%)",
+          "light": "linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%)",
+          "lightRed": "linear-gradient(to bottom, #f39191 0%, #ef6262 100%)",
+          "red": "linear-gradient(to bottom, #f07878 0%, #ED5050 100%)",
+        },
       }
     }
-  >
-    <Header__StyledNavLink />
-  </ContextProvider>
-</ContextProvider>
+  />
+</Router>
 `;
 
 exports[`Tagline matches the snapshot 1`] = `
-.c0 {
-  color: #848484;
-  position: absolute;
-  display: inline-block;
-  margin-left: 2rem;
-  margin-top: 0.5rem;
-  padding: 0.75rem 2rem;
-  border-left: solid 1px #d9d9d9;
-}
-
-@media (max-width:835px) {
-  .c0 {
-    display: none;
-  }
-}
-
 <div
-  className="c0"
+  className="Header__Tagline-sc-10rcavb-3 gCLrZy"
 />
 `;

@@ -6,7 +6,7 @@ import theme from '../../theme';
 
 describe('Footer', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(<IllustratedStep />, theme).dive();
+		const tree = shallow(<IllustratedStep theme={theme} />);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });

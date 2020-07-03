@@ -6,7 +6,7 @@ import theme from '../../theme';
 
 describe('Footer', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(<TermsPage />, theme).dive();
+		const tree = shallow(<TermsPage theme={theme} />);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });

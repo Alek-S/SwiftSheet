@@ -6,7 +6,7 @@ import theme from '../theme';
 
 describe('App', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(<App />, theme);
+		const tree = shallow(<App theme={theme} />);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 

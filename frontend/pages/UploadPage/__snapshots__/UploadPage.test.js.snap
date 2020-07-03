@@ -609,775 +609,379 @@ exports[`UploadPage matches the snapshot 1`] = `
         >
           <UploadPage>
             <UploadPage__StyledDiv>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "UploadPage__StyledDiv-ahg6u5-0",
-                      "isStatic": false,
-                      "lastClassName": "c0",
-                      "rules": Array [
-                        "background-color:white;color:",
-                        [Function],
-                        ";font-family:",
-                        [Function],
-                        ";font-size:0.9em;",
-                        "background-color:",
-                        [Function],
-                        ";padding-top:7rem;height:calc(100vh - 100px);min-height:820px;",
-                      ],
-                    },
-                    "displayName": "UploadPage__StyledDiv",
-                    "foldedComponentIds": Array [
-                      "defaultStyle-g21vfe-0",
-                    ],
-                    "render": [Function],
-                    "styledComponentId": "UploadPage__StyledDiv-ahg6u5-0",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+              <div
+                className="defaultStyle-g21vfe-0 c0"
               >
-                <div
-                  className="c0"
+                <Filedrop
+                  expireIn={72}
+                  firstRowHeader={true}
+                  onDrop={[Function]}
+                  onDropErrorMessage=""
+                  password=""
+                  setDisableSubmit={[Function]}
+                  setErrorMessage={[Function]}
+                  setExpireIn={[Function]}
+                  setHeader={[Function]}
+                  setPassword={[Function]}
+                  setSuccessMessage={[Function]}
+                  setonDropErrorMessage={[Function]}
+                  wrongPassword={false}
                 >
-                  <Filedrop
-                    expireIn={72}
-                    firstRowHeader={true}
-                    onDrop={[Function]}
-                    onDropErrorMessage=""
-                    password=""
-                    setDisableSubmit={[Function]}
-                    setErrorMessage={[Function]}
-                    setExpireIn={[Function]}
-                    setHeader={[Function]}
-                    setPassword={[Function]}
-                    setSuccessMessage={[Function]}
-                    setonDropErrorMessage={[Function]}
-                    wrongPassword={false}
-                  >
-                    <Filedrop__StyledSection>
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "Filedrop__StyledSection-sc-1u7cgvl-0",
-                              "isStatic": false,
-                              "lastClassName": "c1",
-                              "rules": Array [
-                                "display:flex;flex-direction:column;align-items:center;",
-                              ],
-                            },
-                            "displayName": "Filedrop__StyledSection",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "Filedrop__StyledSection-sc-1u7cgvl-0",
-                            "target": "section",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
+                  <Filedrop__StyledSection>
+                    <section
+                      className="c1"
+                    >
+                      <Dropzone
+                        accept=".csv"
+                        maxSize={2500000}
+                        minSize={8}
+                        multiple={false}
+                        onDragEnter={[Function]}
+                        onDragLeave={[Function]}
+                        onDrop={[Function]}
+                        onDropRejected={[Function]}
                       >
-                        <section
-                          className="c1"
+                        <Filedrop__StyledDropzone
+                          dragging={false}
                         >
-                          <Dropzone
-                            accept=".csv"
-                            maxSize={2500000}
-                            minSize={8}
-                            multiple={false}
-                            onDragEnter={[Function]}
-                            onDragLeave={[Function]}
-                            onDrop={[Function]}
-                            onDropRejected={[Function]}
+                          <div
+                            className="c2"
                           >
-                            <Filedrop__StyledDropzone
-                              dragging={false}
+                            <div
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onDragEnter={[Function]}
+                              onDragLeave={[Function]}
+                              onDragOver={[Function]}
+                              onDrop={[Function]}
+                              onFocus={[Function]}
+                              onKeyDown={[Function]}
+                              tabIndex={0}
                             >
-                              <StyledComponent
-                                dragging={false}
-                                forwardedComponent={
+                              <input
+                                accept=".csv"
+                                autoComplete="off"
+                                multiple={false}
+                                onChange={[Function]}
+                                onClick={[Function]}
+                                style={
                                   Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
-                                      "isStatic": false,
-                                      "lastClassName": "c2",
-                                      "rules": Array [
-                                        "background-color:",
-                                        [Function],
-                                        ";border:dashed 2px ",
-                                        [Function],
-                                        ";border-radius:5px;height:250px;width:70%;margin:auto;margin-top:3rem;img{display:block;height:200px;width:80%;margin:auto;}@media (max-width:500px){width:90%;}",
-                                      ],
-                                    },
-                                    "displayName": "Filedrop__StyledDropzone",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "Filedrop__StyledDropzone-sc-1u7cgvl-1",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
+                                    "display": "none",
                                   }
                                 }
-                                forwardedRef={null}
-                              >
-                                <div
-                                  className="c2"
-                                >
-                                  <div
-                                    onBlur={[Function]}
-                                    onClick={[Function]}
-                                    onDragEnter={[Function]}
-                                    onDragLeave={[Function]}
-                                    onDragOver={[Function]}
-                                    onDrop={[Function]}
-                                    onFocus={[Function]}
-                                    onKeyDown={[Function]}
-                                    tabIndex={0}
-                                  >
-                                    <input
-                                      accept=".csv"
-                                      autoComplete="off"
-                                      multiple={false}
-                                      onChange={[Function]}
-                                      onClick={[Function]}
-                                      style={
-                                        Object {
-                                          "display": "none",
-                                        }
-                                      }
-                                      tabIndex={-1}
-                                      type="file"
-                                    />
-                                    <img
-                                      alt="upload-cloud-logo"
-                                      src="./assets/images/upload-cloud-light.svg"
-                                    />
-                                    <Filedrop__StyledText>
-                                      <StyledComponent
-                                        forwardedComponent={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "attrs": Array [],
-                                            "componentStyle": ComponentStyle {
-                                              "componentId": "Filedrop__StyledText-sc-1u7cgvl-2",
-                                              "isStatic": false,
-                                              "lastClassName": "c3",
-                                              "rules": Array [
-                                                "background-color:white;color:",
-                                                [Function],
-                                                ";font-family:",
-                                                [Function],
-                                                ";font-size:0.9em;",
-                                                "color:",
-                                                [Function],
-                                                ";font-size:1.2rem;text-align:center;background-color:transparent;",
-                                              ],
-                                            },
-                                            "displayName": "Filedrop__StyledText",
-                                            "foldedComponentIds": Array [
-                                              "defaultStyle-g21vfe-0",
-                                            ],
-                                            "render": [Function],
-                                            "styledComponentId": "Filedrop__StyledText-sc-1u7cgvl-2",
-                                            "target": "div",
-                                            "toString": [Function],
-                                            "warnTooManyClasses": [Function],
-                                            "withComponent": [Function],
-                                          }
-                                        }
-                                        forwardedRef={null}
-                                      >
-                                        <div
-                                          className="c3"
-                                        >
-                                          Drag
-                                           CSV file here
-                                        </div>
-                                      </StyledComponent>
-                                    </Filedrop__StyledText>
-                                  </div>
-                                </div>
-                              </StyledComponent>
-                            </Filedrop__StyledDropzone>
-                          </Dropzone>
-                          <Filedrop__UploadError>
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "Filedrop__UploadError-sc-1u7cgvl-5",
-                                    "isStatic": false,
-                                    "lastClassName": "c4",
-                                    "rules": Array [
-                                      "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
-                                      [Function],
-                                      ";transition:all 0.3s;&.true{opacity:1;}",
-                                      "min-width:200px;width:fit-content;margin-top:2rem;",
-                                    ],
-                                  },
-                                  "displayName": "Filedrop__UploadError",
-                                  "foldedComponentIds": Array [
-                                    "defaultStyle__ErrorDialog-g21vfe-2",
-                                  ],
-                                  "render": [Function],
-                                  "styledComponentId": "Filedrop__UploadError-sc-1u7cgvl-5",
-                                  "target": "div",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                            >
-                              <div
-                                className="c4"
+                                tabIndex={-1}
+                                type="file"
                               />
-                            </StyledComponent>
-                          </Filedrop__UploadError>
-                          <Filedrop__Options
-                            aria-label="preferences"
-                            role="form"
-                          >
-                            <StyledComponent
-                              aria-label="preferences"
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "Filedrop__Options-sc-1u7cgvl-3",
-                                    "isStatic": false,
-                                    "lastClassName": "c5",
-                                    "rules": Array [
-                                      "background-color:white;color:",
-                                      [Function],
-                                      ";font-family:",
-                                      [Function],
-                                      ";font-size:0.9em;",
-                                      "border-radius:8px;box-shadow:",
-                                      [Function],
-                                      ";input{outline:none;color:",
-                                      [Function],
-                                      ";font-family:",
-                                      [Function],
-                                      ";background-color:",
-                                      [Function],
-                                      ";border:1px solid ",
-                                      [Function],
-                                      ";border-radius:5rem;transition:all 0.3s;::placeholder{font-size:1rem;font-weight:400;font-style:italic;font-family:",
-                                      [Function],
-                                      ";color:",
-                                      [Function],
-                                      ";}&:hover{border:solid 1px ",
-                                      [Function],
-                                      ";}&:focus,&:active{border:solid 1px ",
-                                      [Function],
-                                      ";}&.true{border:1px solid ",
-                                      [Function],
-                                      ";}}",
-                                      "padding-top:1.75rem;padding-bottom:1.75rem;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly;align-items:center;width:70%;margin:auto;text-align:center;margin-top:3.5rem;input{margin:0 2rem 0 0.25rem;padding-left:1rem;width:140px;font-size:0.9rem;font-weight:400;height:25px;::placeholder{color:",
-                                      [Function],
-                                      ";}}select{margin-left:0.25rem;}@media (max-width:500px){width:90%;flex-direction:column;input,select,section{margin:0.5rem 0;}}",
-                                    ],
-                                  },
-                                  "displayName": "Filedrop__Options",
-                                  "foldedComponentIds": Array [
-                                    "defaultStyle-g21vfe-0",
-                                    "defaultStyle__Card-g21vfe-1",
-                                  ],
-                                  "render": [Function],
-                                  "styledComponentId": "Filedrop__Options-sc-1u7cgvl-3",
-                                  "target": "div",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                              role="form"
-                            >
-                              <div
-                                aria-label="preferences"
-                                className="c5"
-                                role="form"
-                              >
-                                <section
-                                  aria-label="set password"
+                              <img
+                                alt="upload-cloud-logo"
+                                src="./assets/images/upload-cloud-light.svg"
+                              />
+                              <Filedrop__StyledText>
+                                <div
+                                  className="defaultStyle-g21vfe-0 c3"
                                 >
-                                  Password:
-                                  <input
-                                    autoComplete="new-password"
-                                    onChange={[Function]}
-                                    placeholder="enter password"
-                                    type="password"
-                                    value=""
-                                  />
-                                </section>
-                                <section
-                                  aria-label="set expiration"
-                                >
-                                  Expires In:
-                                  <select
-                                    aria-label="expire-in-select"
-                                    onChange={[Function]}
-                                    value={72}
-                                  >
-                                    <option
-                                      value={1}
-                                    >
-                                      1 Hour
-                                    </option>
-                                    <option
-                                      value={4}
-                                    >
-                                      4 Hours
-                                    </option>
-                                    <option
-                                      value={8}
-                                    >
-                                      8 Hours
-                                    </option>
-                                    <option
-                                      value={24}
-                                    >
-                                      1 Day
-                                    </option>
-                                    <option
-                                      value={72}
-                                    >
-                                      3 Days
-                                    </option>
-                                    <option
-                                      value={120}
-                                    >
-                                      5 Days
-                                    </option>
-                                  </select>
-                                </section>
-                                <section
-                                  aria-label="toggle first row header"
-                                >
-                                  <Filedrop__HeaderToggle
-                                    active={true}
-                                  >
-                                    <StyledComponent
-                                      active={true}
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "Filedrop__HeaderToggle-sc-1u7cgvl-4",
-                                            "isStatic": false,
-                                            "lastClassName": "c6",
-                                            "rules": Array [
-                                              "margin-left:2rem;button{color:white;cursor:pointer;outline:none;background:",
-                                              [Function],
-                                              ";box-shadow:",
-                                              [Function],
-                                              ";border:none;font-family:",
-                                              [Function],
-                                              ";font-size:1rem;border-radius:4px;margin-left:1rem;padding-top:5px;padding-bottom:5px;width:70px;}",
-                                            ],
-                                          },
-                                          "displayName": "Filedrop__HeaderToggle",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "Filedrop__HeaderToggle-sc-1u7cgvl-4",
-                                          "target": "label",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={null}
-                                    >
-                                      <label
-                                        className="c6"
-                                      >
-                                        <span>
-                                          First Row Header:
-                                        </span>
-                                        <button
-                                          aria-label="toggle-header-button"
-                                          onClick={[Function]}
-                                        >
-                                          Yes
-                                        </button>
-                                      </label>
-                                    </StyledComponent>
-                                  </Filedrop__HeaderToggle>
-                                </section>
-                              </div>
-                            </StyledComponent>
-                          </Filedrop__Options>
-                          <Filedrop__UploadError>
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "Filedrop__UploadError-sc-1u7cgvl-5",
-                                    "isStatic": false,
-                                    "lastClassName": "c4",
-                                    "rules": Array [
-                                      "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
-                                      [Function],
-                                      ";transition:all 0.3s;&.true{opacity:1;}",
-                                      "min-width:200px;width:fit-content;margin-top:2rem;",
-                                    ],
-                                  },
-                                  "displayName": "Filedrop__UploadError",
-                                  "foldedComponentIds": Array [
-                                    "defaultStyle__ErrorDialog-g21vfe-2",
-                                  ],
-                                  "render": [Function],
-                                  "styledComponentId": "Filedrop__UploadError-sc-1u7cgvl-5",
-                                  "target": "div",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                            >
-                              <div
-                                className="c4"
-                              >
-                                ⚠️ Check Password Length
-                              </div>
-                            </StyledComponent>
-                          </Filedrop__UploadError>
-                        </section>
-                      </StyledComponent>
-                    </Filedrop__StyledSection>
-                  </Filedrop>
-                  <UploadPage__StyledForm
-                    disableSubmit={true}
-                  >
-                    <StyledComponent
-                      disableSubmit={true}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "UploadPage__StyledForm-ahg6u5-1",
-                            "isStatic": false,
-                            "lastClassName": "c7",
-                            "rules": Array [
-                              "display:block;width:60%;margin:auto;text-align:center;margin-top:2rem;label{font-size:1.1rem;}select{font-family:",
-                              [Function],
-                              ";font-size:1rem;background-color:white;margin-left:0.5rem;margin-right:0.5rem;border:solid 1px ",
-                              [Function],
-                              ";}input[type='submit']{box-sizing:border-box;position:relative;cursor:",
-                              [Function],
-                              ";color:",
-                              [Function],
-                              ";display:block;margin:auto;font-family:",
-                              [Function],
-                              ";font-weight:400;font-size:1.3rem;border:",
-                              [Function],
-                              ";border-radius:30px;padding:10px 30px;background:",
-                              [Function],
-                              ";box-shadow:",
-                              [Function],
-                              ";transition:all 0.5s;&:hover{background:",
-                              [Function],
-                              ";box-shadow:",
-                              [Function],
-                              ";}}",
-                            ],
-                          },
-                          "displayName": "UploadPage__StyledForm",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "UploadPage__StyledForm-ahg6u5-1",
-                          "target": "form",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                    >
-                      <form
-                        className="c7"
+                                  Drag
+                                   CSV file here
+                                </div>
+                              </Filedrop__StyledText>
+                            </div>
+                          </div>
+                        </Filedrop__StyledDropzone>
+                      </Dropzone>
+                      <Filedrop__UploadError>
+                        <div
+                          className="defaultStyle__ErrorDialog-g21vfe-2 c4"
+                        />
+                      </Filedrop__UploadError>
+                      <Filedrop__Options
+                        aria-label="preferences"
+                        role="form"
                       >
-                        <Mutation
-                          mutation={
+                        <div
+                          aria-label="preferences"
+                          className="defaultStyle-g21vfe-0 defaultStyle__Card-g21vfe-1 c5"
+                          role="form"
+                        >
+                          <section
+                            aria-label="set password"
+                          >
+                            Password:
+                            <input
+                              autoComplete="new-password"
+                              onChange={[Function]}
+                              placeholder="enter password"
+                              type="password"
+                              value=""
+                            />
+                          </section>
+                          <section
+                            aria-label="set expiration"
+                          >
+                            Expires In:
+                            <select
+                              aria-label="expire-in-select"
+                              onChange={[Function]}
+                              value={72}
+                            >
+                              <option
+                                value={1}
+                              >
+                                1 Hour
+                              </option>
+                              <option
+                                value={4}
+                              >
+                                4 Hours
+                              </option>
+                              <option
+                                value={8}
+                              >
+                                8 Hours
+                              </option>
+                              <option
+                                value={24}
+                              >
+                                1 Day
+                              </option>
+                              <option
+                                value={72}
+                              >
+                                3 Days
+                              </option>
+                              <option
+                                value={120}
+                              >
+                                5 Days
+                              </option>
+                            </select>
+                          </section>
+                          <section
+                            aria-label="toggle first row header"
+                          >
+                            <Filedrop__HeaderToggle
+                              active={true}
+                            >
+                              <label
+                                className="c6"
+                              >
+                                <span>
+                                  First Row Header:
+                                </span>
+                                <button
+                                  aria-label="toggle-header-button"
+                                  onClick={[Function]}
+                                >
+                                  Yes
+                                </button>
+                              </label>
+                            </Filedrop__HeaderToggle>
+                          </section>
+                        </div>
+                      </Filedrop__Options>
+                      <Filedrop__UploadError>
+                        <div
+                          className="defaultStyle__ErrorDialog-g21vfe-2 c4"
+                        >
+                          ⚠️ Check Password Length
+                        </div>
+                      </Filedrop__UploadError>
+                    </section>
+                  </Filedrop__StyledSection>
+                </Filedrop>
+                <UploadPage__StyledForm
+                  disableSubmit={true}
+                >
+                  <form
+                    className="c7"
+                  >
+                    <Mutation
+                      mutation={
+                        Object {
+                          "definitions": Array [
                             Object {
-                              "definitions": Array [
-                                Object {
-                                  "directives": Array [],
-                                  "kind": "OperationDefinition",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "UPLOAD_SHEET",
-                                  },
-                                  "operation": "mutation",
-                                  "selectionSet": Object {
-                                    "kind": "SelectionSet",
-                                    "selections": Array [
+                              "directives": Array [],
+                              "kind": "OperationDefinition",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "UPLOAD_SHEET",
+                              },
+                              "operation": "mutation",
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [
                                       Object {
-                                        "alias": undefined,
-                                        "arguments": Array [
-                                          Object {
-                                            "kind": "Argument",
-                                            "name": Object {
-                                              "kind": "Name",
-                                              "value": "sheetData",
-                                            },
-                                            "value": Object {
-                                              "kind": "Variable",
-                                              "name": Object {
-                                                "kind": "Name",
-                                                "value": "sheetData",
-                                              },
-                                            },
-                                          },
-                                          Object {
-                                            "kind": "Argument",
-                                            "name": Object {
-                                              "kind": "Name",
-                                              "value": "expireIn",
-                                            },
-                                            "value": Object {
-                                              "kind": "Variable",
-                                              "name": Object {
-                                                "kind": "Name",
-                                                "value": "expireIn",
-                                              },
-                                            },
-                                          },
-                                          Object {
-                                            "kind": "Argument",
-                                            "name": Object {
-                                              "kind": "Name",
-                                              "value": "password",
-                                            },
-                                            "value": Object {
-                                              "kind": "Variable",
-                                              "name": Object {
-                                                "kind": "Name",
-                                                "value": "password",
-                                              },
-                                            },
-                                          },
-                                        ],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "createSheet",
-                                        },
-                                        "selectionSet": Object {
-                                          "kind": "SelectionSet",
-                                          "selections": Array [
-                                            Object {
-                                              "alias": undefined,
-                                              "arguments": Array [],
-                                              "directives": Array [],
-                                              "kind": "Field",
-                                              "name": Object {
-                                                "kind": "Name",
-                                                "value": "_id",
-                                              },
-                                              "selectionSet": undefined,
-                                            },
-                                          ],
-                                        },
-                                      },
-                                    ],
-                                  },
-                                  "variableDefinitions": Array [
-                                    Object {
-                                      "defaultValue": undefined,
-                                      "directives": Array [],
-                                      "kind": "VariableDefinition",
-                                      "type": Object {
-                                        "kind": "NonNullType",
-                                        "type": Object {
-                                          "kind": "NamedType",
-                                          "name": Object {
-                                            "kind": "Name",
-                                            "value": "String",
-                                          },
-                                        },
-                                      },
-                                      "variable": Object {
-                                        "kind": "Variable",
+                                        "kind": "Argument",
                                         "name": Object {
                                           "kind": "Name",
                                           "value": "sheetData",
                                         },
-                                      },
-                                    },
-                                    Object {
-                                      "defaultValue": undefined,
-                                      "directives": Array [],
-                                      "kind": "VariableDefinition",
-                                      "type": Object {
-                                        "kind": "NonNullType",
-                                        "type": Object {
-                                          "kind": "NamedType",
+                                        "value": Object {
+                                          "kind": "Variable",
                                           "name": Object {
                                             "kind": "Name",
-                                            "value": "Int",
+                                            "value": "sheetData",
                                           },
                                         },
                                       },
-                                      "variable": Object {
-                                        "kind": "Variable",
+                                      Object {
+                                        "kind": "Argument",
                                         "name": Object {
                                           "kind": "Name",
                                           "value": "expireIn",
                                         },
-                                      },
-                                    },
-                                    Object {
-                                      "defaultValue": undefined,
-                                      "directives": Array [],
-                                      "kind": "VariableDefinition",
-                                      "type": Object {
-                                        "kind": "NamedType",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "String",
+                                        "value": Object {
+                                          "kind": "Variable",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "expireIn",
+                                          },
                                         },
                                       },
-                                      "variable": Object {
-                                        "kind": "Variable",
+                                      Object {
+                                        "kind": "Argument",
                                         "name": Object {
                                           "kind": "Name",
                                           "value": "password",
                                         },
+                                        "value": Object {
+                                          "kind": "Variable",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "password",
+                                          },
+                                        },
+                                      },
+                                    ],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "createSheet",
+                                    },
+                                    "selectionSet": Object {
+                                      "kind": "SelectionSet",
+                                      "selections": Array [
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "_id",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                              "variableDefinitions": Array [
+                                Object {
+                                  "defaultValue": undefined,
+                                  "directives": Array [],
+                                  "kind": "VariableDefinition",
+                                  "type": Object {
+                                    "kind": "NonNullType",
+                                    "type": Object {
+                                      "kind": "NamedType",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "String",
                                       },
                                     },
-                                  ],
+                                  },
+                                  "variable": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "sheetData",
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "defaultValue": undefined,
+                                  "directives": Array [],
+                                  "kind": "VariableDefinition",
+                                  "type": Object {
+                                    "kind": "NonNullType",
+                                    "type": Object {
+                                      "kind": "NamedType",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "Int",
+                                      },
+                                    },
+                                  },
+                                  "variable": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "expireIn",
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "defaultValue": undefined,
+                                  "directives": Array [],
+                                  "kind": "VariableDefinition",
+                                  "type": Object {
+                                    "kind": "NamedType",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "String",
+                                    },
+                                  },
+                                  "variable": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "password",
+                                    },
+                                  },
                                 },
                               ],
-                              "kind": "Document",
-                              "loc": Object {
-                                "end": 196,
-                                "start": 0,
-                              },
-                            }
-                          }
-                          onCompleted={[Function]}
-                        >
-                          <div>
-                            <input
-                              aria-label="upload button"
-                              disabled={true}
-                              onClick={[Function]}
-                              type="submit"
-                              value="Upload File"
-                            />
-                          </div>
-                        </Mutation>
-                        <UploadPage__UploadError>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "UploadPage__UploadError-ahg6u5-2",
-                                  "isStatic": false,
-                                  "lastClassName": "c8",
-                                  "rules": Array [
-                                    "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
-                                    [Function],
-                                    ";transition:all 0.3s;&.true{opacity:1;}",
-                                    "min-width:200px;width:fit-content;margin:auto;margin-top:2rem;",
-                                  ],
-                                },
-                                "displayName": "UploadPage__UploadError",
-                                "foldedComponentIds": Array [
-                                  "defaultStyle__ErrorDialog-g21vfe-2",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "UploadPage__UploadError-ahg6u5-2",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="c8"
-                            />
-                          </StyledComponent>
-                        </UploadPage__UploadError>
-                        <UploadPage__UploadSuccess>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "UploadPage__UploadSuccess-ahg6u5-3",
-                                  "isStatic": false,
-                                  "lastClassName": "c9",
-                                  "rules": Array [
-                                    "text-align:center;opacity:0;color:white;padding:0.5rem 1rem;border-radius:5px;background-color:",
-                                    [Function],
-                                    ";transition:all 0.3s;&.true{opacity:1;}",
-                                    "background-color:",
-                                    [Function],
-                                    ";color:",
-                                    [Function],
-                                    ";strong{font-weight:600;}",
-                                    "min-width:200px;width:fit-content;margin:auto;margin-top:0.15rem;",
-                                  ],
-                                },
-                                "displayName": "UploadPage__UploadSuccess",
-                                "foldedComponentIds": Array [
-                                  "defaultStyle__ErrorDialog-g21vfe-2",
-                                  "defaultStyle__SuccessDialog-g21vfe-3",
-                                ],
-                                "render": [Function],
-                                "styledComponentId": "UploadPage__UploadSuccess-ahg6u5-3",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="c9"
-                            >
-                              File to upload: 
-                              <strong />
-                            </div>
-                          </StyledComponent>
-                        </UploadPage__UploadSuccess>
-                      </form>
-                    </StyledComponent>
-                  </UploadPage__StyledForm>
-                </div>
-              </StyledComponent>
+                            },
+                          ],
+                          "kind": "Document",
+                          "loc": Object {
+                            "end": 196,
+                            "start": 0,
+                          },
+                        }
+                      }
+                      onCompleted={[Function]}
+                    >
+                      <div>
+                        <input
+                          aria-label="upload button"
+                          disabled={true}
+                          onClick={[Function]}
+                          type="submit"
+                          value="Upload File"
+                        />
+                      </div>
+                    </Mutation>
+                    <UploadPage__UploadError>
+                      <div
+                        className="defaultStyle__ErrorDialog-g21vfe-2 c8"
+                      />
+                    </UploadPage__UploadError>
+                    <UploadPage__UploadSuccess>
+                      <div
+                        className="defaultStyle__ErrorDialog-g21vfe-2 defaultStyle__SuccessDialog-g21vfe-3 c9"
+                      >
+                        File to upload: 
+                        <strong />
+                      </div>
+                    </UploadPage__UploadSuccess>
+                  </form>
+                </UploadPage__StyledForm>
+              </div>
             </UploadPage__StyledDiv>
           </UploadPage>
         </ThemeProvider>
