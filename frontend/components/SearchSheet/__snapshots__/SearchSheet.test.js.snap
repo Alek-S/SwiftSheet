@@ -245,164 +245,44 @@ exports[`SearchSheet matches the snapshot 1`] = `
     >
       <SearchSheet>
         <defaultStyle__FormCard>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "defaultStyle__FormCard-g21vfe-5",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "background-color:white;color:",
-                    [Function],
-                    ";font-family:",
-                    [Function],
-                    ";font-size:0.9em;",
-                    "border-radius:8px;box-shadow:",
-                    [Function],
-                    ";input{outline:none;color:",
-                    [Function],
-                    ";font-family:",
-                    [Function],
-                    ";background-color:",
-                    [Function],
-                    ";border:1px solid ",
-                    [Function],
-                    ";border-radius:5rem;transition:all 0.3s;::placeholder{font-size:1rem;font-weight:400;font-style:italic;font-family:",
-                    [Function],
-                    ";color:",
-                    [Function],
-                    ";}&:hover{border:solid 1px ",
-                    [Function],
-                    ";}&:focus,&:active{border:solid 1px ",
-                    [Function],
-                    ";}&.true{border:1px solid ",
-                    [Function],
-                    ";}}",
-                    "overflow:hidden;width:90%;max-width:600px;margin-bottom:3rem;header{background:",
-                    [Function],
-                    ";padding-top:1rem;padding-bottom:1rem;width:100%;}h2{font-weight:400;text-align:center;color:white;font-size:1.1rem;}input{box-sizing:border-box;flex-grow:2;height:30px;margin-bottom:0;padding-left:2rem;margin-right:1rem;font-size:0.95rem;::placeholder{color:",
-                    [Function],
-                    ";}}@media (max-width:500px){width:95%;input{padding-left:1rem;margin-right:0;}}",
-                  ],
-                },
-                "displayName": "defaultStyle__FormCard",
-                "foldedComponentIds": Array [
-                  "defaultStyle-g21vfe-0",
-                  "defaultStyle__Card-g21vfe-1",
-                ],
-                "render": [Function],
-                "styledComponentId": "defaultStyle__FormCard-g21vfe-5",
-                "target": "div",
-                "toString": [Function],
-                "usesTheme": true,
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          <div
+            className="defaultStyle-g21vfe-0 defaultStyle__Card-g21vfe-1 c0"
           >
-            <div
-              className="c0"
-            >
-              <defaultStyle__StyledForm>
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "defaultStyle__StyledForm-g21vfe-6",
-                        "isStatic": false,
-                        "lastClassName": "c1",
-                        "rules": Array [
-                          "margin:2rem;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-between;@media (max-width:500px){flex-direction:column;justify-content:center;}",
-                        ],
-                      },
-                      "displayName": "defaultStyle__StyledForm",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "defaultStyle__StyledForm-g21vfe-6",
-                      "target": "form",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
+            <defaultStyle__StyledForm>
+              <form
+                className="c1"
+              >
+                <input
+                  aria-label="input search id"
+                  onChange={[Function]}
+                  placeholder="search by sheet ID"
+                  type="text"
+                  value=""
+                />
+                <Link
+                  to="/"
                 >
-                  <form
-                    className="c1"
+                  <LinkAnchor
+                    href="/"
+                    navigate={[Function]}
                   >
-                    <input
-                      aria-label="input search id"
-                      onChange={[Function]}
-                      placeholder="search by sheet ID"
-                      type="text"
-                      value=""
-                    />
-                    <Link
-                      to="/"
+                    <a
+                      href="/"
+                      onClick={[Function]}
                     >
-                      <LinkAnchor
-                        href="/"
-                        navigate={[Function]}
-                      >
-                        <a
-                          href="/"
-                          onClick={[Function]}
+                      <defaultStyle__SubmitButton>
+                        <button
+                          className="c2"
                         >
-                          <defaultStyle__SubmitButton>
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "defaultStyle__SubmitButton-g21vfe-7",
-                                    "isStatic": false,
-                                    "lastClassName": "c2",
-                                    "rules": Array [
-                                      "cursor:pointer;outline:none;box-sizing:border-box;height:30px;width:100px !important;border-radius:20px;background:",
-                                      [Function],
-                                      ";border:none;color:white !important;font-family:",
-                                      [Function],
-                                      ";font-size:1rem;transition:all 0.5s;&:hover{box-shadow:",
-                                      [Function],
-                                      ";}@media (max-width:500px){width:100%;margin:auto;margin-top:2.5rem;}",
-                                    ],
-                                  },
-                                  "displayName": "defaultStyle__SubmitButton",
-                                  "foldedComponentIds": Array [],
-                                  "render": [Function],
-                                  "styledComponentId": "defaultStyle__SubmitButton-g21vfe-7",
-                                  "target": "button",
-                                  "toString": [Function],
-                                  "usesTheme": true,
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                            >
-                              <button
-                                className="c2"
-                              >
-                                Submit
-                              </button>
-                            </StyledComponent>
-                          </defaultStyle__SubmitButton>
-                        </a>
-                      </LinkAnchor>
-                    </Link>
-                  </form>
-                </StyledComponent>
-              </defaultStyle__StyledForm>
-            </div>
-          </StyledComponent>
+                          Submit
+                        </button>
+                      </defaultStyle__SubmitButton>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </form>
+            </defaultStyle__StyledForm>
+          </div>
         </defaultStyle__FormCard>
       </SearchSheet>
     </ThemeProvider>

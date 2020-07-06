@@ -217,264 +217,133 @@ exports[`<HeadlessTable /> matches the snapshot 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "Table__ButtonGroup-sc-1n1z6me-1",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "width:80%;margin:auto;display:flex;flex-direction:row-reverse;margin-top:2rem;margin-bottom:0rem;padding-bottom:0rem;",
-              ],
-            },
-            "displayName": "Table__ButtonGroup",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "Table__ButtonGroup-sc-1n1z6me-1",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <div
+        className="c0"
         style={
           Object {
             "maxWidth": "1350px",
           }
         }
       >
-        <div
-          className="c0"
-          style={
-            Object {
-              "maxWidth": "1350px",
-            }
-          }
+        <Table__ExportButton
+          onClick={[Function]}
         >
-          <Table__ExportButton
+          <button
+            className="defaultStyle__SubmitButton-g21vfe-7 c1"
             onClick={[Function]}
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "Table__ExportButton-sc-1n1z6me-2",
-                    "isStatic": false,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "cursor:pointer;outline:none;box-sizing:border-box;height:30px;width:100px !important;border-radius:20px;background:",
-                      [Function],
-                      ";border:none;color:white !important;font-family:",
-                      [Function],
-                      ";font-size:1rem;transition:all 0.5s;&:hover{box-shadow:",
-                      [Function],
-                      ";}@media (max-width:500px){width:100%;margin:auto;margin-top:2.5rem;}",
-                      "border-radius:10px 10px 0 0;font-size:0.85rem;width:120px !important;",
-                    ],
-                  },
-                  "displayName": "Table__ExportButton",
-                  "foldedComponentIds": Array [
-                    "defaultStyle__SubmitButton-g21vfe-7",
-                  ],
-                  "render": [Function],
-                  "styledComponentId": "Table__ExportButton-sc-1n1z6me-2",
-                  "target": "button",
-                  "toString": [Function],
-                  "usesTheme": true,
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              onClick={[Function]}
-            >
-              <button
-                className="c1"
-                onClick={[Function]}
-              >
-                Export CSV
-              </button>
-            </StyledComponent>
-          </Table__ExportButton>
-        </div>
-      </StyledComponent>
+            Export CSV
+          </button>
+        </Table__ExportButton>
+      </div>
     </Table__ButtonGroup>
     <Table__Styledtable
       className="ag-theme-material"
     >
-      <StyledComponent
-        className="ag-theme-material"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "Table__Styledtable-sc-1n1z6me-0",
-              "isStatic": false,
-              "lastClassName": "c2",
-              "rules": Array [
-                "height:98%;font-family:",
-                [Function],
-                ";font-size:14px;letter-spacing:1px;background-color:white;width:80%;max-width:",
-                [Function],
-                ";margin:auto;margin-top:0px;border:none;box-shadow:",
-                [Function],
-                ";.ag-header-cell-text{font-family:",
-                [Function],
-                ";font-size:14px;}.ag-row-even{background-color:",
-                [Function],
-                ";}.ag-row-hover{background-color:",
-                [Function],
-                ";}.ag-header{background:",
-                [Function],
-                ";color:",
-                [Function],
-                ";& .ag-header-cell{border-right:1px solid ",
-                [Function],
-                ";}& .ag-column-hover{background:",
-                [Function],
-                ";color:",
-                [Function],
-                ";border-bottom:4px solid ",
-                [Function],
-                ";}}.ag-icon-desc,.ag-icon-asc{background-color:",
-                [Function],
-                ";border-radius:10px;position:relative;top:5px;padding:2px;}.ag-icon-filter{border-radius:4px;position:relative;top:5px;}.ag-filter{background:",
-                [Function],
-                ";box-shadow:",
-                [Function],
-                ";font-family:",
-                [Function],
-                ";}.ag-theme-material .ag-filter input[type=\\"text\\"],.ag-theme-material .ag-filter input[type=\\"date\\"]{border-bottom:1px solid ",
-                [Function],
-                ";}",
-              ],
-            },
-            "displayName": "Table__Styledtable",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "Table__Styledtable-sc-1n1z6me-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": true,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <div
+        className="c2 ag-theme-material"
       >
-        <div
-          className="c2 ag-theme-material"
-        >
-          <AgGridReact
-            columnDefs={
-              Array [
-                Object {
-                  "field": "First Name",
-                  "headerName": "First Name",
-                },
-                Object {
-                  "field": "Last Name",
-                  "headerName": "Last Name",
-                },
-                Object {
-                  "field": "Address",
-                  "headerName": "Address",
-                },
-                Object {
-                  "field": "City",
-                  "headerName": "City",
-                },
-                Object {
-                  "field": "State",
-                  "headerName": "State",
-                },
-                Object {
-                  "field": "Zip",
-                  "headerName": "Zip",
-                },
-              ]
-            }
-            defaultColDef={
+        <AgGridReact
+          columnDefs={
+            Array [
               Object {
-                "columnDrag": true,
-                "filter": true,
-                "resizable": true,
-                "sortable": true,
-                "width": 225,
+                "field": "First Name",
+                "headerName": "First Name",
+              },
+              Object {
+                "field": "Last Name",
+                "headerName": "Last Name",
+              },
+              Object {
+                "field": "Address",
+                "headerName": "Address",
+              },
+              Object {
+                "field": "City",
+                "headerName": "City",
+              },
+              Object {
+                "field": "State",
+                "headerName": "State",
+              },
+              Object {
+                "field": "Zip",
+                "headerName": "Zip",
+              },
+            ]
+          }
+          defaultColDef={
+            Object {
+              "columnDrag": true,
+              "filter": true,
+              "resizable": true,
+              "sortable": true,
+              "width": 225,
+            }
+          }
+          onGridReady={[Function]}
+          rowData={
+            Array [
+              Object {
+                "Address": "120 jefferson st.",
+                "City": "Riverside",
+                "First Name": "John",
+                "Last Name": "Doe",
+                "State": " NJ",
+                "Zip": "8075",
+              },
+              Object {
+                "Address": "220 hobo Av.",
+                "City": "Phila",
+                "First Name": "Jack",
+                "Last Name": "McGinnis",
+                "State": " PA",
+                "Zip": "9119",
+              },
+              Object {
+                "Address": "120 Jefferson St.",
+                "City": "Riverside",
+                "First Name": "John \\"Da Man\\"",
+                "Last Name": "Repici",
+                "State": " NJ",
+                "Zip": "8075",
+              },
+              Object {
+                "Address": "7452 Terrace \\"At the Plaza\\" road",
+                "City": "SomeTown",
+                "First Name": "Stephen",
+                "Last Name": "Tyler",
+                "State": "SD",
+                "Zip": "91234",
+              },
+              Object {
+                "Address": "",
+                "City": "SomeTown",
+                "First Name": "",
+                "Last Name": "Blankman",
+                "State": " SD",
+                "Zip": "298",
+              },
+              Object {
+                "Address": "9th, at Terrace plc",
+                "City": "Desert City",
+                "First Name": "Joan \\"the bone\\", Anne",
+                "Last Name": "Jet",
+                "State": "CO",
+                "Zip": "123",
+              },
+            ]
+          }
+        >
+          <div
+            style={
+              Object {
+                "height": "100%",
               }
             }
-            onGridReady={[Function]}
-            rowData={
-              Array [
-                Object {
-                  "Address": "120 jefferson st.",
-                  "City": "Riverside",
-                  "First Name": "John",
-                  "Last Name": "Doe",
-                  "State": " NJ",
-                  "Zip": "8075",
-                },
-                Object {
-                  "Address": "220 hobo Av.",
-                  "City": "Phila",
-                  "First Name": "Jack",
-                  "Last Name": "McGinnis",
-                  "State": " PA",
-                  "Zip": "9119",
-                },
-                Object {
-                  "Address": "120 Jefferson St.",
-                  "City": "Riverside",
-                  "First Name": "John \\"Da Man\\"",
-                  "Last Name": "Repici",
-                  "State": " NJ",
-                  "Zip": "8075",
-                },
-                Object {
-                  "Address": "7452 Terrace \\"At the Plaza\\" road",
-                  "City": "SomeTown",
-                  "First Name": "Stephen",
-                  "Last Name": "Tyler",
-                  "State": "SD",
-                  "Zip": "91234",
-                },
-                Object {
-                  "Address": "",
-                  "City": "SomeTown",
-                  "First Name": "",
-                  "Last Name": "Blankman",
-                  "State": " SD",
-                  "Zip": "298",
-                },
-                Object {
-                  "Address": "9th, at Terrace plc",
-                  "City": "Desert City",
-                  "First Name": "Joan \\"the bone\\", Anne",
-                  "Last Name": "Jet",
-                  "State": "CO",
-                  "Zip": "123",
-                },
-              ]
-            }
-          >
-            <div
-              style={
-                Object {
-                  "height": "100%",
-                }
-              }
-            />
-          </AgGridReact>
-        </div>
-      </StyledComponent>
+          />
+        </AgGridReact>
+      </div>
     </Table__Styledtable>
   </Table>
 </ThemeProvider>

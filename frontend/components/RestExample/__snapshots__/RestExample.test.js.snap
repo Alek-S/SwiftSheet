@@ -1,68 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RestExample matches the snapshot 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "defaultStyle__ApiCard-g21vfe-4",
-        "isStatic": false,
-        "rules": Array [
-          "background-color:white;color:",
-          [Function],
-          ";font-family:",
-          [Function],
-          ";font-size:0.9em;",
-          "border-radius:8px;box-shadow:",
-          [Function],
-          ";input{outline:none;color:",
-          [Function],
-          ";font-family:",
-          [Function],
-          ";background-color:",
-          [Function],
-          ";border:1px solid ",
-          [Function],
-          ";border-radius:5rem;transition:all 0.3s;::placeholder{font-size:1rem;font-weight:400;font-style:italic;font-family:",
-          [Function],
-          ";color:",
-          [Function],
-          ";}&:hover{border:solid 1px ",
-          [Function],
-          ";}&:focus,&:active{border:solid 1px ",
-          [Function],
-          ";}&.true{border:1px solid ",
-          [Function],
-          ";}}",
-          "width:500px;padding:1rem;margin:auto;margin-top:1rem;background-color:#424242;color:",
-          [Function],
-          ";a{margin-left:1rem;color:",
-          [Function],
-          ";}.pill{background:",
-          [Function],
-          ";color:white;padding:0.1rem 0.5rem;border-radius:4px;}.pill-secondary{background-color:#595959;color:white;padding:0.1rem 0.5rem;border-radius:4px;}.gql_query{margin-left:0.5rem;color:",
-          [Function],
-          ";}.query_title{margin-top:0.75rem;}@media (max-width:535px){width:90%;overflow:none;word-wrap:break-word;.pill,.pill-secondary{display:block;width:fit-content;margin-bottom:0.5rem;}a,.gql_query{margin-left:0;}}",
-        ],
-      },
-      "displayName": "defaultStyle__ApiCard",
-      "foldedComponentIds": Array [
-        "defaultStyle-g21vfe-0",
-        "defaultStyle__Card-g21vfe-1",
-      ],
-      "render": [Function],
-      "styledComponentId": "defaultStyle__ApiCard-g21vfe-4",
-      "target": "div",
-      "toString": [Function],
-      "usesTheme": true,
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
->
+<defaultStyle__ApiCard>
   <span
     className="pill"
   >
@@ -76,5 +15,5 @@ exports[`RestExample matches the snapshot 1`] = `
     /api/sheet/
     42
   </a>
-</StyledComponent>
+</defaultStyle__ApiCard>
 `;

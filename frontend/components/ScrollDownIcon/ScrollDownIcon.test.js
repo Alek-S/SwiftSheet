@@ -6,7 +6,7 @@ import theme from '../../theme';
 
 describe('ScrollDownIcon', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(<ScrollDownIcon />, theme);
+		const tree = shallow(<ScrollDownIcon theme={theme} />);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });

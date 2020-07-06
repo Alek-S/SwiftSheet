@@ -14,14 +14,14 @@ describe('PasswordPrompt', () => {
 	test('matches the snapshot', () => {
 		const wrongPassword = true;
 
-		const tree = shallowWithTheme(
+		const tree = shallow(
 			<PasswordPrompt
 				password="mockPassword"
 				setPassword={setMockPassword}
 				wrongPassword={wrongPassword}
-			/>,
-			theme
-		).dive();
+				theme={theme}
+			/>
+		);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 

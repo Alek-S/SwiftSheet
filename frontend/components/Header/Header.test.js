@@ -14,11 +14,10 @@ function fireScroll(height) {
 
 describe('Header', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(
-			<Router>
-				<Header />
-			</Router>,
-			theme
+		const tree = shallow(
+			<Router theme={theme}>
+				<Header theme={theme} />
+			</Router>
 		);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
@@ -39,12 +38,12 @@ describe('Nav', () => {
 
 describe('StyledNavLink', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(
+		const tree = shallow(
 			<Router>
-				<StyledNavLink />
+				<StyledNavLink theme={theme} />
 			</Router>,
 			theme
-		).dive();
+		);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 });

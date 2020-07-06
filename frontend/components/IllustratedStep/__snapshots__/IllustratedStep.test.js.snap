@@ -1,35 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer matches the snapshot 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "IllustratedStep__StyledSection-sc-108b0jo-0",
-        "isStatic": false,
-        "rules": Array [
-          "margin:auto;padding-top:4rem;padding-bottom:4rem;img{float:left;margin-right:4rem;}header{padding-top:10px;}h2{font-weight:500;font-size:1.4rem;letter-spacing:1px;line-height:175%;}p{margin-top:1.5rem;margin-left:20.5rem;font-size:1rem;line-height:175%;max-width:600px;}a{color:",
-          [Function],
-          ";}.step{border:solid 1px ",
-          [Function],
-          ";border-radius:40px;padding:0.5rem 1.5rem;font-weight:400;margin-right:0.75rem;}.highlight{color:#333;font-weight:600;}@media (max-width:1200px){width:90%;}@media (max-width:900px){width:98%;p{margin-top:0.5rem;margin-left:12rem;line-height:150%;}}@media (max-width:750px){img{display:block;float:none;width:40%;margin:auto;}p{margin-left:0.5rem;}}",
-        ],
-      },
-      "displayName": "IllustratedStep__StyledSection",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "IllustratedStep__StyledSection-sc-108b0jo-0",
-      "target": "section",
-      "toString": [Function],
-      "usesTheme": true,
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
->
+<IllustratedStep__StyledSection>
   <img
     alt="illustration"
     width="180"
@@ -43,5 +15,5 @@ exports[`Footer matches the snapshot 1`] = `
     </h2>
   </header>
   <p />
-</StyledComponent>
+</IllustratedStep__StyledSection>
 `;

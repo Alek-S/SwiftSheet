@@ -7,7 +7,7 @@ import theme from '../../theme';
 
 describe('ViewPage', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(<ViewPage />, theme).dive();
+		const tree = shallow(<ViewPage theme={theme} />);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 

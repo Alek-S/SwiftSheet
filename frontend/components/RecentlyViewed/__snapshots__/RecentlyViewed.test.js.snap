@@ -121,79 +121,12 @@ exports[`RecentlyViewed StyledCard matches the snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="defaultStyle-g21vfe-0 defaultStyle__Card-g21vfe-1 c0"
 />
 `;
 
 exports[`RecentlyViewed matches the snapshot 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "RecentlyViewed__StyledCard-o9muk8-0",
-        "isStatic": false,
-        "rules": Array [
-          "background-color:white;color:",
-          [Function],
-          ";font-family:",
-          [Function],
-          ";font-size:0.9em;",
-          "border-radius:8px;box-shadow:",
-          [Function],
-          ";input{outline:none;color:",
-          [Function],
-          ";font-family:",
-          [Function],
-          ";background-color:",
-          [Function],
-          ";border:1px solid ",
-          [Function],
-          ";border-radius:5rem;transition:all 0.3s;::placeholder{font-size:1rem;font-weight:400;font-style:italic;font-family:",
-          [Function],
-          ";color:",
-          [Function],
-          ";}&:hover{border:solid 1px ",
-          [Function],
-          ";}&:focus,&:active{border:solid 1px ",
-          [Function],
-          ";}&.true{border:1px solid ",
-          [Function],
-          ";}}",
-          "padding-left:0px;padding-right:0px;padding-top:0;overflow:hidden;width:90%;max-width:600px;header{background:",
-          [Function],
-          ";padding-top:1rem;padding-bottom:1rem;width:100%;}h2{font-weight:400;text-align:center;color:white;font-size:1.1rem;}.no-items{font-style:italic;padding-top:3rem;padding-bottom:3rem;text-align:center;font-size:0.9rem;color:",
-          [Function],
-          ";}a{text-decoration:none;color:",
-          [Function],
-          ";}li{font-size:0.9rem;color:",
-          [Function],
-          ";padding-left:1.5rem;padding-top:1rem;padding-bottom:1rem;margin:1rem;border-radius:8px;border:1px solid ",
-          [Function],
-          ";text-align:center;transition:all 0.25s;}li:hover{border:1px solid ",
-          [Function],
-          ";background-color:",
-          [Function],
-          ";}",
-        ],
-      },
-      "displayName": "RecentlyViewed__StyledCard",
-      "foldedComponentIds": Array [
-        "defaultStyle-g21vfe-0",
-        "defaultStyle__Card-g21vfe-1",
-      ],
-      "render": [Function],
-      "styledComponentId": "RecentlyViewed__StyledCard-o9muk8-0",
-      "target": "div",
-      "toString": [Function],
-      "usesTheme": true,
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
->
+<RecentlyViewed__StyledCard>
   <header>
     <h2>
       Recently Viewed Sheets
@@ -204,5 +137,5 @@ exports[`RecentlyViewed matches the snapshot 1`] = `
   >
     No recently viewed items
   </p>
-</StyledComponent>
+</RecentlyViewed__StyledCard>
 `;

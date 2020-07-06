@@ -7,7 +7,7 @@ import { fireEvent, render, getByLabelText } from '@testing-library/react';
 
 describe('Filedrop', () => {
 	test('matches the snapshot', () => {
-		const tree = shallowWithTheme(<Filedrop />, theme);
+		const tree = shallow(<Filedrop theme={theme} />);
 		expect(toJson(tree)).toMatchSnapshot();
 	});
 
