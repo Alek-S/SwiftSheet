@@ -79,7 +79,7 @@
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
-    "codecov": "^3.7.0",
+    "codecov": "^3.8.3",
     "css-loader": "^3.6.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
