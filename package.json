@@ -46,7 +46,7 @@
     "graphql-tag": "^2.10.3",
     "graphql-type-json": "^0.3.2",
     "helmet": "^3.23.3",
-    "mongoose": "^5.9.21",
+    "mongoose": "^5.12.2",
     "morgan": "^1.10.0",
     "pako": "^1.0.11",
     "papaparse": "^5.2.0",
